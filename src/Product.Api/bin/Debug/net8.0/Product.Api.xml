@@ -1,0 +1,176 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Product.Api</name>
+    </assembly>
+    <members>
+        <member name="T:Product.Api.Configurations.KebabParameterTransformer">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Product.Api.Configurations.KebabParameterTransformer.TransformOutbound(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Product.Api.Controllers.V1.Base.BaseController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Product.Api.Controllers.V1.Base.BaseController.ReturnSuccess(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Product.Api.Controllers.V1.Base.BaseController.ReturnNotFound">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Product.Api.Controllers.V1.CoverageController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Product.Api.Controllers.V1.CoverageController.#ctor(Product.Application.Interfaces.IProductService)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Product.Api.Controllers.V1.CoverageController.GetByBranchIdAsync(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="branchId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Product.Api.Controllers.V1.CoverageController.GetByProductIdAsync(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="productId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Product.Api.Controllers.V1.ProductController">
+            <summary>
+            
+            </summary>
+            <param name="productService"></param>
+        </member>
+        <member name="M:Product.Api.Controllers.V1.ProductController.#ctor(Product.Application.Interfaces.IProductService)">
+            <summary>
+            
+            </summary>
+            <param name="productService"></param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Product.Api.Controllers.V1.ProductController.GetProductAsync" -->
+        <member name="M:Product.Api.Controllers.V1.ProductVersionController.GetProductVersionAcceptancesAsync(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="productId"></param>
+            <param name="coverageId"></param>
+            <param name="profileId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Product.Api.Controllers.V1.ProductVersionController.GetInsuredObjectAsync(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="productVersionId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Product.Api.Controllers.V1.ProductVersionController.ListClauseAsync(System.Int32,System.Decimal)">
+            <summary>
+            
+            </summary>
+            <param name="productVersionId"></param>
+            <param name="insuredAmountValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Product.Api.Controllers.V1.ProductVersionController.ListTermTypeAsync(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="productVersionId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Product.Api.Controllers.V1.ProductVersionController.ListLawsuitTypeAsync(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="productVersionId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Product.Api.Controllers.V1.ProductVersionController.ListPaymentMethodAsync(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="productVersionId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Product.Api.Controllers.V1.ProductVersionController.ListPaymentFrequencyAsync(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="productVersionId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Product.Api.Controllers.V1.ProductVersionController.ListPaymentInstallmentAsync(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="productVersionPaymentMethodId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Product.Api.Extensions.ServiceCollectionExtensions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Product.Api.Extensions.ServiceCollectionExtensions.UseApi(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            
+            </summary>
+            <param name="services"></param>
+            <param name="configuration"></param>
+        </member>
+        <member name="T:Product.Api.Filters.SwaggerJsonIgnoreFilter">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Product.Api.Startup">
+            <summary>
+            
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:Product.Api.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:Product.Api.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:Product.Api.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            
+            </summary>
+            <param name="app"></param>
+            <param name="env"></param>
+        </member>
+    </members>
+</doc>
