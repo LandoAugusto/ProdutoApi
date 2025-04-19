@@ -39,7 +39,7 @@
             
             </summary>
         </member>
-        <member name="M:Product.Api.Controllers.V1.CoverageController.#ctor(Product.Application.Interfaces.IProductService)">
+        <member name="M:Product.Api.Controllers.V1.CoverageController.#ctor(ProductApi.Application.Interfaces.IProductService)">
             <summary>
             
             </summary>
@@ -64,7 +64,7 @@
             </summary>
             <param name="productService"></param>
         </member>
-        <member name="M:Product.Api.Controllers.V1.ProductController.#ctor(Product.Application.Interfaces.IProductService)">
+        <member name="M:Product.Api.Controllers.V1.ProductController.#ctor(ProductApi.Application.Interfaces.IProductService)">
             <summary>
             
             </summary>

@@ -10,9 +10,9 @@
         "dependencies": {
           "Asp.Versioning.Mvc.ApiExplorer": "8.1.0",
           "Microsoft.EntityFrameworkCore.Design": "8.0.15",
-          "Product.Application": "1.0.0",
-          "Product.Core": "1.0.0",
-          "Product.Infra.IoC": "1.0.0",
+          "ProductApi.Application": "1.0.0",
+          "ProductApi.Core": "1.0.0",
+          "ProductApi.Infra.IoC": "1.0.0",
           "Serilog": "4.2.0",
           "Swashbuckle.AspNetCore": "8.1.1",
           "Swashbuckle.AspNetCore.Filters": "8.0.2"
@@ -1669,52 +1669,52 @@
           }
         }
       },
-      "Product.Application/1.0.0": {
+      "ProductApi.Application/1.0.0": {
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.2",
-          "Product.Core": "1.0.0",
-          "Product.Infra.Data": "1.0.0"
+          "ProductApi.Core": "1.0.0",
+          "ProductApi.Infra.Data": "1.0.0"
         },
         "runtime": {
-          "Product.Application.dll": {
+          "ProductApi.Application.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
         }
       },
-      "Product.Core/1.0.0": {
+      "ProductApi.Core/1.0.0": {
         "dependencies": {
           "AutoMapper": "14.0.0",
           "Component.Log": "1.0.35",
           "Newtonsoft.Json": "13.0.3"
         },
         "runtime": {
-          "Product.Core.dll": {
+          "ProductApi.Core.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
         }
       },
-      "Product.Infra.Data/1.0.0": {
+      "ProductApi.Infra.Data/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "8.0.15",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.15",
-          "Product.Core": "1.0.0"
+          "ProductApi.Core": "1.0.0"
         },
         "runtime": {
-          "Product.Infra.Data.dll": {
+          "ProductApi.Infra.Data.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
         }
       },
-      "Product.Infra.IoC/1.0.0": {
+      "ProductApi.Infra.IoC/1.0.0": {
         "dependencies": {
-          "Product.Application": "1.0.0",
-          "Product.Infra.Data": "1.0.0"
+          "ProductApi.Application": "1.0.0",
+          "ProductApi.Infra.Data": "1.0.0"
         },
         "runtime": {
-          "Product.Infra.IoC.dll": {
+          "ProductApi.Infra.IoC.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -2764,22 +2764,22 @@
       "path": "zstdsharp.port/0.6.2",
       "hashPath": "zstdsharp.port.0.6.2.nupkg.sha512"
     },
-    "Product.Application/1.0.0": {
+    "ProductApi.Application/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "Product.Core/1.0.0": {
+    "ProductApi.Core/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "Product.Infra.Data/1.0.0": {
+    "ProductApi.Infra.Data/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "Product.Infra.IoC/1.0.0": {
+    "ProductApi.Infra.IoC/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

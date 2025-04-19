@@ -15,7 +15,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Product.Core.Model.BaseDataResponseModel\u00601[[Product.Core.Model.ProductModel, Product.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "ProductApi.Core.Model.BaseDataResponseModel\u00601[[ProductApi.Core.Model.ProductModel, ProductApi.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain; x-api-version=1.0",
           "application/json; x-api-version=1.0",
@@ -24,7 +24,7 @@
         "StatusCode": 200
       },
       {
-        "Type": "Product.Core.Model.BaseDataResponseModel\u00601[[Product.Core.Model.ProductModel, Product.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "ProductApi.Core.Model.BaseDataResponseModel\u00601[[ProductApi.Core.Model.ProductModel, ProductApi.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain; x-api-version=1.0",
           "application/json; x-api-version=1.0",
@@ -33,7 +33,7 @@
         "StatusCode": 400
       },
       {
-        "Type": "Product.Core.Model.BaseDataResponseModel\u00601[[Product.Core.Model.ProductModel, Product.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "ProductApi.Core.Model.BaseDataResponseModel\u00601[[ProductApi.Core.Model.ProductModel, ProductApi.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain; x-api-version=1.0",
           "application/json; x-api-version=1.0",
@@ -59,7 +59,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Product.Core.Model.BaseDataResponseModel\u00601[[Product.Core.Model.ProductModel, Product.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "ProductApi.Core.Model.BaseDataResponseModel\u00601[[ProductApi.Core.Model.ProductModel, ProductApi.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain; x-api-version=1.0",
           "application/json; x-api-version=1.0",
@@ -68,7 +68,7 @@
         "StatusCode": 200
       },
       {
-        "Type": "Product.Core.Model.BaseDataResponseModel\u00601[[Product.Core.Model.ProductModel, Product.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "ProductApi.Core.Model.BaseDataResponseModel\u00601[[ProductApi.Core.Model.ProductModel, ProductApi.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain; x-api-version=1.0",
           "application/json; x-api-version=1.0",
@@ -77,7 +77,7 @@
         "StatusCode": 400
       },
       {
-        "Type": "Product.Core.Model.BaseDataResponseModel\u00601[[Product.Core.Model.ProductModel, Product.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "ProductApi.Core.Model.BaseDataResponseModel\u00601[[ProductApi.Core.Model.ProductModel, ProductApi.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain; x-api-version=1.0",
           "application/json; x-api-version=1.0",
@@ -97,7 +97,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "Product.Core.Model.BaseDataResponseModel\u00601[[Product.Core.Model.ProductModel, Product.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "ProductApi.Core.Model.BaseDataResponseModel\u00601[[ProductApi.Core.Model.ProductModel, ProductApi.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain; x-api-version=1.0",
           "application/json; x-api-version=1.0",
@@ -106,7 +106,7 @@
         "StatusCode": 200
       },
       {
-        "Type": "Product.Core.Model.BaseDataResponseModel\u00601[[Product.Core.Model.ProductModel, Product.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "ProductApi.Core.Model.BaseDataResponseModel\u00601[[ProductApi.Core.Model.ProductModel, ProductApi.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain; x-api-version=1.0",
           "application/json; x-api-version=1.0",
@@ -115,7 +115,7 @@
         "StatusCode": 400
       },
       {
-        "Type": "Product.Core.Model.BaseDataResponseModel\u00601[[Product.Core.Model.ProductModel, Product.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "ProductApi.Core.Model.BaseDataResponseModel\u00601[[ProductApi.Core.Model.ProductModel, ProductApi.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain; x-api-version=1.0",
           "application/json; x-api-version=1.0",
@@ -151,7 +151,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Product.Core.Model.BaseDataResponseModel\u00601[[Product.Core.Model.ProductModel, Product.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "ProductApi.Core.Model.BaseDataResponseModel\u00601[[ProductApi.Core.Model.ProductModel, ProductApi.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain; x-api-version=1.0",
           "application/json; x-api-version=1.0",
@@ -160,7 +160,7 @@
         "StatusCode": 200
       },
       {
-        "Type": "Product.Core.Model.BaseDataResponseModel\u00601[[Product.Core.Model.ProductModel, Product.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "ProductApi.Core.Model.BaseDataResponseModel\u00601[[ProductApi.Core.Model.ProductModel, ProductApi.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain; x-api-version=1.0",
           "application/json; x-api-version=1.0",
@@ -169,7 +169,7 @@
         "StatusCode": 500
       },
       {
-        "Type": "Product.Core.Model.BaseDataResponseModel\u00601[[Product.Core.Model.ProductModel, Product.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "ProductApi.Core.Model.BaseDataResponseModel\u00601[[ProductApi.Core.Model.ProductModel, ProductApi.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain; x-api-version=1.0",
           "application/json; x-api-version=1.0",
@@ -200,7 +200,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Product.Core.Model.BaseDataResponseModel\u00601[[Product.Core.Model.ProductModel, Product.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "ProductApi.Core.Model.BaseDataResponseModel\u00601[[ProductApi.Core.Model.ProductModel, ProductApi.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain; x-api-version=1.0",
           "application/json; x-api-version=1.0",
@@ -209,7 +209,7 @@
         "StatusCode": 200
       },
       {
-        "Type": "Product.Core.Model.BaseDataResponseModel\u00601[[Product.Core.Model.ProductModel, Product.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "ProductApi.Core.Model.BaseDataResponseModel\u00601[[ProductApi.Core.Model.ProductModel, ProductApi.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain; x-api-version=1.0",
           "application/json; x-api-version=1.0",
@@ -218,7 +218,7 @@
         "StatusCode": 500
       },
       {
-        "Type": "Product.Core.Model.BaseDataResponseModel\u00601[[Product.Core.Model.ProductModel, Product.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "ProductApi.Core.Model.BaseDataResponseModel\u00601[[ProductApi.Core.Model.ProductModel, ProductApi.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain; x-api-version=1.0",
           "application/json; x-api-version=1.0",
@@ -244,7 +244,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Product.Core.Model.BaseDataResponseModel\u00601[[Product.Core.Model.ProductModel, Product.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "ProductApi.Core.Model.BaseDataResponseModel\u00601[[ProductApi.Core.Model.ProductModel, ProductApi.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain; x-api-version=1.0",
           "application/json; x-api-version=1.0",
@@ -253,7 +253,7 @@
         "StatusCode": 200
       },
       {
-        "Type": "Product.Core.Model.BaseDataResponseModel\u00601[[Product.Core.Model.ProductModel, Product.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "ProductApi.Core.Model.BaseDataResponseModel\u00601[[ProductApi.Core.Model.ProductModel, ProductApi.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain; x-api-version=1.0",
           "application/json; x-api-version=1.0",
@@ -262,7 +262,7 @@
         "StatusCode": 500
       },
       {
-        "Type": "Product.Core.Model.BaseDataResponseModel\u00601[[Product.Core.Model.ProductModel, Product.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "ProductApi.Core.Model.BaseDataResponseModel\u00601[[ProductApi.Core.Model.ProductModel, ProductApi.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain; x-api-version=1.0",
           "application/json; x-api-version=1.0",
@@ -288,7 +288,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Product.Core.Model.BaseDataResponseModel\u00601[[Product.Core.Model.ProductModel, Product.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "ProductApi.Core.Model.BaseDataResponseModel\u00601[[ProductApi.Core.Model.ProductModel, ProductApi.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain; x-api-version=1.0",
           "application/json; x-api-version=1.0",
@@ -297,7 +297,7 @@
         "StatusCode": 200
       },
       {
-        "Type": "Product.Core.Model.BaseDataResponseModel\u00601[[Product.Core.Model.ProductModel, Product.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "ProductApi.Core.Model.BaseDataResponseModel\u00601[[ProductApi.Core.Model.ProductModel, ProductApi.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain; x-api-version=1.0",
           "application/json; x-api-version=1.0",
@@ -306,7 +306,7 @@
         "StatusCode": 500
       },
       {
-        "Type": "Product.Core.Model.BaseDataResponseModel\u00601[[Product.Core.Model.ProductModel, Product.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "ProductApi.Core.Model.BaseDataResponseModel\u00601[[ProductApi.Core.Model.ProductModel, ProductApi.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain; x-api-version=1.0",
           "application/json; x-api-version=1.0",
@@ -332,7 +332,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Product.Core.Model.BaseDataResponseModel\u00601[[Product.Core.Model.ProductModel, Product.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "ProductApi.Core.Model.BaseDataResponseModel\u00601[[ProductApi.Core.Model.ProductModel, ProductApi.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain; x-api-version=1.0",
           "application/json; x-api-version=1.0",
@@ -341,7 +341,7 @@
         "StatusCode": 200
       },
       {
-        "Type": "Product.Core.Model.BaseDataResponseModel\u00601[[Product.Core.Model.ProductModel, Product.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "ProductApi.Core.Model.BaseDataResponseModel\u00601[[ProductApi.Core.Model.ProductModel, ProductApi.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain; x-api-version=1.0",
           "application/json; x-api-version=1.0",
@@ -350,7 +350,7 @@
         "StatusCode": 500
       },
       {
-        "Type": "Product.Core.Model.BaseDataResponseModel\u00601[[Product.Core.Model.ProductModel, Product.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "ProductApi.Core.Model.BaseDataResponseModel\u00601[[ProductApi.Core.Model.ProductModel, ProductApi.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain; x-api-version=1.0",
           "application/json; x-api-version=1.0",
@@ -376,7 +376,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Product.Core.Model.BaseDataResponseModel\u00601[[Product.Core.Model.ProductModel, Product.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "ProductApi.Core.Model.BaseDataResponseModel\u00601[[ProductApi.Core.Model.ProductModel, ProductApi.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain; x-api-version=1.0",
           "application/json; x-api-version=1.0",
@@ -385,7 +385,7 @@
         "StatusCode": 200
       },
       {
-        "Type": "Product.Core.Model.BaseDataResponseModel\u00601[[Product.Core.Model.ProductModel, Product.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "ProductApi.Core.Model.BaseDataResponseModel\u00601[[ProductApi.Core.Model.ProductModel, ProductApi.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain; x-api-version=1.0",
           "application/json; x-api-version=1.0",
@@ -394,7 +394,7 @@
         "StatusCode": 500
       },
       {
-        "Type": "Product.Core.Model.BaseDataResponseModel\u00601[[Product.Core.Model.ProductModel, Product.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "ProductApi.Core.Model.BaseDataResponseModel\u00601[[ProductApi.Core.Model.ProductModel, ProductApi.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain; x-api-version=1.0",
           "application/json; x-api-version=1.0",
@@ -420,7 +420,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Product.Core.Model.BaseDataResponseModel\u00601[[Product.Core.Model.ProductModel, Product.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "ProductApi.Core.Model.BaseDataResponseModel\u00601[[ProductApi.Core.Model.ProductModel, ProductApi.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain; x-api-version=1.0",
           "application/json; x-api-version=1.0",
@@ -429,7 +429,7 @@
         "StatusCode": 200
       },
       {
-        "Type": "Product.Core.Model.BaseDataResponseModel\u00601[[Product.Core.Model.ProductModel, Product.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "ProductApi.Core.Model.BaseDataResponseModel\u00601[[ProductApi.Core.Model.ProductModel, ProductApi.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain; x-api-version=1.0",
           "application/json; x-api-version=1.0",
@@ -438,7 +438,7 @@
         "StatusCode": 500
       },
       {
-        "Type": "Product.Core.Model.BaseDataResponseModel\u00601[[Product.Core.Model.ProductModel, Product.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "ProductApi.Core.Model.BaseDataResponseModel\u00601[[ProductApi.Core.Model.ProductModel, ProductApi.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain; x-api-version=1.0",
           "application/json; x-api-version=1.0",
@@ -464,7 +464,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Product.Core.Model.BaseDataResponseModel\u00601[[Product.Core.Model.ProductModel, Product.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "ProductApi.Core.Model.BaseDataResponseModel\u00601[[ProductApi.Core.Model.ProductModel, ProductApi.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain; x-api-version=1.0",
           "application/json; x-api-version=1.0",
@@ -473,7 +473,7 @@
         "StatusCode": 200
       },
       {
-        "Type": "Product.Core.Model.BaseDataResponseModel\u00601[[Product.Core.Model.ProductModel, Product.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "ProductApi.Core.Model.BaseDataResponseModel\u00601[[ProductApi.Core.Model.ProductModel, ProductApi.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain; x-api-version=1.0",
           "application/json; x-api-version=1.0",
@@ -482,7 +482,7 @@
         "StatusCode": 500
       },
       {
-        "Type": "Product.Core.Model.BaseDataResponseModel\u00601[[Product.Core.Model.ProductModel, Product.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "ProductApi.Core.Model.BaseDataResponseModel\u00601[[ProductApi.Core.Model.ProductModel, ProductApi.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain; x-api-version=1.0",
           "application/json; x-api-version=1.0",

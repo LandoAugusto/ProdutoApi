@@ -1,9 +1,9 @@
 ﻿using Asp.Versioning.ApiExplorer;
 using Microsoft.AspNetCore.Diagnostics;
 using Newtonsoft.Json;
-using Product.Core.Infrastructure.Configuration;
-using Product.Core.Infrastructure.Exceptions;
-using Product.Core.Model;
+using ProductApi.Core.Infrastructure.Configuration;
+using ProductApi.Core.Infrastructure.Exceptions;
+using ProductApi.Core.Model;
 using Swashbuckle.AspNetCore.Swagger;
 using Swashbuckle.AspNetCore.SwaggerUI;
 using System.Net;

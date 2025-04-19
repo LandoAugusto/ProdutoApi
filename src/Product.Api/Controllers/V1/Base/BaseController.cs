@@ -1,6 +1,6 @@
 ﻿using Asp.Versioning;
 using Microsoft.AspNetCore.Mvc;
-using Product.Core.Model;
+using ProductApi.Core.Model;
 
 namespace Product.Api.Controllers.V1.Base
 {

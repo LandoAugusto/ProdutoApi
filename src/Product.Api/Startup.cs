@@ -1,6 +1,6 @@
 ﻿using Component.LogExtensions;
 using Product.Api.Extensions;
-using Product.Infra.IoC;
+using ProductApi.Infra.IoC;
 
 namespace Product.Api
 { /// <summary>

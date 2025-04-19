@@ -1,9 +1,9 @@
 ﻿using Component.Log.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
-using Product.Core.Infrastructure.Exceptions;
-using Product.Core.Infrastructure.Interfaces;
-using Product.Core.Model;
+using ProductApi.Core.Infrastructure.Exceptions;
+using ProductApi.Core.Infrastructure.Interfaces;
+using ProductApi.Core.Model;
 using System.Net;
 
 namespace Product.Api.Filters

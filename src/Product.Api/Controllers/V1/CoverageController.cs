@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Product.Api.Controllers.V1.Base;
-using Product.Application.Interfaces;
-using Product.Core.Entities.Enumerators;
-using Product.Core.Model;
+using ProductApi.Application.Interfaces;
+using ProductApi.Core.Entities.Enumerators;
+using ProductApi.Core.Model;
 
 namespace Product.Api.Controllers.V1
 {
