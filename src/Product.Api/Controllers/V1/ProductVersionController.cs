@@ -1,0 +1,180 @@
+﻿using Microsoft.AspNetCore.Mvc;
+using Product.Api.Controllers.V1.Base;
+using Product.Application.Interfaces;
+using Product.Core.Entities.Enumerators;
+using Product.Core.Model;
+
+namespace Product.Api.Controllers.V1
+{
+    public class ProductVersionController  (IProductVersionAcceptanceService productVersionService, IProductVersionInsuredObjectService productVersionInsuredObjectService,
+        IProductVersionClauseService productVersionClauseService, IProductVersionLawsuitTypeService productVersionLawsuitTypeService, IProductVersionTermTypeService productVersionTermTypeService,
+        IProductVersionPaymentMethodService productVersionPaymentMethodService, IProductVersionPaymentInstallmentService productVersionPaymentInstallmentService,
+        IProductVersionPaymentFrequencyService productVersionPaymentFrequencyService) : BaseController
+    {
+        private readonly IProductVersionAcceptanceService _productVersionService = productVersionService;
+        private readonly IProductVersionInsuredObjectService _productVersionInsuredObjectService = productVersionInsuredObjectService;
+        private readonly IProductVersionClauseService _productVersionClauseService = productVersionClauseService;
+        private readonly IProductVersionLawsuitTypeService _productVersionLawsuitTypeService = productVersionLawsuitTypeService;
+        private readonly IProductVersionTermTypeService _productVersionTermTypeService = productVersionTermTypeService;
+        private readonly IProductVersionPaymentMethodService _productVersionPaymentMethodService = productVersionPaymentMethodService;
+        private readonly IProductVersionPaymentInstallmentService _productVersionPaymentInstallmentService = productVersionPaymentInstallmentService;
+        private readonly IProductVersionPaymentFrequencyService _productVersionPaymentFrequencyService = productVersionPaymentFrequencyService;
+
+        
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="productId"></param>
+        /// <param name="coverageId"></param>
+        /// <param name="profileId"></param>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("get-product-version-acceptance/{productId}/{coverageId}/{profileId}")]
+        [ProducesResponseType(typeof(BaseDataResponseModel<ProductModel>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<ProductModel>), StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<ProductModel>), StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> GetProductVersionAcceptancesAsync(int productId, int coverageId, int profileId)
+        {
+            var response = await _productVersionService.GetAsync(productId, coverageId, profileId, RecordStatusEnum.Ativo);
+            if (response == null)
+                return ReturnNotFound();
+
+            return base.ReturnSuccess(response);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="productVersionId"></param>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("get-product-version-insured-object/{productVersionId}")]
+        [ProducesResponseType(typeof(BaseDataResponseModel<ProductModel>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<ProductModel>), StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<ProductModel>), StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> GetInsuredObjectAsync(int productVersionId)
+        {
+            var response = await _productVersionInsuredObjectService.GetAsync(productVersionId, RecordStatusEnum.Ativo);
+            if (response == null)
+                return ReturnNotFound();
+
+            return base.ReturnSuccess(response);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="productVersionId"></param>
+        /// <param name="insuredAmountValue"></param>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("get-product-version-clause/{productVersionId}/{insuredAmountValue}")]
+        [ProducesResponseType(typeof(BaseDataResponseModel<ProductModel>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<ProductModel>), StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<ProductModel>), StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> ListClauseAsync(int productVersionId, decimal insuredAmountValue)
+        {
+            var response = await _productVersionClauseService.ListAsync(productVersionId, insuredAmountValue, RecordStatusEnum.Ativo);
+            if (response == null)
+                return ReturnNotFound();
+
+            return base.ReturnSuccess(response);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="productVersionId"></param>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("get-product-version-term-type/{productVersionId}")]
+        [ProducesResponseType(typeof(BaseDataResponseModel<ProductModel>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<ProductModel>), StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<ProductModel>), StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> ListTermTypeAsync(int productVersionId)
+        {
+            var response = await _productVersionTermTypeService.ListAsync(productVersionId, RecordStatusEnum.Ativo);
+            if (response == null)
+                return ReturnNotFound();
+
+            return base.ReturnSuccess(response);
+        }
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="productVersionId"></param>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("get-product-version-lawsuit-type/{productVersionId}")]
+        [ProducesResponseType(typeof(BaseDataResponseModel<ProductModel>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<ProductModel>), StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<ProductModel>), StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> ListLawsuitTypeAsync(int productVersionId)
+        {
+            var response = await _productVersionLawsuitTypeService.ListAsync(productVersionId, RecordStatusEnum.Ativo);
+            if (response == null)
+                return ReturnNotFound();
+
+            return base.ReturnSuccess(response);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="productVersionId"></param>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("get-product-version-payment-method/{productVersionId}")]
+        [ProducesResponseType(typeof(BaseDataResponseModel<ProductModel>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<ProductModel>), StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<ProductModel>), StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> ListPaymentMethodAsync(int productVersionId)
+        {
+            var response = await _productVersionPaymentMethodService.ListAsync(productVersionId, RecordStatusEnum.Ativo);
+            if (response == null)
+                return ReturnNotFound();
+
+            return base.ReturnSuccess(response);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="productVersionId"></param>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("get-product-version-payment-frequency/{productVersionId}")]
+        [ProducesResponseType(typeof(BaseDataResponseModel<ProductModel>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<ProductModel>), StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<ProductModel>), StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> ListPaymentFrequencyAsync(int productVersionId)
+        {
+            var response = await _productVersionPaymentFrequencyService.ListAsync(productVersionId, RecordStatusEnum.Ativo);
+            if (response == null)
+                return ReturnNotFound();
+
+            return base.ReturnSuccess(response);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="productVersionPaymentMethodId"></param>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("get-product-version-payment-installment/{productVersionPaymentMethodId}")]
+        [ProducesResponseType(typeof(BaseDataResponseModel<ProductModel>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<ProductModel>), StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<ProductModel>), StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> ListPaymentInstallmentAsync(int productVersionPaymentMethodId)
+        {
+            var response = await _productVersionPaymentInstallmentService.ListAsync(productVersionPaymentMethodId);
+            if (response == null)
+                return ReturnNotFound();
+
+            return base.ReturnSuccess(response);
+        }
+    }
+}
