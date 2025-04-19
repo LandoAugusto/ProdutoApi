@@ -25,8 +25,8 @@
           "net8.0"
         ],
         "sources": {
-          "C:\\Components\\package": {},
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Work\\APIS\\ProdutoApi\\components\\package": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -104,8 +104,8 @@
           "net8.0"
         ],
         "sources": {
-          "C:\\Components\\package": {},
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Work\\APIS\\ProdutoApi\\components\\package": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -184,8 +184,8 @@
           "net8.0"
         ],
         "sources": {
-          "C:\\Components\\package": {},
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Work\\APIS\\ProdutoApi\\components\\package": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -264,8 +264,8 @@
           "net8.0"
         ],
         "sources": {
-          "C:\\Components\\package": {},
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Work\\APIS\\ProdutoApi\\components\\package": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
