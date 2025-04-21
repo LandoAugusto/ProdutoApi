@@ -1,7 +1,9 @@
 ﻿using Asp.Versioning;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Cors.Infrastructure;
 using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Product.Api.Configurations;
 using Product.Api.Filters;
@@ -10,8 +12,10 @@ using ProductApi.Core.Infrastructure.Configuration;
 using ProductApi.Core.Infrastructure.Interfaces;
 using ProductApi.Core.Infrastructure.Mapper;
 using Swashbuckle.AspNetCore.SwaggerGen;
+using System.IdentityModel.Tokens.Jwt;
 using System.IO.Compression;
 using System.Reflection;
+using System.Text;
 
 namespace Product.Api.Extensions
 {
@@ -39,7 +43,8 @@ namespace Product.Api.Extensions
             services.AddApiVersion();
             services.AddSwagger(apiConfig);
             services.AddAutoMapper(typeof(ConfigurarationMapping));
-            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();            
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddAuthAndAuthor(apiConfig);
         }
 
         private static IServiceCollection ConfigControllersPipeline(this IServiceCollection services)
@@ -153,6 +158,64 @@ namespace Product.Api.Extensions
                 var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
                 options.IncludeXmlComments(xmlPath);
             });
+        }
+
+        private static void AddAuthAndAuthor(this IServiceCollection services, ApiConfig apiConfig)
+        {
+            if (apiConfig.Jwt.Enable)
+            {
+                var signingConfigurations = new SigningConfiguration();
+                services.AddSingleton(signingConfigurations);
+
+                services.AddAuthentication(options =>
+                {
+                    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme; ;
+                    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+                }).AddJwtBearer(jwtOptions =>
+                {
+                    var secretKey = apiConfig.Jwt.Secret;
+                    var validateSigningKey = !string.IsNullOrWhiteSpace(secretKey);
+
+                    var paramsValidation = jwtOptions.TokenValidationParameters;
+
+                    paramsValidation.IssuerSigningKey = signingConfigurations.Key;
+                    paramsValidation.ValidAudience = apiConfig.Jwt.Audience;
+                    paramsValidation.ValidIssuer = apiConfig.Jwt.Issuer;
+                    paramsValidation.ValidateIssuerSigningKey = true;
+                    paramsValidation.ValidateLifetime = true;
+                    paramsValidation.ClockSkew = TimeSpan.FromHours(apiConfig.Jwt.ExpiresInMinutes);
+                    if (validateSigningKey)
+                    {
+                        var secretKeyBytes = Encoding.UTF8.GetBytes(secretKey);
+                        jwtOptions.TokenValidationParameters.IssuerSigningKey = new SymmetricSecurityKey(secretKeyBytes);
+                    }
+                    else
+                    {
+                        jwtOptions.TokenValidationParameters.RequireExpirationTime = false;
+                        jwtOptions.TokenValidationParameters.RequireSignedTokens = false;
+                        jwtOptions.TokenValidationParameters.SignatureValidator = (token, _) =>
+                            new JwtSecurityToken(token);
+                    }
+
+                    jwtOptions.TokenValidationParameters = paramsValidation;
+
+                    jwtOptions.Events = new JwtBearerEvents
+                    {
+                        OnChallenge = async (context) =>
+                        {
+                            context.HandleResponse();
+                            context.Response.StatusCode = StatusCodes.Status401Unauthorized;
+
+                        },
+                        OnForbidden = async (context) =>
+                        {
+                            context.Response.StatusCode = StatusCodes.Status403Forbidden;
+                        },
+                    };
+                });
+
+                services.AddAuthorization();
+            }
         }
     }
 }
