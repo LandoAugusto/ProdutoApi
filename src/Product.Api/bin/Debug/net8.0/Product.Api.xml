@@ -130,6 +130,11 @@
             <param name="productVersionPaymentMethodId"></param>
             <returns></returns>
         </member>
+        <member name="T:Product.Api.Extensions.ApplicationBuilderExtensions">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="T:Product.Api.Extensions.ServiceCollectionExtensions">
             <summary>
             
@@ -146,6 +151,13 @@
             <summary>
             
             </summary>
+        </member>
+        <member name="M:Product.Api.Filters.SwaggerJsonIgnoreFilter.Apply(Microsoft.OpenApi.Models.OpenApiOperation,Swashbuckle.AspNetCore.SwaggerGen.OperationFilterContext)">
+            <summary>
+            
+            </summary>
+            <param name="operation"></param>
+            <param name="context"></param>
         </member>
         <member name="T:Product.Api.Startup">
             <summary>

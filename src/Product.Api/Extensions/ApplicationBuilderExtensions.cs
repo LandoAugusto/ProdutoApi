@@ -10,6 +10,9 @@ using System.Net;
 
 namespace Product.Api.Extensions
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public static class ApplicationBuilderExtensions
     {
 

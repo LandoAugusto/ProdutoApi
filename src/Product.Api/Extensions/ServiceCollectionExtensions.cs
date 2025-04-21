@@ -120,7 +120,7 @@ namespace Product.Api.Extensions
                 options.OperationFilter<SwaggerDefaultValues>();
 
                 options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
-                {
+                {   
                     Description =
                     @"Digite 'Bearer' [espaço] e, em seguida, seu token na entrada de texto abaixo.<br><br>Example: 'Bearer 12345abcdef'<br>",
                     Name = "Authorization",

@@ -1,4 +1,5 @@
 ﻿using Asp.Versioning;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ProductApi.Core.Model;
 
@@ -7,7 +8,7 @@ namespace Product.Api.Controllers.V1.Base
     /// <summary>
     /// 
     /// </summary>
-    //[Authorize]
+    [Authorize]
     [ApiController]
     [Route("api/v{version:apiVersion}/[controller]")]
     [ApiVersion("1.0")]

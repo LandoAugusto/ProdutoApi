@@ -1,7 +1,36 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Work\\APIS\\ProdutoApi\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{43668110-B5EE-4FD3-A7F7-006DF586C52A}|src\\Product.Api\\Product.Api.csproj|c:\\work\\apis\\produtoapi\\src\\product.api\\controllers\\v1\\base\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{43668110-B5EE-4FD3-A7F7-006DF586C52A}|src\\Product.Api\\Product.Api.csproj|solutionrelative:src\\product.api\\controllers\\v1\\base\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{43668110-B5EE-4FD3-A7F7-006DF586C52A}|src\\Product.Api\\Product.Api.csproj|c:\\work\\apis\\produtoapi\\src\\product.api\\extensions\\servicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{43668110-B5EE-4FD3-A7F7-006DF586C52A}|src\\Product.Api\\Product.Api.csproj|solutionrelative:src\\product.api\\extensions\\servicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{43668110-B5EE-4FD3-A7F7-006DF586C52A}|src\\Product.Api\\Product.Api.csproj|c:\\work\\apis\\produtoapi\\src\\product.api\\extensions\\applicationbuilderextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{43668110-B5EE-4FD3-A7F7-006DF586C52A}|src\\Product.Api\\Product.Api.csproj|solutionrelative:src\\product.api\\extensions\\applicationbuilderextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{43668110-B5EE-4FD3-A7F7-006DF586C52A}|src\\Product.Api\\Product.Api.csproj|c:\\work\\apis\\produtoapi\\src\\product.api\\filters\\swaggerjsonignorefilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{43668110-B5EE-4FD3-A7F7-006DF586C52A}|src\\Product.Api\\Product.Api.csproj|solutionrelative:src\\product.api\\filters\\swaggerjsonignorefilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B379D005-B4EB-4D29-90D8-082B692C37BD}|src\\ProductApi.Infra.IoC\\ProductApi.Infra.IoC.csproj|c:\\work\\apis\\produtoapi\\src\\productapi.infra.ioc\\dependencyinjectionextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B379D005-B4EB-4D29-90D8-082B692C37BD}|src\\ProductApi.Infra.IoC\\ProductApi.Infra.IoC.csproj|solutionrelative:src\\productapi.infra.ioc\\dependencyinjectionextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{43668110-B5EE-4FD3-A7F7-006DF586C52A}|src\\Product.Api\\Product.Api.csproj|c:\\work\\apis\\produtoapi\\src\\product.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{43668110-B5EE-4FD3-A7F7-006DF586C52A}|src\\Product.Api\\Product.Api.csproj|solutionrelative:src\\product.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{43668110-B5EE-4FD3-A7F7-006DF586C52A}|src\\Product.Api\\Product.Api.csproj|c:\\work\\apis\\produtoapi\\src\\product.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{43668110-B5EE-4FD3-A7F7-006DF586C52A}|src\\Product.Api\\Product.Api.csproj|solutionrelative:src\\product.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -18,6 +47,93 @@
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BaseController.cs",
+              "DocumentMoniker": "C:\\Work\\APIS\\ProdutoApi\\src\\Product.Api\\Controllers\\V1\\Base\\BaseController.cs",
+              "RelativeDocumentMoniker": "src\\Product.Api\\Controllers\\V1\\Base\\BaseController.cs",
+              "ToolTip": "C:\\Work\\APIS\\ProdutoApi\\src\\Product.Api\\Controllers\\V1\\Base\\BaseController.cs*",
+              "RelativeToolTip": "src\\Product.Api\\Controllers\\V1\\Base\\BaseController.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T11:36:23.112Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ServiceCollectionExtensions.cs",
+              "DocumentMoniker": "C:\\Work\\APIS\\ProdutoApi\\src\\Product.Api\\Extensions\\ServiceCollectionExtensions.cs",
+              "RelativeDocumentMoniker": "src\\Product.Api\\Extensions\\ServiceCollectionExtensions.cs",
+              "ToolTip": "C:\\Work\\APIS\\ProdutoApi\\src\\Product.Api\\Extensions\\ServiceCollectionExtensions.cs",
+              "RelativeToolTip": "src\\Product.Api\\Extensions\\ServiceCollectionExtensions.cs",
+              "ViewState": "AgIAAFsAAAAAAAAAAAAcwGQAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T11:30:22.296Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ApplicationBuilderExtensions.cs",
+              "DocumentMoniker": "C:\\Work\\APIS\\ProdutoApi\\src\\Product.Api\\Extensions\\ApplicationBuilderExtensions.cs",
+              "RelativeDocumentMoniker": "src\\Product.Api\\Extensions\\ApplicationBuilderExtensions.cs",
+              "ToolTip": "C:\\Work\\APIS\\ProdutoApi\\src\\Product.Api\\Extensions\\ApplicationBuilderExtensions.cs",
+              "RelativeToolTip": "src\\Product.Api\\Extensions\\ApplicationBuilderExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T11:29:47.339Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SwaggerJsonIgnoreFilter.cs",
+              "DocumentMoniker": "C:\\Work\\APIS\\ProdutoApi\\src\\Product.Api\\Filters\\SwaggerJsonIgnoreFilter.cs",
+              "RelativeDocumentMoniker": "src\\Product.Api\\Filters\\SwaggerJsonIgnoreFilter.cs",
+              "ToolTip": "C:\\Work\\APIS\\ProdutoApi\\src\\Product.Api\\Filters\\SwaggerJsonIgnoreFilter.cs",
+              "RelativeToolTip": "src\\Product.Api\\Filters\\SwaggerJsonIgnoreFilter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T11:27:00.757Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DependencyInjectionExtension.cs",
+              "DocumentMoniker": "C:\\Work\\APIS\\ProdutoApi\\src\\ProductApi.Infra.IoC\\DependencyInjectionExtension.cs",
+              "RelativeDocumentMoniker": "src\\ProductApi.Infra.IoC\\DependencyInjectionExtension.cs",
+              "ToolTip": "C:\\Work\\APIS\\ProdutoApi\\src\\ProductApi.Infra.IoC\\DependencyInjectionExtension.cs",
+              "RelativeToolTip": "src\\ProductApi.Infra.IoC\\DependencyInjectionExtension.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-19T22:31:42.581Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Work\\APIS\\ProdutoApi\\src\\Product.Api\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "src\\Product.Api\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Work\\APIS\\ProdutoApi\\src\\Product.Api\\Properties\\launchSettings.json",
+              "RelativeToolTip": "src\\Product.Api\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-19T22:18:31.188Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Work\\APIS\\ProdutoApi\\src\\Product.Api\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "src\\Product.Api\\appsettings.Development.json",
+              "ToolTip": "C:\\Work\\APIS\\ProdutoApi\\src\\Product.Api\\appsettings.Development.json",
+              "RelativeToolTip": "src\\Product.Api\\appsettings.Development.json",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAcwB0AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-19T22:16:34.247Z"
             }
           ]
         }
