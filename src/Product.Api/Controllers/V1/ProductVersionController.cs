@@ -35,7 +35,7 @@ namespace Product.Api.Controllers.V1
         [ProducesResponseType(typeof(BaseDataResponseModel<ProductModel>), StatusCodes.Status404NotFound)]
         public async Task<IActionResult> GetProductVersionAcceptancesAsync(int productId, int coverageId, int profileId)
         {
-            var response = await _productVersionService.GetAsync(productId, coverageId, profileId, RecordStatusEnum.Ativo);
+            var response = await _productVersionService.GetAsync(productId, coverageId, profileId, RecordStatusEnum.Active);
             if (response == null)
                 return ReturnNotFound();
 
@@ -54,7 +54,7 @@ namespace Product.Api.Controllers.V1
         [ProducesResponseType(typeof(BaseDataResponseModel<ProductModel>), StatusCodes.Status404NotFound)]
         public async Task<IActionResult> GetInsuredObjectAsync(int productVersionId)
         {
-            var response = await _productVersionInsuredObjectService.GetAsync(productVersionId, RecordStatusEnum.Ativo);
+            var response = await _productVersionInsuredObjectService.GetAsync(productVersionId, RecordStatusEnum.Active);
             if (response == null)
                 return ReturnNotFound();
 
@@ -74,7 +74,7 @@ namespace Product.Api.Controllers.V1
         [ProducesResponseType(typeof(BaseDataResponseModel<ProductModel>), StatusCodes.Status404NotFound)]
         public async Task<IActionResult> ListClauseAsync(int productVersionId, decimal insuredAmountValue)
         {
-            var response = await _productVersionClauseService.ListAsync(productVersionId, insuredAmountValue, RecordStatusEnum.Ativo);
+            var response = await _productVersionClauseService.ListAsync(productVersionId, insuredAmountValue, RecordStatusEnum.Active);
             if (response == null)
                 return ReturnNotFound();
 
@@ -93,7 +93,7 @@ namespace Product.Api.Controllers.V1
         [ProducesResponseType(typeof(BaseDataResponseModel<ProductModel>), StatusCodes.Status404NotFound)]
         public async Task<IActionResult> ListTermTypeAsync(int productVersionId)
         {
-            var response = await _productVersionTermTypeService.ListAsync(productVersionId, RecordStatusEnum.Ativo);
+            var response = await _productVersionTermTypeService.ListAsync(productVersionId, RecordStatusEnum.Active);
             if (response == null)
                 return ReturnNotFound();
 
@@ -113,7 +113,7 @@ namespace Product.Api.Controllers.V1
         [ProducesResponseType(typeof(BaseDataResponseModel<ProductModel>), StatusCodes.Status404NotFound)]
         public async Task<IActionResult> ListLawsuitTypeAsync(int productVersionId)
         {
-            var response = await _productVersionLawsuitTypeService.ListAsync(productVersionId, RecordStatusEnum.Ativo);
+            var response = await _productVersionLawsuitTypeService.ListAsync(productVersionId, RecordStatusEnum.Active);
             if (response == null)
                 return ReturnNotFound();
 
@@ -132,7 +132,7 @@ namespace Product.Api.Controllers.V1
         [ProducesResponseType(typeof(BaseDataResponseModel<ProductModel>), StatusCodes.Status404NotFound)]
         public async Task<IActionResult> ListPaymentMethodAsync(int productVersionId)
         {
-            var response = await _productVersionPaymentMethodService.ListAsync(productVersionId, RecordStatusEnum.Ativo);
+            var response = await _productVersionPaymentMethodService.ListAsync(productVersionId, RecordStatusEnum.Active);
             if (response == null)
                 return ReturnNotFound();
 
@@ -151,7 +151,7 @@ namespace Product.Api.Controllers.V1
         [ProducesResponseType(typeof(BaseDataResponseModel<ProductModel>), StatusCodes.Status404NotFound)]
         public async Task<IActionResult> ListPaymentFrequencyAsync(int productVersionId)
         {
-            var response = await _productVersionPaymentFrequencyService.ListAsync(productVersionId, RecordStatusEnum.Ativo);
+            var response = await _productVersionPaymentFrequencyService.ListAsync(productVersionId, RecordStatusEnum.Active);
             if (response == null)
                 return ReturnNotFound();
 
@@ -161,16 +161,17 @@ namespace Product.Api.Controllers.V1
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="productVersionPaymentMethodId"></param>
+        /// <param name="productVersionId"></param>
+        /// <param name="paymentMethodId"></param>
         /// <returns></returns>
         [HttpGet]
-        [Route("get-product-version-payment-installment/{productVersionPaymentMethodId}")]
+        [Route("get-product-version-payment-installment/{productVersionId}/{paymentMethodId}")]
         [ProducesResponseType(typeof(BaseDataResponseModel<ProductModel>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(BaseDataResponseModel<ProductModel>), StatusCodes.Status500InternalServerError)]
         [ProducesResponseType(typeof(BaseDataResponseModel<ProductModel>), StatusCodes.Status404NotFound)]
-        public async Task<IActionResult> ListPaymentInstallmentAsync(int productVersionPaymentMethodId)
+        public async Task<IActionResult> ListPaymentInstallmentAsync(int productVersionId, int paymentMethodId)
         {
-            var response = await _productVersionPaymentInstallmentService.ListAsync(productVersionPaymentMethodId);
+            var response = await _productVersionPaymentInstallmentService.ListAsync(productVersionId, paymentMethodId);
             if (response == null)
                 return ReturnNotFound();
 

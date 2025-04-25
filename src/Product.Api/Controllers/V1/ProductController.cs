@@ -31,7 +31,7 @@ namespace Product.Api.Controllers.V1
         [ProducesResponseType(typeof(BaseDataResponseModel<ProductModel>), StatusCodes.Status404NotFound)]
         public async Task<IActionResult> GetProductAsync()
         {
-            var response = await _productService.GetAllAsync(RecordStatusEnum.Ativo);
+            var response = await _productService.GetAllAsync(RecordStatusEnum.Active);
             if (response == null)
                 return ReturnNotFound();
 

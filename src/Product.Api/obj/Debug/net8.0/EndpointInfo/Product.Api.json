@@ -842,7 +842,7 @@
         }
       }
     },
-    "/api/v1/productversion/get-product-version-payment-installment/{productVersionPaymentMethodId}": {
+    "/api/v1/productversion/get-product-version-payment-installment/{productVersionId}/{paymentMethodId}": {
       "get": {
         "tags": [
           "ProductVersion"
@@ -850,7 +850,17 @@
         "summary": "",
         "parameters": [
           {
-            "name": "productVersionPaymentMethodId",
+            "name": "productVersionId",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "paymentMethodId",
             "in": "path",
             "description": "",
             "required": true,

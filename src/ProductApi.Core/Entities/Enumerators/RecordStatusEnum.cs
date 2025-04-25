@@ -6,7 +6,7 @@ namespace ProductApi.Core.Entities.Enumerators
     public enum RecordStatusEnum
     {
         [Description("Ativo")]
-        Ativo = 1,
+        Active = 1,
 
         [Description("Inativo")]
         Inativo = 2,

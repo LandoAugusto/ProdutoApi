@@ -128,11 +128,12 @@
             <param name="productVersionId"></param>
             <returns></returns>
         </member>
-        <member name="M:Product.Api.Controllers.V1.ProductVersionController.ListPaymentInstallmentAsync(System.Int32)">
+        <member name="M:Product.Api.Controllers.V1.ProductVersionController.ListPaymentInstallmentAsync(System.Int32,System.Int32)">
             <summary>
             
             </summary>
-            <param name="productVersionPaymentMethodId"></param>
+            <param name="productVersionId"></param>
+            <param name="paymentMethodId"></param>
             <returns></returns>
         </member>
         <member name="T:Product.Api.Extensions.ApplicationBuilderExtensions">

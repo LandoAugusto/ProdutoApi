@@ -26,7 +26,7 @@ namespace Product.Api.Controllers.V1
         [ProducesResponseType(typeof(BaseDataResponseModel<ProductModel>), StatusCodes.Status404NotFound)]
         public async Task<IActionResult> GetByBranchIdAsync(int branchId)
         {
-            var response = await _productService.GetAllAsync(RecordStatusEnum.Ativo);
+            var response = await _productService.GetAllAsync(RecordStatusEnum.Active);
             if (response == null)
                 return ReturnNotFound();
 
@@ -45,7 +45,7 @@ namespace Product.Api.Controllers.V1
         [ProducesResponseType(typeof(BaseDataResponseModel<ProductModel>), StatusCodes.Status404NotFound)]
         public async Task<IActionResult> GetByProductIdAsync(int productId)
         {
-            var response = await _productService.GetAllAsync(RecordStatusEnum.Ativo);
+            var response = await _productService.GetAllAsync(RecordStatusEnum.Active);
             if (response == null)
                 return ReturnNotFound();
 

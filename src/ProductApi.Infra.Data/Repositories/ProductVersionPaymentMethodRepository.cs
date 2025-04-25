@@ -9,6 +9,23 @@ namespace ProductApi.Infra.Data.Repositories
 {
     internal class ProductVersionPaymentMethodRepository(ProductDbContext context) : DomainRepository<ProductVersionPaymentMethod>(context), IProductVersionPaymentMethodRepository
     {
+        public async Task<ProductVersionPaymentMethod?> GetAsync(int productVersionId, int paymentMethodId, RecordStatusEnum recordStatus)
+        {
+            var query =
+                    await Task.FromResult(
+                        GenerateQuery(
+                            filter: (filtr => filtr.ProductVersionId.Equals(productVersionId)
+                            && filtr.PaymentMethodId.Equals(paymentMethodId)
+                            && filtr.Status.Equals((int)recordStatus)),
+                            includeProperties: source =>
+                                    source
+                                    .Include(item => item.ProductVersion)
+                                    .Include(item => item.PaymentMethod),
+                            orderBy: item => item.OrderBy(y => y.ProductVersionPaymentMethodId)));
+
+            return query.FirstOrDefault();
+        }
+
         public async Task<IEnumerable<ProductVersionPaymentMethod>?> ListAsync(int productVersionId, RecordStatusEnum recordStatus)
         {
             var query =

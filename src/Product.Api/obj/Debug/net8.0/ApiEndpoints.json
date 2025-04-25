@@ -363,13 +363,18 @@
   {
     "ContainingType": "Product.Api.Controllers.V1.ProductVersionController",
     "Method": "ListPaymentInstallmentAsync",
-    "RelativePath": "api/v1/productversion/get-product-version-payment-installment/{productVersionPaymentMethodId}",
+    "RelativePath": "api/v1/productversion/get-product-version-payment-installment/{productVersionId}/{paymentMethodId}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "productVersionPaymentMethodId",
+        "Name": "productVersionId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "paymentMethodId",
         "Type": "System.Int32",
         "IsRequired": true
       }
