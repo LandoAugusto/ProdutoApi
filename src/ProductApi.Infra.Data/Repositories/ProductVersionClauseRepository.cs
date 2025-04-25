@@ -9,12 +9,12 @@ namespace ProductApi.Infra.Data.Repositories
 {
     internal class ProductVersionClauseRepository(ProductDbContext context) : DomainRepository<ProductVersionClause>(context), IProductVersionClauseRepository
     {
-        public async Task<IEnumerable<ProductVersionClause>?> ListAsync(int productVersionId, decimal insuredAmountValue, RecordStatusEnum recordStatus)
+        public async Task<IEnumerable<ProductVersionClause>?> ListAsync(int productVersionCoverageId, decimal insuredAmountValue, RecordStatusEnum recordStatus)
         {
             var query =
                     await Task.FromResult(
                         GenerateQuery(
-                            filter: (filtr => filtr.ProductVersionId.Equals(productVersionId)
+                            filter: (filtr => filtr.ProductVersionCoverageId.Equals(productVersionCoverageId)
                                      && filtr.Status.Equals((int)recordStatus)
                                      && (insuredAmountValue >= filtr.InsuredAmountValueMin && insuredAmountValue <= filtr.InsuredAmountValueMax)),
                             includeProperties: source =>

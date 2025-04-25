@@ -8,8 +8,7 @@ namespace ProductApi.Application.Extensions
     {
         public static void AddAppServices(this IServiceCollection services)
         {
-            services.AddScoped<IProductService, ProductService>();            
-            services.AddScoped<IProductService, ProductService>();            
+            services.AddScoped<IProductService, ProductService>();                        
             services.AddScoped<IProductVersionAcceptanceService, ProductVersionAcceptanceService>();
             services.AddScoped<IProductVersionInsuredObjectService, ProductVersionInsuredObjectService>();
             services.AddScoped<IProductVersionClauseService, ProductVersionClauseService>();
@@ -17,7 +16,8 @@ namespace ProductApi.Application.Extensions
             services.AddScoped<IProductVersionLawsuitTypeService, ProductVersionLawsuitTypeService>();
             services.AddScoped<IProductVersionPaymentMethodService, ProductVersionPaymentMethodService>();
             services.AddScoped<IProductVersionPaymentInstallmentService, ProductVersionPaymentInstallmentService>();
-            services.AddScoped<IProductVersionPaymentFrequencyService, ProductVersionPaymentFrequencyService>();            
+            services.AddScoped<IProductVersionPaymentFrequencyService, ProductVersionPaymentFrequencyService>();
+            services.AddScoped<IProductVersionCoverageAppService, ProductVersionCoverageAppService>();
         }
     }
 }

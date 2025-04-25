@@ -76,6 +76,34 @@
             <param name="productService"></param>
         </member>
         <!-- Badly formed XML comment ignored for member "M:Product.Api.Controllers.V1.ProductController.GetProductAsync" -->
+        <member name="T:Product.Api.Controllers.V1.ProductVersionController">
+            <summary>
+            
+            </summary>
+            <param name="productVersionService"></param>
+            <param name="productVersionInsuredObjectService"></param>
+            <param name="productVersionClauseService"></param>
+            <param name="productVersionLawsuitTypeService"></param>
+            <param name="productVersionTermTypeService"></param>
+            <param name="productVersionPaymentMethodService"></param>
+            <param name="productVersionPaymentInstallmentService"></param>
+            <param name="productVersionPaymentFrequencyService"></param>
+            <param name="productVersionCoverageAppService"></param>
+        </member>
+        <member name="M:Product.Api.Controllers.V1.ProductVersionController.#ctor(ProductApi.Application.Interfaces.IProductVersionAcceptanceService,ProductApi.Application.Interfaces.IProductVersionInsuredObjectService,ProductApi.Application.Interfaces.IProductVersionClauseService,ProductApi.Application.Interfaces.IProductVersionLawsuitTypeService,ProductApi.Application.Interfaces.IProductVersionTermTypeService,ProductApi.Application.Interfaces.IProductVersionPaymentMethodService,ProductApi.Application.Interfaces.IProductVersionPaymentInstallmentService,ProductApi.Application.Interfaces.IProductVersionPaymentFrequencyService,ProductApi.Application.Interfaces.IProductVersionCoverageAppService)">
+            <summary>
+            
+            </summary>
+            <param name="productVersionService"></param>
+            <param name="productVersionInsuredObjectService"></param>
+            <param name="productVersionClauseService"></param>
+            <param name="productVersionLawsuitTypeService"></param>
+            <param name="productVersionTermTypeService"></param>
+            <param name="productVersionPaymentMethodService"></param>
+            <param name="productVersionPaymentInstallmentService"></param>
+            <param name="productVersionPaymentFrequencyService"></param>
+            <param name="productVersionCoverageAppService"></param>
+        </member>
         <member name="M:Product.Api.Controllers.V1.ProductVersionController.GetProductVersionAcceptancesAsync(System.Int32,System.Int32,System.Int32)">
             <summary>
             
@@ -89,6 +117,21 @@
             <summary>
             
             </summary>
+            <param name="productVersionId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Product.Api.Controllers.V1.ProductVersionController.GetByCoverageIdsync(System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="productVersionId"></param>
+            <param name="coverageId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Product.Api.Controllers.V1.ProductVersionController.ListCoverageIdsync(System.Int32)">
+            <summary>
+            
+            </summary>        
             <param name="productVersionId"></param>
             <returns></returns>
         </member>

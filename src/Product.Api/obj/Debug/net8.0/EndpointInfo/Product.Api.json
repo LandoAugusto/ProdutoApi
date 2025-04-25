@@ -422,6 +422,180 @@
         }
       }
     },
+    "/api/v1/productversion/get-product-version-coverage/{productVersionId}/{coverageId}": {
+      "get": {
+        "tags": [
+          "ProductVersion"
+        ],
+        "summary": "",
+        "parameters": [
+          {
+            "name": "productVersionId",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "coverageId",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProductModelBaseDataResponseModel"
+                }
+              },
+              "application/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProductModelBaseDataResponseModel"
+                }
+              },
+              "text/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProductModelBaseDataResponseModel"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "text/plain; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProductModelBaseDataResponseModel"
+                }
+              },
+              "application/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProductModelBaseDataResponseModel"
+                }
+              },
+              "text/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProductModelBaseDataResponseModel"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProductModelBaseDataResponseModel"
+                }
+              },
+              "application/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProductModelBaseDataResponseModel"
+                }
+              },
+              "text/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProductModelBaseDataResponseModel"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/productversion/list-product-version-coverage/{productVersionId}": {
+      "get": {
+        "tags": [
+          "ProductVersion"
+        ],
+        "summary": "",
+        "parameters": [
+          {
+            "name": "productVersionId",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProductModelBaseDataResponseModel"
+                }
+              },
+              "application/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProductModelBaseDataResponseModel"
+                }
+              },
+              "text/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProductModelBaseDataResponseModel"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "text/plain; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProductModelBaseDataResponseModel"
+                }
+              },
+              "application/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProductModelBaseDataResponseModel"
+                }
+              },
+              "text/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProductModelBaseDataResponseModel"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProductModelBaseDataResponseModel"
+                }
+              },
+              "application/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProductModelBaseDataResponseModel"
+                }
+              },
+              "text/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProductModelBaseDataResponseModel"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/v1/productversion/get-product-version-clause/{productVersionId}/{insuredAmountValue}": {
       "get": {
         "tags": [

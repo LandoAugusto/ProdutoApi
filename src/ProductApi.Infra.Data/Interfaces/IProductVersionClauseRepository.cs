@@ -6,6 +6,6 @@ namespace ProductApi.Infra.Data.Interfaces
 {
     public interface IProductVersionClauseRepository : IDomainRepository<ProductVersionClause>
     {
-        Task<IEnumerable<ProductVersionClause?>> ListAsync(int productVersionId, decimal insuredAmountValue, RecordStatusEnum recordStatus);
+        Task<IEnumerable<ProductVersionClause>?> ListAsync(int productVersionId, decimal insuredAmountValue, RecordStatusEnum recordStatus);
     }
 }

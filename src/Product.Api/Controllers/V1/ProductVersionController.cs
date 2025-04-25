@@ -6,10 +6,22 @@ using ProductApi.Core.Model;
 
 namespace Product.Api.Controllers.V1
 {
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="productVersionService"></param>
+    /// <param name="productVersionInsuredObjectService"></param>
+    /// <param name="productVersionClauseService"></param>
+    /// <param name="productVersionLawsuitTypeService"></param>
+    /// <param name="productVersionTermTypeService"></param>
+    /// <param name="productVersionPaymentMethodService"></param>
+    /// <param name="productVersionPaymentInstallmentService"></param>
+    /// <param name="productVersionPaymentFrequencyService"></param>
+    /// <param name="productVersionCoverageAppService"></param>
     public class ProductVersionController  (IProductVersionAcceptanceService productVersionService, IProductVersionInsuredObjectService productVersionInsuredObjectService,
         IProductVersionClauseService productVersionClauseService, IProductVersionLawsuitTypeService productVersionLawsuitTypeService, IProductVersionTermTypeService productVersionTermTypeService,
         IProductVersionPaymentMethodService productVersionPaymentMethodService, IProductVersionPaymentInstallmentService productVersionPaymentInstallmentService,
-        IProductVersionPaymentFrequencyService productVersionPaymentFrequencyService) : BaseController
+        IProductVersionPaymentFrequencyService productVersionPaymentFrequencyService, IProductVersionCoverageAppService productVersionCoverageAppService) : BaseController
     {
         private readonly IProductVersionAcceptanceService _productVersionService = productVersionService;
         private readonly IProductVersionInsuredObjectService _productVersionInsuredObjectService = productVersionInsuredObjectService;
@@ -19,8 +31,9 @@ namespace Product.Api.Controllers.V1
         private readonly IProductVersionPaymentMethodService _productVersionPaymentMethodService = productVersionPaymentMethodService;
         private readonly IProductVersionPaymentInstallmentService _productVersionPaymentInstallmentService = productVersionPaymentInstallmentService;
         private readonly IProductVersionPaymentFrequencyService _productVersionPaymentFrequencyService = productVersionPaymentFrequencyService;
+        private readonly IProductVersionCoverageAppService _productVersionCoverageAppService = productVersionCoverageAppService;    
 
-        
+
         /// <summary>
         /// 
         /// </summary>
@@ -55,6 +68,46 @@ namespace Product.Api.Controllers.V1
         public async Task<IActionResult> GetInsuredObjectAsync(int productVersionId)
         {
             var response = await _productVersionInsuredObjectService.GetAsync(productVersionId, RecordStatusEnum.Active);
+            if (response == null)
+                return ReturnNotFound();
+
+            return base.ReturnSuccess(response);
+        }
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="productVersionId"></param>
+        /// <param name="coverageId"></param>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("get-product-version-coverage/{productVersionId}/{coverageId}")]
+        [ProducesResponseType(typeof(BaseDataResponseModel<ProductModel>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<ProductModel>), StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<ProductModel>), StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> GetByCoverageIdsync(int productVersionId, int coverageId)
+        {
+            var response = await _productVersionCoverageAppService.GetAsync(productVersionId, coverageId, RecordStatusEnum.Active);
+            if (response == null)
+                return ReturnNotFound();
+
+            return base.ReturnSuccess(response);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>        
+        /// <param name="productVersionId"></param>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("list-product-version-coverage/{productVersionId}")]
+        [ProducesResponseType(typeof(BaseDataResponseModel<ProductModel>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<ProductModel>), StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<ProductModel>), StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> ListCoverageIdsync(int productVersionId)
+        {
+            var response = await _productVersionCoverageAppService.ListAsync(productVersionId, RecordStatusEnum.Active);
             if (response == null)
                 return ReturnNotFound();
 

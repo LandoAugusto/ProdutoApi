@@ -19,13 +19,6 @@ namespace ProductApi.Infra.Data.Mappings
               .HasMaxLength(255)
               .IsUnicode(false);
 
-
-            builder
-            .Property(x => x.BranchId);
-
-            builder
-            .Property(x => x.CoverageGroupId);
-
             builder
             .Property(x => x.Status);
 

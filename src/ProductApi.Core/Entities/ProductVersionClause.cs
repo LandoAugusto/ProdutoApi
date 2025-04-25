@@ -6,7 +6,7 @@ namespace ProductApi.Core.Entities
     public class ProductVersionClause : IIdentityEntity
     {
         public int ProductVersionClauseId { get; set; }
-        public int ProductVersionId { get; set; }
+        public int ProductVersionCoverageId { get; set; }
         public int ClauseId { get; set; }
         public int ClauseTextId { get; set; }
         public decimal? InsuredAmountValueMin { get; set; }

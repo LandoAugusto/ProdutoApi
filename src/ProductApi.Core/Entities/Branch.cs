@@ -13,6 +13,6 @@ namespace ProductApi.Core.Entities
         public int? LastChangeUserId { get; set; }
         public DateTime? LastChangeDate { get; set; }
         public virtual BranchType BranchType { get; set; } = null!;
-        public virtual ICollection<Coverage> Coverage { get; set; } = new HashSet<Coverage>();
+        public virtual ICollection<InsuranceBranch> Coverage { get; set; } = new HashSet<InsuranceBranch>();
     }
 }

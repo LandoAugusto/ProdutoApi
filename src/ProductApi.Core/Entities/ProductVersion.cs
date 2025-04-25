@@ -21,6 +21,7 @@ namespace ProductApi.Core.Entities
         public virtual ICollection<ProductVersionInsuredObject> ProductVersionInsuredObject { get; set; } = new HashSet<ProductVersionInsuredObject>();
         public virtual ICollection<ProductVersionClause> ProductVersionClause { get; set; } = new HashSet<ProductVersionClause>();
         public virtual ICollection<ProductVersionPaymentMethod> ProductVersionPaymentMethod { get; set; } = new HashSet<ProductVersionPaymentMethod>();
+        public virtual ICollection<ProductVersionCoverage> ProductVersionCoverage { get; set; } = new HashSet<ProductVersionCoverage>();
 
     }
 }

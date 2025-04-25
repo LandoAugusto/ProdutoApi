@@ -230,6 +230,55 @@
   },
   {
     "ContainingType": "Product.Api.Controllers.V1.ProductVersionController",
+    "Method": "GetByCoverageIdsync",
+    "RelativePath": "api/v1/productversion/get-product-version-coverage/{productVersionId}/{coverageId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "productVersionId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "coverageId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ProductApi.Core.Model.BaseDataResponseModel\u00601[[ProductApi.Core.Model.ProductModel, ProductApi.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "ProductApi.Core.Model.BaseDataResponseModel\u00601[[ProductApi.Core.Model.ProductModel, ProductApi.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0"
+        ],
+        "StatusCode": 500
+      },
+      {
+        "Type": "ProductApi.Core.Model.BaseDataResponseModel\u00601[[ProductApi.Core.Model.ProductModel, ProductApi.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0"
+        ],
+        "StatusCode": 404
+      }
+    ]
+  },
+  {
+    "ContainingType": "Product.Api.Controllers.V1.ProductVersionController",
     "Method": "GetInsuredObjectAsync",
     "RelativePath": "api/v1/productversion/get-product-version-insured-object/{productVersionId}",
     "HttpMethod": "GET",
@@ -457,6 +506,50 @@
     "ContainingType": "Product.Api.Controllers.V1.ProductVersionController",
     "Method": "ListTermTypeAsync",
     "RelativePath": "api/v1/productversion/get-product-version-term-type/{productVersionId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "productVersionId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ProductApi.Core.Model.BaseDataResponseModel\u00601[[ProductApi.Core.Model.ProductModel, ProductApi.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "ProductApi.Core.Model.BaseDataResponseModel\u00601[[ProductApi.Core.Model.ProductModel, ProductApi.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0"
+        ],
+        "StatusCode": 500
+      },
+      {
+        "Type": "ProductApi.Core.Model.BaseDataResponseModel\u00601[[ProductApi.Core.Model.ProductModel, ProductApi.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0"
+        ],
+        "StatusCode": 404
+      }
+    ]
+  },
+  {
+    "ContainingType": "Product.Api.Controllers.V1.ProductVersionController",
+    "Method": "ListCoverageIdsync",
+    "RelativePath": "api/v1/productversion/list-product-version-coverage/{productVersionId}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

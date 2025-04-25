@@ -32,6 +32,7 @@ namespace ProductApi.Infra.Data.Extensions
             services.AddScoped<IProductVersionPaymentMethodRepository, ProductVersionPaymentMethodRepository>();
             services.AddScoped<IProductVersionPaymentInstallmentRepository, ProductVersionPaymentInstallmentRepository>();
             services.AddScoped<IProductVersionPaymentFrequencyRepository, ProductVersionPaymentFrequencyRepository>();
+            services.AddScoped<IProductVersionCoverageRepository, ProductVersionCoverageRepository>();
 
             return services;
         }

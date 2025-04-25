@@ -10,6 +10,7 @@ namespace ProductApi.Infra.Data.Contexts
         }
     
         public virtual DbSet<Branch> Branch { get; set; }
+        public virtual DbSet<InsuranceBranch> InsuranceBranch { get; set; }
         public virtual DbSet<BranchType> BranchType { get; set; }
         public virtual DbSet<Profile> Profile { get; set; }
         public virtual DbSet<Core.Entities.Product> Product { get; set; }        
@@ -22,6 +23,7 @@ namespace ProductApi.Infra.Data.Contexts
         public virtual DbSet<ProductVersionPaymentMethod> ProductVersionPaymentMethod { get; set; }
         public virtual DbSet<ProductVersionPaymentInstallment> ProductVersionPaymentInstallment { get; set; }
         public virtual DbSet<ProductVersionPaymentFrequency> ProductVersionPaymentFrequency { get; set; }
+        public virtual DbSet<ProductVersionCoverage> ProductVersionCoverage { get; set; }
         public virtual DbSet<PaymentFrequency> PaymentFrequency { get; set; }
         public virtual DbSet<PaymentInstallment> PaymentInstallment { get; set; }
         public virtual DbSet<PaymentMethod> PaymentMethod { get; set; }
@@ -29,7 +31,7 @@ namespace ProductApi.Infra.Data.Contexts
         public virtual DbSet<InsuredObject> InsuredObject { get; set; }
         public virtual DbSet<InsuredObjectBlock> InsuredObjectBlock { get; set; }
         public virtual DbSet<Coverage> Coverage { get; set; }
-        public virtual DbSet<CoverageGroup> CoverageGroup { get; set; }
+        //public virtual DbSet<CoverageGroup> CoverageGroup { get; set; }
         public virtual DbSet<FlexRate> FlexRate { get; set; }            
         public virtual DbSet<TermType> TermType { get; set; }        
         public virtual DbSet<LegalRecourseType> LegalRecourseType { get; set; }

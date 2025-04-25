@@ -12,7 +12,7 @@ namespace ProductApi.Infra.Data.Mappings
               .HasKey(x => x.ProductVersionClauseId);
 
             builder
-            .Property(x => x.ProductVersionId);
+            .Property(x => x.ProductVersionCoverageId);
 
             builder
             .Property(x => x.ClauseId);
