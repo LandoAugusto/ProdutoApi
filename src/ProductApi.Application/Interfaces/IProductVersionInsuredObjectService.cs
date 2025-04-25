@@ -1,10 +1,10 @@
 ﻿using ProductApi.Core.Entities.Enumerators;
-using ProductApi.Core.Models;
+using ProductApi.Core.Models.Product;
 
 namespace ProductApi.Application.Interfaces
 {
     public interface IProductVersionInsuredObjectService
     {
-        Task<ProductVersionInsuredObjectModel?> GetAsync(int productVersionId, RecordStatusEnum recordStatus);
+        Task<InsuredObjectModel?> GetAsync(int productVersionId, RecordStatusEnum recordStatus);
     }
 }

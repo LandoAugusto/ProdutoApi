@@ -5,6 +5,6 @@ namespace ProductApi.Application.Interfaces
 {
     public interface IProductVersionPaymentInstallmentService
     {
-        Task<ProductVersionPaymentInstallmentModel?> ListAsync(int productVersionPaymentMethodId);
+        Task<IEnumerable<PaymentInstallmentModel?>> ListAsync(int productVersionPaymentMethodId);
     }
 }

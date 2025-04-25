@@ -10,24 +10,18 @@ namespace ProductApi.Application.Services
 {
     internal class ProductVersionPaymentFrequencyService(IMapper mapper, IProductVersionPaymentFrequencyRepository _productVersionPaymentFrequencyRepository) : IProductVersionPaymentFrequencyService
     {
-        private readonly IMapper _mapper = mapper;   
+        private readonly IMapper _mapper = mapper;
         private readonly IProductVersionPaymentFrequencyRepository _productVersionPaymentFrequencyRepository = _productVersionPaymentFrequencyRepository;
 
-
-        public async Task<ProductVersionPaymentFrequencyModel> ListAsync(int productVersionId, RecordStatusEnum recordStatus)
+        public async Task<IEnumerable<PaymentFrequencyModel>> ListAsync(int productVersionId, RecordStatusEnum recordStatus)
         {
             var entidade = await _productVersionPaymentFrequencyRepository.ListAsync(productVersionId, recordStatus);
             if (!entidade.IsAny<ProductVersionPaymentFrequency>()) return null;
 
-            var response = new ProductVersionPaymentFrequencyModel()
+            return [.. entidade.ToList().Select(item =>
             {
-                ProductVersionId = productVersionId,
-            };
-
-            foreach (var item in entidade)
-                response.PaymentFrequency.Add(_mapper.Map<PaymentFrequencyModel>(item.PaymentFrequency));
-
-            return response;
+                return _mapper.Map<PaymentFrequencyModel>(item?.PaymentFrequency);
+            })];
         }
     }
 }

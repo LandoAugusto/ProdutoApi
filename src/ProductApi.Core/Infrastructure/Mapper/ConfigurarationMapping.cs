@@ -15,13 +15,9 @@ namespace ProductApi.Core.Infrastructure.Mapper
             CreateMap<CoverageModel, Coverage>().ReverseMap();
             CreateMap<TermTypeModel, TermType>().ReverseMap();
             CreateMap<ProductVersionModel, ProductVersion>().ReverseMap();
-            CreateMap<ProductVersionAcceptanceModel, ProductVersionAcceptance>().ReverseMap();
-            CreateMap<ProductVersionInsuredObjectModel, ProductVersionInsuredObject>().ReverseMap();
+            CreateMap<ProductVersionAcceptanceModel, ProductVersionAcceptance>().ReverseMap();            
             CreateMap<ProductVersionClauseModel, ProductVersionClause>().ReverseMap();
-            CreateMap<ProductVersionLawsuitTypeModel, ProductVersionLawsuitType>().ReverseMap();
-            CreateMap<ProductVersionTermTypeModel, ProductVersionTermType>().ReverseMap();
-            CreateMap<ProductVersionPaymentMethodModel, ProductVersionPaymentMethod>().ReverseMap();
-            CreateMap<ProductVersionPaymentFrequencyModel, ProductVersionPaymentFrequency>().ReverseMap();
+            CreateMap<ProductVersionLawsuitTypeModel, ProductVersionLawsuitType>().ReverseMap();                              
             CreateMap<PaymentFrequencyModel, PaymentFrequency>().ReverseMap();
             CreateMap<PaymentInstallmentModel, PaymentInstallment>().ReverseMap();
             CreateMap<InsuredObjectModel, InsuredObject>().ReverseMap();

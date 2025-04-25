@@ -14,12 +14,15 @@ namespace ProductApi.Application.Services
         private readonly IMapper _mapper = mapper;
         private readonly IProductVersionTermTypeRepository _productVersionTermTypeRepository = productVersionTermTypeRepository;
 
-        public async Task<IEnumerable<ProductVersionTermTypeModel>?> ListAsync(int productVersionId, RecordStatusEnum recordStatus)
+        public async Task<IEnumerable<TermTypeModel>?> ListAsync(int productVersionId, RecordStatusEnum recordStatus)
         {
             var entidade = await _productVersionTermTypeRepository.ListAsync(productVersionId, recordStatus);
             if (!entidade.IsAny<ProductVersionTermType>()) return null;
 
-            return _mapper.Map<IEnumerable<ProductVersionTermTypeModel>>(entidade);
+            return [.. entidade.ToList().Select(item =>
+            {
+                return _mapper.Map<TermTypeModel>(item.TermType);
+            })];
         }
     }
 }

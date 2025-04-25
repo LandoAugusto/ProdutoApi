@@ -13,20 +13,15 @@ namespace ProductApi.Application.Services
         private readonly IMapper _mapper = mapper;
         private readonly IProductVersionPaymentMethodRepository _productVersionPaymentMethodRepository = productVersionPaymentMethodRepository;
 
-        public async Task<ProductVersionPaymentMethodModel?> ListAsync(int productVersionId, RecordStatusEnum recordStatus)
+        public async Task<IEnumerable<PaymentMethodModel>> ListAsync(int productVersionId, RecordStatusEnum recordStatus)
         {
             var entidade = await _productVersionPaymentMethodRepository.ListAsync(productVersionId, recordStatus);
             if (!entidade.IsAny<ProductVersionPaymentMethod>()) return null;
 
-            var response = new ProductVersionPaymentMethodModel()
+            return [.. entidade.ToList().Select(item =>
             {
-                ProductVersionId = productVersionId,
-            };
-
-            foreach (var item in entidade)
-                response.PaymentMethodModel.Add(_mapper.Map<PaymentMethodModel>(item.PaymentMethod));
-
-            return response;
+                return _mapper.Map<PaymentMethodModel>(item?.PaymentMethod);
+            })];
         }
     }
 }

@@ -5,6 +5,6 @@ namespace ProductApi.Application.Interfaces
 {
     public  interface IProductVersionTermTypeService
     {
-        Task<IEnumerable<ProductVersionTermTypeModel>?> ListAsync(int productVersionId, RecordStatusEnum recordStatus);
+        Task<IEnumerable<TermTypeModel>?> ListAsync(int productVersionId, RecordStatusEnum recordStatus);
     }
 }
