@@ -19,6 +19,8 @@ namespace ProductApi.Application.Extensions
             services.AddScoped<IProductVersionPaymentFrequencyAppService, ProductVersionPaymentFrequencyAppService>();
             services.AddScoped<IProductVersionCoverageAppService, ProductVersionCoverageAppService>();
             services.AddScoped<ICommonAppService, CommonAppService>();
+            services.AddScoped<IBranchAppService, BranchAppService>();
+            
         }
     }
 }

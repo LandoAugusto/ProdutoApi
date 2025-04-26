@@ -18,10 +18,13 @@ namespace ProductApi.Infra.Data.Extensions
         .AddRepositories();
 
         private static IServiceCollection AddRepositories(this IServiceCollection services)
-        {   
+        {
+            services.AddScoped<IBranchRepository, BranchRepository>();
+            services.AddScoped<IBranchTypeRepository, BranchTypeRepository>();
+            services.AddScoped<IInsuranceBranchRepository, InsuranceBranchRepository>();
             services.AddScoped<IProductRepository, ProductRepository>();
             services.AddScoped<ICoverageRepository, CoverageRepository>();
-            services.AddScoped<IRecordStatusRepository, RecordStatusRepository>();            
+            services.AddScoped<IRecordStatusRepository, RecordStatusRepository>();
             services.AddScoped<IStateRepository, StateRepository>();
             services.AddScoped<IDocumentTypeRepository, DocumentTypeRepository>();
             services.AddScoped<IInsuredTypeRepository, InsuredTypeRepository>();

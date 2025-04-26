@@ -7,6 +7,10 @@ using ProductApi.Core.Model;
 namespace Product.Api.Controllers.V1
 {
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="commonService"></param>
     public class CommonController(ICommonAppService commonService) : BaseController
     {
 

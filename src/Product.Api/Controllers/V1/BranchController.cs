@@ -1,6 +1,11 @@
-﻿namespace Product.Api.Controllers.V1
+﻿using Product.Api.Controllers.V1.Base;
+
+namespace Product.Api.Controllers.V1
 {
-    public class BranchController
+    /// <summary>
+    /// 
+    /// </summary>
+    public class BranchController : BaseController
     {
     }
 }

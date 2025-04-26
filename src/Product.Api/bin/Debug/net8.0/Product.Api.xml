@@ -39,6 +39,23 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="T:Product.Api.Controllers.V1.BranchController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Product.Api.Controllers.V1.CommonController">
+            <summary>
+            
+            </summary>
+            <param name="commonService"></param>
+        </member>
+        <member name="M:Product.Api.Controllers.V1.CommonController.#ctor(ProductApi.Application.Interfaces.ICommonAppService)">
+            <summary>
+            
+            </summary>
+            <param name="commonService"></param>
+        </member>
         <member name="M:Product.Api.Controllers.V1.CommonController.GetStateAllAsync">
             <summary>
             
