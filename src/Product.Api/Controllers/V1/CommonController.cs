@@ -23,7 +23,6 @@ namespace Product.Api.Controllers.V1
         [HttpGet]
         [Route("get-state-all")]
         [ProducesResponseType(typeof(BaseDataResponseModel<StateModel>), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(BaseDataResponseModel<StateModel>), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(BaseDataResponseModel<StateModel>), StatusCodes.Status404NotFound)]
         public async Task<IActionResult> GetStateAllAsync()
         {
@@ -41,7 +40,6 @@ namespace Product.Api.Controllers.V1
         [HttpGet]
         [Route("get-address-type")]
         [ProducesResponseType(typeof(BaseDataResponseModel<IEnumerable<AddressTypeModel>>), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(BaseDataResponseModel<IEnumerable<AddressTypeModel>>), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(BaseDataResponseModel<IEnumerable<AddressTypeModel>>), StatusCodes.Status404NotFound)]
         public async Task<IActionResult> GetAddressTypeAsync()
         {
@@ -59,7 +57,6 @@ namespace Product.Api.Controllers.V1
         [HttpGet]
         [Route("get-document-type")]
         [ProducesResponseType(typeof(BaseDataResponseModel<IEnumerable<DocumentTypeModel>>), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(BaseDataResponseModel<IEnumerable<DocumentTypeModel>>), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(BaseDataResponseModel<IEnumerable<DocumentTypeModel>>), StatusCodes.Status404NotFound)]
         public async Task<IActionResult> GetDocumentypeAsync()
         {
@@ -78,7 +75,6 @@ namespace Product.Api.Controllers.V1
         [HttpGet]
         [Route("get-insured-type")]
         [ProducesResponseType(typeof(BaseDataResponseModel<IEnumerable<InsuredTypeModel>>), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(BaseDataResponseModel<IEnumerable<InsuredTypeModel>>), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(BaseDataResponseModel<IEnumerable<InsuredTypeModel>>), StatusCodes.Status404NotFound)]
         public async Task<IActionResult> GetInsuredTypeModelAsync()
         {

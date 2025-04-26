@@ -12,9 +12,17 @@ namespace ProductApi.Application.Services
         private readonly IMapper _mapper = mapper;
         private readonly IProductRepository _productRepository = productRepository;
 
-        public async Task<IEnumerable<ProductModel>?> GetAllAsync(RecordStatusEnum recordStatus)
+        public async Task<IEnumerable<ProductModel>?> ListAsync(RecordStatusEnum recordStatus)
         {
-            var entidade = await _productRepository.GetAllAsync(recordStatus);
+            var entidade = await _productRepository.ListAsync(recordStatus);
+            if (!entidade.IsAny<Core.Entities.Product>()) return null;
+
+            return _mapper.Map<IEnumerable<ProductModel>>(entidade);
+        }
+
+        public async Task<IEnumerable<ProductModel>?> ListBranchAsync(int insurancebranchId, RecordStatusEnum recordStatus)
+        {
+            var entidade = await _productRepository.ListBranchAsync(insurancebranchId, recordStatus);
             if (!entidade.IsAny<Core.Entities.Product>()) return null;
 
             return _mapper.Map<IEnumerable<ProductModel>>(entidade);

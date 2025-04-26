@@ -32,26 +32,6 @@
               }
             }
           },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "text/plain; x-api-version=1.0": {
-                "schema": {
-                  "$ref": "#/components/schemas/StateModelBaseDataResponseModel"
-                }
-              },
-              "application/json; x-api-version=1.0": {
-                "schema": {
-                  "$ref": "#/components/schemas/StateModelBaseDataResponseModel"
-                }
-              },
-              "text/json; x-api-version=1.0": {
-                "schema": {
-                  "$ref": "#/components/schemas/StateModelBaseDataResponseModel"
-                }
-              }
-            }
-          },
           "404": {
             "description": "Not Found",
             "content": {
@@ -94,26 +74,6 @@
         "responses": {
           "200": {
             "description": "OK",
-            "content": {
-              "text/plain; x-api-version=1.0": {
-                "schema": {
-                  "$ref": "#/components/schemas/StateModelBaseDataResponseModel"
-                }
-              },
-              "application/json; x-api-version=1.0": {
-                "schema": {
-                  "$ref": "#/components/schemas/StateModelBaseDataResponseModel"
-                }
-              },
-              "text/json; x-api-version=1.0": {
-                "schema": {
-                  "$ref": "#/components/schemas/StateModelBaseDataResponseModel"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request",
             "content": {
               "text/plain; x-api-version=1.0": {
                 "schema": {
@@ -192,26 +152,6 @@
               }
             }
           },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "text/plain; x-api-version=1.0": {
-                "schema": {
-                  "$ref": "#/components/schemas/StateModelBaseDataResponseModel"
-                }
-              },
-              "application/json; x-api-version=1.0": {
-                "schema": {
-                  "$ref": "#/components/schemas/StateModelBaseDataResponseModel"
-                }
-              },
-              "text/json; x-api-version=1.0": {
-                "schema": {
-                  "$ref": "#/components/schemas/StateModelBaseDataResponseModel"
-                }
-              }
-            }
-          },
           "404": {
             "description": "Not Found",
             "content": {
@@ -244,26 +184,6 @@
         "responses": {
           "200": {
             "description": "OK",
-            "content": {
-              "text/plain; x-api-version=1.0": {
-                "schema": {
-                  "$ref": "#/components/schemas/StateModelBaseDataResponseModel"
-                }
-              },
-              "application/json; x-api-version=1.0": {
-                "schema": {
-                  "$ref": "#/components/schemas/StateModelBaseDataResponseModel"
-                }
-              },
-              "text/json; x-api-version=1.0": {
-                "schema": {
-                  "$ref": "#/components/schemas/StateModelBaseDataResponseModel"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request",
             "content": {
               "text/plain; x-api-version=1.0": {
                 "schema": {
@@ -332,26 +252,6 @@
               }
             }
           },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "text/plain; x-api-version=1.0": {
-                "schema": {
-                  "$ref": "#/components/schemas/AddressTypeModelIEnumerableBaseDataResponseModel"
-                }
-              },
-              "application/json; x-api-version=1.0": {
-                "schema": {
-                  "$ref": "#/components/schemas/AddressTypeModelIEnumerableBaseDataResponseModel"
-                }
-              },
-              "text/json; x-api-version=1.0": {
-                "schema": {
-                  "$ref": "#/components/schemas/AddressTypeModelIEnumerableBaseDataResponseModel"
-                }
-              }
-            }
-          },
           "404": {
             "description": "Not Found",
             "content": {
@@ -384,26 +284,6 @@
         "responses": {
           "200": {
             "description": "OK",
-            "content": {
-              "text/plain; x-api-version=1.0": {
-                "schema": {
-                  "$ref": "#/components/schemas/DocumentTypeModelIEnumerableBaseDataResponseModel"
-                }
-              },
-              "application/json; x-api-version=1.0": {
-                "schema": {
-                  "$ref": "#/components/schemas/DocumentTypeModelIEnumerableBaseDataResponseModel"
-                }
-              },
-              "text/json; x-api-version=1.0": {
-                "schema": {
-                  "$ref": "#/components/schemas/DocumentTypeModelIEnumerableBaseDataResponseModel"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request",
             "content": {
               "text/plain; x-api-version=1.0": {
                 "schema": {
@@ -472,26 +352,6 @@
               }
             }
           },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "text/plain; x-api-version=1.0": {
-                "schema": {
-                  "$ref": "#/components/schemas/InsuredTypeModelIEnumerableBaseDataResponseModel"
-                }
-              },
-              "application/json; x-api-version=1.0": {
-                "schema": {
-                  "$ref": "#/components/schemas/InsuredTypeModelIEnumerableBaseDataResponseModel"
-                }
-              },
-              "text/json; x-api-version=1.0": {
-                "schema": {
-                  "$ref": "#/components/schemas/InsuredTypeModelIEnumerableBaseDataResponseModel"
-                }
-              }
-            }
-          },
           "404": {
             "description": "Not Found",
             "content": {
@@ -520,6 +380,7 @@
         "tags": [
           "Product"
         ],
+        "summary": "",
         "responses": {
           "200": {
             "description": "OK",
@@ -541,8 +402,50 @@
               }
             }
           },
-          "400": {
-            "description": "Bad Request",
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProductModelBaseDataResponseModel"
+                }
+              },
+              "application/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProductModelBaseDataResponseModel"
+                }
+              },
+              "text/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProductModelBaseDataResponseModel"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/product/get-product-branch/{insurancebranchId}": {
+      "get": {
+        "tags": [
+          "Product"
+        ],
+        "summary": "",
+        "parameters": [
+          {
+            "name": "insurancebranchId",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
             "content": {
               "text/plain; x-api-version=1.0": {
                 "schema": {

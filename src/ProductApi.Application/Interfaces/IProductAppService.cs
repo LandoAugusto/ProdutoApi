@@ -1,10 +1,12 @@
-﻿using ProductApi.Core.Entities.Enumerators;
+﻿using ProductApi.Core.Entities;
+using ProductApi.Core.Entities.Enumerators;
 using ProductApi.Core.Model;
 
 namespace ProductApi.Application.Interfaces
 {
     public interface IProductAppService
     {
-        Task<IEnumerable<ProductModel>?> GetAllAsync(RecordStatusEnum recordStatus);
+        Task<IEnumerable<ProductModel>?> ListAsync(RecordStatusEnum recordStatus);
+        Task<IEnumerable<ProductModel>?> ListBranchAsync(int insurancebranchId, RecordStatusEnum recordStatusEnum);
     }
 }

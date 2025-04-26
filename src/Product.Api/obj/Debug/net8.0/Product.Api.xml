@@ -115,7 +115,19 @@
             </summary>
             <param name="productService"></param>
         </member>
-        <!-- Badly formed XML comment ignored for member "M:Product.Api.Controllers.V1.ProductController.GetProductAsync" -->
+        <member name="M:Product.Api.Controllers.V1.ProductController.GetProductAsync">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Product.Api.Controllers.V1.ProductController.GetByBranchAsync(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="insurancebranchId"></param>
+            <returns></returns>
+        </member>
         <member name="T:Product.Api.Controllers.V1.ProductVersionController">
             <summary>
             

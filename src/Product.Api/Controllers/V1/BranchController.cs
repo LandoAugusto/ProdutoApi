@@ -20,8 +20,7 @@ namespace Product.Api.Controllers.V1
         /// <returns></returns>
         [HttpGet]
         [Route("get-branch-type")]
-        [ProducesResponseType(typeof(BaseDataResponseModel<StateModel>), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(BaseDataResponseModel<StateModel>), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<StateModel>), StatusCodes.Status200OK)]        
         [ProducesResponseType(typeof(BaseDataResponseModel<StateModel>), StatusCodes.Status404NotFound)]
         public async Task<IActionResult> ListBranchTypeAsync()
         {
@@ -38,8 +37,7 @@ namespace Product.Api.Controllers.V1
         /// <returns></returns>
         [HttpGet]
         [Route("get-branch")]
-        [ProducesResponseType(typeof(BaseDataResponseModel<StateModel>), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(BaseDataResponseModel<StateModel>), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<StateModel>), StatusCodes.Status200OK)]        
         [ProducesResponseType(typeof(BaseDataResponseModel<StateModel>), StatusCodes.Status404NotFound)]
         public async Task<IActionResult> ListBranchAsync(int? brachTypeId)
         {
@@ -56,8 +54,7 @@ namespace Product.Api.Controllers.V1
         /// <returns></returns>
         [HttpGet]
         [Route("get-insurance-branch")]
-        [ProducesResponseType(typeof(BaseDataResponseModel<StateModel>), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(BaseDataResponseModel<StateModel>), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<StateModel>), StatusCodes.Status200OK)]        
         [ProducesResponseType(typeof(BaseDataResponseModel<StateModel>), StatusCodes.Status404NotFound)]
         public async Task<IActionResult> ListInsuranceBranchAsync(int? brachId)
         {

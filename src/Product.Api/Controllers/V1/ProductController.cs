@@ -16,22 +16,36 @@ namespace Product.Api.Controllers.V1
 
         private readonly IProductAppService _productService = productService;
 
-        // <summary>        
+
+        /// <summary>
+        /// 
         /// </summary>
-        /// <remarks>
-        /// remark goes here.
-        /// </remarks>
-        /// <param name="id">Required </param>
-        /// <return>Returns comment</return>
-        /// <response code="200">Ok</response>        
+        /// <returns></returns>
         [HttpGet]
         [Route("get-all")]
-        [ProducesResponseType(typeof(BaseDataResponseModel<ProductModel>), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(BaseDataResponseModel<ProductModel>), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<ProductModel>), StatusCodes.Status200OK)]        
         [ProducesResponseType(typeof(BaseDataResponseModel<ProductModel>), StatusCodes.Status404NotFound)]
         public async Task<IActionResult> GetProductAsync()
         {
-            var response = await _productService.GetAllAsync(RecordStatusEnum.Active);
+            var response = await _productService.ListAsync(RecordStatusEnum.Active);
+            if (response == null)
+                return ReturnNotFound();
+
+            return base.ReturnSuccess(response);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="insurancebranchId"></param>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("get-product-branch/{insurancebranchId}")]
+        [ProducesResponseType(typeof(BaseDataResponseModel<ProductModel>), StatusCodes.Status200OK)]        
+        [ProducesResponseType(typeof(BaseDataResponseModel<ProductModel>), StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> GetByBranchAsync(int insurancebranchId)
+        {
+            var response = await _productService.ListBranchAsync(insurancebranchId, RecordStatusEnum.Active);
             if (response == null)
                 return ReturnNotFound();
 
