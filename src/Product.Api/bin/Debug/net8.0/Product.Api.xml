@@ -55,6 +55,12 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:Product.Api.Controllers.V1.BranchController.ListBranchAsync(System.Nullable{System.Int32})">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
         <member name="T:Product.Api.Controllers.V1.CommonController">
             <summary>
             

@@ -31,5 +31,25 @@ namespace Product.Api.Controllers.V1
 
             return base.ReturnSuccess(response);
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("get-branch")]
+        [ProducesResponseType(typeof(BaseDataResponseModel<StateModel>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<StateModel>), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<StateModel>), StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> ListBranchAsync(int? brachTypeId)
+        {
+            var response = await _branchAppService.ListBranchAsync(brachTypeId, RecordStatusEnum.Active);
+            if (response == null)
+                return ReturnNotFound();
+
+            return base.ReturnSuccess(response);
+        }
+
+
     }
 }

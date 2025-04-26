@@ -3,32 +3,52 @@
   "WorkspaceRootPath": "C:\\Work\\APIS\\ProdutoApi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{43668110-B5EE-4FD3-A7F7-006DF586C52A}|src\\Product.Api\\Product.Api.csproj|c:\\work\\apis\\produtoapi\\src\\product.api\\controllers\\v1\\branchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{43668110-B5EE-4FD3-A7F7-006DF586C52A}|src\\Product.Api\\Product.Api.csproj|solutionrelative:src\\product.api\\controllers\\v1\\branchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9E735982-15C2-4A44-8C50-450518BDD0B0}|src\\ProductApi.Core\\ProductApi.Core.csproj|c:\\work\\apis\\produtoapi\\src\\productapi.core\\entities\\branchtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E735982-15C2-4A44-8C50-450518BDD0B0}|src\\ProductApi.Core\\ProductApi.Core.csproj|solutionrelative:src\\productapi.core\\entities\\branchtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2584B1B8-298A-4720-9F3D-CE2FFB56C036}|src\\ProductApi.Infra.Data\\ProductApi.Infra.Data.csproj|c:\\work\\apis\\produtoapi\\src\\productapi.infra.data\\repositories\\branchtyperepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2584B1B8-298A-4720-9F3D-CE2FFB56C036}|src\\ProductApi.Infra.Data\\ProductApi.Infra.Data.csproj|solutionrelative:src\\productapi.infra.data\\repositories\\branchtyperepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{69EDEDAB-4A20-4441-B979-F66AC5305D8A}|src\\ProductApi.Application\\ProductApi.Application.csproj|c:\\work\\apis\\produtoapi\\src\\productapi.application\\interfaces\\ibranchappservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69EDEDAB-4A20-4441-B979-F66AC5305D8A}|src\\ProductApi.Application\\ProductApi.Application.csproj|solutionrelative:src\\productapi.application\\interfaces\\ibranchappservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{69EDEDAB-4A20-4441-B979-F66AC5305D8A}|src\\ProductApi.Application\\ProductApi.Application.csproj|c:\\work\\apis\\produtoapi\\src\\productapi.application\\services\\branchappservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{69EDEDAB-4A20-4441-B979-F66AC5305D8A}|src\\ProductApi.Application\\ProductApi.Application.csproj|solutionrelative:src\\productapi.application\\services\\branchappservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{43668110-B5EE-4FD3-A7F7-006DF586C52A}|src\\Product.Api\\Product.Api.csproj|c:\\work\\apis\\produtoapi\\src\\product.api\\controllers\\v1\\branchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{43668110-B5EE-4FD3-A7F7-006DF586C52A}|src\\Product.Api\\Product.Api.csproj|solutionrelative:src\\product.api\\controllers\\v1\\branchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2584B1B8-298A-4720-9F3D-CE2FFB56C036}|src\\ProductApi.Infra.Data\\ProductApi.Infra.Data.csproj|c:\\work\\apis\\produtoapi\\src\\productapi.infra.data\\interfaces\\ibranchrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2584B1B8-298A-4720-9F3D-CE2FFB56C036}|src\\ProductApi.Infra.Data\\ProductApi.Infra.Data.csproj|solutionrelative:src\\productapi.infra.data\\interfaces\\ibranchrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9E735982-15C2-4A44-8C50-450518BDD0B0}|src\\ProductApi.Core\\ProductApi.Core.csproj|c:\\work\\apis\\produtoapi\\src\\productapi.core\\infrastructure\\mapper\\configurarationmapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9E735982-15C2-4A44-8C50-450518BDD0B0}|src\\ProductApi.Core\\ProductApi.Core.csproj|solutionrelative:src\\productapi.core\\infrastructure\\mapper\\configurarationmapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{43668110-B5EE-4FD3-A7F7-006DF586C52A}|src\\Product.Api\\Product.Api.csproj|c:\\work\\apis\\produtoapi\\src\\product.api\\controllers\\v1\\commoncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{43668110-B5EE-4FD3-A7F7-006DF586C52A}|src\\Product.Api\\Product.Api.csproj|solutionrelative:src\\product.api\\controllers\\v1\\commoncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2584B1B8-298A-4720-9F3D-CE2FFB56C036}|src\\ProductApi.Infra.Data\\ProductApi.Infra.Data.csproj|c:\\work\\apis\\produtoapi\\src\\productapi.infra.data\\repositories\\branchrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2584B1B8-298A-4720-9F3D-CE2FFB56C036}|src\\ProductApi.Infra.Data\\ProductApi.Infra.Data.csproj|solutionrelative:src\\productapi.infra.data\\repositories\\branchrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69EDEDAB-4A20-4441-B979-F66AC5305D8A}|src\\ProductApi.Application\\ProductApi.Application.csproj|c:\\work\\apis\\produtoapi\\src\\productapi.application\\interfaces\\ibranchappservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69EDEDAB-4A20-4441-B979-F66AC5305D8A}|src\\ProductApi.Application\\ProductApi.Application.csproj|solutionrelative:src\\productapi.application\\interfaces\\ibranchappservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9E735982-15C2-4A44-8C50-450518BDD0B0}|src\\ProductApi.Core\\ProductApi.Core.csproj|c:\\work\\apis\\produtoapi\\src\\productapi.core\\entities\\branch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E735982-15C2-4A44-8C50-450518BDD0B0}|src\\ProductApi.Core\\ProductApi.Core.csproj|solutionrelative:src\\productapi.core\\entities\\branch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2584B1B8-298A-4720-9F3D-CE2FFB56C036}|src\\ProductApi.Infra.Data\\ProductApi.Infra.Data.csproj|c:\\work\\apis\\produtoapi\\src\\productapi.infra.data\\repositories\\branchtyperepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2584B1B8-298A-4720-9F3D-CE2FFB56C036}|src\\ProductApi.Infra.Data\\ProductApi.Infra.Data.csproj|solutionrelative:src\\productapi.infra.data\\repositories\\branchtyperepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E735982-15C2-4A44-8C50-450518BDD0B0}|src\\ProductApi.Core\\ProductApi.Core.csproj|c:\\work\\apis\\produtoapi\\src\\productapi.core\\model\\branchmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E735982-15C2-4A44-8C50-450518BDD0B0}|src\\ProductApi.Core\\ProductApi.Core.csproj|solutionrelative:src\\productapi.core\\model\\branchmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E735982-15C2-4A44-8C50-450518BDD0B0}|src\\ProductApi.Core\\ProductApi.Core.csproj|c:\\work\\apis\\produtoapi\\src\\productapi.core\\model\\branchtypemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E735982-15C2-4A44-8C50-450518BDD0B0}|src\\ProductApi.Core\\ProductApi.Core.csproj|solutionrelative:src\\productapi.core\\model\\branchtypemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E735982-15C2-4A44-8C50-450518BDD0B0}|src\\ProductApi.Core\\ProductApi.Core.csproj|c:\\work\\apis\\produtoapi\\src\\productapi.core\\entities\\branchtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E735982-15C2-4A44-8C50-450518BDD0B0}|src\\ProductApi.Core\\ProductApi.Core.csproj|solutionrelative:src\\productapi.core\\entities\\branchtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{43668110-B5EE-4FD3-A7F7-006DF586C52A}|src\\Product.Api\\Product.Api.csproj|c:\\work\\apis\\produtoapi\\src\\product.api\\controllers\\v1\\commoncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{43668110-B5EE-4FD3-A7F7-006DF586C52A}|src\\Product.Api\\Product.Api.csproj|solutionrelative:src\\product.api\\controllers\\v1\\commoncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2584B1B8-298A-4720-9F3D-CE2FFB56C036}|src\\ProductApi.Infra.Data\\ProductApi.Infra.Data.csproj|c:\\work\\apis\\produtoapi\\src\\productapi.infra.data\\interfaces\\ibranchtyperepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -41,10 +61,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{69EDEDAB-4A20-4441-B979-F66AC5305D8A}|src\\ProductApi.Application\\ProductApi.Application.csproj|c:\\work\\apis\\produtoapi\\src\\productapi.application\\services\\commonappservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{69EDEDAB-4A20-4441-B979-F66AC5305D8A}|src\\ProductApi.Application\\ProductApi.Application.csproj|solutionrelative:src\\productapi.application\\services\\commonappservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9E735982-15C2-4A44-8C50-450518BDD0B0}|src\\ProductApi.Core\\ProductApi.Core.csproj|c:\\work\\apis\\produtoapi\\src\\productapi.core\\model\\branchtypemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E735982-15C2-4A44-8C50-450518BDD0B0}|src\\ProductApi.Core\\ProductApi.Core.csproj|solutionrelative:src\\productapi.core\\model\\branchtypemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2584B1B8-298A-4720-9F3D-CE2FFB56C036}|src\\ProductApi.Infra.Data\\ProductApi.Infra.Data.csproj|c:\\work\\apis\\produtoapi\\src\\productapi.infra.data\\mappings\\insurancebranchmapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -67,14 +83,6 @@
       "RelativeMoniker": "D:0:0:{2584B1B8-298A-4720-9F3D-CE2FFB56C036}|src\\ProductApi.Infra.Data\\ProductApi.Infra.Data.csproj|solutionrelative:src\\productapi.infra.data\\interfaces\\iinsurancebranchrepository.cs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2584B1B8-298A-4720-9F3D-CE2FFB56C036}|src\\ProductApi.Infra.Data\\ProductApi.Infra.Data.csproj|c:\\work\\apis\\produtoapi\\src\\productapi.infra.data\\repositories\\branchrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2584B1B8-298A-4720-9F3D-CE2FFB56C036}|src\\ProductApi.Infra.Data\\ProductApi.Infra.Data.csproj|solutionrelative:src\\productapi.infra.data\\repositories\\branchrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2584B1B8-298A-4720-9F3D-CE2FFB56C036}|src\\ProductApi.Infra.Data\\ProductApi.Infra.Data.csproj|c:\\work\\apis\\produtoapi\\src\\productapi.infra.data\\interfaces\\ibranchrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2584B1B8-298A-4720-9F3D-CE2FFB56C036}|src\\ProductApi.Infra.Data\\ProductApi.Infra.Data.csproj|solutionrelative:src\\productapi.infra.data\\interfaces\\ibranchrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{69EDEDAB-4A20-4441-B979-F66AC5305D8A}|src\\ProductApi.Application\\ProductApi.Application.csproj|c:\\work\\apis\\produtoapi\\src\\productapi.application\\extensions\\dependencyinjectionextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{69EDEDAB-4A20-4441-B979-F66AC5305D8A}|src\\ProductApi.Application\\ProductApi.Application.csproj|solutionrelative:src\\productapi.application\\extensions\\dependencyinjectionextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -86,7 +94,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 20,
+          "SelectedChildIndex": 19,
           "Children": [
             {
               "$type": "Bookmark",
@@ -98,7 +106,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
+              "Title": "Branch.cs",
+              "DocumentMoniker": "C:\\Work\\APIS\\ProdutoApi\\src\\ProductApi.Core\\Entities\\Branch.cs",
+              "RelativeDocumentMoniker": "src\\ProductApi.Core\\Entities\\Branch.cs",
+              "ToolTip": "C:\\Work\\APIS\\ProdutoApi\\src\\ProductApi.Core\\Entities\\Branch.cs",
+              "RelativeToolTip": "src\\ProductApi.Core\\Entities\\Branch.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAcAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T12:35:42.313Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "BranchModel.cs",
+              "DocumentMoniker": "C:\\Work\\APIS\\ProdutoApi\\src\\ProductApi.Core\\Model\\BranchModel.cs",
+              "RelativeDocumentMoniker": "src\\ProductApi.Core\\Model\\BranchModel.cs",
+              "ToolTip": "C:\\Work\\APIS\\ProdutoApi\\src\\ProductApi.Core\\Model\\BranchModel.cs",
+              "RelativeToolTip": "src\\ProductApi.Core\\Model\\BranchModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T12:34:28.972Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "BranchType.cs",
               "DocumentMoniker": "C:\\Work\\APIS\\ProdutoApi\\src\\ProductApi.Core\\Entities\\BranchType.cs",
               "RelativeDocumentMoniker": "src\\ProductApi.Core\\Entities\\BranchType.cs",
@@ -111,7 +145,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 14,
               "Title": "CommonAppService.cs",
               "DocumentMoniker": "C:\\Work\\APIS\\ProdutoApi\\src\\ProductApi.Application\\Services\\CommonAppService.cs",
               "RelativeDocumentMoniker": "src\\ProductApi.Application\\Services\\CommonAppService.cs",
@@ -130,27 +164,27 @@
               "RelativeDocumentMoniker": "src\\ProductApi.Core\\Infrastructure\\Mapper\\ConfigurarationMapping.cs",
               "ToolTip": "C:\\Work\\APIS\\ProdutoApi\\src\\ProductApi.Core\\Infrastructure\\Mapper\\ConfigurarationMapping.cs",
               "RelativeToolTip": "src\\ProductApi.Core\\Infrastructure\\Mapper\\ConfigurarationMapping.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-26T12:23:33.779Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 9,
               "Title": "BranchTypeModel.cs",
               "DocumentMoniker": "C:\\Work\\APIS\\ProdutoApi\\src\\ProductApi.Core\\Model\\BranchTypeModel.cs",
               "RelativeDocumentMoniker": "src\\ProductApi.Core\\Model\\BranchTypeModel.cs",
               "ToolTip": "C:\\Work\\APIS\\ProdutoApi\\src\\ProductApi.Core\\Model\\BranchTypeModel.cs",
               "RelativeToolTip": "src\\ProductApi.Core\\Model\\BranchTypeModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAQAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-26T12:23:02.929Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 15,
               "Title": "InsuranceBranchMapping.cs",
               "DocumentMoniker": "C:\\Work\\APIS\\ProdutoApi\\src\\ProductApi.Infra.Data\\Mappings\\InsuranceBranchMapping.cs",
               "RelativeDocumentMoniker": "src\\ProductApi.Infra.Data\\Mappings\\InsuranceBranchMapping.cs",
@@ -163,7 +197,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 16,
               "Title": "BranchMapping.cs",
               "DocumentMoniker": "C:\\Work\\APIS\\ProdutoApi\\src\\ProductApi.Infra.Data\\Mappings\\BranchMapping.cs",
               "RelativeDocumentMoniker": "src\\ProductApi.Infra.Data\\Mappings\\BranchMapping.cs",
@@ -176,7 +210,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 17,
               "Title": "ProductDbContext.cs",
               "DocumentMoniker": "C:\\Work\\APIS\\ProdutoApi\\src\\ProductApi.Infra.Data\\Contexts\\ProductDbContext.cs",
               "RelativeDocumentMoniker": "src\\ProductApi.Infra.Data\\Contexts\\ProductDbContext.cs",
@@ -189,7 +223,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 13,
               "Title": "DependencyInjectionExtension.cs",
               "DocumentMoniker": "C:\\Work\\APIS\\ProdutoApi\\src\\ProductApi.Infra.Data\\Extensions\\DependencyInjectionExtension.cs",
               "RelativeDocumentMoniker": "src\\ProductApi.Infra.Data\\Extensions\\DependencyInjectionExtension.cs",
@@ -202,20 +236,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "BranchTypeRepository.cs",
               "DocumentMoniker": "C:\\Work\\APIS\\ProdutoApi\\src\\ProductApi.Infra.Data\\Repositories\\BranchTypeRepository.cs",
               "RelativeDocumentMoniker": "src\\ProductApi.Infra.Data\\Repositories\\BranchTypeRepository.cs",
               "ToolTip": "C:\\Work\\APIS\\ProdutoApi\\src\\ProductApi.Infra.Data\\Repositories\\BranchTypeRepository.cs",
               "RelativeToolTip": "src\\ProductApi.Infra.Data\\Repositories\\BranchTypeRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAABdAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAoAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-26T12:16:17.315Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 12,
               "Title": "IBranchTypeRepository.cs",
               "DocumentMoniker": "C:\\Work\\APIS\\ProdutoApi\\src\\ProductApi.Infra.Data\\Interfaces\\IBranchTypeRepository.cs",
               "RelativeDocumentMoniker": "src\\ProductApi.Infra.Data\\Interfaces\\IBranchTypeRepository.cs",
@@ -228,7 +262,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 19,
               "Title": "IInsuranceBranchRepository.cs.cs",
               "DocumentMoniker": "C:\\Work\\APIS\\ProdutoApi\\src\\ProductApi.Infra.Data\\Interfaces\\IInsuranceBranchRepository.cs.cs",
               "RelativeDocumentMoniker": "src\\ProductApi.Infra.Data\\Interfaces\\IInsuranceBranchRepository.cs.cs",
@@ -241,7 +275,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 18,
               "Title": "InsuranceBranchRepository.cs",
               "DocumentMoniker": "C:\\Work\\APIS\\ProdutoApi\\src\\ProductApi.Infra.Data\\Repositories\\InsuranceBranchRepository.cs",
               "RelativeDocumentMoniker": "src\\ProductApi.Infra.Data\\Repositories\\InsuranceBranchRepository.cs",
@@ -254,33 +288,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 5,
               "Title": "BranchRepository.cs",
               "DocumentMoniker": "C:\\Work\\APIS\\ProdutoApi\\src\\ProductApi.Infra.Data\\Repositories\\BranchRepository.cs",
               "RelativeDocumentMoniker": "src\\ProductApi.Infra.Data\\Repositories\\BranchRepository.cs",
               "ToolTip": "C:\\Work\\APIS\\ProdutoApi\\src\\ProductApi.Infra.Data\\Repositories\\BranchRepository.cs",
               "RelativeToolTip": "src\\ProductApi.Infra.Data\\Repositories\\BranchRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABpAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-26T12:12:21.611Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 3,
               "Title": "IBranchRepository.cs",
               "DocumentMoniker": "C:\\Work\\APIS\\ProdutoApi\\src\\ProductApi.Infra.Data\\Interfaces\\IBranchRepository.cs",
               "RelativeDocumentMoniker": "src\\ProductApi.Infra.Data\\Interfaces\\IBranchRepository.cs",
               "ToolTip": "C:\\Work\\APIS\\ProdutoApi\\src\\ProductApi.Infra.Data\\Interfaces\\IBranchRepository.cs",
               "RelativeToolTip": "src\\ProductApi.Infra.Data\\Interfaces\\IBranchRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-26T12:12:11.14Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "DependencyInjectionExtension.cs",
               "DocumentMoniker": "C:\\Work\\APIS\\ProdutoApi\\src\\ProductApi.Application\\Extensions\\DependencyInjectionExtension.cs",
               "RelativeDocumentMoniker": "src\\ProductApi.Application\\Extensions\\DependencyInjectionExtension.cs",
@@ -293,33 +327,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
               "Title": "IBranchAppService.cs",
               "DocumentMoniker": "C:\\Work\\APIS\\ProdutoApi\\src\\ProductApi.Application\\Interfaces\\IBranchAppService.cs",
               "RelativeDocumentMoniker": "src\\ProductApi.Application\\Interfaces\\IBranchAppService.cs",
               "ToolTip": "C:\\Work\\APIS\\ProdutoApi\\src\\ProductApi.Application\\Interfaces\\IBranchAppService.cs",
               "RelativeToolTip": "src\\ProductApi.Application\\Interfaces\\IBranchAppService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-26T12:10:51.02Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "BranchAppService.cs",
               "DocumentMoniker": "C:\\Work\\APIS\\ProdutoApi\\src\\ProductApi.Application\\Services\\BranchAppService.cs",
               "RelativeDocumentMoniker": "src\\ProductApi.Application\\Services\\BranchAppService.cs",
               "ToolTip": "C:\\Work\\APIS\\ProdutoApi\\src\\ProductApi.Application\\Services\\BranchAppService.cs",
               "RelativeToolTip": "src\\ProductApi.Application\\Services\\BranchAppService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA7AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-26T12:10:42.208Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 11,
               "Title": "CommonController.cs",
               "DocumentMoniker": "C:\\Work\\APIS\\ProdutoApi\\src\\Product.Api\\Controllers\\V1\\CommonController.cs",
               "RelativeDocumentMoniker": "src\\Product.Api\\Controllers\\V1\\CommonController.cs",
@@ -332,13 +366,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "BranchController.cs",
               "DocumentMoniker": "C:\\Work\\APIS\\ProdutoApi\\src\\Product.Api\\Controllers\\V1\\BranchController.cs",
               "RelativeDocumentMoniker": "src\\Product.Api\\Controllers\\V1\\BranchController.cs",
-              "ToolTip": "C:\\Work\\APIS\\ProdutoApi\\src\\Product.Api\\Controllers\\V1\\BranchController.cs",
-              "RelativeToolTip": "src\\Product.Api\\Controllers\\V1\\BranchController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
+              "ToolTip": "C:\\Work\\APIS\\ProdutoApi\\src\\Product.Api\\Controllers\\V1\\BranchController.cs*",
+              "RelativeToolTip": "src\\Product.Api\\Controllers\\V1\\BranchController.cs*",
+              "ViewState": "AgIAABAAAAAAAAAAAAD4vy4AAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-26T12:09:58.89Z",
               "EditorCaption": ""
