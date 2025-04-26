@@ -19,6 +19,5 @@ namespace ProductApi.Infra.Data.Repositories
 
             return query.AsEnumerable();
         }
-
     }
 }

@@ -11,6 +11,7 @@ namespace ProductApi.Core.Infrastructure.Mapper
         {
             CreateMap<BranchModel, Branch>().ReverseMap();
             CreateMap<BranchTypeModel, BranchType>().ReverseMap();
+            CreateMap<InsuranceBranchModel, InsuranceBranch>().ReverseMap();
             CreateMap<ProductModel, Core.Entities.Product>().ReverseMap();
             CreateMap<CoverageModel, Coverage>().ReverseMap();
             CreateMap<TermTypeModel, TermType>().ReverseMap();

@@ -50,6 +50,22 @@ namespace Product.Api.Controllers.V1
             return base.ReturnSuccess(response);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("get-insurance-branch")]
+        [ProducesResponseType(typeof(BaseDataResponseModel<StateModel>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<StateModel>), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<StateModel>), StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> ListInsuranceBranchAsync(int? brachId)
+        {
+            var response = await _branchAppService.ListInsuranceBranchAsync(brachId, RecordStatusEnum.Active);
+            if (response == null)
+                return ReturnNotFound();
 
+            return base.ReturnSuccess(response);
+        }
     }
 }

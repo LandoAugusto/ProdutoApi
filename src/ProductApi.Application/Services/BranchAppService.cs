@@ -29,5 +29,12 @@ namespace ProductApi.Application.Services
 
             return _mapper.Map<IEnumerable<BranchModel>>(response);
         }
+        public async Task<IEnumerable<InsuranceBranchModel>?> ListInsuranceBranchAsync(int? brachId, RecordStatusEnum recordStatusEnum)
+        {
+            var response = await _insuranceBranchRepository.ListAsync(brachId, recordStatusEnum);
+            if (response == null) return null;
+
+            return _mapper.Map<IEnumerable<InsuranceBranchModel>>(response);
+        }
     }
 }
