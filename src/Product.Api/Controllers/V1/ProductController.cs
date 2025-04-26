@@ -11,10 +11,10 @@ namespace Product.Api.Controllers.V1
     /// </summary>
     /// <param name="productService"></param>
 
-    public class ProductController(IProductService productService) : BaseController
+    public class ProductController(IProductAppService productService) : BaseController
     {
 
-        private readonly IProductService _productService = productService;
+        private readonly IProductAppService _productService = productService;
 
         // <summary>        
         /// </summary>

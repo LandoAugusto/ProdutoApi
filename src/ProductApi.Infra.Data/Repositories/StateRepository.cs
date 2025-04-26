@@ -8,7 +8,7 @@ namespace ProductApi.Infra.Data.Repositories
 {
     internal class StateRepository(ProductDbContext context) : DomainRepository<State>(context), IStateRepository
     {
-        public async Task<IEnumerable<State>?> GetAllAsync(RecordStatusEnum recordStatus)
+        public async Task<IEnumerable<State>?> ListAsync(RecordStatusEnum recordStatus)
         {
             var query =
                     await Task.FromResult(

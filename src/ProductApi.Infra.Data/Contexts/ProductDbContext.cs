@@ -30,13 +30,14 @@ namespace ProductApi.Infra.Data.Contexts
         public virtual DbSet<LawsuitType> LawsuitType { get; set; }        
         public virtual DbSet<InsuredObject> InsuredObject { get; set; }
         public virtual DbSet<InsuredObjectBlock> InsuredObjectBlock { get; set; }
-        public virtual DbSet<Coverage> Coverage { get; set; }
-        //public virtual DbSet<CoverageGroup> CoverageGroup { get; set; }
-        public virtual DbSet<FlexRate> FlexRate { get; set; }            
+        public virtual DbSet<Coverage> Coverage { get; set; }        
         public virtual DbSet<TermType> TermType { get; set; }        
         public virtual DbSet<LegalRecourseType> LegalRecourseType { get; set; }
         public virtual DbSet<LegalRecourseTypeParameter> LegalRecourseTypeParameter { get; set; }
         public virtual DbSet<ClauseText> ClauseText { get; set; }
-        
+        public virtual DbSet<AddressType> AddressType { get; set; }
+        public virtual DbSet<DocumentType> DocumentType { get; set; }
+        public virtual DbSet<InsuredType> InsuredType { get; set; }
+    
     }
 }

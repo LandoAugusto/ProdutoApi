@@ -9,8 +9,6 @@ namespace ProductApi.Core.Infrastructure.Mapper
     {
         public ConfigurarationMapping()
         {
-
-
             CreateMap<ProductModel, Core.Entities.Product>().ReverseMap();
             CreateMap<CoverageModel, Coverage>().ReverseMap();
             CreateMap<TermTypeModel, TermType>().ReverseMap();
@@ -26,7 +24,10 @@ namespace ProductApi.Core.Infrastructure.Mapper
             CreateMap<ClauseModel, Clause>().ReverseMap();
             CreateMap<ClauseTextModel, ClauseText>().ReverseMap();
             CreateMap<TermTypeModel, TermType>().ReverseMap();
-            CreateMap<LawsuitTypeModel, LawsuitType>().ReverseMap();            
+            CreateMap<LawsuitTypeModel, LawsuitType>().ReverseMap();
+            CreateMap<DocumentTypeModel, DocumentType>().ReverseMap();
+            CreateMap<AddressTypeModel, AddressType>().ReverseMap();
+            CreateMap<InsuredTypeModel, InsuredType>().ReverseMap();
         }
     }
 }

@@ -23,6 +23,9 @@ namespace ProductApi.Infra.Data.Extensions
             services.AddScoped<ICoverageRepository, CoverageRepository>();
             services.AddScoped<IRecordStatusRepository, RecordStatusRepository>();            
             services.AddScoped<IStateRepository, StateRepository>();
+            services.AddScoped<IDocumentTypeRepository, DocumentTypeRepository>();
+            services.AddScoped<IInsuredTypeRepository, InsuredTypeRepository>();
+            services.AddScoped<IAddressTypeRepository, AddressTypeRepository>();
             services.AddScoped<IProductVersionRepository, ProductVersionRepository>();
             services.AddScoped<IProductVersionAcceptanceRepository, ProductVersionAcceptanceRepository>();
             services.AddScoped<IProductVersionInsuredObjectRepository, ProductVersionInsuredObjectRepository>();

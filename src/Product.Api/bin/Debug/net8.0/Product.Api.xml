@@ -39,28 +39,28 @@
             </summary>
             <returns></returns>
         </member>
-        <member name="T:Product.Api.Controllers.V1.CoverageController">
+        <member name="M:Product.Api.Controllers.V1.CommonController.GetStateAllAsync">
             <summary>
             
             </summary>
-        </member>
-        <member name="M:Product.Api.Controllers.V1.CoverageController.#ctor(ProductApi.Application.Interfaces.IProductService)">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="M:Product.Api.Controllers.V1.CoverageController.GetByBranchIdAsync(System.Int32)">
-            <summary>
-            
-            </summary>
-            <param name="branchId"></param>
             <returns></returns>
         </member>
-        <member name="M:Product.Api.Controllers.V1.CoverageController.GetByProductIdAsync(System.Int32)">
+        <member name="M:Product.Api.Controllers.V1.CommonController.GetAddressTypeAsync">
             <summary>
             
             </summary>
-            <param name="productId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Product.Api.Controllers.V1.CommonController.GetDocumentypeAsync">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Product.Api.Controllers.V1.CommonController.GetInsuredTypeModelAsync">
+            <summary>
+            
+            </summary>
             <returns></returns>
         </member>
         <member name="T:Product.Api.Controllers.V1.ProductController">
@@ -69,7 +69,7 @@
             </summary>
             <param name="productService"></param>
         </member>
-        <member name="M:Product.Api.Controllers.V1.ProductController.#ctor(ProductApi.Application.Interfaces.IProductService)">
+        <member name="M:Product.Api.Controllers.V1.ProductController.#ctor(ProductApi.Application.Interfaces.IProductAppService)">
             <summary>
             
             </summary>
@@ -90,7 +90,7 @@
             <param name="productVersionPaymentFrequencyService"></param>
             <param name="productVersionCoverageAppService"></param>
         </member>
-        <member name="M:Product.Api.Controllers.V1.ProductVersionController.#ctor(ProductApi.Application.Interfaces.IProductVersionAcceptanceService,ProductApi.Application.Interfaces.IProductVersionInsuredObjectService,ProductApi.Application.Interfaces.IProductVersionClauseService,ProductApi.Application.Interfaces.IProductVersionLawsuitTypeService,ProductApi.Application.Interfaces.IProductVersionTermTypeService,ProductApi.Application.Interfaces.IProductVersionPaymentMethodService,ProductApi.Application.Interfaces.IProductVersionPaymentInstallmentService,ProductApi.Application.Interfaces.IProductVersionPaymentFrequencyService,ProductApi.Application.Interfaces.IProductVersionCoverageAppService)">
+        <member name="M:Product.Api.Controllers.V1.ProductVersionController.#ctor(ProductApi.Application.Interfaces.IProductVersionAcceptanceAppService,ProductApi.Application.Interfaces.IProductVersionInsuredObjectAppService,ProductApi.Application.Interfaces.IProductVersionClauseAppService,ProductApi.Application.Interfaces.IProductVersionLawsuitTypeAppService,ProductApi.Application.Interfaces.IProductVersionTermTypeAppService,ProductApi.Application.Interfaces.IProductVersionPaymentMethodAppService,ProductApi.Application.Interfaces.IProductVersionPaymentInstallmentAppService,ProductApi.Application.Interfaces.IProductVersionPaymentFrequencyAppService,ProductApi.Application.Interfaces.IProductVersionCoverageAppService)">
             <summary>
             
             </summary>

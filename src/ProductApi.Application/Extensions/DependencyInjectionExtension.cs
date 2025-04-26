@@ -8,16 +8,17 @@ namespace ProductApi.Application.Extensions
     {
         public static void AddAppServices(this IServiceCollection services)
         {
-            services.AddScoped<IProductService, ProductService>();                        
-            services.AddScoped<IProductVersionAcceptanceService, ProductVersionAcceptanceService>();
-            services.AddScoped<IProductVersionInsuredObjectService, ProductVersionInsuredObjectService>();
-            services.AddScoped<IProductVersionClauseService, ProductVersionClauseService>();
-            services.AddScoped<IProductVersionTermTypeService, ProductVersionTermTypeService>();
-            services.AddScoped<IProductVersionLawsuitTypeService, ProductVersionLawsuitTypeService>();
-            services.AddScoped<IProductVersionPaymentMethodService, ProductVersionPaymentMethodService>();
-            services.AddScoped<IProductVersionPaymentInstallmentService, ProductVersionPaymentInstallmentService>();
-            services.AddScoped<IProductVersionPaymentFrequencyService, ProductVersionPaymentFrequencyService>();
+            services.AddScoped<IProductAppService, ProductAppService>();                        
+            services.AddScoped<IProductVersionAcceptanceAppService, ProductVersionAcceptanceAppService>();
+            services.AddScoped<IProductVersionInsuredObjectAppService, ProductVersionInsuredObjectAppService>();
+            services.AddScoped<IProductVersionClauseAppService, ProductVersionClauseAppService>();
+            services.AddScoped<IProductVersionTermTypeAppService, ProductVersionTermTypeAppService>();
+            services.AddScoped<IProductVersionLawsuitTypeAppService, ProductVersionLawsuitTypeAppService>();
+            services.AddScoped<IProductVersionPaymentMethodAppService, ProductVersionPaymentMethodAppService>();
+            services.AddScoped<IProductVersionPaymentInstallmentAppService, ProductVersionPaymentInstallmentAppService>();
+            services.AddScoped<IProductVersionPaymentFrequencyAppService, ProductVersionPaymentFrequencyAppService>();
             services.AddScoped<IProductVersionCoverageAppService, ProductVersionCoverageAppService>();
+            services.AddScoped<ICommonAppService, CommonAppService>();
         }
     }
 }

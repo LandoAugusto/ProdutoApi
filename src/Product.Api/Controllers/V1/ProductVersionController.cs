@@ -18,19 +18,19 @@ namespace Product.Api.Controllers.V1
     /// <param name="productVersionPaymentInstallmentService"></param>
     /// <param name="productVersionPaymentFrequencyService"></param>
     /// <param name="productVersionCoverageAppService"></param>
-    public class ProductVersionController  (IProductVersionAcceptanceService productVersionService, IProductVersionInsuredObjectService productVersionInsuredObjectService,
-        IProductVersionClauseService productVersionClauseService, IProductVersionLawsuitTypeService productVersionLawsuitTypeService, IProductVersionTermTypeService productVersionTermTypeService,
-        IProductVersionPaymentMethodService productVersionPaymentMethodService, IProductVersionPaymentInstallmentService productVersionPaymentInstallmentService,
-        IProductVersionPaymentFrequencyService productVersionPaymentFrequencyService, IProductVersionCoverageAppService productVersionCoverageAppService) : BaseController
+    public class ProductVersionController  (IProductVersionAcceptanceAppService productVersionService, IProductVersionInsuredObjectAppService productVersionInsuredObjectService,
+        IProductVersionClauseAppService productVersionClauseService, IProductVersionLawsuitTypeAppService productVersionLawsuitTypeService, IProductVersionTermTypeAppService productVersionTermTypeService,
+        IProductVersionPaymentMethodAppService productVersionPaymentMethodService, IProductVersionPaymentInstallmentAppService productVersionPaymentInstallmentService,
+        IProductVersionPaymentFrequencyAppService productVersionPaymentFrequencyService, IProductVersionCoverageAppService productVersionCoverageAppService) : BaseController
     {
-        private readonly IProductVersionAcceptanceService _productVersionService = productVersionService;
-        private readonly IProductVersionInsuredObjectService _productVersionInsuredObjectService = productVersionInsuredObjectService;
-        private readonly IProductVersionClauseService _productVersionClauseService = productVersionClauseService;
-        private readonly IProductVersionLawsuitTypeService _productVersionLawsuitTypeService = productVersionLawsuitTypeService;
-        private readonly IProductVersionTermTypeService _productVersionTermTypeService = productVersionTermTypeService;
-        private readonly IProductVersionPaymentMethodService _productVersionPaymentMethodService = productVersionPaymentMethodService;
-        private readonly IProductVersionPaymentInstallmentService _productVersionPaymentInstallmentService = productVersionPaymentInstallmentService;
-        private readonly IProductVersionPaymentFrequencyService _productVersionPaymentFrequencyService = productVersionPaymentFrequencyService;
+        private readonly IProductVersionAcceptanceAppService _productVersionService = productVersionService;
+        private readonly IProductVersionInsuredObjectAppService _productVersionInsuredObjectService = productVersionInsuredObjectService;
+        private readonly IProductVersionClauseAppService _productVersionClauseService = productVersionClauseService;
+        private readonly IProductVersionLawsuitTypeAppService _productVersionLawsuitTypeService = productVersionLawsuitTypeService;
+        private readonly IProductVersionTermTypeAppService _productVersionTermTypeService = productVersionTermTypeService;
+        private readonly IProductVersionPaymentMethodAppService _productVersionPaymentMethodService = productVersionPaymentMethodService;
+        private readonly IProductVersionPaymentInstallmentAppService _productVersionPaymentInstallmentService = productVersionPaymentInstallmentService;
+        private readonly IProductVersionPaymentFrequencyAppService _productVersionPaymentFrequencyService = productVersionPaymentFrequencyService;
         private readonly IProductVersionCoverageAppService _productVersionCoverageAppService = productVersionCoverageAppService;    
 
 

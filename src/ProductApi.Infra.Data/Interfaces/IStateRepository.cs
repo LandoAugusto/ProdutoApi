@@ -6,6 +6,6 @@ namespace ProductApi.Infra.Data.Interfaces
 {
     public interface IStateRepository :IDomainRepository<State>
     {
-        Task<IEnumerable<State>?> GetAllAsync(RecordStatusEnum recordStatus);
+        Task<IEnumerable<State>?> ListAsync(RecordStatusEnum recordStatus);
     }
 }

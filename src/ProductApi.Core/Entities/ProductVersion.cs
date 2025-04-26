@@ -12,8 +12,7 @@ namespace ProductApi.Core.Entities
         public DateTime InclusionDate { get; set; }
         public int? LastChangeUserId { get; set; }
         public DateTime? LastChangeDate { get; set; }
-        public virtual Product Product { get; set; } = null!;        
-        public virtual ICollection<FlexRate> FlexRate { get; set; } = new HashSet<FlexRate>();
+        public virtual Product Product { get; set; } = null!;                
         public virtual ICollection<ProductVersionPaymentFrequency> ProductVersionPaymentFrequency { get; set; } = new HashSet<ProductVersionPaymentFrequency>();
         public virtual ICollection<ProductVersionLawsuitType> ProductVersionLawsuitType { get; set; } = new HashSet<ProductVersionLawsuitType>();
         public virtual ICollection<ProductVersionTermType> ProductVersionTermType { get; set; } = new HashSet<ProductVersionTermType>();
