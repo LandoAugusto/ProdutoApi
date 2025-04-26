@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
 using ProductApi.Application.Interfaces;
+using ProductApi.Core.Entities.Enumerators;
+using ProductApi.Core.Model;
 using ProductApi.Infra.Data.Interfaces;
 
 namespace ProductApi.Application.Services
@@ -12,5 +14,12 @@ namespace ProductApi.Application.Services
         private readonly IInsuranceBranchRepository _insuranceBranchRepository = insuranceBranchRepository;
         private readonly IMapper _mapper = mapper;
 
+        public async Task<IEnumerable<BranchTypeModel>?> ListBranchTypeAsync(RecordStatusEnum recordStatusEnum)
+        {
+            var response = await _branchTypeRepository.ListAsync(recordStatusEnum);
+            if (response == null) return null;
+
+            return _mapper.Map<IEnumerable<BranchTypeModel>>(response);
+        }
     }
 }

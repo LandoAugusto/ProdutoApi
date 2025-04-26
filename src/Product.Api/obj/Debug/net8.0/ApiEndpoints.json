@@ -1,5 +1,43 @@
 [
   {
+    "ContainingType": "Product.Api.Controllers.V1.BranchController",
+    "Method": "ListBranchTypeAsync",
+    "RelativePath": "api/v1/branch/get-branch-type",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "ProductApi.Core.Model.BaseDataResponseModel\u00601[[ProductApi.Core.Model.StateModel, ProductApi.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "ProductApi.Core.Model.BaseDataResponseModel\u00601[[ProductApi.Core.Model.StateModel, ProductApi.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0"
+        ],
+        "StatusCode": 400
+      },
+      {
+        "Type": "ProductApi.Core.Model.BaseDataResponseModel\u00601[[ProductApi.Core.Model.StateModel, ProductApi.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0"
+        ],
+        "StatusCode": 404
+      }
+    ]
+  },
+  {
     "ContainingType": "Product.Api.Controllers.V1.CommonController",
     "Method": "GetAddressTypeAsync",
     "RelativePath": "api/v1/common/get-address-type",

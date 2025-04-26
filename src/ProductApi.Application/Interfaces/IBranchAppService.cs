@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ProductApi.Core.Entities.Enumerators;
+using ProductApi.Core.Model;
 
 namespace ProductApi.Application.Interfaces
 {
     public interface IBranchAppService
     {
+        Task<IEnumerable<BranchTypeModel>?> ListBranchTypeAsync(RecordStatusEnum recordStatusEnum);
     }
 }

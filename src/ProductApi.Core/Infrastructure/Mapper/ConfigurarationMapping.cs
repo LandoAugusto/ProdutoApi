@@ -9,6 +9,7 @@ namespace ProductApi.Core.Infrastructure.Mapper
     {
         public ConfigurarationMapping()
         {
+            CreateMap<BranchTypeModel, BranchType>().ReverseMap();
             CreateMap<ProductModel, Core.Entities.Product>().ReverseMap();
             CreateMap<CoverageModel, Coverage>().ReverseMap();
             CreateMap<TermTypeModel, TermType>().ReverseMap();
