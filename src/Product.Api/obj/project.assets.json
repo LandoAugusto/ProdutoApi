@@ -171,7 +171,7 @@
           "lib/netstandard2.1/Ben.Demystifier.dll": {}
         }
       },
-      "Component.Log/1.0.35": {
+      "Component.Log/1.0.36": {
         "type": "package",
         "dependencies": {
           "Elastic.Apm.NetCoreAll": "1.25.3",
@@ -2722,7 +2722,7 @@
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
           "AutoMapper": "14.0.0",
-          "Component.Log": "1.0.35",
+          "Component.Log": "1.0.36",
           "Newtonsoft.Json": "13.0.3"
         },
         "compile": {
@@ -2953,13 +2953,13 @@
         "readme.md"
       ]
     },
-    "Component.Log/1.0.35": {
-      "sha512": "spEdmtCKQE16jlZozGndf3lbRj0VjkYfatfbAdqIHF2szVf3v1f/IfrIbjG9mfaz1Z+3ykeUjv6g12hmk2Utow==",
+    "Component.Log/1.0.36": {
+      "sha512": "5gb+//SXlZltnsL1aYDDg0QIOR2QJP/7b2zvpKcBRktVay2YUNjwfF2HOPNCQqIB2FeoaAI6jXdek8fi0DF5FA==",
       "type": "package",
-      "path": "component.log/1.0.35",
+      "path": "component.log/1.0.36",
       "files": [
         ".nupkg.metadata",
-        "component.log.1.0.35.nupkg.sha512",
+        "component.log.1.0.36.nupkg.sha512",
         "component.log.nuspec",
         "lib/net8.0/Component.Log.dll"
       ]
@@ -7004,16 +7004,17 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Work\\APIS\\ProdutoApi\\src\\Product.Api\\Product.Api.csproj",
+      "projectUniqueName": "C:\\Work\\APIS\\ProductApi\\src\\Product.Api\\Product.Api.csproj",
       "projectName": "Product.Api",
-      "projectPath": "C:\\Work\\APIS\\ProdutoApi\\src\\Product.Api\\Product.Api.csproj",
+      "projectPath": "C:\\Work\\APIS\\ProductApi\\src\\Product.Api\\Product.Api.csproj",
       "packagesPath": "C:\\Users\\lando\\.nuget\\packages\\",
-      "outputPath": "C:\\Work\\APIS\\ProdutoApi\\src\\Product.Api\\obj\\",
+      "outputPath": "C:\\Work\\APIS\\ProductApi\\src\\Product.Api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
+        "C:\\Work\\APIS\\ProductApi\\NuGet.Config",
         "C:\\Users\\lando\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -7023,21 +7024,21 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Work\\APIS\\ProdutoApi\\components\\package": {},
+        "C:\\Work\\APIS\\ProductApi\\components\\package": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Work\\APIS\\ProdutoApi\\src\\ProductApi.Application\\ProductApi.Application.csproj": {
-              "projectPath": "C:\\Work\\APIS\\ProdutoApi\\src\\ProductApi.Application\\ProductApi.Application.csproj"
+            "C:\\Work\\APIS\\ProductApi\\src\\ProductApi.Application\\ProductApi.Application.csproj": {
+              "projectPath": "C:\\Work\\APIS\\ProductApi\\src\\ProductApi.Application\\ProductApi.Application.csproj"
             },
-            "C:\\Work\\APIS\\ProdutoApi\\src\\ProductApi.Core\\ProductApi.Core.csproj": {
-              "projectPath": "C:\\Work\\APIS\\ProdutoApi\\src\\ProductApi.Core\\ProductApi.Core.csproj"
+            "C:\\Work\\APIS\\ProductApi\\src\\ProductApi.Core\\ProductApi.Core.csproj": {
+              "projectPath": "C:\\Work\\APIS\\ProductApi\\src\\ProductApi.Core\\ProductApi.Core.csproj"
             },
-            "C:\\Work\\APIS\\ProdutoApi\\src\\ProductApi.Infra.IoC\\ProductApi.Infra.IoC.csproj": {
-              "projectPath": "C:\\Work\\APIS\\ProdutoApi\\src\\ProductApi.Infra.IoC\\ProductApi.Infra.IoC.csproj"
+            "C:\\Work\\APIS\\ProductApi\\src\\ProductApi.Infra.IoC\\ProductApi.Infra.IoC.csproj": {
+              "projectPath": "C:\\Work\\APIS\\ProductApi\\src\\ProductApi.Infra.IoC\\ProductApi.Infra.IoC.csproj"
             }
           }
         }

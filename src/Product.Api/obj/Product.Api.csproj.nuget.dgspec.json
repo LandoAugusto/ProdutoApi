@@ -1,22 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Work\\APIS\\ProdutoApi\\src\\Product.Api\\Product.Api.csproj": {}
+    "C:\\Work\\APIS\\ProductApi\\src\\Product.Api\\Product.Api.csproj": {}
   },
   "projects": {
-    "C:\\Work\\APIS\\ProdutoApi\\src\\Product.Api\\Product.Api.csproj": {
+    "C:\\Work\\APIS\\ProductApi\\src\\Product.Api\\Product.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Work\\APIS\\ProdutoApi\\src\\Product.Api\\Product.Api.csproj",
+        "projectUniqueName": "C:\\Work\\APIS\\ProductApi\\src\\Product.Api\\Product.Api.csproj",
         "projectName": "Product.Api",
-        "projectPath": "C:\\Work\\APIS\\ProdutoApi\\src\\Product.Api\\Product.Api.csproj",
+        "projectPath": "C:\\Work\\APIS\\ProductApi\\src\\Product.Api\\Product.Api.csproj",
         "packagesPath": "C:\\Users\\lando\\.nuget\\packages\\",
-        "outputPath": "C:\\Work\\APIS\\ProdutoApi\\src\\Product.Api\\obj\\",
+        "outputPath": "C:\\Work\\APIS\\ProductApi\\src\\Product.Api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
+          "C:\\Work\\APIS\\ProductApi\\NuGet.Config",
           "C:\\Users\\lando\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -26,21 +27,21 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Work\\APIS\\ProdutoApi\\components\\package": {},
+          "C:\\Work\\APIS\\ProductApi\\components\\package": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Work\\APIS\\ProdutoApi\\src\\ProductApi.Application\\ProductApi.Application.csproj": {
-                "projectPath": "C:\\Work\\APIS\\ProdutoApi\\src\\ProductApi.Application\\ProductApi.Application.csproj"
+              "C:\\Work\\APIS\\ProductApi\\src\\ProductApi.Application\\ProductApi.Application.csproj": {
+                "projectPath": "C:\\Work\\APIS\\ProductApi\\src\\ProductApi.Application\\ProductApi.Application.csproj"
               },
-              "C:\\Work\\APIS\\ProdutoApi\\src\\ProductApi.Core\\ProductApi.Core.csproj": {
-                "projectPath": "C:\\Work\\APIS\\ProdutoApi\\src\\ProductApi.Core\\ProductApi.Core.csproj"
+              "C:\\Work\\APIS\\ProductApi\\src\\ProductApi.Core\\ProductApi.Core.csproj": {
+                "projectPath": "C:\\Work\\APIS\\ProductApi\\src\\ProductApi.Core\\ProductApi.Core.csproj"
               },
-              "C:\\Work\\APIS\\ProdutoApi\\src\\ProductApi.Infra.IoC\\ProductApi.Infra.IoC.csproj": {
-                "projectPath": "C:\\Work\\APIS\\ProdutoApi\\src\\ProductApi.Infra.IoC\\ProductApi.Infra.IoC.csproj"
+              "C:\\Work\\APIS\\ProductApi\\src\\ProductApi.Infra.IoC\\ProductApi.Infra.IoC.csproj": {
+                "projectPath": "C:\\Work\\APIS\\ProductApi\\src\\ProductApi.Infra.IoC\\ProductApi.Infra.IoC.csproj"
               }
             }
           }
@@ -115,19 +116,20 @@
         }
       }
     },
-    "C:\\Work\\APIS\\ProdutoApi\\src\\ProductApi.Application\\ProductApi.Application.csproj": {
+    "C:\\Work\\APIS\\ProductApi\\src\\ProductApi.Application\\ProductApi.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Work\\APIS\\ProdutoApi\\src\\ProductApi.Application\\ProductApi.Application.csproj",
+        "projectUniqueName": "C:\\Work\\APIS\\ProductApi\\src\\ProductApi.Application\\ProductApi.Application.csproj",
         "projectName": "ProductApi.Application",
-        "projectPath": "C:\\Work\\APIS\\ProdutoApi\\src\\ProductApi.Application\\ProductApi.Application.csproj",
+        "projectPath": "C:\\Work\\APIS\\ProductApi\\src\\ProductApi.Application\\ProductApi.Application.csproj",
         "packagesPath": "C:\\Users\\lando\\.nuget\\packages\\",
-        "outputPath": "C:\\Work\\APIS\\ProdutoApi\\src\\ProductApi.Application\\obj\\",
+        "outputPath": "C:\\Work\\APIS\\ProductApi\\src\\ProductApi.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
+          "C:\\Work\\APIS\\ProductApi\\NuGet.Config",
           "C:\\Users\\lando\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -137,18 +139,18 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Work\\APIS\\ProdutoApi\\components\\package": {},
+          "C:\\Work\\APIS\\ProductApi\\components\\package": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Work\\APIS\\ProdutoApi\\src\\ProductApi.Core\\ProductApi.Core.csproj": {
-                "projectPath": "C:\\Work\\APIS\\ProdutoApi\\src\\ProductApi.Core\\ProductApi.Core.csproj"
+              "C:\\Work\\APIS\\ProductApi\\src\\ProductApi.Core\\ProductApi.Core.csproj": {
+                "projectPath": "C:\\Work\\APIS\\ProductApi\\src\\ProductApi.Core\\ProductApi.Core.csproj"
               },
-              "C:\\Work\\APIS\\ProdutoApi\\src\\ProductApi.Infra.Data\\ProductApi.Infra.Data.csproj": {
-                "projectPath": "C:\\Work\\APIS\\ProdutoApi\\src\\ProductApi.Infra.Data\\ProductApi.Infra.Data.csproj"
+              "C:\\Work\\APIS\\ProductApi\\src\\ProductApi.Infra.Data\\ProductApi.Infra.Data.csproj": {
+                "projectPath": "C:\\Work\\APIS\\ProductApi\\src\\ProductApi.Infra.Data\\ProductApi.Infra.Data.csproj"
               }
             }
           }
@@ -194,19 +196,20 @@
         }
       }
     },
-    "C:\\Work\\APIS\\ProdutoApi\\src\\ProductApi.Core\\ProductApi.Core.csproj": {
+    "C:\\Work\\APIS\\ProductApi\\src\\ProductApi.Core\\ProductApi.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Work\\APIS\\ProdutoApi\\src\\ProductApi.Core\\ProductApi.Core.csproj",
+        "projectUniqueName": "C:\\Work\\APIS\\ProductApi\\src\\ProductApi.Core\\ProductApi.Core.csproj",
         "projectName": "ProductApi.Core",
-        "projectPath": "C:\\Work\\APIS\\ProdutoApi\\src\\ProductApi.Core\\ProductApi.Core.csproj",
+        "projectPath": "C:\\Work\\APIS\\ProductApi\\src\\ProductApi.Core\\ProductApi.Core.csproj",
         "packagesPath": "C:\\Users\\lando\\.nuget\\packages\\",
-        "outputPath": "C:\\Work\\APIS\\ProdutoApi\\src\\ProductApi.Core\\obj\\",
+        "outputPath": "C:\\Work\\APIS\\ProductApi\\src\\ProductApi.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
+          "C:\\Work\\APIS\\ProductApi\\NuGet.Config",
           "C:\\Users\\lando\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -216,7 +219,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Work\\APIS\\ProdutoApi\\components\\package": {},
+          "C:\\Work\\APIS\\ProductApi\\components\\package": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -247,7 +250,7 @@
             },
             "Component.Log": {
               "target": "Package",
-              "version": "[1.0.35, )"
+              "version": "[1.0.36, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",
@@ -274,19 +277,20 @@
         }
       }
     },
-    "C:\\Work\\APIS\\ProdutoApi\\src\\ProductApi.Infra.Data\\ProductApi.Infra.Data.csproj": {
+    "C:\\Work\\APIS\\ProductApi\\src\\ProductApi.Infra.Data\\ProductApi.Infra.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Work\\APIS\\ProdutoApi\\src\\ProductApi.Infra.Data\\ProductApi.Infra.Data.csproj",
+        "projectUniqueName": "C:\\Work\\APIS\\ProductApi\\src\\ProductApi.Infra.Data\\ProductApi.Infra.Data.csproj",
         "projectName": "ProductApi.Infra.Data",
-        "projectPath": "C:\\Work\\APIS\\ProdutoApi\\src\\ProductApi.Infra.Data\\ProductApi.Infra.Data.csproj",
+        "projectPath": "C:\\Work\\APIS\\ProductApi\\src\\ProductApi.Infra.Data\\ProductApi.Infra.Data.csproj",
         "packagesPath": "C:\\Users\\lando\\.nuget\\packages\\",
-        "outputPath": "C:\\Work\\APIS\\ProdutoApi\\src\\ProductApi.Infra.Data\\obj\\",
+        "outputPath": "C:\\Work\\APIS\\ProductApi\\src\\ProductApi.Infra.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
+          "C:\\Work\\APIS\\ProductApi\\NuGet.Config",
           "C:\\Users\\lando\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -296,15 +300,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Work\\APIS\\ProdutoApi\\components\\package": {},
+          "C:\\Work\\APIS\\ProductApi\\components\\package": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Work\\APIS\\ProdutoApi\\src\\ProductApi.Core\\ProductApi.Core.csproj": {
-                "projectPath": "C:\\Work\\APIS\\ProdutoApi\\src\\ProductApi.Core\\ProductApi.Core.csproj"
+              "C:\\Work\\APIS\\ProductApi\\src\\ProductApi.Core\\ProductApi.Core.csproj": {
+                "projectPath": "C:\\Work\\APIS\\ProductApi\\src\\ProductApi.Core\\ProductApi.Core.csproj"
               }
             }
           }
@@ -354,19 +358,20 @@
         }
       }
     },
-    "C:\\Work\\APIS\\ProdutoApi\\src\\ProductApi.Infra.IoC\\ProductApi.Infra.IoC.csproj": {
+    "C:\\Work\\APIS\\ProductApi\\src\\ProductApi.Infra.IoC\\ProductApi.Infra.IoC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Work\\APIS\\ProdutoApi\\src\\ProductApi.Infra.IoC\\ProductApi.Infra.IoC.csproj",
+        "projectUniqueName": "C:\\Work\\APIS\\ProductApi\\src\\ProductApi.Infra.IoC\\ProductApi.Infra.IoC.csproj",
         "projectName": "ProductApi.Infra.IoC",
-        "projectPath": "C:\\Work\\APIS\\ProdutoApi\\src\\ProductApi.Infra.IoC\\ProductApi.Infra.IoC.csproj",
+        "projectPath": "C:\\Work\\APIS\\ProductApi\\src\\ProductApi.Infra.IoC\\ProductApi.Infra.IoC.csproj",
         "packagesPath": "C:\\Users\\lando\\.nuget\\packages\\",
-        "outputPath": "C:\\Work\\APIS\\ProdutoApi\\src\\ProductApi.Infra.IoC\\obj\\",
+        "outputPath": "C:\\Work\\APIS\\ProductApi\\src\\ProductApi.Infra.IoC\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
+          "C:\\Work\\APIS\\ProductApi\\NuGet.Config",
           "C:\\Users\\lando\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -376,18 +381,18 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Work\\APIS\\ProdutoApi\\components\\package": {},
+          "C:\\Work\\APIS\\ProductApi\\components\\package": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Work\\APIS\\ProdutoApi\\src\\ProductApi.Application\\ProductApi.Application.csproj": {
-                "projectPath": "C:\\Work\\APIS\\ProdutoApi\\src\\ProductApi.Application\\ProductApi.Application.csproj"
+              "C:\\Work\\APIS\\ProductApi\\src\\ProductApi.Application\\ProductApi.Application.csproj": {
+                "projectPath": "C:\\Work\\APIS\\ProductApi\\src\\ProductApi.Application\\ProductApi.Application.csproj"
               },
-              "C:\\Work\\APIS\\ProdutoApi\\src\\ProductApi.Infra.Data\\ProductApi.Infra.Data.csproj": {
-                "projectPath": "C:\\Work\\APIS\\ProdutoApi\\src\\ProductApi.Infra.Data\\ProductApi.Infra.Data.csproj"
+              "C:\\Work\\APIS\\ProductApi\\src\\ProductApi.Infra.Data\\ProductApi.Infra.Data.csproj": {
+                "projectPath": "C:\\Work\\APIS\\ProductApi\\src\\ProductApi.Infra.Data\\ProductApi.Infra.Data.csproj"
               }
             }
           }

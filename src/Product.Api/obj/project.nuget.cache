@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4pFJ5ft3Ztk=",
+  "dgSpecHash": "SrEJEPD2v9Q=",
   "success": true,
-  "projectFilePath": "C:\\Work\\APIS\\ProdutoApi\\src\\Product.Api\\Product.Api.csproj",
+  "projectFilePath": "C:\\Work\\APIS\\ProductApi\\src\\Product.Api\\Product.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lando\\.nuget\\packages\\asp.versioning.abstractions\\8.1.0\\asp.versioning.abstractions.8.1.0.nupkg.sha512",
     "C:\\Users\\lando\\.nuget\\packages\\asp.versioning.http\\8.1.0\\asp.versioning.http.8.1.0.nupkg.sha512",
@@ -14,7 +14,7 @@
     "C:\\Users\\lando\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\lando\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
     "C:\\Users\\lando\\.nuget\\packages\\ben.demystifier\\0.4.1\\ben.demystifier.0.4.1.nupkg.sha512",
-    "C:\\Users\\lando\\.nuget\\packages\\component.log\\1.0.35\\component.log.1.0.35.nupkg.sha512",
+    "C:\\Users\\lando\\.nuget\\packages\\component.log\\1.0.36\\component.log.1.0.36.nupkg.sha512",
     "C:\\Users\\lando\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",
     "C:\\Users\\lando\\.nuget\\packages\\elastic.apm\\1.25.3\\elastic.apm.1.25.3.nupkg.sha512",
     "C:\\Users\\lando\\.nuget\\packages\\elastic.apm.aspnetcore\\1.25.3\\elastic.apm.aspnetcore.1.25.3.nupkg.sha512",

@@ -143,7 +143,7 @@
           }
         }
       },
-      "Component.Log/1.0.35": {
+      "Component.Log/1.0.36": {
         "dependencies": {
           "Elastic.Apm.NetCoreAll": "1.25.3",
           "Elastic.CommonSchema.Serilog": "8.6.1",
@@ -157,8 +157,8 @@
         },
         "runtime": {
           "lib/net8.0/Component.Log.dll": {
-            "assemblyVersion": "1.0.35.0",
-            "fileVersion": "1.0.35.0"
+            "assemblyVersion": "1.0.36.0",
+            "fileVersion": "1.0.36.0"
           }
         }
       },
@@ -1679,7 +1679,7 @@
       "ProductApi.Core/1.0.0": {
         "dependencies": {
           "AutoMapper": "14.0.0",
-          "Component.Log": "1.0.35",
+          "Component.Log": "1.0.36",
           "Newtonsoft.Json": "13.0.3"
         },
         "runtime": {
@@ -1792,12 +1792,12 @@
       "path": "ben.demystifier/0.4.1",
       "hashPath": "ben.demystifier.0.4.1.nupkg.sha512"
     },
-    "Component.Log/1.0.35": {
+    "Component.Log/1.0.36": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-spEdmtCKQE16jlZozGndf3lbRj0VjkYfatfbAdqIHF2szVf3v1f/IfrIbjG9mfaz1Z+3ykeUjv6g12hmk2Utow==",
-      "path": "component.log/1.0.35",
-      "hashPath": "component.log.1.0.35.nupkg.sha512"
+      "sha512": "sha512-5gb+//SXlZltnsL1aYDDg0QIOR2QJP/7b2zvpKcBRktVay2YUNjwfF2HOPNCQqIB2FeoaAI6jXdek8fi0DF5FA==",
+      "path": "component.log/1.0.36",
+      "hashPath": "component.log.1.0.36.nupkg.sha512"
     },
     "DnsClient/1.6.1": {
       "type": "package",
