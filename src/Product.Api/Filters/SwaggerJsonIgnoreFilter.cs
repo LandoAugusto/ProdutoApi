@@ -10,6 +10,11 @@ namespace Product.Api.Filters
     /// </summary>
     public class SwaggerJsonIgnoreFilter : IOperationFilter
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="operation"></param>
+        /// <param name="context"></param>
         public void Apply(OpenApiOperation operation, OperationFilterContext context)
         {
             var ignoredProperties = context.MethodInfo.GetParameters()

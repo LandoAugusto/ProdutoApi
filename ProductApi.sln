@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35931.197 d17.13
+VisualStudioVersion = 17.13.35931.197
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
@@ -9,13 +9,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentantion", "Presentant
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Product.Api", "src\Product.Api\Product.Api.csproj", "{43668110-B5EE-4FD3-A7F7-006DF586C52A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Product.Application", "src\Product.Application\Product.Application.csproj", "{69EDEDAB-4A20-4441-B979-F66AC5305D8A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductApi.Application", "src\ProductApi.Application\ProductApi.Application.csproj", "{69EDEDAB-4A20-4441-B979-F66AC5305D8A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Product.Core", "src\Product.Core\Product.Core.csproj", "{9E735982-15C2-4A44-8C50-450518BDD0B0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductApi.Core", "src\ProductApi.Core\ProductApi.Core.csproj", "{9E735982-15C2-4A44-8C50-450518BDD0B0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Product.Infra.Data", "src\Product.Infra.Data\Product.Infra.Data.csproj", "{2584B1B8-298A-4720-9F3D-CE2FFB56C036}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductApi.Infra.Data", "src\ProductApi.Infra.Data\ProductApi.Infra.Data.csproj", "{2584B1B8-298A-4720-9F3D-CE2FFB56C036}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Product.Infra.IoC", "src\Product.Infra.IoC\Product.Infra.IoC.csproj", "{B379D005-B4EB-4D29-90D8-082B692C37BD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductApi.Infra.IoC", "src\ProductApi.Infra.IoC\ProductApi.Infra.IoC.csproj", "{B379D005-B4EB-4D29-90D8-082B692C37BD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

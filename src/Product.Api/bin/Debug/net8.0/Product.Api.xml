@@ -16,6 +16,11 @@
             <param name="value"></param>
             <returns></returns>
         </member>
+        <member name="T:Product.Api.Configurations.SigningConfiguration">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="T:Product.Api.Controllers.V1.Base.BaseController">
             <summary>
             
@@ -34,28 +39,68 @@
             </summary>
             <returns></returns>
         </member>
-        <member name="T:Product.Api.Controllers.V1.CoverageController">
+        <member name="T:Product.Api.Controllers.V1.BranchController">
             <summary>
             
             </summary>
         </member>
-        <member name="M:Product.Api.Controllers.V1.CoverageController.#ctor(Product.Application.Interfaces.IProductService)">
+        <member name="M:Product.Api.Controllers.V1.BranchController.#ctor(ProductApi.Application.Interfaces.IBranchAppService)">
             <summary>
             
             </summary>
         </member>
-        <member name="M:Product.Api.Controllers.V1.CoverageController.GetByBranchIdAsync(System.Int32)">
+        <member name="M:Product.Api.Controllers.V1.BranchController.ListBranchTypeAsync">
             <summary>
             
             </summary>
-            <param name="branchId"></param>
             <returns></returns>
         </member>
-        <member name="M:Product.Api.Controllers.V1.CoverageController.GetByProductIdAsync(System.Int32)">
+        <member name="M:Product.Api.Controllers.V1.BranchController.ListBranchAsync(System.Nullable{System.Int32})">
             <summary>
             
             </summary>
-            <param name="productId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Product.Api.Controllers.V1.BranchController.ListInsuranceBranchAsync(System.Nullable{System.Int32})">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Product.Api.Controllers.V1.CommonController">
+            <summary>
+            
+            </summary>
+            <param name="commonService"></param>
+        </member>
+        <member name="M:Product.Api.Controllers.V1.CommonController.#ctor(ProductApi.Application.Interfaces.ICommonAppService)">
+            <summary>
+            
+            </summary>
+            <param name="commonService"></param>
+        </member>
+        <member name="M:Product.Api.Controllers.V1.CommonController.GetStateAllAsync">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Product.Api.Controllers.V1.CommonController.GetAddressTypeAsync">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Product.Api.Controllers.V1.CommonController.GetDocumentypeAsync">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Product.Api.Controllers.V1.CommonController.GetInsuredTypeModelAsync">
+            <summary>
+            
+            </summary>
             <returns></returns>
         </member>
         <member name="T:Product.Api.Controllers.V1.ProductController">
@@ -64,13 +109,53 @@
             </summary>
             <param name="productService"></param>
         </member>
-        <member name="M:Product.Api.Controllers.V1.ProductController.#ctor(Product.Application.Interfaces.IProductService)">
+        <member name="M:Product.Api.Controllers.V1.ProductController.#ctor(ProductApi.Application.Interfaces.IProductAppService)">
             <summary>
             
             </summary>
             <param name="productService"></param>
         </member>
-        <!-- Badly formed XML comment ignored for member "M:Product.Api.Controllers.V1.ProductController.GetProductAsync" -->
+        <member name="M:Product.Api.Controllers.V1.ProductController.GetProductAsync">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Product.Api.Controllers.V1.ProductController.GetByBranchAsync(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="insurancebranchId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Product.Api.Controllers.V1.ProductVersionController">
+            <summary>
+            
+            </summary>
+            <param name="productVersionService"></param>
+            <param name="productVersionInsuredObjectService"></param>
+            <param name="productVersionClauseService"></param>
+            <param name="productVersionLawsuitTypeService"></param>
+            <param name="productVersionTermTypeService"></param>
+            <param name="productVersionPaymentMethodService"></param>
+            <param name="productVersionPaymentInstallmentService"></param>
+            <param name="productVersionPaymentFrequencyService"></param>
+            <param name="productVersionCoverageAppService"></param>
+        </member>
+        <member name="M:Product.Api.Controllers.V1.ProductVersionController.#ctor(ProductApi.Application.Interfaces.IProductVersionAcceptanceAppService,ProductApi.Application.Interfaces.IProductVersionInsuredObjectAppService,ProductApi.Application.Interfaces.IProductVersionClauseAppService,ProductApi.Application.Interfaces.IProductVersionLawsuitTypeAppService,ProductApi.Application.Interfaces.IProductVersionTermTypeAppService,ProductApi.Application.Interfaces.IProductVersionPaymentMethodAppService,ProductApi.Application.Interfaces.IProductVersionPaymentInstallmentAppService,ProductApi.Application.Interfaces.IProductVersionPaymentFrequencyAppService,ProductApi.Application.Interfaces.IProductVersionCoverageAppService)">
+            <summary>
+            
+            </summary>
+            <param name="productVersionService"></param>
+            <param name="productVersionInsuredObjectService"></param>
+            <param name="productVersionClauseService"></param>
+            <param name="productVersionLawsuitTypeService"></param>
+            <param name="productVersionTermTypeService"></param>
+            <param name="productVersionPaymentMethodService"></param>
+            <param name="productVersionPaymentInstallmentService"></param>
+            <param name="productVersionPaymentFrequencyService"></param>
+            <param name="productVersionCoverageAppService"></param>
+        </member>
         <member name="M:Product.Api.Controllers.V1.ProductVersionController.GetProductVersionAcceptancesAsync(System.Int32,System.Int32,System.Int32)">
             <summary>
             
@@ -84,6 +169,21 @@
             <summary>
             
             </summary>
+            <param name="productVersionId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Product.Api.Controllers.V1.ProductVersionController.GetByCoverageIdsync(System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="productVersionId"></param>
+            <param name="coverageId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Product.Api.Controllers.V1.ProductVersionController.ListCoverageIdsync(System.Int32)">
+            <summary>
+            
+            </summary>        
             <param name="productVersionId"></param>
             <returns></returns>
         </member>
@@ -123,12 +223,18 @@
             <param name="productVersionId"></param>
             <returns></returns>
         </member>
-        <member name="M:Product.Api.Controllers.V1.ProductVersionController.ListPaymentInstallmentAsync(System.Int32)">
+        <member name="M:Product.Api.Controllers.V1.ProductVersionController.ListPaymentInstallmentAsync(System.Int32,System.Int32)">
             <summary>
             
             </summary>
-            <param name="productVersionPaymentMethodId"></param>
+            <param name="productVersionId"></param>
+            <param name="paymentMethodId"></param>
             <returns></returns>
+        </member>
+        <member name="T:Product.Api.Extensions.ApplicationBuilderExtensions">
+            <summary>
+            
+            </summary>
         </member>
         <member name="T:Product.Api.Extensions.ServiceCollectionExtensions">
             <summary>
@@ -146,6 +252,13 @@
             <summary>
             
             </summary>
+        </member>
+        <member name="M:Product.Api.Filters.SwaggerJsonIgnoreFilter.Apply(Microsoft.OpenApi.Models.OpenApiOperation,Swashbuckle.AspNetCore.SwaggerGen.OperationFilterContext)">
+            <summary>
+            
+            </summary>
+            <param name="operation"></param>
+            <param name="context"></param>
         </member>
         <member name="T:Product.Api.Startup">
             <summary>
