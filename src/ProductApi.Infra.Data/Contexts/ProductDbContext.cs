@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using  ProductApi.Core.Entities;
 using ProductApi.Core.Entities;
 
 namespace ProductApi.Infra.Data.Contexts
@@ -38,6 +39,18 @@ namespace ProductApi.Infra.Data.Contexts
         public virtual DbSet<AddressType> AddressType { get; set; }
         public virtual DbSet<DocumentType> DocumentType { get; set; }
         public virtual DbSet<InsuredType> InsuredType { get; set; }
-    
+        public virtual DbSet<RegisterVehicleAccessory> RegisterVehicleAccessory { get; set; }
+        public virtual DbSet<RegisterVehicleBodyWorkType> RegisterVehicleBodyWorkType { get; set; }
+        public virtual DbSet<RegisterVehicleBrand> RegisterVehicleBrand { get; set; }
+        public virtual DbSet<RegisterVehicleColor> RegisterVehicleColor { get; set; }
+        public virtual DbSet<RegisterVehicleDoor> RegisterVehicleDoor { get; set; }
+        public virtual DbSet<RegisterVehicleFuelType> RegisterVehicleFuelType { get; set; }
+        public virtual DbSet<RegisterVehicleModel> RegisterVehicleModel { get; set; }
+        public virtual DbSet<RegisterVehiclePassengerCapacity> RegisterVehiclePassengerCapacity { get; set; }
+        public virtual DbSet<RegisterVehicleType> RegisterVehicleType { get; set; }
+        public virtual DbSet<RegisterVehicleUse> RegisterVehicleUse { get; set; }
+        public virtual DbSet<RegisterVehicleVersion> RegisterVehicleVersion { get; set; }
+        public virtual DbSet<RegisterVehicleYear> RegisterVehicleYear { get; set; }
+
     }
 }

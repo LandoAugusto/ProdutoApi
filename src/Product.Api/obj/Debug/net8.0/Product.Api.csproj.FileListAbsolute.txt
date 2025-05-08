@@ -622,7 +622,6 @@ C:\Work\APIS\ProductApi\src\Product.Api\obj\Debug\net8.0\Product.Api.GeneratedMS
 C:\Work\APIS\ProductApi\src\Product.Api\obj\Debug\net8.0\Product.Api.AssemblyInfoInputs.cache
 C:\Work\APIS\ProductApi\src\Product.Api\obj\Debug\net8.0\Product.Api.AssemblyInfo.cs
 C:\Work\APIS\ProductApi\src\Product.Api\obj\Debug\net8.0\Product.Api.csproj.CoreCompileInputs.cache
-C:\Work\APIS\ProductApi\src\Product.Api\obj\Debug\net8.0\Product.Api.MvcApplicationPartsAssemblyInfo.cs
 C:\Work\APIS\ProductApi\src\Product.Api\obj\Debug\net8.0\Product.Api.MvcApplicationPartsAssemblyInfo.cache
 C:\Work\APIS\ProductApi\src\Product.Api\obj\Debug\net8.0\Product.Api.sourcelink.json
 C:\Work\APIS\ProductApi\src\Product.Api\obj\Debug\net8.0\scopedcss\bundle\Product.Api.styles.css
