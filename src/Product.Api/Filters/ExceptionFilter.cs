@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using ProductApi.Core.Infrastructure.Exceptions;
 using ProductApi.Core.Infrastructure.Interfaces;
-using ProductApi.Core.Model;
+using ProductApi.Core.Models;
 using System.Net;
 
 namespace Product.Api.Filters

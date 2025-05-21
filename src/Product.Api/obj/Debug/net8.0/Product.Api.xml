@@ -67,6 +67,30 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="T:Product.Api.Controllers.V1.CivilCourtController">
+            <summary>
+            
+            </summary>
+            <param name="civilCourtAppService"></param>
+        </member>
+        <member name="M:Product.Api.Controllers.V1.CivilCourtController.#ctor(ProductApi.Application.Interfaces.ICivilCourtAppService)">
+            <summary>
+            
+            </summary>
+            <param name="civilCourtAppService"></param>
+        </member>
+        <member name="M:Product.Api.Controllers.V1.CivilCourtController.GetAllAsync">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Product.Api.Controllers.V1.CivilCourtController.ListAsync(ProductApi.Core.Models.CivilCourtFilterModel)">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
         <member name="T:Product.Api.Controllers.V1.CommonController">
             <summary>
             
@@ -110,6 +134,56 @@
             <returns></returns>
         </member>
         <member name="M:Product.Api.Controllers.V1.CommonController.GetTermTypeAllAsync">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Product.Api.Controllers.V1.FlexRateController">
+            <summary>
+            
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <param name="flexRateAppService"></param>
+        </member>
+        <member name="M:Product.Api.Controllers.V1.FlexRateController.#ctor(ProductApi.Application.Interfaces.IFlexRateAppService)">
+            <summary>
+            
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <param name="flexRateAppService"></param>
+        </member>
+        <member name="M:Product.Api.Controllers.V1.FlexRateController.GetAllAsync(System.Int32,System.Nullable{System.Int32})">
+            <summary>
+            
+            </summary>
+            <param name="productVersionId"></param>
+            <param name="statusId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Product.Api.Controllers.V1.LaborCourtController">
+            <summary>
+            
+            </summary>
+            <param name="laborCourtAppService"></param>
+        </member>
+        <member name="M:Product.Api.Controllers.V1.LaborCourtController.#ctor(ProductApi.Application.Interfaces.ILaborCourtAppService)">
+            <summary>
+            
+            </summary>
+            <param name="laborCourtAppService"></param>
+        </member>
+        <member name="M:Product.Api.Controllers.V1.LaborCourtController.GetAllAsync">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Product.Api.Controllers.V1.LaborCourtController.ListAsync(ProductApi.Core.Models.LaborCourtFilterModel)">
             <summary>
             
             </summary>

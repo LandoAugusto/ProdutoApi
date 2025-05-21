@@ -1,5 +1,4 @@
-﻿using ProductApi.Core.Entities;
-using ProductApi.Core.Entities.Interfaces;
+﻿using ProductApi.Core.Entities.Interfaces;
 
 namespace ProductApi.Core.Entities
 {

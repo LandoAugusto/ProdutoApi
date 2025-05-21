@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Diagnostics;
 using Newtonsoft.Json;
 using ProductApi.Core.Infrastructure.Configuration;
 using ProductApi.Core.Infrastructure.Exceptions;
-using ProductApi.Core.Model;
+using ProductApi.Core.Models;
 using Swashbuckle.AspNetCore.Swagger;
 using Swashbuckle.AspNetCore.SwaggerUI;
 using System.Net;

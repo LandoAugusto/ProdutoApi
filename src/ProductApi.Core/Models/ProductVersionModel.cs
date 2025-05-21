@@ -1,6 +1,4 @@
-﻿using ProductApi.Core.Model;
-
-namespace ProductApi.Core.Models
+﻿namespace ProductApi.Core.Models
 {
     public class ProductVersionModel
     {

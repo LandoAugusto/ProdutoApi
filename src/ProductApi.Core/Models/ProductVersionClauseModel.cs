@@ -1,6 +1,6 @@
 ﻿using ProductApi.Core.Models.Product;
 
-namespace ProductApi.Core.Model
+namespace ProductApi.Core.Models
 {
     public class ProductVersionClauseModel
     {

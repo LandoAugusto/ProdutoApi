@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace ProductApi.Core.Model
+namespace ProductApi.Core.Models
 {
 
     /// <summary>

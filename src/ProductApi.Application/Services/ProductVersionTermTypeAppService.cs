@@ -4,7 +4,7 @@ using ProductApi.Core.Entities;
 using ProductApi.Core.Entities.Enumerators;
 using ProductApi.Infra.Data.Interfaces;
 using ProductApi.Core.Extensions;
-using ProductApi.Core.Model;
+using ProductApi.Core.Models;
 
 
 namespace ProductApi.Application.Services

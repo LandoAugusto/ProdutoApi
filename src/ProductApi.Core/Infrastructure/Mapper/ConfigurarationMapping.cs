@@ -1,5 +1,5 @@
 ﻿using ProductApi.Core.Entities;
-using ProductApi.Core.Model;
+using ProductApi.Core.Models;
 using ProductApi.Core.Models;
 using ProductApi.Core.Models.Product;
 

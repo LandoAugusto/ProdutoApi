@@ -2,7 +2,7 @@
 using Product.Api.Controllers.V1.Base;
 using ProductApi.Application.Interfaces;
 using ProductApi.Core.Entities.Enumerators;
-using ProductApi.Core.Model;
+using ProductApi.Core.Models;
 using ProductApi.Core.Models;
 using ProductApi.Core.Models.Product;
 

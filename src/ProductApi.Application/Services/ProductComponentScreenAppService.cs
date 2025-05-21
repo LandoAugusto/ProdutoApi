@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using ProductApi.Application.Interfaces;
-using ProductApi.Core.Model;
+using ProductApi.Core.Models;
 using ProductApi.Infra.Data.Interfaces;
 
 namespace ProductApi.Application.Services

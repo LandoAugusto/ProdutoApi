@@ -1,7 +1,7 @@
 ﻿using Asp.Versioning;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using ProductApi.Core.Model;
+using ProductApi.Core.Models;
 
 namespace Product.Api.Controllers.V1.Base
 {

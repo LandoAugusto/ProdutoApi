@@ -4,7 +4,7 @@ using  ProductApi.Core.Entities.Enumerators;
 using  ProductApi.Core.Models;
 using  ProductApi.Core.Extensions;
 using  ProductApi.Infra.Data.Interfaces;
-using  ProductApi.Core.Model;
+using  ProductApi.Core.Models;
 using Nest;
 
 namespace Product.Application.Services

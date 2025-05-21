@@ -21,6 +21,9 @@ namespace ProductApi.Application.Extensions
             services.AddScoped<ICommonAppService, CommonAppService>();
             services.AddScoped<IBranchAppService, BranchAppService>();
             services.AddScoped<IProductComponentScreenAppService, ProductComponentScreenAppService>();
+            services.AddScoped<ILaborCourtAppService, LaborCourtAppService>();
+            services.AddScoped<ICivilCourtAppService, CivilCourtAppService>();
+            services.AddScoped<IFlexRateAppService, FlexRateAppService>();
 
         }
     }

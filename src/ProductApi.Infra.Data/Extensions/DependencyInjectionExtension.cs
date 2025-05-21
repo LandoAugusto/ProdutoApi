@@ -41,6 +41,11 @@ namespace ProductApi.Infra.Data.Extensions
             services.AddScoped<IProductVersionCoverageRepository, ProductVersionCoverageRepository>();
             services.AddScoped<ITermTypeRepository, TermTypeRepository>();
             services.AddScoped<IProductComponentRepository, ProductComponentRepository>();
+            services.AddScoped<IFlexRateRepository, FlexRateRepository>();
+            services.AddScoped<IFlexRateBrokerRepository, FlexRateBrokerRepository>();
+            services.AddScoped<IFlexRateBorrowerRepository, FlexRateBorrowerRepository>();
+            services.AddScoped<ICivilCourtRepository, CivilCourtRepository>();
+            services.AddScoped<ILaborCourtRepository, LaborCourtRepository>();
             return services;
         }
     }

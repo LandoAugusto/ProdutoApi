@@ -1,4 +1,4 @@
-﻿namespace ProductApi.Core.Model
+﻿namespace ProductApi.Core.Models
 {
     public class BranchTypeModel
     {

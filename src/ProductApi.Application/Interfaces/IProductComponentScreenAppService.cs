@@ -1,4 +1,4 @@
-﻿using ProductApi.Core.Model;
+﻿using ProductApi.Core.Models;
 
 namespace ProductApi.Application.Interfaces
 {
