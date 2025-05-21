@@ -13,9 +13,9 @@ namespace ProductApi.Application.Services
         private readonly IProductVersionRepository _productVersionRepository = productVersionRepository;
         private readonly IProductVersionAcceptanceRepository _productVersionAcceptanceRepository = productVersionAcceptanceRepository;
 
-        public async Task<ProductVersionAcceptanceModel?> GetAsync(int productId, int coverageId, int profileId, RecordStatusEnum recordStatus)
+        public async Task<ProductVersionAcceptanceModel?> GetAsync(int productId, int profileId, RecordStatusEnum recordStatus)
         {
-            var entidade = await _productVersionRepository.GetAsync(productId, coverageId, recordStatus);
+            var entidade = await _productVersionRepository.GetAsync(productId, profileId, recordStatus);
             if (entidade == null) return null;
 
             return _mapper.Map<ProductVersionAcceptanceModel>(await _productVersionAcceptanceRepository.GetAsync(entidade.ProductVersionId, profileId, recordStatus));

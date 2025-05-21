@@ -6,6 +6,6 @@ namespace ProductApi.Infra.Data.Interfaces
 {
     public interface IProductVersionRepository : IDomainRepository<ProductVersion>
     {
-        Task<ProductVersion?> GetAsync(int productId, int coverageId, RecordStatusEnum recordStatus);
+        Task<ProductVersion?> GetAsync(int productId, int profileId, RecordStatusEnum recordStatus);
     }
 }

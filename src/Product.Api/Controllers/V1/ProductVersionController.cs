@@ -39,18 +39,17 @@ namespace Product.Api.Controllers.V1
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="productId"></param>
-        /// <param name="coverageId"></param>
+        /// <param name="productId"></param>        
         /// <param name="profileId"></param>
         /// <returns></returns>
         [HttpGet]
-        [Route("get-product-version-acceptance/{productId}/{coverageId}/{profileId}")]
+        [Route("get-product-version-acceptance/{productId}/{profileId}")]
         [ProducesResponseType(typeof(BaseDataResponseModel<ProductVersionAcceptanceModel>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(BaseDataResponseModel<ProductVersionAcceptanceModel>), StatusCodes.Status500InternalServerError)]
         [ProducesResponseType(typeof(BaseDataResponseModel<ProductVersionAcceptanceModel>), StatusCodes.Status404NotFound)]
-        public async Task<IActionResult> GetProductVersionAcceptancesAsync(int productId, int coverageId, int profileId)
+        public async Task<IActionResult> GetProductVersionAcceptancesAsync(int productId,  int profileId)
         {
-            var response = await _productVersionService.GetAsync(productId, coverageId, profileId, RecordStatusEnum.Active);
+            var response = await _productVersionService.GetAsync(productId,  profileId, RecordStatusEnum.Active);
             if (response == null)
                 return ReturnNotFound();
 
