@@ -139,32 +139,6 @@
             </summary>
             <returns></returns>
         </member>
-        <member name="T:Product.Api.Controllers.V1.FlexRateController">
-            <summary>
-            
-            </summary>
-            <remarks>
-            
-            </remarks>
-            <param name="flexRateAppService"></param>
-        </member>
-        <member name="M:Product.Api.Controllers.V1.FlexRateController.#ctor(ProductApi.Application.Interfaces.IFlexRateAppService)">
-            <summary>
-            
-            </summary>
-            <remarks>
-            
-            </remarks>
-            <param name="flexRateAppService"></param>
-        </member>
-        <member name="M:Product.Api.Controllers.V1.FlexRateController.GetAllAsync(System.Int32,System.Nullable{System.Int32})">
-            <summary>
-            
-            </summary>
-            <param name="productVersionId"></param>
-            <param name="statusId"></param>
-            <returns></returns>
-        </member>
         <member name="T:Product.Api.Controllers.V1.LaborCourtController">
             <summary>
             

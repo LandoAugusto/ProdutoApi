@@ -26,11 +26,11 @@ namespace ProductApi.Infra.Data.Mappings
             builder
             .Property(x => x.Abbreviation);
             builder
-            .Property(x => x.Status);   
+            .Property(x => x.Status);
             builder
-            .Property(x => x.UserId);
+            .Property(x => x.InclusionUserId);
             builder
-            .Property(x => x.DateUtc);
+            .Property(x => x.InclusionDate);
         }
     }
 }

@@ -1,6 +1,5 @@
 ﻿using ProductApi.Core.Entities;
 using ProductApi.Core.Models;
-using ProductApi.Core.Models;
 using ProductApi.Core.Models.Product;
 
 namespace ProductApi.Core.Infrastructure.Mapper
@@ -32,10 +31,12 @@ namespace ProductApi.Core.Infrastructure.Mapper
             CreateMap<AddressTypeModel, AddressType>().ReverseMap();
             CreateMap<InsuredTypeModel, InsuredType>().ReverseMap();
             CreateMap<RecordStatusModel, RecordStatus>().ReverseMap();
-
             CreateMap<ProductComponentModel, ProductComponent>().ReverseMap();
             CreateMap<ComponentModel, Core.Entities.Component>().ReverseMap();
             CreateMap<ProductComponentScreenModel, ProductComponentScreen>().ReverseMap();
+            CreateMap<CivilCourtModel, CivilCourt>().ReverseMap();
+            CreateMap<LaborCourtModel, LaborCourt>().ReverseMap();
+            CreateMap<StateModel, State>().ReverseMap();
         }
     }
 }

@@ -17,8 +17,8 @@ namespace ProductApi.Core.Entities
         public string? ExternalCode { get; set; }
         public string? ExternalPersonCode { get; set; }
         public string? ExternalAddressCode { get; set; }
-        public int UserId { get; set; }
-        public DateTime DateUtc { get; set; }
+        public int InclusionUserId { get; set; }
+        public DateTime InclusionDate { get; set; }
         public virtual ICollection<CivilCourt> CivilCourt { get; set; } = new HashSet<CivilCourt>();
     }
 }

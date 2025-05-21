@@ -55,5 +55,9 @@ namespace ProductApi.Infra.Data.Contexts
         public virtual DbSet<ProductComponentScreen> ProductComponentScreen { get; set; }
         public virtual DbSet<Core.Entities.Component> Component { get; set; }
 
+
+        public virtual DbSet<CivilCourt> CivilCourt { get; set; }
+        public virtual DbSet<LaborCourt> LaborCourt { get; set; }        
+
     }
 }

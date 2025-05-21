@@ -11,7 +11,7 @@ namespace ProductApi.Core.Entities
         public string Name { get; set; }
         public string? Abbreviation { get; set; }
         public int? Status { get; set; }
-        public int UserId { get; set; }
-        public DateTime DateUtc { get; set; }
+        public int InclusionUserId { get; set; }
+        public DateTime InclusionDate { get; set; }
     }
 }
