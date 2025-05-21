@@ -1,5 +1,5 @@
 ﻿using ProductApi.Core.Entities.Enumerators;
-using ProductApi.Core.Models;
+using ProductApi.Core.Model;
 
 namespace ProductApi.Application.Interfaces
 {

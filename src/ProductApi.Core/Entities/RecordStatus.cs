@@ -7,8 +7,8 @@ namespace ProductApi.Core.Entities
         public int RecordStatusId { get; set; }
         public string Description { get; set; }
         public int StatusId { get; set; }
-        public int UserId { get; set; }
-        public DateTime DateUtc { get; set; }
+        public int InclusionUserId { get; set; }
+        public DateTime InclusionDate { get; set; }
 
     }
 }

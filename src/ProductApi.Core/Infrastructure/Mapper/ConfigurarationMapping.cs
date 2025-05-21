@@ -31,6 +31,7 @@ namespace ProductApi.Core.Infrastructure.Mapper
             CreateMap<DocumentTypeModel, DocumentType>().ReverseMap();
             CreateMap<AddressTypeModel, AddressType>().ReverseMap();
             CreateMap<InsuredTypeModel, InsuredType>().ReverseMap();
+            CreateMap<RecordStatusModel, RecordStatus>().ReverseMap();
         }
     }
 }

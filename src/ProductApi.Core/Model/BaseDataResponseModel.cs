@@ -7,6 +7,10 @@ namespace ProductApi.Core.Model
     /// Represents a base data response model.
     /// </summary>
     /// <typeparam name="T">The type of the data.</typeparam>
+    /// <summary>
+    /// Represents a base data response model.
+    /// </summary>
+    /// <typeparam name="T">The type of the data.</typeparam>
     public class BaseDataResponseModel<T>
     {
         /// <summary>
@@ -87,6 +91,12 @@ namespace ProductApi.Core.Model
     [JsonObject(ItemNullValueHandling = NullValueHandling.Ignore)]
     public record StatusResponseModel
     {
+        /// <summary>
+        /// Represents the code property of the status response model.
+        /// </summary>
+        [JsonProperty("sucess")]
+        public bool Sucess { get; set; }
+
         /// <summary>
         /// Represents the code property of the status response model.
         /// </summary>

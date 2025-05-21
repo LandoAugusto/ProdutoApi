@@ -1,5 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using  ProductApi.Core.Entities;
 using ProductApi.Core.Entities;
 
 namespace ProductApi.Infra.Data.Contexts
@@ -39,6 +38,7 @@ namespace ProductApi.Infra.Data.Contexts
         public virtual DbSet<AddressType> AddressType { get; set; }
         public virtual DbSet<DocumentType> DocumentType { get; set; }
         public virtual DbSet<InsuredType> InsuredType { get; set; }
+        public virtual DbSet<RecordStatus> RecordStatus { get; set; }
         public virtual DbSet<RegisterVehicleAccessory> RegisterVehicleAccessory { get; set; }
         public virtual DbSet<RegisterVehicleBodyWorkType> RegisterVehicleBodyWorkType { get; set; }
         public virtual DbSet<RegisterVehicleBrand> RegisterVehicleBrand { get; set; }

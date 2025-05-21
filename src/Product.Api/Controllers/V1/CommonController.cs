@@ -21,7 +21,7 @@ namespace Product.Api.Controllers.V1
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-        [Route("get-state-all")]
+        [Route("get-state")]
         [ProducesResponseType(typeof(BaseDataResponseModel<StateModel>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(BaseDataResponseModel<StateModel>), StatusCodes.Status404NotFound)]
         public async Task<IActionResult> GetStateAllAsync()
@@ -79,6 +79,43 @@ namespace Product.Api.Controllers.V1
         public async Task<IActionResult> GetInsuredTypeModelAsync()
         {
             var response = await _commonService.GetInsuredTypeAsync(RecordStatusEnum.Active);
+            if (response == null)
+                return ReturnNotFound();
+
+            return base.ReturnSuccess(response);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("get-record-status")]
+        [ProducesResponseType(typeof(BaseDataResponseModel<RecordStatusModel>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<RecordStatusModel>), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<RecordStatusModel>), StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> GetRecordStatusAsync()
+        {
+            var response = await _commonService.GetRecordStatusAsync();
+            if (response == null)
+                return ReturnNotFound();
+
+            return base.ReturnSuccess(response);
+
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("get-term-type")]
+        [ProducesResponseType(typeof(BaseDataResponseModel<TermTypeModel>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<TermTypeModel>), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<TermTypeModel>), StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> GetTermTypeAllAsync()
+        {
+            var response = await _commonService.GetTermTypeAsync(RecordStatusEnum.Active);
             if (response == null)
                 return ReturnNotFound();
 

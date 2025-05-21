@@ -9,12 +9,12 @@ namespace Product.Api.Controllers.V1
     /// <summary>
     /// 
     /// </summary>
-    /// <param name="productService"></param>
+    /// <param name="productAppService"></param>
 
-    public class ProductController(IProductAppService productService) : BaseController
+    public class ProductController(IProductAppService productAppService) : BaseController
     {
 
-        private readonly IProductAppService _productService = productService;
+        private readonly IProductAppService _productAppService = productAppService;
 
 
         /// <summary>
@@ -27,7 +27,7 @@ namespace Product.Api.Controllers.V1
         [ProducesResponseType(typeof(BaseDataResponseModel<ProductModel>), StatusCodes.Status404NotFound)]
         public async Task<IActionResult> GetProductAsync()
         {
-            var response = await _productService.ListAsync(RecordStatusEnum.Active);
+            var response = await _productAppService.ListAsync(RecordStatusEnum.Active);
             if (response == null)
                 return ReturnNotFound();
 
@@ -45,7 +45,7 @@ namespace Product.Api.Controllers.V1
         [ProducesResponseType(typeof(BaseDataResponseModel<ProductModel>), StatusCodes.Status404NotFound)]
         public async Task<IActionResult> GetByBranchAsync(int insurancebranchId)
         {
-            var response = await _productService.ListBranchAsync(insurancebranchId, RecordStatusEnum.Active);
+            var response = await _productAppService.ListBranchAsync(insurancebranchId, RecordStatusEnum.Active);
             if (response == null)
                 return ReturnNotFound();
 

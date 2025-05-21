@@ -27,6 +27,7 @@ namespace Product.Api.Controllers.V1.Base
                 Data = data,
                 TransactionStatus = new StatusResponseModel
                 {
+                    Sucess = true,
                     Code = (int)StatusCodes.Status200OK
                 }
             });

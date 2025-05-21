@@ -103,17 +103,29 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:Product.Api.Controllers.V1.CommonController.GetRecordStatusAsync">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Product.Api.Controllers.V1.CommonController.GetTermTypeAllAsync">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
         <member name="T:Product.Api.Controllers.V1.ProductController">
             <summary>
             
             </summary>
-            <param name="productService"></param>
+            <param name="productAppService"></param>
         </member>
         <member name="M:Product.Api.Controllers.V1.ProductController.#ctor(ProductApi.Application.Interfaces.IProductAppService)">
             <summary>
             
             </summary>
-            <param name="productService"></param>
+            <param name="productAppService"></param>
         </member>
         <member name="M:Product.Api.Controllers.V1.ProductController.GetProductAsync">
             <summary>
@@ -229,6 +241,24 @@
             </summary>
             <param name="productVersionId"></param>
             <param name="paymentMethodId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Product.Api.Controllers.V1.VehicleController">
+            <summary>
+            
+            </summary>
+            <param name="productAppService"></param>
+        </member>
+        <member name="M:Product.Api.Controllers.V1.VehicleController.#ctor(ProductApi.Application.Interfaces.IProductAppService)">
+            <summary>
+            
+            </summary>
+            <param name="productAppService"></param>
+        </member>
+        <member name="M:Product.Api.Controllers.V1.VehicleController.GetProductAsync">
+            <summary>
+            
+            </summary>
             <returns></returns>
         </member>
         <member name="T:Product.Api.Extensions.ApplicationBuilderExtensions">

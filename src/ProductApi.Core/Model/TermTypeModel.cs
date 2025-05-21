@@ -1,4 +1,4 @@
-﻿namespace ProductApi.Core.Models
+﻿namespace ProductApi.Core.Model
 {
     public  class TermTypeModel
     {
