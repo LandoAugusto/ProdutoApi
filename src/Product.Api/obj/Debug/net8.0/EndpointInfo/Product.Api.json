@@ -627,6 +627,67 @@
         }
       }
     },
+    "/api/v1/product/get-component-screen/{code}": {
+      "get": {
+        "tags": [
+          "Product"
+        ],
+        "summary": "",
+        "parameters": [
+          {
+            "name": "code",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProductModelBaseDataResponseModel"
+                }
+              },
+              "application/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProductModelBaseDataResponseModel"
+                }
+              },
+              "text/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProductModelBaseDataResponseModel"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProductModelBaseDataResponseModel"
+                }
+              },
+              "application/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProductModelBaseDataResponseModel"
+                }
+              },
+              "text/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProductModelBaseDataResponseModel"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/v1/productversion/get-product-version-acceptance/{productId}/{coverageId}/{profileId}": {
       "get": {
         "tags": [

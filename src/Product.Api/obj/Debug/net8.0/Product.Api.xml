@@ -120,14 +120,16 @@
             
             </summary>
             <param name="productAppService"></param>
+            <param name="productComponentScreenAppService"></param>
         </member>
-        <member name="M:Product.Api.Controllers.V1.ProductController.#ctor(ProductApi.Application.Interfaces.IProductAppService)">
+        <member name="M:Product.Api.Controllers.V1.ProductController.#ctor(ProductApi.Application.Interfaces.IProductAppService,ProductApi.Application.Interfaces.IProductComponentScreenAppService)">
             <summary>
             
             </summary>
             <param name="productAppService"></param>
+            <param name="productComponentScreenAppService"></param>
         </member>
-        <member name="M:Product.Api.Controllers.V1.ProductController.GetProductAsync">
+        <member name="M:Product.Api.Controllers.V1.ProductController.ListAsync">
             <summary>
             
             </summary>
@@ -138,6 +140,12 @@
             
             </summary>
             <param name="insurancebranchId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Product.Api.Controllers.V1.ProductController.GetComponentScreenAsync(System.Int32)">
+            <summary>
+            
+            </summary>
             <returns></returns>
         </member>
         <member name="T:Product.Api.Controllers.V1.ProductVersionController">

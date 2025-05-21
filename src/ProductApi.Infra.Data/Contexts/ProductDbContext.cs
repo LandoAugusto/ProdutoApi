@@ -8,7 +8,7 @@ namespace ProductApi.Infra.Data.Contexts
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
         }
-    
+        
         public virtual DbSet<Branch> Branch { get; set; }
         public virtual DbSet<InsuranceBranch> InsuranceBranch { get; set; }
         public virtual DbSet<BranchType> BranchType { get; set; }
@@ -51,6 +51,9 @@ namespace ProductApi.Infra.Data.Contexts
         public virtual DbSet<RegisterVehicleUse> RegisterVehicleUse { get; set; }
         public virtual DbSet<RegisterVehicleVersion> RegisterVehicleVersion { get; set; }
         public virtual DbSet<RegisterVehicleYear> RegisterVehicleYear { get; set; }
+        public virtual DbSet<ProductComponent> ProductComponent { get; set; }
+        public virtual DbSet<ProductComponentScreen> ProductComponentScreen { get; set; }
+        public virtual DbSet<Core.Entities.Component> Component { get; set; }
 
     }
 }

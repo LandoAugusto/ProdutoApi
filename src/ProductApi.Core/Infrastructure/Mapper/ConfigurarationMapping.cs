@@ -32,6 +32,10 @@ namespace ProductApi.Core.Infrastructure.Mapper
             CreateMap<AddressTypeModel, AddressType>().ReverseMap();
             CreateMap<InsuredTypeModel, InsuredType>().ReverseMap();
             CreateMap<RecordStatusModel, RecordStatus>().ReverseMap();
+
+            CreateMap<ProductComponentModel, ProductComponent>().ReverseMap();
+            CreateMap<ComponentModel, Core.Entities.Component>().ReverseMap();
+            CreateMap<ProductComponentScreenModel, ProductComponentScreen>().ReverseMap();
         }
     }
 }
