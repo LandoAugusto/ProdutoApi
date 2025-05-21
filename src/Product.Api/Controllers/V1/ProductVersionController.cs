@@ -47,9 +47,9 @@ namespace Product.Api.Controllers.V1
         [ProducesResponseType(typeof(BaseDataResponseModel<ProductVersionAcceptanceModel>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(BaseDataResponseModel<ProductVersionAcceptanceModel>), StatusCodes.Status500InternalServerError)]
         [ProducesResponseType(typeof(BaseDataResponseModel<ProductVersionAcceptanceModel>), StatusCodes.Status404NotFound)]
-        public async Task<IActionResult> GetProductVersionAcceptancesAsync(int productId,  int profileId)
+        public async Task<IActionResult> GetProductVersionAcceptancesAsync(int productId, int profileId)
         {
-            var response = await _productVersionService.GetAsync(productId,  profileId, RecordStatusEnum.Active);
+            var response = await _productVersionService.GetAsync(productId, profileId, RecordStatusEnum.Active);
             if (response == null)
                 return ReturnNotFound();
 
@@ -142,9 +142,9 @@ namespace Product.Api.Controllers.V1
         /// <returns></returns>
         [HttpGet]
         [Route("get-product-version-term-type/{productVersionId}")]
-        [ProducesResponseType(typeof(BaseDataResponseModel<IEnumerable<TermTypeModel>> ), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(BaseDataResponseModel<IEnumerable<TermTypeModel>?> ), StatusCodes.Status500InternalServerError)]
-        [ProducesResponseType(typeof(BaseDataResponseModel<IEnumerable<TermTypeModel>?> ), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<IEnumerable<TermTypeModel>>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<IEnumerable<TermTypeModel>?>), StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<IEnumerable<TermTypeModel>?>), StatusCodes.Status404NotFound)]
         public async Task<IActionResult> ListTermTypeAsync(int productVersionId)
         {
             var response = await _productVersionTermTypeService.ListAsync(productVersionId, RecordStatusEnum.Active);
@@ -181,9 +181,9 @@ namespace Product.Api.Controllers.V1
         /// <returns></returns>
         [HttpGet]
         [Route("get-product-version-payment-method/{productVersionId}")]
-        [ProducesResponseType(typeof(BaseDataResponseModel<ProductModel>), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(BaseDataResponseModel<ProductModel>), StatusCodes.Status500InternalServerError)]
-        [ProducesResponseType(typeof(BaseDataResponseModel<ProductModel>), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<IEnumerable<PaymentMethodModel>>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<IEnumerable<PaymentMethodModel>?>), StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<IEnumerable<PaymentMethodModel>?>), StatusCodes.Status404NotFound)]
         public async Task<IActionResult> ListPaymentMethodAsync(int productVersionId)
         {
             var response = await _productVersionPaymentMethodService.ListAsync(productVersionId, RecordStatusEnum.Active);
@@ -200,9 +200,9 @@ namespace Product.Api.Controllers.V1
         /// <returns></returns>
         [HttpGet]
         [Route("get-product-version-payment-frequency/{productVersionId}")]
-        [ProducesResponseType(typeof(BaseDataResponseModel<ProductModel>), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(BaseDataResponseModel<ProductModel>), StatusCodes.Status500InternalServerError)]
-        [ProducesResponseType(typeof(BaseDataResponseModel<ProductModel>), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<IEnumerable<PaymentFrequencyModel>>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<IEnumerable<PaymentFrequencyModel?>>), StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<IEnumerable<PaymentFrequencyModel?>>), StatusCodes.Status404NotFound)]
         public async Task<IActionResult> ListPaymentFrequencyAsync(int productVersionId)
         {
             var response = await _productVersionPaymentFrequencyService.ListAsync(productVersionId, RecordStatusEnum.Active);
@@ -220,7 +220,7 @@ namespace Product.Api.Controllers.V1
         /// <returns></returns>
         [HttpGet]
         [Route("get-product-version-payment-installment/{productVersionId}/{paymentMethodId}")]
-        [ProducesResponseType(typeof(BaseDataResponseModel<IEnumerable<PaymentInstallmentModel?>>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<IEnumerable<PaymentInstallmentModel>>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(BaseDataResponseModel<IEnumerable<PaymentInstallmentModel?>>), StatusCodes.Status500InternalServerError)]
         [ProducesResponseType(typeof(BaseDataResponseModel<IEnumerable<PaymentInstallmentModel?>>), StatusCodes.Status404NotFound)]
         public async Task<IActionResult> ListPaymentInstallmentAsync(int productVersionId, int paymentMethodId)

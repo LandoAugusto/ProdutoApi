@@ -42,7 +42,8 @@ namespace Product.Api.Controllers.V1.Base
             {
                 TransactionStatus = new StatusResponseModel
                 {
-                    Code = (int)StatusCodes.Status404NotFound
+                    Code = (int)StatusCodes.Status404NotFound,
+                    Message = "Não encontrado nenhum registro para os parametros informados."
                 }
             });
         }
