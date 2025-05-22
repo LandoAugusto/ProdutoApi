@@ -245,7 +245,7 @@
         }
       }
     },
-    "/api/v1/civilcourt/get-list": {
+    "/api/v1/civilcourt/get-search-civil-court": {
       "post": {
         "tags": [
           "CivilCourt"

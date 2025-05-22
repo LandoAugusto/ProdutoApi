@@ -21,24 +21,6 @@
             
             </summary>
         </member>
-        <member name="T:Product.Api.Controllers.LegalRecourseTypeController">
-            <summary>
-            
-            </summary>
-            <param name="legalRecourseTypeAppService"></param>
-        </member>
-        <member name="M:Product.Api.Controllers.LegalRecourseTypeController.#ctor(ProductApi.Application.Interfaces.ILegalRecourseTypeAppService)">
-            <summary>
-            
-            </summary>
-            <param name="legalRecourseTypeAppService"></param>
-        </member>
-        <member name="M:Product.Api.Controllers.LegalRecourseTypeController.GetAllAsync">
-            <summary>
-            
-            </summary>
-            <returns></returns>
-        </member>
         <member name="T:Product.Api.Controllers.V1.Base.BaseController">
             <summary>
             
@@ -176,6 +158,24 @@
             <returns></returns>
         </member>
         <member name="M:Product.Api.Controllers.V1.LaborCourtController.ListAsync(ProductApi.Core.Models.LaborCourtFilterModel)">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Product.Api.Controllers.V1.LegalRecourseTypeController">
+            <summary>
+            
+            </summary>
+            <param name="legalRecourseTypeAppService"></param>
+        </member>
+        <member name="M:Product.Api.Controllers.V1.LegalRecourseTypeController.#ctor(ProductApi.Application.Interfaces.ILegalRecourseTypeAppService)">
+            <summary>
+            
+            </summary>
+            <param name="legalRecourseTypeAppService"></param>
+        </member>
+        <member name="M:Product.Api.Controllers.V1.LegalRecourseTypeController.GetAllAsync">
             <summary>
             
             </summary>

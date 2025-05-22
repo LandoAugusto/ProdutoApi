@@ -37,7 +37,7 @@ namespace Product.Api.Controllers.V1
         /// </summary>
         /// <returns></returns>
         [HttpPost]
-        [Route("get-list")]
+        [Route("get-search-civil-court")]
         [ProducesResponseType(typeof(BaseDataResponseModel<CivilCourtModel>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(BaseDataResponseModel<CivilCourtModel>), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(BaseDataResponseModel<CivilCourtModel>), StatusCodes.Status404NotFound)]

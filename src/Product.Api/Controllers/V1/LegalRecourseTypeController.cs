@@ -1,12 +1,35 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Product.Api.Controllers.V1.Base;
+using ProductApi.Application.Interfaces;
+using ProductApi.Core.Entities.Enumerators;
+using ProductApi.Core.Models;
 
 namespace Product.Api.Controllers.V1
 {
-    public class LegalRecourseTypeController : Controller
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="legalRecourseTypeAppService"></param>
+    public class LegalRecourseTypeController(ILegalRecourseTypeAppService legalRecourseTypeAppService) : BaseController
     {
-        public IActionResult Index()
+        private readonly ILegalRecourseTypeAppService _legalRecourseTypeAppService = legalRecourseTypeAppService;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("get-all")]
+        [ProducesResponseType(typeof(BaseDataResponseModel<LegalRecourseTypeModel>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<LegalRecourseTypeModel>), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<LegalRecourseTypeModel>), StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> GetAllAsync()
         {
-            return View();
+            var response = await _legalRecourseTypeAppService.GetAllAsync(RecordStatusEnum.Active);
+            if (response == null)
+                return ReturnNotFound();
+
+            return ReturnSuccess(response);
         }
     }
 }

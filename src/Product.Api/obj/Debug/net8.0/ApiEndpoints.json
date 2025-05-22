@@ -139,7 +139,7 @@
   {
     "ContainingType": "Product.Api.Controllers.V1.CivilCourtController",
     "Method": "ListAsync",
-    "RelativePath": "api/v1/civilcourt/get-list",
+    "RelativePath": "api/v1/civilcourt/get-search-civil-court",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -455,7 +455,7 @@
     ]
   },
   {
-    "ContainingType": "Product.Api.Controllers.LegalRecourseTypeController",
+    "ContainingType": "Product.Api.Controllers.V1.LegalRecourseTypeController",
     "Method": "GetAllAsync",
     "RelativePath": "api/v1/legalrecoursetype/get-all",
     "HttpMethod": "GET",
