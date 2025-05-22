@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Product.Api.Controllers.V1.Base;
-using Product.Application.Interfaces;
 using ProductApi.Application.Interfaces;
 using ProductApi.Core.Entities.Enumerators;
 using ProductApi.Core.Models;
@@ -13,6 +12,7 @@ namespace Product.Api.Controllers.V1
     /// </summary>
     /// <param name="vehicleBrandService"></param>
     /// <param name="vehicleModelAppService"></param>
+    /// <param name="vehicleVersionAppService"></param>
     public class VehicleController(IRegisterVehicleBrandAppService vehicleBrandService, IRegisterVehicleModelAppService vehicleModelAppService,
          IRegisterVehicleVersionAppService vehicleVersionAppService) : BaseController
     {

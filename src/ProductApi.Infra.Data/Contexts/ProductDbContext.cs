@@ -8,12 +8,12 @@ namespace ProductApi.Infra.Data.Contexts
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
         }
-        
+
         public virtual DbSet<Branch> Branch { get; set; }
         public virtual DbSet<InsuranceBranch> InsuranceBranch { get; set; }
         public virtual DbSet<BranchType> BranchType { get; set; }
         public virtual DbSet<Profile> Profile { get; set; }
-        public virtual DbSet<Core.Entities.Product> Product { get; set; }        
+        public virtual DbSet<Core.Entities.Product> Product { get; set; }
         public virtual DbSet<ProductVersion> ProductVersion { get; set; }
         public virtual DbSet<ProductVersionAcceptance> ProductVersionAcceptance { get; set; }
         public virtual DbSet<ProductVersionInsuredObject> ProductVersionInsuredObject { get; set; }
@@ -24,14 +24,15 @@ namespace ProductApi.Infra.Data.Contexts
         public virtual DbSet<ProductVersionPaymentInstallment> ProductVersionPaymentInstallment { get; set; }
         public virtual DbSet<ProductVersionPaymentFrequency> ProductVersionPaymentFrequency { get; set; }
         public virtual DbSet<ProductVersionCoverage> ProductVersionCoverage { get; set; }
+        public virtual DbSet<ProductVersionContractType> ProductVersionContractType { get; set; }
         public virtual DbSet<PaymentFrequency> PaymentFrequency { get; set; }
         public virtual DbSet<PaymentInstallment> PaymentInstallment { get; set; }
         public virtual DbSet<PaymentMethod> PaymentMethod { get; set; }
-        public virtual DbSet<LawsuitType> LawsuitType { get; set; }        
+        public virtual DbSet<LawsuitType> LawsuitType { get; set; }
         public virtual DbSet<InsuredObject> InsuredObject { get; set; }
         public virtual DbSet<InsuredObjectBlock> InsuredObjectBlock { get; set; }
-        public virtual DbSet<Coverage> Coverage { get; set; }        
-        public virtual DbSet<TermType> TermType { get; set; }        
+        public virtual DbSet<Coverage> Coverage { get; set; }
+        public virtual DbSet<TermType> TermType { get; set; }
         public virtual DbSet<LegalRecourseType> LegalRecourseType { get; set; }
         public virtual DbSet<LegalRecourseTypeParameter> LegalRecourseTypeParameter { get; set; }
         public virtual DbSet<ClauseText> ClauseText { get; set; }
@@ -56,7 +57,7 @@ namespace ProductApi.Infra.Data.Contexts
         public virtual DbSet<Core.Entities.Component> Component { get; set; }
         public virtual DbSet<State> State { get; set; }
         public virtual DbSet<CivilCourt> CivilCourt { get; set; }
-        public virtual DbSet<LaborCourt> LaborCourt { get; set; }        
-
+        public virtual DbSet<LaborCourt> LaborCourt { get; set; }
+        public virtual DbSet<ContractType> ContractType { get; set; }
     }
 }

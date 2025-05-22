@@ -228,7 +228,7 @@
             <param name="productVersionPaymentFrequencyService"></param>
             <param name="productVersionCoverageAppService"></param>
         </member>
-        <member name="M:Product.Api.Controllers.V1.ProductVersionController.#ctor(ProductApi.Application.Interfaces.IProductVersionAcceptanceAppService,ProductApi.Application.Interfaces.IProductVersionInsuredObjectAppService,ProductApi.Application.Interfaces.IProductVersionClauseAppService,ProductApi.Application.Interfaces.IProductVersionLawsuitTypeAppService,ProductApi.Application.Interfaces.IProductVersionTermTypeAppService,ProductApi.Application.Interfaces.IProductVersionPaymentMethodAppService,ProductApi.Application.Interfaces.IProductVersionPaymentInstallmentAppService,ProductApi.Application.Interfaces.IProductVersionPaymentFrequencyAppService,ProductApi.Application.Interfaces.IProductVersionCoverageAppService)">
+        <member name="M:Product.Api.Controllers.V1.ProductVersionController.#ctor(ProductApi.Application.Interfaces.IProductVersionAcceptanceAppService,ProductApi.Application.Interfaces.IProductVersionInsuredObjectAppService,ProductApi.Application.Interfaces.IProductVersionClauseAppService,ProductApi.Application.Interfaces.IProductVersionLawsuitTypeAppService,ProductApi.Application.Interfaces.IProductVersionTermTypeAppService,ProductApi.Application.Interfaces.IProductVersionPaymentMethodAppService,ProductApi.Application.Interfaces.IProductVersionPaymentInstallmentAppService,ProductApi.Application.Interfaces.IProductVersionPaymentFrequencyAppService,ProductApi.Application.Interfaces.IProductVersionCoverageAppService,ProductApi.Application.Interfaces.IProductVersionContractTypeAppService)">
             <summary>
             
             </summary>
@@ -316,12 +316,20 @@
             <param name="paymentMethodId"></param>
             <returns></returns>
         </member>
+        <member name="M:Product.Api.Controllers.V1.ProductVersionController.ListContractTypeAsync(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="productVersionId"></param>        
+            <returns></returns>
+        </member>
         <member name="T:Product.Api.Controllers.V1.VehicleController">
             <summary>
             
             </summary>
             <param name="vehicleBrandService"></param>
             <param name="vehicleModelAppService"></param>
+            <param name="vehicleVersionAppService"></param>
         </member>
         <member name="M:Product.Api.Controllers.V1.VehicleController.#ctor(ProductApi.Application.Interfaces.IRegisterVehicleBrandAppService,ProductApi.Application.Interfaces.IRegisterVehicleModelAppService,ProductApi.Application.Interfaces.IRegisterVehicleVersionAppService)">
             <summary>
@@ -329,6 +337,7 @@
             </summary>
             <param name="vehicleBrandService"></param>
             <param name="vehicleModelAppService"></param>
+            <param name="vehicleVersionAppService"></param>
         </member>
         <member name="M:Product.Api.Controllers.V1.VehicleController.GetSearchBrandAsync(System.String)">
             <summary>

@@ -1,9 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Product.Api.Controllers.V1.Base;
 using ProductApi.Application.Interfaces;
-using ProductApi.Core.Entities;
 using ProductApi.Core.Entities.Enumerators;
-using ProductApi.Core.Models;
 using ProductApi.Core.Models;
 using ProductApi.Core.Models.Product;
 
@@ -24,7 +22,8 @@ namespace Product.Api.Controllers.V1
     public class ProductVersionController(IProductVersionAcceptanceAppService productVersionService, IProductVersionInsuredObjectAppService productVersionInsuredObjectService,
         IProductVersionClauseAppService productVersionClauseService, IProductVersionLawsuitTypeAppService productVersionLawsuitTypeService, IProductVersionTermTypeAppService productVersionTermTypeService,
         IProductVersionPaymentMethodAppService productVersionPaymentMethodService, IProductVersionPaymentInstallmentAppService productVersionPaymentInstallmentService,
-        IProductVersionPaymentFrequencyAppService productVersionPaymentFrequencyService, IProductVersionCoverageAppService productVersionCoverageAppService) : BaseController
+        IProductVersionPaymentFrequencyAppService productVersionPaymentFrequencyService, IProductVersionCoverageAppService productVersionCoverageAppService,
+        IProductVersionContractTypeAppService productVersionContractTypeAppService) : BaseController
     {
         private readonly IProductVersionAcceptanceAppService _productVersionService = productVersionService;
         private readonly IProductVersionInsuredObjectAppService _productVersionInsuredObjectService = productVersionInsuredObjectService;
@@ -35,6 +34,7 @@ namespace Product.Api.Controllers.V1
         private readonly IProductVersionPaymentInstallmentAppService _productVersionPaymentInstallmentService = productVersionPaymentInstallmentService;
         private readonly IProductVersionPaymentFrequencyAppService _productVersionPaymentFrequencyService = productVersionPaymentFrequencyService;
         private readonly IProductVersionCoverageAppService _productVersionCoverageAppService = productVersionCoverageAppService;
+        private readonly IProductVersionContractTypeAppService _productVersionContractTypeAppService = productVersionContractTypeAppService;
 
 
         /// <summary>
@@ -227,6 +227,24 @@ namespace Product.Api.Controllers.V1
         public async Task<IActionResult> ListPaymentInstallmentAsync(int productVersionId, int paymentMethodId)
         {
             var response = await _productVersionPaymentInstallmentService.ListAsync(productVersionId, paymentMethodId);
+            if (response == null)
+                return ReturnNotFound();
+
+            return base.ReturnSuccess(response);
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="productVersionId"></param>        
+        /// <returns></returns>
+        [HttpGet]
+        [Route("get-product-version-contract-type/{productVersionId}")]
+        [ProducesResponseType(typeof(BaseDataResponseModel<IEnumerable<PaymentInstallmentModel>>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<IEnumerable<PaymentInstallmentModel?>>), StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<IEnumerable<PaymentInstallmentModel?>>), StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> GetProductVersionContractTypeAsync(int productVersionId)
+        {
+            var response = await _productVersionContractTypeAppService.GetProductVersionContractTypeAsync(productVersionId, RecordStatusEnum.Active);
             if (response == null)
                 return ReturnNotFound();
 

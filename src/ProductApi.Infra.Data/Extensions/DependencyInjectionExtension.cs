@@ -39,6 +39,7 @@ namespace ProductApi.Infra.Data.Extensions
             services.AddScoped<IProductVersionPaymentInstallmentRepository, ProductVersionPaymentInstallmentRepository>();
             services.AddScoped<IProductVersionPaymentFrequencyRepository, ProductVersionPaymentFrequencyRepository>();
             services.AddScoped<IProductVersionCoverageRepository, ProductVersionCoverageRepository>();
+            services.AddScoped<IProductVersionContractTypeRepository, ProductVersionContractTypeRepository>();
             services.AddScoped<ITermTypeRepository, TermTypeRepository>();
             services.AddScoped<IProductComponentRepository, ProductComponentRepository>();
             services.AddScoped<IFlexRateRepository, FlexRateRepository>();
@@ -48,7 +49,6 @@ namespace ProductApi.Infra.Data.Extensions
             services.AddScoped<ILaborCourtRepository, LaborCourtRepository>();
             services.AddScoped<ILegalRecourseTypeRepository, LegalRecourseTypeRepository>();
             services.AddScoped<ILegalRecourseTypeParameterRepository, LegalRecourseTypeParameterRepository>();
-
             services.AddScoped<IRegisterVehicleBrandRepository, RegisterVehicleBrandRepository>();
             services.AddScoped<IRegisterVehicleModelRepository, RegisterVehicleModelRepository>();            
             services.AddScoped<IRegisterVehicleVersionRepository, RegisterVehicleVersionRepository>();  
