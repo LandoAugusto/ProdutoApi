@@ -48,6 +48,10 @@ namespace ProductApi.Infra.Data.Extensions
             services.AddScoped<ILaborCourtRepository, LaborCourtRepository>();
             services.AddScoped<ILegalRecourseTypeRepository, LegalRecourseTypeRepository>();
             services.AddScoped<ILegalRecourseTypeParameterRepository, LegalRecourseTypeParameterRepository>();
+
+            services.AddScoped<IRegisterVehicleBrandRepository, RegisterVehicleBrandRepository>();
+            services.AddScoped<IRegisterVehicleModelRepository, RegisterVehicleModelRepository>();            
+            services.AddScoped<IRegisterVehicleVersionRepository, RegisterVehicleVersionRepository>();  
             return services;
         }
     }

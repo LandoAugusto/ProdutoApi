@@ -320,18 +320,36 @@
             <summary>
             
             </summary>
-            <param name="productAppService"></param>
+            <param name="vehicleBrandService"></param>
+            <param name="vehicleModelAppService"></param>
         </member>
-        <member name="M:Product.Api.Controllers.V1.VehicleController.#ctor(ProductApi.Application.Interfaces.IProductAppService)">
+        <member name="M:Product.Api.Controllers.V1.VehicleController.#ctor(ProductApi.Application.Interfaces.IRegisterVehicleBrandAppService,ProductApi.Application.Interfaces.IRegisterVehicleModelAppService,ProductApi.Application.Interfaces.IRegisterVehicleVersionAppService)">
             <summary>
             
             </summary>
-            <param name="productAppService"></param>
+            <param name="vehicleBrandService"></param>
+            <param name="vehicleModelAppService"></param>
         </member>
-        <member name="M:Product.Api.Controllers.V1.VehicleController.GetProductAsync">
+        <member name="M:Product.Api.Controllers.V1.VehicleController.GetSearchBrandAsync(System.String)">
             <summary>
             
             </summary>
+            <returns></returns>        
+        </member>
+        <member name="M:Product.Api.Controllers.V1.VehicleController.GetSearchModelAsync(System.Int32,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="vehicleBranchId"></param>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Product.Api.Controllers.V1.VehicleController.GetSearchVersionlAsync(System.Int32,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="vehicleModelId"></param>
+            <param name="name"></param>
             <returns></returns>
         </member>
         <member name="T:Product.Api.Extensions.ApplicationBuilderExtensions">

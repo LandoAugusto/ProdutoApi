@@ -37,7 +37,11 @@ namespace ProductApi.Core.Infrastructure.Mapper
             CreateMap<CivilCourtModel, CivilCourt>().ReverseMap();
             CreateMap<LaborCourtModel, LaborCourt>().ReverseMap();
             CreateMap<StateModel, State>().ReverseMap();
-            CreateMap<LegalRecourseTypeModel, LegalRecourseType>().ReverseMap();            
+            CreateMap<LegalRecourseTypeModel, LegalRecourseType>().ReverseMap();
+
+            CreateMap<RegisterVehicleBrandModel, RegisterVehicleBrand>().ReverseMap();
+            CreateMap<RegisterVehicleModelModel, RegisterVehicleModel>().ReverseMap();
+            CreateMap<RegisterVehicleVersionModel, RegisterVehicleVersion>().ReverseMap();
 
         }
     }

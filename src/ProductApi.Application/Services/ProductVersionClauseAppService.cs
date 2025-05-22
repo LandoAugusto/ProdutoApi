@@ -15,10 +15,10 @@ namespace ProductApi.Application.Services
 
         public async Task<IEnumerable<ProductVersionClauseModel>?> ListAsync(int productVersionId, decimal insuredAmountValue, RecordStatusEnum recordStatus)
         {
-            var entidade = await _productVersionClauseRepository.ListAsync(productVersionId, insuredAmountValue, recordStatus);
-            if (!entidade.IsAny<ProductVersionClause>()) return null;
+            var entity = await _productVersionClauseRepository.ListAsync(productVersionId, insuredAmountValue, recordStatus);
+            if (!entity.IsAny<ProductVersionClause>()) return null;
 
-            return _mapper.Map<IEnumerable<ProductVersionClauseModel>>(entidade);
+            return _mapper.Map<IEnumerable<ProductVersionClauseModel>>(entity);
         }
     }
 }

@@ -1,11 +1,12 @@
-﻿using  ProductApi.Core.Entities.Enumerators;
+﻿using ProductApi.Core.Entities;
+using  ProductApi.Core.Entities.Enumerators;
 using  ProductApi.Infra.Data.Repositories.Standard.Interfaces;
 
 namespace  ProductApi.Infra.Data.Interfaces
 {
-    public interface IRegisterVehicleModelRepository : IDomainRepository<Core.Entities.RegisterVehicleModel>
-    {
-        Task<IEnumerable<Core.Entities.RegisterVehicleModel>?> GetAllAsync(RecordStatusEnum recordStatus);
+    public interface IRegisterVehicleModelRepository : IDomainRepository<RegisterVehicleModel>
+    {   
+        Task<IEnumerable<RegisterVehicleModel>?> GetSearchModelAsync(int vehicleBranchId, string? name, RecordStatusEnum recordStatus);
     }
 }
 

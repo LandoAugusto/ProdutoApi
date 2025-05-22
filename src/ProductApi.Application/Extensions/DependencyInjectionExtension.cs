@@ -1,6 +1,8 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using Product.Application.Interfaces;
 using ProductApi.Application.Interfaces;
 using ProductApi.Application.Services;
+using ProductApi.Infra.Data.Interfaces;
 
 namespace ProductApi.Application.Extensions
 {
@@ -24,6 +26,10 @@ namespace ProductApi.Application.Extensions
             services.AddScoped<ILaborCourtAppService, LaborCourtAppService>();
             services.AddScoped<ICivilCourtAppService, CivilCourtAppService>();
             services.AddScoped<ILegalRecourseTypeAppService, LegalRecourseTypeAppService>();
+
+            services.AddScoped<IRegisterVehicleBrandAppService, RegisterVehicleBrandAppService>();
+            services.AddScoped<IRegisterVehicleModelAppService, RegisterVehicleModelAppService>();
+            services.AddScoped<IRegisterVehicleVersionAppService, RegisterVehicleVersionAppService>();           
 
         }
     }
