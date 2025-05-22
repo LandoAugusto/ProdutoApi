@@ -23,10 +23,10 @@ namespace ProductApi.Infra.Data.Mappings
             .Property(x => x.Status);
 
             builder
-            .Property(x => x.UserId);
+            .Property(x => x.InclusionUserId);
 
             builder
-            .Property(x => x.DateUtc);
+            .Property(x => x.InclusionDate);
         }
     }
 }

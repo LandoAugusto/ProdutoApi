@@ -15,10 +15,10 @@ namespace ProductApi.Infra.Data.Mappings
            .Property(x => x.LegalRecourseTypeId);
 
             builder
-            .Property(x => x.EffectiveDateStart);
+            .Property(x => x.StartCoverage);
 
             builder
-            .Property(x => x.EffectiveDateEnd);
+            .Property(x => x.EndCoverage);
 
             builder
             .Property(x => x.InclusionUserId);

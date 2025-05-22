@@ -7,8 +7,8 @@ namespace ProductApi.Core.Entities
         public int? LegalRecourseTypeParameterId { get; set; }
         public int LegalRecourseTypeId { get; set; }
         public decimal ApeelDepositAmount { get; set; }
-        public DateTime EffectiveDateStart { get; set; }
-        public DateTime? EffectiveDateEnd { get; set; }
+        public DateTime StartCoverage { get; set; }
+        public DateTime? EndCoverage { get; set; }
         public int InclusionUserId { get; set; }
         public DateTime InclusionDate { get; set; }
         public int? LastChangeUserId { get; set; }
