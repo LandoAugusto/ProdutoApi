@@ -11,9 +11,9 @@ namespace ProductApi.Application.Services
         private readonly IMapper _mapper = mapper;
         private readonly IProductVersionInsuredObjectRepository _productVersionInsuredObjectRepository = productVersionInsuredObjectRepository;
 
-        public async Task<InsuredObjectModel?> GetAsync(int productVersionId, RecordStatusEnum recordStatus)
+        public async Task<InsuredObjectModel?> GetAsync(int productVersionCoverageId, RecordStatusEnum recordStatus)
         {
-            var entidade = await _productVersionInsuredObjectRepository.GetAsync(productVersionId, recordStatus);
+            var entidade = await _productVersionInsuredObjectRepository.GetAsync(productVersionCoverageId, recordStatus);
             if (entidade == null) return null;
 
             return _mapper.Map<InsuredObjectModel>(entidade.InsuredObject);

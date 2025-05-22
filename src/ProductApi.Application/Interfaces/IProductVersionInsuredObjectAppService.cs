@@ -5,6 +5,6 @@ namespace ProductApi.Application.Interfaces
 {
     public interface IProductVersionInsuredObjectAppService
     {
-        Task<InsuredObjectModel?> GetAsync(int productVersionId, RecordStatusEnum recordStatus);
+        Task<InsuredObjectModel?> GetAsync(int productVersionCoverageId, RecordStatusEnum recordStatus);
     }
 }

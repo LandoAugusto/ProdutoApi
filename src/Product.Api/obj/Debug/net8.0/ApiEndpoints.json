@@ -741,13 +741,13 @@
   {
     "ContainingType": "Product.Api.Controllers.V1.ProductVersionController",
     "Method": "GetInsuredObjectAsync",
-    "RelativePath": "api/v1/productversion/get-product-version-insured-object/{productVersionId}",
+    "RelativePath": "api/v1/productversion/get-product-version-insured-object/{productVersionCoverageId}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "productVersionId",
+        "Name": "productVersionCoverageId",
         "Type": "System.Int32",
         "IsRequired": true
       }

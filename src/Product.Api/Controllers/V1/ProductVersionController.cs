@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Product.Api.Controllers.V1.Base;
 using ProductApi.Application.Interfaces;
+using ProductApi.Core.Entities;
 using ProductApi.Core.Entities.Enumerators;
 using ProductApi.Core.Models;
 using ProductApi.Core.Models;
@@ -59,16 +60,16 @@ namespace Product.Api.Controllers.V1
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="productVersionId"></param>
+        /// <param name="productVersionCoverageId"></param>
         /// <returns></returns>
         [HttpGet]
-        [Route("get-product-version-insured-object/{productVersionId}")]
+        [Route("get-product-version-insured-object/{productVersionCoverageId}")]
         [ProducesResponseType(typeof(BaseDataResponseModel<InsuredObjectModel>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(BaseDataResponseModel<InsuredObjectModel>), StatusCodes.Status500InternalServerError)]
         [ProducesResponseType(typeof(BaseDataResponseModel<InsuredObjectModel>), StatusCodes.Status404NotFound)]
-        public async Task<IActionResult> GetInsuredObjectAsync(int productVersionId)
+        public async Task<IActionResult> GetInsuredObjectAsync(int productVersionCoverageId)
         {
-            var response = await _productVersionInsuredObjectService.GetAsync(productVersionId, RecordStatusEnum.Active);
+            var response = await _productVersionInsuredObjectService.GetAsync(productVersionCoverageId, RecordStatusEnum.Active);
             if (response == null)
                 return ReturnNotFound();
 

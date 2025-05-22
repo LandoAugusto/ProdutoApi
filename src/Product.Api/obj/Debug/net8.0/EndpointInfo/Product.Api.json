@@ -1168,7 +1168,7 @@
         }
       }
     },
-    "/api/v1/productversion/get-product-version-insured-object/{productVersionId}": {
+    "/api/v1/productversion/get-product-version-insured-object/{productVersionCoverageId}": {
       "get": {
         "tags": [
           "ProductVersion"
@@ -1176,7 +1176,7 @@
         "summary": "",
         "parameters": [
           {
-            "name": "productVersionId",
+            "name": "productVersionCoverageId",
             "in": "path",
             "description": "",
             "required": true,
@@ -2968,13 +2968,11 @@
         "properties": {
           "stateId": {
             "type": "integer",
-            "format": "int32",
-            "nullable": true
+            "format": "int32"
           },
           "countryId": {
             "type": "integer",
-            "format": "int32",
-            "nullable": true
+            "format": "int32"
           },
           "initials": {
             "type": "string",

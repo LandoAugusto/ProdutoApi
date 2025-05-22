@@ -16,5 +16,6 @@ namespace ProductApi.Core.Entities
         public DateTime? LastChangeDate { get; set; }
         public ProductVersion ProductVersion { get; set; } = null!;
         public Coverage Coverage { get; set; } = null!;
+        public virtual ICollection<ProductVersionInsuredObject> ProductVersionInsuredObject { get; set; } = new HashSet<ProductVersionInsuredObject>();
     }
 }

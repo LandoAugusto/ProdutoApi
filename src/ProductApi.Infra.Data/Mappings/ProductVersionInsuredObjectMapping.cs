@@ -15,7 +15,7 @@ namespace ProductApi.Infra.Data.Mappings
            .Property(x => x.InsuredObjectId);
 
             builder
-           .Property(x => x.ProductVersionId);           
+           .Property(x => x.ProductVersionCoverageId);           
 
             builder
            .Property(x => x.Status);

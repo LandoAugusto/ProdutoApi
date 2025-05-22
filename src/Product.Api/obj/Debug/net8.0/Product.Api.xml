@@ -254,7 +254,7 @@
             <summary>
             
             </summary>
-            <param name="productVersionId"></param>
+            <param name="productVersionCoverageId"></param>
             <returns></returns>
         </member>
         <member name="M:Product.Api.Controllers.V1.ProductVersionController.GetByCoverageIdsync(System.Int32,System.Int32)">
