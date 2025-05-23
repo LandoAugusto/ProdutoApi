@@ -5,6 +5,6 @@ namespace ProductApi.Application.Interfaces
 {
     public interface IRegisterVehicleBrandAppService
     {   
-        Task<IEnumerable<RegisterVehicleBrandModel>?> GetSearchBrandAsync(string name, RecordStatusEnum recordStatus);
+        Task<IEnumerable<RegisterVehicleBrandModel>?> GetVehicleBrandAsync(string name, RecordStatusEnum recordStatus);
     }
 }

@@ -14,7 +14,7 @@ namespace ProductApi.Application.Services
         private readonly IMapper _mapper = mapper;
         private readonly IRegisterVehicleBrandRepository _repository = repository;       
 
-        public async Task<IEnumerable<RegisterVehicleBrandModel>?> GetSearchBrandAsync(string name, RecordStatusEnum recordStatus)
+        public async Task<IEnumerable<RegisterVehicleBrandModel>?> GetVehicleBrandAsync(string name, RecordStatusEnum recordStatus)
         {
             var entity = await _repository.GetSearchBrandAsync(name, recordStatus);
             if (!entity.IsAny<RegisterVehicleBrand>()) return null;

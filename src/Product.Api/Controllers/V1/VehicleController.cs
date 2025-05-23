@@ -20,19 +20,16 @@ namespace Product.Api.Controllers.V1
         private readonly IRegisterVehicleModelAppService _vehicleModelAppService = vehicleModelAppService;
         private readonly IRegisterVehicleVersionAppService _vehicleVersionAppService = vehicleVersionAppService;
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns></returns>        
+        /// <summary> 
+        [AllowAnonymous]
         [HttpGet]
-        [Route("get-search-brand")]
+        [Route("get-vehicle-brand/{name}")]
         [ProducesResponseType(typeof(BaseDataResponseModel<IEnumerable<RegisterVehicleBrandModel>>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(BaseDataResponseModel<IEnumerable<RegisterVehicleBrandModel>?>), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(BaseDataResponseModel<IEnumerable<RegisterVehicleBrandModel>?>), StatusCodes.Status404NotFound)]
-        public async Task<IActionResult> GetSearchBrandAsync(string name)
+        public async Task<IActionResult> GetVehicleBrandAsync(string name)
         {
-            var response = await _vehicleBrandService.GetSearchBrandAsync(name, RecordStatusEnum.Active);
-
+            var response = await _vehicleBrandService.GetVehicleBrandAsync(name, RecordStatusEnum.Active);
             if (response == null)
                 return ReturnNotFound();
 
@@ -47,14 +44,13 @@ namespace Product.Api.Controllers.V1
         /// <returns></returns>
         [AllowAnonymous]
         [HttpGet]
-        [Route("get-search-model/{branchId}")]
-        [ProducesResponseType(typeof(BaseDataResponseModel<IEnumerable<RegisterVehicleBrandModel>>), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(BaseDataResponseModel<IEnumerable<RegisterVehicleBrandModel>?>), StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(typeof(BaseDataResponseModel<IEnumerable<RegisterVehicleBrandModel>?>), StatusCodes.Status404NotFound)]
-        public async Task<IActionResult> GetSearchModelAsync(int vehicleBranchId, string? name)
+        [Route("get-vehicle-model/{vehicleBranchId}")]
+        [ProducesResponseType(typeof(BaseDataResponseModel<IEnumerable<RegisterVehicleModelModel>>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<IEnumerable<RegisterVehicleModelModel>?>), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<IEnumerable<RegisterVehicleModelModel>?>), StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> GetVehicleModelAsync(int vehicleBranchId, string? name)
         {
-            var response = await _vehicleModelAppService.GetSearchModelAsync(vehicleBranchId, name, RecordStatusEnum.Active);
-
+            var response = await _vehicleModelAppService.GetVehicleModelAsync(vehicleBranchId, name, RecordStatusEnum.Active);
             if (response == null)
                 return ReturnNotFound();
 
@@ -68,14 +64,13 @@ namespace Product.Api.Controllers.V1
         /// <returns></returns>
         [AllowAnonymous]
         [HttpGet]
-        [Route("get-search-version/{vehicleModelId}")]
-        [ProducesResponseType(typeof(BaseDataResponseModel<IEnumerable<RegisterVehicleBrandModel>>), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(BaseDataResponseModel<IEnumerable<RegisterVehicleBrandModel>?>), StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(typeof(BaseDataResponseModel<IEnumerable<RegisterVehicleBrandModel>?>), StatusCodes.Status404NotFound)]
-        public async Task<IActionResult> GetSearchVersionlAsync(int vehicleModelId, string? name)
+        [Route("get-vehicle-version/{vehicleModelId}")]
+        [ProducesResponseType(typeof(BaseDataResponseModel<IEnumerable<RegisterVehicleVersionModel>>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<IEnumerable<RegisterVehicleVersionModel>?>), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<IEnumerable<RegisterVehicleVersionModel>?>), StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> GetVehicleVersionAsync(int vehicleModelId, string? name)
         {
-            var response = await _vehicleVersionAppService.GetSearchVersionAsync(vehicleModelId, name, RecordStatusEnum.Active);
-
+            var response = await _vehicleVersionAppService.GetVehicleVersionAsync(vehicleModelId, name, RecordStatusEnum.Active);
             if (response == null)
                 return ReturnNotFound();
 

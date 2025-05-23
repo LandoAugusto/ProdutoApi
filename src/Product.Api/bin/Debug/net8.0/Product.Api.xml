@@ -368,13 +368,8 @@
             <param name="vehicleModelAppService"></param>
             <param name="vehicleVersionAppService"></param>
         </member>
-        <member name="M:Product.Api.Controllers.V1.VehicleController.GetSearchBrandAsync(System.String)">
-            <summary>
-            
-            </summary>
-            <returns></returns>        
-        </member>
-        <member name="M:Product.Api.Controllers.V1.VehicleController.GetSearchModelAsync(System.Int32,System.String)">
+        <!-- Badly formed XML comment ignored for member "M:Product.Api.Controllers.V1.VehicleController.GetVehicleBrandAsync(System.String)" -->
+        <member name="M:Product.Api.Controllers.V1.VehicleController.GetVehicleModelAsync(System.Int32,System.String)">
             <summary>
             
             </summary>
@@ -382,7 +377,7 @@
             <param name="name"></param>
             <returns></returns>
         </member>
-        <member name="M:Product.Api.Controllers.V1.VehicleController.GetSearchVersionlAsync(System.Int32,System.String)">
+        <member name="M:Product.Api.Controllers.V1.VehicleController.GetVehicleVersionAsync(System.Int32,System.String)">
             <summary>
             
             </summary>

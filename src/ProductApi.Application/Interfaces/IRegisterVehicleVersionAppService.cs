@@ -5,6 +5,6 @@ namespace ProductApi.Application.Interfaces
 {
     public interface IRegisterVehicleVersionAppService
     {
-        Task<IEnumerable<RegisterVehicleVersionModel>?> GetSearchVersionAsync(int vehicleModelId, string? name, RecordStatusEnum recordStatus);
+        Task<IEnumerable<RegisterVehicleVersionModel>?> GetVehicleVersionAsync(int vehicleModelId, string? name, RecordStatusEnum recordStatus);
     }
 }

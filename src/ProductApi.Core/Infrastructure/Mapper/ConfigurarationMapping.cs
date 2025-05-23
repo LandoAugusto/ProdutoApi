@@ -46,9 +46,6 @@ namespace ProductApi.Core.Infrastructure.Mapper
             CreateMap<ConstructionTypeModel, ConstructionType>().ReverseMap();
             CreateMap<CalculationTypeModel, CalculationType>().ReverseMap();
             CreateMap<CalculationTypeAcceptanceModel, ProductVersionCalculationTypeAcceptance>().ReverseMap();
-            
-
-
         }
     }
 }
