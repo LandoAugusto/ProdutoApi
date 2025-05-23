@@ -18,7 +18,6 @@ namespace Product.Api.Controllers.V1
         private readonly IProductAppService _productAppService = productAppService;
         private readonly IProductComponentScreenAppService _productComponentScreenAppService = productComponentScreenAppService;
 
-
         /// <summary>
         /// 
         /// </summary>
@@ -26,7 +25,7 @@ namespace Product.Api.Controllers.V1
         [HttpGet]
         [Route("get-all")]
         [ProducesResponseType(typeof(BaseDataResponseModel<ProductModel>), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(BaseDataResponseModel<ProductModel>), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status404NotFound)]
         public async Task<IActionResult> ListAsync()
         {
             var response = await _productAppService.ListAsync(RecordStatusEnum.Active);
@@ -44,7 +43,7 @@ namespace Product.Api.Controllers.V1
         [HttpGet]
         [Route("get-product-branch/{insurancebranchId}")]
         [ProducesResponseType(typeof(BaseDataResponseModel<ProductModel>), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(BaseDataResponseModel<ProductModel>), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status404NotFound)]
         public async Task<IActionResult> GetByBranchAsync(int insurancebranchId)
         {
             var response = await _productAppService.ListBranchAsync(insurancebranchId, RecordStatusEnum.Active);
@@ -61,7 +60,7 @@ namespace Product.Api.Controllers.V1
         [HttpGet]
         [Route("get-component-screen/{code}")]
         [ProducesResponseType(typeof(BaseDataResponseModel<ProductModel>), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(BaseDataResponseModel<ProductModel>), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status404NotFound)]
         public async Task<IActionResult> GetComponentScreenAsync(int code)
         {
             var response = await _productComponentScreenAppService.GetAsync(code);

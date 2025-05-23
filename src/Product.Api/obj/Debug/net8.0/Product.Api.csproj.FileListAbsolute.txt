@@ -429,8 +429,8 @@ C:\Work\APIS\ProdutoApi\src\Product.Api\obj\Debug\net8.0\ref\Product.Api.dll
 C:\Work\APIS\ProdutoApi\src\Product.Api\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Work\APIS\ProductApi\src\Product.Api\bin\Debug\net8.0\appsettings.Development.json
 C:\Work\APIS\ProductApi\src\Product.Api\bin\Debug\net8.0\appsettings.json
-C:\Work\APIS\ProductApi\src\Product.Api\bin\Debug\net8.0\Product.Api.staticwebassets.endpoints.json
 C:\Work\APIS\ProductApi\src\Product.Api\bin\Debug\net8.0\appsettings.Production.json
+C:\Work\APIS\ProductApi\src\Product.Api\bin\Debug\net8.0\Product.Api.staticwebassets.endpoints.json
 C:\Work\APIS\ProductApi\src\Product.Api\bin\Debug\net8.0\Product.Api.exe
 C:\Work\APIS\ProductApi\src\Product.Api\bin\Debug\net8.0\Product.Api.deps.json
 C:\Work\APIS\ProductApi\src\Product.Api\bin\Debug\net8.0\Product.Api.runtimeconfig.json
@@ -622,10 +622,12 @@ C:\Work\APIS\ProductApi\src\Product.Api\obj\Debug\net8.0\Product.Api.GeneratedMS
 C:\Work\APIS\ProductApi\src\Product.Api\obj\Debug\net8.0\Product.Api.AssemblyInfoInputs.cache
 C:\Work\APIS\ProductApi\src\Product.Api\obj\Debug\net8.0\Product.Api.AssemblyInfo.cs
 C:\Work\APIS\ProductApi\src\Product.Api\obj\Debug\net8.0\Product.Api.csproj.CoreCompileInputs.cache
+C:\Work\APIS\ProductApi\src\Product.Api\obj\Debug\net8.0\Product.Api.MvcApplicationPartsAssemblyInfo.cs
 C:\Work\APIS\ProductApi\src\Product.Api\obj\Debug\net8.0\Product.Api.MvcApplicationPartsAssemblyInfo.cache
 C:\Work\APIS\ProductApi\src\Product.Api\obj\Debug\net8.0\Product.Api.sourcelink.json
 C:\Work\APIS\ProductApi\src\Product.Api\obj\Debug\net8.0\scopedcss\bundle\Product.Api.styles.css
 C:\Work\APIS\ProductApi\src\Product.Api\obj\Debug\net8.0\staticwebassets.build.json
+C:\Work\APIS\ProductApi\src\Product.Api\obj\Debug\net8.0\staticwebassets.build.json.cache
 C:\Work\APIS\ProductApi\src\Product.Api\obj\Debug\net8.0\staticwebassets.development.json
 C:\Work\APIS\ProductApi\src\Product.Api\obj\Debug\net8.0\staticwebassets.build.endpoints.json
 C:\Work\APIS\ProductApi\src\Product.Api\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
@@ -636,5 +638,3 @@ C:\Work\APIS\ProductApi\src\Product.Api\obj\Debug\net8.0\Product.Api.xml
 C:\Work\APIS\ProductApi\src\Product.Api\obj\Debug\net8.0\Product.Api.pdb
 C:\Work\APIS\ProductApi\src\Product.Api\obj\Debug\net8.0\Product.Api.genruntimeconfig.cache
 C:\Work\APIS\ProductApi\src\Product.Api\obj\Debug\net8.0\ref\Product.Api.dll
-C:\Work\APIS\ProductApi\src\Product.Api\obj\Debug\net8.0\staticwebassets.build.json.cache
-C:\Work\APIS\ProductApi\src\Product.Api\obj\Debug\net8.0\Product.Api.MvcApplicationPartsAssemblyInfo.cs

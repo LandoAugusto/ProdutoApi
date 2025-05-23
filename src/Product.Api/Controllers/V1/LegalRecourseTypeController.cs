@@ -20,9 +20,8 @@ namespace Product.Api.Controllers.V1
         /// <returns></returns>
         [HttpGet]
         [Route("get-all")]
-        [ProducesResponseType(typeof(BaseDataResponseModel<LegalRecourseTypeModel>), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(BaseDataResponseModel<LegalRecourseTypeModel>), StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(typeof(BaseDataResponseModel<LegalRecourseTypeModel>), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<LegalRecourseTypeModel>), StatusCodes.Status200OK)]        
+        [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status404NotFound)]
         public async Task<IActionResult> GetAllAsync()
         {
             var response = await _legalRecourseTypeAppService.GetAllAsync(RecordStatusEnum.Active);

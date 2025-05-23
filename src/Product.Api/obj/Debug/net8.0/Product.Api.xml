@@ -359,6 +359,7 @@
             <param name="vehicleBrandService"></param>
             <param name="vehicleModelAppService"></param>
             <param name="vehicleVersionAppService"></param>
+            <param name="vehicleYearService"></param>
         </member>
         <member name="M:Product.Api.Controllers.V1.VehicleController.#ctor(ProductApi.Application.Interfaces.IRegisterVehicleBrandAppService,ProductApi.Application.Interfaces.IRegisterVehicleModelAppService,ProductApi.Application.Interfaces.IRegisterVehicleVersionAppService,ProductApi.Application.Interfaces.IRegisterVehicleYearAppService)">
             <summary>
@@ -367,6 +368,7 @@
             <param name="vehicleBrandService"></param>
             <param name="vehicleModelAppService"></param>
             <param name="vehicleVersionAppService"></param>
+            <param name="vehicleYearService"></param>
         </member>
         <!-- Badly formed XML comment ignored for member "M:Product.Api.Controllers.V1.VehicleController.GetVehicleBrandAsync(System.String)" -->
         <member name="M:Product.Api.Controllers.V1.VehicleController.GetVehicleModelAsync(System.Int32,System.String)">

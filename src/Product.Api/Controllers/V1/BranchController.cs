@@ -20,8 +20,9 @@ namespace Product.Api.Controllers.V1
         /// <returns></returns>
         [HttpGet]
         [Route("get-branch-type")]
-        [ProducesResponseType(typeof(BaseDataResponseModel<BranchTypeModel>), StatusCodes.Status200OK)]        
-        [ProducesResponseType(typeof(BaseDataResponseModel<BranchTypeModel>), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<BranchTypeModel>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status404NotFound)]
         public async Task<IActionResult> ListBranchTypeAsync()
         {
             var response = await _branchAppService.ListBranchTypeAsync(RecordStatusEnum.Active);
@@ -37,8 +38,9 @@ namespace Product.Api.Controllers.V1
         /// <returns></returns>
         [HttpGet]
         [Route("get-branch")]
-        [ProducesResponseType(typeof(BaseDataResponseModel<BranchModel>), StatusCodes.Status200OK)]        
-        [ProducesResponseType(typeof(BaseDataResponseModel<BranchModel>), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<BranchModel>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status404NotFound)]
         public async Task<IActionResult> ListBranchAsync(int? brachTypeId)
         {
             var response = await _branchAppService.ListBranchAsync(brachTypeId, RecordStatusEnum.Active);
@@ -54,8 +56,9 @@ namespace Product.Api.Controllers.V1
         /// <returns></returns>
         [HttpGet]
         [Route("get-insurance-branch")]
-        [ProducesResponseType(typeof(BaseDataResponseModel<InsuranceBranchModel>), StatusCodes.Status200OK)]        
-        [ProducesResponseType(typeof(BaseDataResponseModel<InsuranceBranchModel>), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<InsuranceBranchModel>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status404NotFound)]
         public async Task<IActionResult> ListInsuranceBranchAsync(int? brachId)
         {
             var response = await _branchAppService.ListInsuranceBranchAsync(brachId, RecordStatusEnum.Active);
