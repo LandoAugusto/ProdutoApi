@@ -1,22 +1,17 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using  ProductApi.Core.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using ProductApi.Core.Entities;
 
 namespace  ProductApi.Infra.Data.Mappings
 {
-    internal class RegisterVehicleYearMapping : IEntityTypeConfiguration<Core.Entities.RegisterVehicleYear>
+    internal class RegisterVehicleYearMapping : IEntityTypeConfiguration<RegisterVehicleYear>
     {
         public void Configure(EntityTypeBuilder<RegisterVehicleYear> builder)
         {
             builder.HasKey(x => x.RegisterVehicleYearId);
 
             builder
-                .Property(e => e.VehicleYear);
+                .Property(e => e.Year);
             builder
                 .Property(e => e.Status);
             builder

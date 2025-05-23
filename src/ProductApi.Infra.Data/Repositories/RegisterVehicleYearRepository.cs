@@ -1,4 +1,5 @@
 ﻿
+using ProductApi.Core.Entities;
 using  ProductApi.Core.Entities.Enumerators;
 using  ProductApi.Infra.Data.Contexts;
 using  ProductApi.Infra.Data.Interfaces;
@@ -6,9 +7,9 @@ using  ProductApi.Infra.Data.Repositories.Standard;
 
 namespace  ProductApi.Infra.Data.Repositories
 {
-    internal class RegisterVehicleYearRepository(ProductDbContext context) : DomainRepository<Core.Entities.RegisterVehicleYear>(context), IRegisterVehicleYearRepository
+    internal class RegisterVehicleYearRepository(ProductDbContext context) : DomainRepository<RegisterVehicleYear>(context), IRegisterVehicleYearRepository
     {
-        public async Task<IEnumerable<Core.Entities.RegisterVehicleYear>?> GetAllAsync(RecordStatusEnum recordStatus)
+        public async Task<IEnumerable<RegisterVehicleYear>?> GetAllAsync(RecordStatusEnum recordStatus)
         {
             var query =
                     await Task.FromResult(

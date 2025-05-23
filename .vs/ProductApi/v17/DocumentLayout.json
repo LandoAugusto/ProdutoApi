@@ -3,56 +3,52 @@
   "WorkspaceRootPath": "C:\\Work\\APIS\\ProductApi\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{9E735982-15C2-4A44-8C50-450518BDD0B0}|src\\ProductApi.Core\\ProductApi.Core.csproj|c:\\work\\apis\\productapi\\src\\productapi.core\\models\\registervehicleyearmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E735982-15C2-4A44-8C50-450518BDD0B0}|src\\ProductApi.Core\\ProductApi.Core.csproj|solutionrelative:src\\productapi.core\\models\\registervehicleyearmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69EDEDAB-4A20-4441-B979-F66AC5305D8A}|src\\ProductApi.Application\\ProductApi.Application.csproj|c:\\work\\apis\\productapi\\src\\productapi.application\\interfaces\\iregistervehicleyearappservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69EDEDAB-4A20-4441-B979-F66AC5305D8A}|src\\ProductApi.Application\\ProductApi.Application.csproj|solutionrelative:src\\productapi.application\\interfaces\\iregistervehicleyearappservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{43668110-B5EE-4FD3-A7F7-006DF586C52A}|src\\Product.Api\\Product.Api.csproj|c:\\work\\apis\\productapi\\src\\product.api\\controllers\\v1\\vehiclecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{43668110-B5EE-4FD3-A7F7-006DF586C52A}|src\\Product.Api\\Product.Api.csproj|solutionrelative:src\\product.api\\controllers\\v1\\vehiclecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2584B1B8-298A-4720-9F3D-CE2FFB56C036}|src\\ProductApi.Infra.Data\\ProductApi.Infra.Data.csproj|c:\\work\\apis\\productapi\\src\\productapi.infra.data\\repositories\\registervehiclemodelrepository(.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2584B1B8-298A-4720-9F3D-CE2FFB56C036}|src\\ProductApi.Infra.Data\\ProductApi.Infra.Data.csproj|solutionrelative:src\\productapi.infra.data\\repositories\\registervehiclemodelrepository(.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{69EDEDAB-4A20-4441-B979-F66AC5305D8A}|src\\ProductApi.Application\\ProductApi.Application.csproj|c:\\work\\apis\\productapi\\src\\productapi.application\\services\\registervehicleyearappservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69EDEDAB-4A20-4441-B979-F66AC5305D8A}|src\\ProductApi.Application\\ProductApi.Application.csproj|solutionrelative:src\\productapi.application\\services\\registervehicleyearappservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9E735982-15C2-4A44-8C50-450518BDD0B0}|src\\ProductApi.Core\\ProductApi.Core.csproj|c:\\work\\apis\\productapi\\src\\productapi.core\\models\\registervehicleversionmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E735982-15C2-4A44-8C50-450518BDD0B0}|src\\ProductApi.Core\\ProductApi.Core.csproj|solutionrelative:src\\productapi.core\\models\\registervehicleversionmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2584B1B8-298A-4720-9F3D-CE2FFB56C036}|src\\ProductApi.Infra.Data\\ProductApi.Infra.Data.csproj|c:\\work\\apis\\productapi\\src\\productapi.infra.data\\mappings\\registervehicleyearmapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2584B1B8-298A-4720-9F3D-CE2FFB56C036}|src\\ProductApi.Infra.Data\\ProductApi.Infra.Data.csproj|solutionrelative:src\\productapi.infra.data\\mappings\\registervehicleyearmapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69EDEDAB-4A20-4441-B979-F66AC5305D8A}|src\\ProductApi.Application\\ProductApi.Application.csproj|c:\\work\\apis\\productapi\\src\\productapi.application\\interfaces\\iregistervehicleversionappservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69EDEDAB-4A20-4441-B979-F66AC5305D8A}|src\\ProductApi.Application\\ProductApi.Application.csproj|solutionrelative:src\\productapi.application\\interfaces\\iregistervehicleversionappservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2584B1B8-298A-4720-9F3D-CE2FFB56C036}|src\\ProductApi.Infra.Data\\ProductApi.Infra.Data.csproj|c:\\work\\apis\\productapi\\src\\productapi.infra.data\\repositories\\registervehicleyearrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2584B1B8-298A-4720-9F3D-CE2FFB56C036}|src\\ProductApi.Infra.Data\\ProductApi.Infra.Data.csproj|solutionrelative:src\\productapi.infra.data\\repositories\\registervehicleyearrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{43668110-B5EE-4FD3-A7F7-006DF586C52A}|src\\Product.Api\\Product.Api.csproj|c:\\work\\apis\\productapi\\src\\product.api\\controllers\\v1\\commoncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{43668110-B5EE-4FD3-A7F7-006DF586C52A}|src\\Product.Api\\Product.Api.csproj|solutionrelative:src\\product.api\\controllers\\v1\\commoncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9E735982-15C2-4A44-8C50-450518BDD0B0}|src\\ProductApi.Core\\ProductApi.Core.csproj|c:\\work\\apis\\productapi\\src\\productapi.core\\entities\\registervehicleyear.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E735982-15C2-4A44-8C50-450518BDD0B0}|src\\ProductApi.Core\\ProductApi.Core.csproj|solutionrelative:src\\productapi.core\\entities\\registervehicleyear.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{43668110-B5EE-4FD3-A7F7-006DF586C52A}|src\\Product.Api\\Product.Api.csproj|c:\\work\\apis\\productapi\\src\\product.api\\controllers\\v1\\civilcourtcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{43668110-B5EE-4FD3-A7F7-006DF586C52A}|src\\Product.Api\\Product.Api.csproj|solutionrelative:src\\product.api\\controllers\\v1\\civilcourtcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2584B1B8-298A-4720-9F3D-CE2FFB56C036}|src\\ProductApi.Infra.Data\\ProductApi.Infra.Data.csproj|c:\\work\\apis\\productapi\\src\\productapi.infra.data\\extensions\\dependencyinjectionextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2584B1B8-298A-4720-9F3D-CE2FFB56C036}|src\\ProductApi.Infra.Data\\ProductApi.Infra.Data.csproj|solutionrelative:src\\productapi.infra.data\\extensions\\dependencyinjectionextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69EDEDAB-4A20-4441-B979-F66AC5305D8A}|src\\ProductApi.Application\\ProductApi.Application.csproj|c:\\work\\apis\\productapi\\src\\productapi.application\\extensions\\dependencyinjectionextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69EDEDAB-4A20-4441-B979-F66AC5305D8A}|src\\ProductApi.Application\\ProductApi.Application.csproj|solutionrelative:src\\productapi.application\\extensions\\dependencyinjectionextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9E735982-15C2-4A44-8C50-450518BDD0B0}|src\\ProductApi.Core\\ProductApi.Core.csproj|c:\\work\\apis\\productapi\\src\\productapi.core\\infrastructure\\mapper\\configurarationmapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9E735982-15C2-4A44-8C50-450518BDD0B0}|src\\ProductApi.Core\\ProductApi.Core.csproj|solutionrelative:src\\productapi.core\\infrastructure\\mapper\\configurarationmapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{43668110-B5EE-4FD3-A7F7-006DF586C52A}|src\\Product.Api\\Product.Api.csproj|c:\\work\\apis\\productapi\\src\\product.api\\controllers\\v1\\productversioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{43668110-B5EE-4FD3-A7F7-006DF586C52A}|src\\Product.Api\\Product.Api.csproj|solutionrelative:src\\product.api\\controllers\\v1\\productversioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2584B1B8-298A-4720-9F3D-CE2FFB56C036}|src\\ProductApi.Infra.Data\\ProductApi.Infra.Data.csproj|c:\\work\\apis\\productapi\\src\\productapi.infra.data\\interfaces\\iregistervehicleyearrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2584B1B8-298A-4720-9F3D-CE2FFB56C036}|src\\ProductApi.Infra.Data\\ProductApi.Infra.Data.csproj|solutionrelative:src\\productapi.infra.data\\interfaces\\iregistervehicleyearrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9E735982-15C2-4A44-8C50-450518BDD0B0}|src\\ProductApi.Core\\ProductApi.Core.csproj|c:\\work\\apis\\productapi\\src\\productapi.core\\models\\calculationtypeacceptancemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E735982-15C2-4A44-8C50-450518BDD0B0}|src\\ProductApi.Core\\ProductApi.Core.csproj|solutionrelative:src\\productapi.core\\models\\calculationtypeacceptancemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9E735982-15C2-4A44-8C50-450518BDD0B0}|src\\ProductApi.Core\\ProductApi.Core.csproj|c:\\work\\apis\\productapi\\src\\productapi.core\\entities\\productversioncalculationtypeacceptance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E735982-15C2-4A44-8C50-450518BDD0B0}|src\\ProductApi.Core\\ProductApi.Core.csproj|solutionrelative:src\\productapi.core\\entities\\productversioncalculationtypeacceptance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2584B1B8-298A-4720-9F3D-CE2FFB56C036}|src\\ProductApi.Infra.Data\\ProductApi.Infra.Data.csproj|c:\\work\\apis\\productapi\\src\\productapi.infra.data\\contexts\\productdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2584B1B8-298A-4720-9F3D-CE2FFB56C036}|src\\ProductApi.Infra.Data\\ProductApi.Infra.Data.csproj|solutionrelative:src\\productapi.infra.data\\contexts\\productdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9E735982-15C2-4A44-8C50-450518BDD0B0}|src\\ProductApi.Core\\ProductApi.Core.csproj|c:\\work\\apis\\productapi\\src\\productapi.core\\entities\\productversioncalculationtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E735982-15C2-4A44-8C50-450518BDD0B0}|src\\ProductApi.Core\\ProductApi.Core.csproj|solutionrelative:src\\productapi.core\\entities\\productversioncalculationtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{43668110-B5EE-4FD3-A7F7-006DF586C52A}|src\\Product.Api\\Product.Api.csproj|c:\\work\\apis\\productapi\\src\\product.api\\controllers\\v1\\base\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{43668110-B5EE-4FD3-A7F7-006DF586C52A}|src\\Product.Api\\Product.Api.csproj|solutionrelative:src\\product.api\\controllers\\v1\\base\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{69EDEDAB-4A20-4441-B979-F66AC5305D8A}|src\\ProductApi.Application\\ProductApi.Application.csproj|c:\\work\\apis\\productapi\\src\\productapi.application\\services\\registervehiclebrandappservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69EDEDAB-4A20-4441-B979-F66AC5305D8A}|src\\ProductApi.Application\\ProductApi.Application.csproj|solutionrelative:src\\productapi.application\\services\\registervehiclebrandappservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -62,7 +58,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -74,171 +70,158 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "RegisterVehicleVersionModel.cs",
-              "DocumentMoniker": "C:\\Work\\APIS\\ProductApi\\src\\ProductApi.Core\\Models\\RegisterVehicleVersionModel.cs",
-              "RelativeDocumentMoniker": "src\\ProductApi.Core\\Models\\RegisterVehicleVersionModel.cs",
-              "ToolTip": "C:\\Work\\APIS\\ProductApi\\src\\ProductApi.Core\\Models\\RegisterVehicleVersionModel.cs",
-              "RelativeToolTip": "src\\ProductApi.Core\\Models\\RegisterVehicleVersionModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-23T12:47:17.574Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IRegisterVehicleVersionAppService.cs",
-              "DocumentMoniker": "C:\\Work\\APIS\\ProductApi\\src\\ProductApi.Application\\Interfaces\\IRegisterVehicleVersionAppService.cs",
-              "RelativeDocumentMoniker": "src\\ProductApi.Application\\Interfaces\\IRegisterVehicleVersionAppService.cs",
-              "ToolTip": "C:\\Work\\APIS\\ProductApi\\src\\ProductApi.Application\\Interfaces\\IRegisterVehicleVersionAppService.cs",
-              "RelativeToolTip": "src\\ProductApi.Application\\Interfaces\\IRegisterVehicleVersionAppService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-23T12:37:47.196Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "CivilCourtController.cs",
-              "DocumentMoniker": "C:\\Work\\APIS\\ProductApi\\src\\Product.Api\\Controllers\\V1\\CivilCourtController.cs",
-              "RelativeDocumentMoniker": "src\\Product.Api\\Controllers\\V1\\CivilCourtController.cs",
-              "ToolTip": "C:\\Work\\APIS\\ProductApi\\src\\Product.Api\\Controllers\\V1\\CivilCourtController.cs",
-              "RelativeToolTip": "src\\Product.Api\\Controllers\\V1\\CivilCourtController.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAgwCsAAABRAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-23T12:35:05.721Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "CommonController.cs",
-              "DocumentMoniker": "C:\\Work\\APIS\\ProductApi\\src\\Product.Api\\Controllers\\V1\\CommonController.cs",
-              "RelativeDocumentMoniker": "src\\Product.Api\\Controllers\\V1\\CommonController.cs",
-              "ToolTip": "C:\\Work\\APIS\\ProductApi\\src\\Product.Api\\Controllers\\V1\\CommonController.cs",
-              "RelativeToolTip": "src\\Product.Api\\Controllers\\V1\\CommonController.cs",
-              "ViewState": "AgIAAIEAAAAAAAAAAAAmwAAAAAAAAAAAAAAAAA==",
+              "Title": "RegisterVehicleYearMapping.cs",
+              "DocumentMoniker": "C:\\Work\\APIS\\ProductApi\\src\\ProductApi.Infra.Data\\Mappings\\RegisterVehicleYearMapping.cs",
+              "RelativeDocumentMoniker": "src\\ProductApi.Infra.Data\\Mappings\\RegisterVehicleYearMapping.cs",
+              "ToolTip": "C:\\Work\\APIS\\ProductApi\\src\\ProductApi.Infra.Data\\Mappings\\RegisterVehicleYearMapping.cs",
+              "RelativeToolTip": "src\\ProductApi.Infra.Data\\Mappings\\RegisterVehicleYearMapping.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAawBoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-23T12:34:56.978Z",
+              "WhenOpened": "2025-05-23T13:13:08.155Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "VehicleController.cs",
-              "DocumentMoniker": "C:\\Work\\APIS\\ProductApi\\src\\Product.Api\\Controllers\\V1\\VehicleController.cs",
-              "RelativeDocumentMoniker": "src\\Product.Api\\Controllers\\V1\\VehicleController.cs",
-              "ToolTip": "C:\\Work\\APIS\\ProductApi\\src\\Product.Api\\Controllers\\V1\\VehicleController.cs",
-              "RelativeToolTip": "src\\Product.Api\\Controllers\\V1\\VehicleController.cs",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAowBYAAAAVAAAAAAAAAA==",
+              "Title": "RegisterVehicleYearModel.cs",
+              "DocumentMoniker": "C:\\Work\\APIS\\ProductApi\\src\\ProductApi.Core\\Models\\RegisterVehicleYearModel.cs",
+              "RelativeDocumentMoniker": "src\\ProductApi.Core\\Models\\RegisterVehicleYearModel.cs",
+              "ToolTip": "C:\\Work\\APIS\\ProductApi\\src\\ProductApi.Core\\Models\\RegisterVehicleYearModel.cs",
+              "RelativeToolTip": "src\\ProductApi.Core\\Models\\RegisterVehicleYearModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAMAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-23T11:52:08.015Z",
+              "WhenOpened": "2025-05-23T13:12:35.919Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "ConfigurarationMapping.cs",
-              "DocumentMoniker": "C:\\Work\\APIS\\ProductApi\\src\\ProductApi.Core\\Infrastructure\\Mapper\\ConfigurarationMapping.cs",
-              "RelativeDocumentMoniker": "src\\ProductApi.Core\\Infrastructure\\Mapper\\ConfigurarationMapping.cs",
-              "ToolTip": "C:\\Work\\APIS\\ProductApi\\src\\ProductApi.Core\\Infrastructure\\Mapper\\ConfigurarationMapping.cs",
-              "RelativeToolTip": "src\\ProductApi.Core\\Infrastructure\\Mapper\\ConfigurarationMapping.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAgwCoAAAAmAAAAAAAAAA==",
+              "Title": "RegisterVehicleYear.cs",
+              "DocumentMoniker": "C:\\Work\\APIS\\ProductApi\\src\\ProductApi.Core\\Entities\\RegisterVehicleYear.cs",
+              "RelativeDocumentMoniker": "src\\ProductApi.Core\\Entities\\RegisterVehicleYear.cs",
+              "ToolTip": "C:\\Work\\APIS\\ProductApi\\src\\ProductApi.Core\\Entities\\RegisterVehicleYear.cs",
+              "RelativeToolTip": "src\\ProductApi.Core\\Entities\\RegisterVehicleYear.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-23T11:37:24.511Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "CalculationTypeAcceptanceModel.cs",
-              "DocumentMoniker": "C:\\Work\\APIS\\ProductApi\\src\\ProductApi.Core\\Models\\CalculationTypeAcceptanceModel.cs",
-              "RelativeDocumentMoniker": "src\\ProductApi.Core\\Models\\CalculationTypeAcceptanceModel.cs",
-              "ToolTip": "C:\\Work\\APIS\\ProductApi\\src\\ProductApi.Core\\Models\\CalculationTypeAcceptanceModel.cs",
-              "RelativeToolTip": "src\\ProductApi.Core\\Models\\CalculationTypeAcceptanceModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-23T11:36:24.811Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ProductVersionCalculationTypeAcceptance.cs",
-              "DocumentMoniker": "C:\\Work\\APIS\\ProductApi\\src\\ProductApi.Core\\Entities\\ProductVersionCalculationTypeAcceptance.cs",
-              "RelativeDocumentMoniker": "src\\ProductApi.Core\\Entities\\ProductVersionCalculationTypeAcceptance.cs",
-              "ToolTip": "C:\\Work\\APIS\\ProductApi\\src\\ProductApi.Core\\Entities\\ProductVersionCalculationTypeAcceptance.cs",
-              "RelativeToolTip": "src\\ProductApi.Core\\Entities\\ProductVersionCalculationTypeAcceptance.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-23T11:35:07.491Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ProductDbContext.cs",
-              "DocumentMoniker": "C:\\Work\\APIS\\ProductApi\\src\\ProductApi.Infra.Data\\Contexts\\ProductDbContext.cs",
-              "RelativeDocumentMoniker": "src\\ProductApi.Infra.Data\\Contexts\\ProductDbContext.cs",
-              "ToolTip": "C:\\Work\\APIS\\ProductApi\\src\\ProductApi.Infra.Data\\Contexts\\ProductDbContext.cs",
-              "RelativeToolTip": "src\\ProductApi.Infra.Data\\Contexts\\ProductDbContext.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAA4wBoAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-23T11:34:48.911Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ProductVersionCalculationType.cs",
-              "DocumentMoniker": "C:\\Work\\APIS\\ProductApi\\src\\ProductApi.Core\\Entities\\ProductVersionCalculationType.cs",
-              "RelativeDocumentMoniker": "src\\ProductApi.Core\\Entities\\ProductVersionCalculationType.cs",
-              "ToolTip": "C:\\Work\\APIS\\ProductApi\\src\\ProductApi.Core\\Entities\\ProductVersionCalculationType.cs",
-              "RelativeToolTip": "src\\ProductApi.Core\\Entities\\ProductVersionCalculationType.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-23T11:33:03.824Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "RegisterVehicleModelRepository(.cs",
-              "DocumentMoniker": "C:\\Work\\APIS\\ProductApi\\src\\ProductApi.Infra.Data\\Repositories\\RegisterVehicleModelRepository(.cs",
-              "RelativeDocumentMoniker": "src\\ProductApi.Infra.Data\\Repositories\\RegisterVehicleModelRepository(.cs",
-              "ToolTip": "C:\\Work\\APIS\\ProductApi\\src\\ProductApi.Infra.Data\\Repositories\\RegisterVehicleModelRepository(.cs",
-              "RelativeToolTip": "src\\ProductApi.Infra.Data\\Repositories\\RegisterVehicleModelRepository(.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAuwBkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-22T19:50:35.378Z",
+              "WhenOpened": "2025-05-23T13:12:09.521Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "ProductVersionController.cs",
-              "DocumentMoniker": "C:\\Work\\APIS\\ProductApi\\src\\Product.Api\\Controllers\\V1\\ProductVersionController.cs",
-              "RelativeDocumentMoniker": "src\\Product.Api\\Controllers\\V1\\ProductVersionController.cs",
-              "ToolTip": "C:\\Work\\APIS\\ProductApi\\src\\Product.Api\\Controllers\\V1\\ProductVersionController.cs",
-              "RelativeToolTip": "src\\Product.Api\\Controllers\\V1\\ProductVersionController.cs",
-              "ViewState": "AgIAABkBAAAAAAAAAADwvyUBAABYAAAAAAAAAA==",
+              "Title": "DependencyInjectionExtension.cs",
+              "DocumentMoniker": "C:\\Work\\APIS\\ProductApi\\src\\ProductApi.Infra.Data\\Extensions\\DependencyInjectionExtension.cs",
+              "RelativeDocumentMoniker": "src\\ProductApi.Infra.Data\\Extensions\\DependencyInjectionExtension.cs",
+              "ToolTip": "C:\\Work\\APIS\\ProductApi\\src\\ProductApi.Infra.Data\\Extensions\\DependencyInjectionExtension.cs",
+              "RelativeToolTip": "src\\ProductApi.Infra.Data\\Extensions\\DependencyInjectionExtension.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAowDkAAABOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-23T11:32:48.897Z",
+              "WhenOpened": "2025-05-23T13:08:42.107Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "BaseController.cs",
-              "DocumentMoniker": "C:\\Work\\APIS\\ProductApi\\src\\Product.Api\\Controllers\\V1\\Base\\BaseController.cs",
-              "RelativeDocumentMoniker": "src\\Product.Api\\Controllers\\V1\\Base\\BaseController.cs",
-              "ToolTip": "C:\\Work\\APIS\\ProductApi\\src\\Product.Api\\Controllers\\V1\\Base\\BaseController.cs",
-              "RelativeToolTip": "src\\Product.Api\\Controllers\\V1\\Base\\BaseController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAfAAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "DependencyInjectionExtension.cs",
+              "DocumentMoniker": "C:\\Work\\APIS\\ProductApi\\src\\ProductApi.Application\\Extensions\\DependencyInjectionExtension.cs",
+              "RelativeDocumentMoniker": "src\\ProductApi.Application\\Extensions\\DependencyInjectionExtension.cs",
+              "ToolTip": "C:\\Work\\APIS\\ProductApi\\src\\ProductApi.Application\\Extensions\\DependencyInjectionExtension.cs",
+              "RelativeToolTip": "src\\ProductApi.Application\\Extensions\\DependencyInjectionExtension.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAA1wCUAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-23T11:31:43.545Z",
+              "WhenOpened": "2025-05-23T13:08:16.664Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ConfigurarationMapping.cs",
+              "DocumentMoniker": "C:\\Work\\APIS\\ProductApi\\src\\ProductApi.Core\\Infrastructure\\Mapper\\ConfigurarationMapping.cs",
+              "RelativeDocumentMoniker": "src\\ProductApi.Core\\Infrastructure\\Mapper\\ConfigurarationMapping.cs",
+              "ToolTip": "C:\\Work\\APIS\\ProductApi\\src\\ProductApi.Core\\Infrastructure\\Mapper\\ConfigurarationMapping.cs",
+              "RelativeToolTip": "src\\ProductApi.Core\\Infrastructure\\Mapper\\ConfigurarationMapping.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAgwCsAAABUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T13:08:00.155Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RegisterVehicleYearRepository.cs",
+              "DocumentMoniker": "C:\\Work\\APIS\\ProductApi\\src\\ProductApi.Infra.Data\\Repositories\\RegisterVehicleYearRepository.cs",
+              "RelativeDocumentMoniker": "src\\ProductApi.Infra.Data\\Repositories\\RegisterVehicleYearRepository.cs",
+              "ToolTip": "C:\\Work\\APIS\\ProductApi\\src\\ProductApi.Infra.Data\\Repositories\\RegisterVehicleYearRepository.cs",
+              "RelativeToolTip": "src\\ProductApi.Infra.Data\\Repositories\\RegisterVehicleYearRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAsAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T13:07:32.578Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "RegisterVehicleBrandAppService.cs",
+              "DocumentMoniker": "C:\\Work\\APIS\\ProductApi\\src\\ProductApi.Application\\Services\\RegisterVehicleBrandAppService.cs",
+              "RelativeDocumentMoniker": "src\\ProductApi.Application\\Services\\RegisterVehicleBrandAppService.cs",
+              "ToolTip": "C:\\Work\\APIS\\ProductApi\\src\\ProductApi.Application\\Services\\RegisterVehicleBrandAppService.cs",
+              "RelativeToolTip": "src\\ProductApi.Application\\Services\\RegisterVehicleBrandAppService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T13:07:16.203Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RegisterVehicleYearAppService.cs",
+              "DocumentMoniker": "C:\\Work\\APIS\\ProductApi\\src\\ProductApi.Application\\Services\\RegisterVehicleYearAppService.cs",
+              "RelativeDocumentMoniker": "src\\ProductApi.Application\\Services\\RegisterVehicleYearAppService.cs",
+              "ToolTip": "C:\\Work\\APIS\\ProductApi\\src\\ProductApi.Application\\Services\\RegisterVehicleYearAppService.cs",
+              "RelativeToolTip": "src\\ProductApi.Application\\Services\\RegisterVehicleYearAppService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T13:06:45.283Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IRegisterVehicleYearAppService.cs",
+              "DocumentMoniker": "C:\\Work\\APIS\\ProductApi\\src\\ProductApi.Application\\Interfaces\\IRegisterVehicleYearAppService.cs",
+              "RelativeDocumentMoniker": "src\\ProductApi.Application\\Interfaces\\IRegisterVehicleYearAppService.cs",
+              "ToolTip": "C:\\Work\\APIS\\ProductApi\\src\\ProductApi.Application\\Interfaces\\IRegisterVehicleYearAppService.cs",
+              "RelativeToolTip": "src\\ProductApi.Application\\Interfaces\\IRegisterVehicleYearAppService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAcAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T13:05:50.63Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "IRegisterVehicleYearRepository.cs",
+              "DocumentMoniker": "C:\\Work\\APIS\\ProductApi\\src\\ProductApi.Infra.Data\\Interfaces\\IRegisterVehicleYearRepository.cs",
+              "RelativeDocumentMoniker": "src\\ProductApi.Infra.Data\\Interfaces\\IRegisterVehicleYearRepository.cs",
+              "ToolTip": "C:\\Work\\APIS\\ProductApi\\src\\ProductApi.Infra.Data\\Interfaces\\IRegisterVehicleYearRepository.cs",
+              "RelativeToolTip": "src\\ProductApi.Infra.Data\\Interfaces\\IRegisterVehicleYearRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T13:03:53.624Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "VehicleController.cs",
+              "DocumentMoniker": "C:\\Work\\APIS\\ProductApi\\src\\Product.Api\\Controllers\\V1\\VehicleController.cs",
+              "RelativeDocumentMoniker": "src\\Product.Api\\Controllers\\V1\\VehicleController.cs",
+              "ToolTip": "C:\\Work\\APIS\\ProductApi\\src\\Product.Api\\Controllers\\V1\\VehicleController.cs",
+              "RelativeToolTip": "src\\Product.Api\\Controllers\\V1\\VehicleController.cs",
+              "ViewState": "AgIAAE8AAAAAAAAAAAD4v2QAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T13:02:28.005Z",
               "EditorCaption": ""
             }
           ]

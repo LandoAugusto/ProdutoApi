@@ -34,7 +34,8 @@ namespace ProductApi.Application.Extensions
 
             services.AddScoped<IRegisterVehicleBrandAppService, RegisterVehicleBrandAppService>();
             services.AddScoped<IRegisterVehicleModelAppService, RegisterVehicleModelAppService>();
-            services.AddScoped<IRegisterVehicleVersionAppService, RegisterVehicleVersionAppService>();           
+            services.AddScoped<IRegisterVehicleVersionAppService, RegisterVehicleVersionAppService>();
+            services.AddScoped<IRegisterVehicleYearAppService, RegisterVehicleYearAppService>();
 
         }
     }

@@ -360,7 +360,7 @@
             <param name="vehicleModelAppService"></param>
             <param name="vehicleVersionAppService"></param>
         </member>
-        <member name="M:Product.Api.Controllers.V1.VehicleController.#ctor(ProductApi.Application.Interfaces.IRegisterVehicleBrandAppService,ProductApi.Application.Interfaces.IRegisterVehicleModelAppService,ProductApi.Application.Interfaces.IRegisterVehicleVersionAppService)">
+        <member name="M:Product.Api.Controllers.V1.VehicleController.#ctor(ProductApi.Application.Interfaces.IRegisterVehicleBrandAppService,ProductApi.Application.Interfaces.IRegisterVehicleModelAppService,ProductApi.Application.Interfaces.IRegisterVehicleVersionAppService,ProductApi.Application.Interfaces.IRegisterVehicleYearAppService)">
             <summary>
             
             </summary>
@@ -383,6 +383,12 @@
             </summary>
             <param name="vehicleModelId"></param>
             <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Product.Api.Controllers.V1.VehicleController.GetVehicleYearAsync">
+            <summary>
+            
+            </summary>                
             <returns></returns>
         </member>
         <member name="T:Product.Api.Extensions.ApplicationBuilderExtensions">

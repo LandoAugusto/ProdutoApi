@@ -41,6 +41,7 @@ namespace ProductApi.Core.Infrastructure.Mapper
             CreateMap<RegisterVehicleBrandModel, RegisterVehicleBrand>().ReverseMap();
             CreateMap<RegisterVehicleModelModel, RegisterVehicleModel>().ReverseMap();
             CreateMap<RegisterVehicleVersionModel, RegisterVehicleVersion>().ReverseMap();
+            CreateMap<RegisterVehicleYearModel, RegisterVehicleYear>().ReverseMap();            
             CreateMap<ContractTypeModel, ContractType>().ReverseMap();
             CreateMap<InsuranceTypeModel, InsuranceType>().ReverseMap();
             CreateMap<ConstructionTypeModel, ConstructionType>().ReverseMap();

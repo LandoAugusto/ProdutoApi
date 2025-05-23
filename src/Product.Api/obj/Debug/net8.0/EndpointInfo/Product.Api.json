@@ -2540,6 +2540,76 @@
           }
         }
       }
+    },
+    "/api/v1/vehicle/get-vehicle-year": {
+      "get": {
+        "tags": [
+          "Vehicle"
+        ],
+        "summary": "",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/RegisterVehicleYearModelIEnumerableBaseDataResponseModel"
+                }
+              },
+              "application/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/RegisterVehicleYearModelIEnumerableBaseDataResponseModel"
+                }
+              },
+              "text/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/RegisterVehicleYearModelIEnumerableBaseDataResponseModel"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/RegisterVehicleYearModelIEnumerableBaseDataResponseModel"
+                }
+              },
+              "application/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/RegisterVehicleYearModelIEnumerableBaseDataResponseModel"
+                }
+              },
+              "text/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/RegisterVehicleYearModelIEnumerableBaseDataResponseModel"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/RegisterVehicleYearModelIEnumerableBaseDataResponseModel"
+                }
+              },
+              "application/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/RegisterVehicleYearModelIEnumerableBaseDataResponseModel"
+                }
+              },
+              "text/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/RegisterVehicleYearModelIEnumerableBaseDataResponseModel"
+                }
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -3674,6 +3744,36 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/RegisterVehicleVersionModel"
+            },
+            "nullable": true
+          },
+          "transactionStatus": {
+            "$ref": "#/components/schemas/StatusResponseModel"
+          }
+        },
+        "additionalProperties": false
+      },
+      "RegisterVehicleYearModel": {
+        "type": "object",
+        "properties": {
+          "registerVehicleYearId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "year": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "RegisterVehicleYearModelIEnumerableBaseDataResponseModel": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RegisterVehicleYearModel"
             },
             "nullable": true
           },

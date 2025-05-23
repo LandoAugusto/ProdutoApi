@@ -40,11 +40,8 @@ namespace ProductApi.Infra.Data.Extensions
             services.AddScoped<IProductVersionPaymentFrequencyRepository, ProductVersionPaymentFrequencyRepository>();
             services.AddScoped<IProductVersionCoverageRepository, ProductVersionCoverageRepository>();
             services.AddScoped<IProductVersionContractTypeRepository, ProductVersionContractTypeRepository>();
-
-
             services.AddScoped<IProductVersionCalculationTypeRepository, ProductVersionCalculationTypeRepository>();
             services.AddScoped<IProductVersionCalculationTypeAcceptanceRepository, ProductVersionCalculationTypeAcceptanceRepository>();
-
             services.AddScoped<ITermTypeRepository, TermTypeRepository>();
             services.AddScoped<IProductComponentRepository, ProductComponentRepository>();
             services.AddScoped<IFlexRateRepository, FlexRateRepository>();
@@ -57,7 +54,8 @@ namespace ProductApi.Infra.Data.Extensions
             services.AddScoped<IInsuranceTypeRepository, InsuranceTypeRepository>();
             services.AddScoped<IRegisterVehicleBrandRepository, RegisterVehicleBrandRepository>();
             services.AddScoped<IRegisterVehicleModelRepository, RegisterVehicleModelRepository>();            
-            services.AddScoped<IRegisterVehicleVersionRepository, RegisterVehicleVersionRepository>();  
+            services.AddScoped<IRegisterVehicleVersionRepository, RegisterVehicleVersionRepository>();
+            services.AddScoped<IRegisterVehicleYearRepository, RegisterVehicleYearRepository>();
             return services;
         }
     }

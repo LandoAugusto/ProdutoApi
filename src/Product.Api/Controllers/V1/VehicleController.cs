@@ -14,11 +14,12 @@ namespace Product.Api.Controllers.V1
     /// <param name="vehicleModelAppService"></param>
     /// <param name="vehicleVersionAppService"></param>
     public class VehicleController(IRegisterVehicleBrandAppService vehicleBrandService, IRegisterVehicleModelAppService vehicleModelAppService,
-         IRegisterVehicleVersionAppService vehicleVersionAppService) : BaseController
+         IRegisterVehicleVersionAppService vehicleVersionAppService, IRegisterVehicleYearAppService vehicleYearService) : BaseController
     {
         private readonly IRegisterVehicleBrandAppService _vehicleBrandService = vehicleBrandService;
         private readonly IRegisterVehicleModelAppService _vehicleModelAppService = vehicleModelAppService;
         private readonly IRegisterVehicleVersionAppService _vehicleVersionAppService = vehicleVersionAppService;
+        private readonly  IRegisterVehicleYearAppService _vehicleYearService = vehicleYearService;
 
         /// <summary> 
         [AllowAnonymous]
@@ -71,6 +72,25 @@ namespace Product.Api.Controllers.V1
         public async Task<IActionResult> GetVehicleVersionAsync(int vehicleModelId, string? name)
         {
             var response = await _vehicleVersionAppService.GetVehicleVersionAsync(vehicleModelId, name, RecordStatusEnum.Active);
+            if (response == null)
+                return ReturnNotFound();
+
+            return base.ReturnSuccess(response);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>                
+        /// <returns></returns>
+        [AllowAnonymous]
+        [HttpGet]
+        [Route("get-vehicle-year")]
+        [ProducesResponseType(typeof(BaseDataResponseModel<IEnumerable<RegisterVehicleYearModel>>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<IEnumerable<RegisterVehicleYearModel>?>), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<IEnumerable<RegisterVehicleYearModel>?>), StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> GetVehicleYearAsync()
+        {
+            var response = await _vehicleYearService.GetAllAsync(RecordStatusEnum.Active);
             if (response == null)
                 return ReturnNotFound();
 
