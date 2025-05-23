@@ -19,11 +19,15 @@ namespace Product.Api.Controllers.V1
     /// <param name="productVersionPaymentInstallmentService"></param>
     /// <param name="productVersionPaymentFrequencyService"></param>
     /// <param name="productVersionCoverageAppService"></param>
+    /// <param name="productVersionContractTypeAppService"></param>
+    /// <param name="productVersionCalculationTypeAppService"></param>
+    /// <param name="productVersionCalculationTypeAcceptanceAppService"></param>
     public class ProductVersionController(IProductVersionAcceptanceAppService productVersionService, IProductVersionInsuredObjectAppService productVersionInsuredObjectService,
         IProductVersionClauseAppService productVersionClauseService, IProductVersionLawsuitTypeAppService productVersionLawsuitTypeService, IProductVersionTermTypeAppService productVersionTermTypeService,
         IProductVersionPaymentMethodAppService productVersionPaymentMethodService, IProductVersionPaymentInstallmentAppService productVersionPaymentInstallmentService,
         IProductVersionPaymentFrequencyAppService productVersionPaymentFrequencyService, IProductVersionCoverageAppService productVersionCoverageAppService,
-        IProductVersionContractTypeAppService productVersionContractTypeAppService) : BaseController
+        IProductVersionContractTypeAppService productVersionContractTypeAppService, IProductVersionCalculationTypeAppService productVersionCalculationTypeAppService,
+        IProductVersionCalculationTypeAcceptanceAppService productVersionCalculationTypeAcceptanceAppService) : BaseController
     {
         private readonly IProductVersionAcceptanceAppService _productVersionService = productVersionService;
         private readonly IProductVersionInsuredObjectAppService _productVersionInsuredObjectService = productVersionInsuredObjectService;
@@ -35,6 +39,8 @@ namespace Product.Api.Controllers.V1
         private readonly IProductVersionPaymentFrequencyAppService _productVersionPaymentFrequencyService = productVersionPaymentFrequencyService;
         private readonly IProductVersionCoverageAppService _productVersionCoverageAppService = productVersionCoverageAppService;
         private readonly IProductVersionContractTypeAppService _productVersionContractTypeAppService = productVersionContractTypeAppService;
+        private readonly IProductVersionCalculationTypeAppService _productVersionCalculationTypeAppService = productVersionCalculationTypeAppService;
+        private readonly IProductVersionCalculationTypeAcceptanceAppService _productVersionCalculationTypeAcceptanceAppService = productVersionCalculationTypeAcceptanceAppService;
 
 
         /// <summary>
@@ -239,12 +245,53 @@ namespace Product.Api.Controllers.V1
         /// <returns></returns>
         [HttpGet]
         [Route("get-product-version-contract-type/{productVersionId}")]
-        [ProducesResponseType(typeof(BaseDataResponseModel<IEnumerable<PaymentInstallmentModel>>), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(BaseDataResponseModel<IEnumerable<PaymentInstallmentModel?>>), StatusCodes.Status500InternalServerError)]
-        [ProducesResponseType(typeof(BaseDataResponseModel<IEnumerable<PaymentInstallmentModel?>>), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<IEnumerable<ContractTypeModel>>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<IEnumerable<ContractTypeModel?>>), StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<IEnumerable<ContractTypeModel?>>), StatusCodes.Status404NotFound)]
         public async Task<IActionResult> GetProductVersionContractTypeAsync(int productVersionId)
         {
             var response = await _productVersionContractTypeAppService.GetProductVersionContractTypeAsync(productVersionId, RecordStatusEnum.Active);
+            if (response == null)
+                return ReturnNotFound();
+
+            return base.ReturnSuccess(response);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="productVersionId"></param>
+        /// <param name="profileId"></param>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("get-product-version-calculation-type/{productVersionId}/{profileId}")]
+        [ProducesResponseType(typeof(BaseDataResponseModel<IEnumerable<CalculationTypeModel>>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<IEnumerable<CalculationTypeModel?>>), StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<IEnumerable<CalculationTypeModel?>>), StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> GetProductVersionContractTypeAsync(int productVersionId, int profileId)
+        {
+            var response = await _productVersionCalculationTypeAppService.GetProductVersionCalculationTypeAsync(productVersionId, profileId, RecordStatusEnum.Active);
+            if (response == null)
+                return ReturnNotFound();
+
+            return base.ReturnSuccess(response);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="productVersionId"></param>
+        /// <param name="profileId"></param>
+        /// <param name="calculationTypeId"></param>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("get-product-version-calculation-type-acceptance/{productVersionId}/{profileId}/{calculationTypeId}")]
+        [ProducesResponseType(typeof(BaseDataResponseModel<IEnumerable<CalculationTypeModel>>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<IEnumerable<CalculationTypeModel?>>), StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<IEnumerable<CalculationTypeModel?>>), StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> GetProductVersionContractTypeAcceptanceAsync(int productVersionId, int profileId, int calculationTypeId)
+        {
+            var response = await _productVersionCalculationTypeAcceptanceAppService.GetAsync(productVersionId, profileId, calculationTypeId, RecordStatusEnum.Active);
             if (response == null)
                 return ReturnNotFound();
 

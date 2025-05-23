@@ -10,7 +10,7 @@ namespace ProductApi.Application.Services
 {
     internal class CommonAppService(IMapper mapper, IInsuredTypeRepository insuredTypeRepository, IDocumentTypeRepository documentTypeRepository,
        IAddressTypeRepository addressTypeRepository, IStateRepository stateRepository, IRecordStatusRepository recordStatusRepository,
-       ITermTypeRepository termTypeRepository) : ICommonAppService
+       ITermTypeRepository termTypeRepository, IInsuranceTypeRepository insuranceTypeRepository) : ICommonAppService
     {
 
         private readonly IMapper _mapper = mapper;
@@ -20,6 +20,7 @@ namespace ProductApi.Application.Services
         private readonly IInsuredTypeRepository _insuredTypeRepository = insuredTypeRepository;
         private readonly IRecordStatusRepository _recordStatusRepository = recordStatusRepository;
         private readonly ITermTypeRepository _termTypeRepository = termTypeRepository;
+        private readonly IInsuranceTypeRepository _insuranceTypeRepository = insuranceTypeRepository;
 
         public async Task<IEnumerable<AddressTypeModel>?> GetAddressTypeAsync(RecordStatusEnum recordStatusEnum)
         {
@@ -67,6 +68,13 @@ namespace ProductApi.Application.Services
             if (!entity.IsAny<TermType>()) return null;
 
             return _mapper.Map<IEnumerable<TermTypeModel>>(entity);
+        }
+        public async Task<IEnumerable<InsuranceTypeModel>?> GetinsuranceTypsAsync(RecordStatusEnum recordStatus)
+        {
+            var entity = await _insuranceTypeRepository.GetAllAsync(recordStatus);
+            if (!entity.IsAny<InsuranceType>()) return null;
+
+            return _mapper.Map<IEnumerable<InsuranceTypeModel>>(entity);
         }
     }
 }

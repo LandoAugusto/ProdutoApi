@@ -2,9 +2,13 @@
 
 namespace ProductApi.Core.Entities
 {
-    internal class CalculationType : IIdentityEntity
+    public class CalculationType : IIdentityEntity
     {
-        public int InsuranceTypeId { get; set; }
+        public int CalculationTypeId { get; set; }
         public required string Name { get; set; }
+        public int Status { get; set; }
+        public int? InclusionUserId { get; set; }
+        public DateTime? InclusionDate { get; set; }
+        public virtual ICollection<ProductVersionCalculationType> ProductVersionCalculationType { get; set; } = new HashSet<ProductVersionCalculationType>();
     }
 }

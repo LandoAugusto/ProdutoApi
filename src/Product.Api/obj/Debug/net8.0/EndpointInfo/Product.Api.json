@@ -674,6 +674,76 @@
         }
       }
     },
+    "/api/v1/common/get-insurance-type": {
+      "get": {
+        "tags": [
+          "Common"
+        ],
+        "summary": "",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/TermTypeModelBaseDataResponseModel"
+                }
+              },
+              "application/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/TermTypeModelBaseDataResponseModel"
+                }
+              },
+              "text/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/TermTypeModelBaseDataResponseModel"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/TermTypeModelBaseDataResponseModel"
+                }
+              },
+              "application/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/TermTypeModelBaseDataResponseModel"
+                }
+              },
+              "text/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/TermTypeModelBaseDataResponseModel"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/TermTypeModelBaseDataResponseModel"
+                }
+              },
+              "application/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/TermTypeModelBaseDataResponseModel"
+                }
+              },
+              "text/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/TermTypeModelBaseDataResponseModel"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/v1/laborcourt/get-all": {
       "get": {
         "tags": [
@@ -1960,17 +2030,17 @@
             "content": {
               "text/plain; x-api-version=1.0": {
                 "schema": {
-                  "$ref": "#/components/schemas/PaymentInstallmentModelIEnumerableBaseDataResponseModel"
+                  "$ref": "#/components/schemas/ContractTypeModelIEnumerableBaseDataResponseModel"
                 }
               },
               "application/json; x-api-version=1.0": {
                 "schema": {
-                  "$ref": "#/components/schemas/PaymentInstallmentModelIEnumerableBaseDataResponseModel"
+                  "$ref": "#/components/schemas/ContractTypeModelIEnumerableBaseDataResponseModel"
                 }
               },
               "text/json; x-api-version=1.0": {
                 "schema": {
-                  "$ref": "#/components/schemas/PaymentInstallmentModelIEnumerableBaseDataResponseModel"
+                  "$ref": "#/components/schemas/ContractTypeModelIEnumerableBaseDataResponseModel"
                 }
               }
             }
@@ -1980,17 +2050,17 @@
             "content": {
               "text/plain; x-api-version=1.0": {
                 "schema": {
-                  "$ref": "#/components/schemas/PaymentInstallmentModelIEnumerableBaseDataResponseModel"
+                  "$ref": "#/components/schemas/ContractTypeModelIEnumerableBaseDataResponseModel"
                 }
               },
               "application/json; x-api-version=1.0": {
                 "schema": {
-                  "$ref": "#/components/schemas/PaymentInstallmentModelIEnumerableBaseDataResponseModel"
+                  "$ref": "#/components/schemas/ContractTypeModelIEnumerableBaseDataResponseModel"
                 }
               },
               "text/json; x-api-version=1.0": {
                 "schema": {
-                  "$ref": "#/components/schemas/PaymentInstallmentModelIEnumerableBaseDataResponseModel"
+                  "$ref": "#/components/schemas/ContractTypeModelIEnumerableBaseDataResponseModel"
                 }
               }
             }
@@ -2000,17 +2070,109 @@
             "content": {
               "text/plain; x-api-version=1.0": {
                 "schema": {
-                  "$ref": "#/components/schemas/PaymentInstallmentModelIEnumerableBaseDataResponseModel"
+                  "$ref": "#/components/schemas/ContractTypeModelIEnumerableBaseDataResponseModel"
                 }
               },
               "application/json; x-api-version=1.0": {
                 "schema": {
-                  "$ref": "#/components/schemas/PaymentInstallmentModelIEnumerableBaseDataResponseModel"
+                  "$ref": "#/components/schemas/ContractTypeModelIEnumerableBaseDataResponseModel"
                 }
               },
               "text/json; x-api-version=1.0": {
                 "schema": {
-                  "$ref": "#/components/schemas/PaymentInstallmentModelIEnumerableBaseDataResponseModel"
+                  "$ref": "#/components/schemas/ContractTypeModelIEnumerableBaseDataResponseModel"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/productversion/get-product-version-calculation-type/{productVersionId}/{profileId}": {
+      "get": {
+        "tags": [
+          "ProductVersion"
+        ],
+        "summary": "",
+        "parameters": [
+          {
+            "name": "productVersionId",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "profileId",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/CalculationTypeModelIEnumerableBaseDataResponseModel"
+                }
+              },
+              "application/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/CalculationTypeModelIEnumerableBaseDataResponseModel"
+                }
+              },
+              "text/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/CalculationTypeModelIEnumerableBaseDataResponseModel"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "text/plain; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/CalculationTypeModelIEnumerableBaseDataResponseModel"
+                }
+              },
+              "application/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/CalculationTypeModelIEnumerableBaseDataResponseModel"
+                }
+              },
+              "text/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/CalculationTypeModelIEnumerableBaseDataResponseModel"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/CalculationTypeModelIEnumerableBaseDataResponseModel"
+                }
+              },
+              "application/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/CalculationTypeModelIEnumerableBaseDataResponseModel"
+                }
+              },
+              "text/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/CalculationTypeModelIEnumerableBaseDataResponseModel"
                 }
               }
             }
@@ -2377,6 +2539,39 @@
         },
         "additionalProperties": false
       },
+      "CalculationTypeModel": {
+        "required": [
+          "name"
+        ],
+        "type": "object",
+        "properties": {
+          "calculationTypeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CalculationTypeModelIEnumerableBaseDataResponseModel": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CalculationTypeModel"
+            },
+            "nullable": true
+          },
+          "transactionStatus": {
+            "$ref": "#/components/schemas/StatusResponseModel"
+          }
+        },
+        "additionalProperties": false
+      },
       "CivilCourtFilterModel": {
         "type": "object",
         "properties": {
@@ -2538,6 +2733,39 @@
         ],
         "type": "integer",
         "format": "int32"
+      },
+      "ContractTypeModel": {
+        "required": [
+          "name"
+        ],
+        "type": "object",
+        "properties": {
+          "contractTypeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ContractTypeModelIEnumerableBaseDataResponseModel": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ContractTypeModel"
+            },
+            "nullable": true
+          },
+          "transactionStatus": {
+            "$ref": "#/components/schemas/StatusResponseModel"
+          }
+        },
+        "additionalProperties": false
       },
       "CoverageModel": {
         "type": "object",

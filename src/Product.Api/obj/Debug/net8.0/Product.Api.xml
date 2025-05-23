@@ -139,6 +139,12 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:Product.Api.Controllers.V1.CommonController.GetinsuranceTypsAsync">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
         <member name="T:Product.Api.Controllers.V1.LaborCourtController">
             <summary>
             
@@ -227,8 +233,11 @@
             <param name="productVersionPaymentInstallmentService"></param>
             <param name="productVersionPaymentFrequencyService"></param>
             <param name="productVersionCoverageAppService"></param>
+            <param name="productVersionContractTypeAppService"></param>
+            <param name="productVersionCalculationTypeAppService"></param>
+            <param name="productVersionCalculationTypeAcceptanceAppService"></param>
         </member>
-        <member name="M:Product.Api.Controllers.V1.ProductVersionController.#ctor(ProductApi.Application.Interfaces.IProductVersionAcceptanceAppService,ProductApi.Application.Interfaces.IProductVersionInsuredObjectAppService,ProductApi.Application.Interfaces.IProductVersionClauseAppService,ProductApi.Application.Interfaces.IProductVersionLawsuitTypeAppService,ProductApi.Application.Interfaces.IProductVersionTermTypeAppService,ProductApi.Application.Interfaces.IProductVersionPaymentMethodAppService,ProductApi.Application.Interfaces.IProductVersionPaymentInstallmentAppService,ProductApi.Application.Interfaces.IProductVersionPaymentFrequencyAppService,ProductApi.Application.Interfaces.IProductVersionCoverageAppService,ProductApi.Application.Interfaces.IProductVersionContractTypeAppService)">
+        <member name="M:Product.Api.Controllers.V1.ProductVersionController.#ctor(ProductApi.Application.Interfaces.IProductVersionAcceptanceAppService,ProductApi.Application.Interfaces.IProductVersionInsuredObjectAppService,ProductApi.Application.Interfaces.IProductVersionClauseAppService,ProductApi.Application.Interfaces.IProductVersionLawsuitTypeAppService,ProductApi.Application.Interfaces.IProductVersionTermTypeAppService,ProductApi.Application.Interfaces.IProductVersionPaymentMethodAppService,ProductApi.Application.Interfaces.IProductVersionPaymentInstallmentAppService,ProductApi.Application.Interfaces.IProductVersionPaymentFrequencyAppService,ProductApi.Application.Interfaces.IProductVersionCoverageAppService,ProductApi.Application.Interfaces.IProductVersionContractTypeAppService,ProductApi.Application.Interfaces.IProductVersionCalculationTypeAppService,ProductApi.Application.Interfaces.IProductVersionCalculationTypeAcceptanceAppService)">
             <summary>
             
             </summary>
@@ -241,6 +250,9 @@
             <param name="productVersionPaymentInstallmentService"></param>
             <param name="productVersionPaymentFrequencyService"></param>
             <param name="productVersionCoverageAppService"></param>
+            <param name="productVersionContractTypeAppService"></param>
+            <param name="productVersionCalculationTypeAppService"></param>
+            <param name="productVersionCalculationTypeAcceptanceAppService"></param>
         </member>
         <member name="M:Product.Api.Controllers.V1.ProductVersionController.GetProductVersionAcceptancesAsync(System.Int32,System.Int32)">
             <summary>
@@ -316,11 +328,28 @@
             <param name="paymentMethodId"></param>
             <returns></returns>
         </member>
-        <member name="M:Product.Api.Controllers.V1.ProductVersionController.ListContractTypeAsync(System.Int32)">
+        <member name="M:Product.Api.Controllers.V1.ProductVersionController.GetProductVersionContractTypeAsync(System.Int32)">
             <summary>
             
             </summary>
             <param name="productVersionId"></param>        
+            <returns></returns>
+        </member>
+        <member name="M:Product.Api.Controllers.V1.ProductVersionController.GetProductVersionContractTypeAsync(System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="productVersionId"></param>
+            <param name="profileId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Product.Api.Controllers.V1.ProductVersionController.GetProductVersionContractTypeAcceptanceAsync(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="productVersionId"></param>
+            <param name="profileId"></param>
+            <param name="calculationTypeId"></param>
             <returns></returns>
         </member>
         <member name="T:Product.Api.Controllers.V1.VehicleController">

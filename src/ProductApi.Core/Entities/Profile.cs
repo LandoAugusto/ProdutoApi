@@ -9,6 +9,7 @@
         public DateTime InclusionDate { get; set; }
         public int? LastChangeUserId { get; set; }
         public DateTime? LastChangeDate { get; set; }
+        public virtual ICollection<ProductVersionCalculationType> ProductVersionCalculationType { get; set; } = new HashSet<ProductVersionCalculationType>();
         public virtual ICollection<ProductVersionAcceptance> ProductVersionAcceptance { get; set; } = new HashSet<ProductVersionAcceptance>(); 
     }
 }

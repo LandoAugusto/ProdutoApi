@@ -17,7 +17,6 @@ namespace ProductApi.Infra.Data.Repositories
                             filter: (filtr => filtr.ProductVersionId.Equals(productVersionId) && filtr.Status.Equals((int)recordStatus)),
                             includeProperties: source =>
                                     source
-                                    .Include(item => item.ProductVersion)
                                     .Include(item => item.TermType),
                             orderBy: item => item.OrderBy(y => y.ProductVersionTermTypeId)));
 

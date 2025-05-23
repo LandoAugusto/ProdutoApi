@@ -121,5 +121,23 @@ namespace Product.Api.Controllers.V1
 
             return base.ReturnSuccess(response);
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("get-insurance-type")]
+        [ProducesResponseType(typeof(BaseDataResponseModel<TermTypeModel>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<TermTypeModel>), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<TermTypeModel>), StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> GetinsuranceTypsAsync()
+        {
+            var response = await _commonService.GetinsuranceTypsAsync(RecordStatusEnum.Active);
+            if (response == null)
+                return ReturnNotFound();
+
+            return base.ReturnSuccess(response);
+        }
     }
 }

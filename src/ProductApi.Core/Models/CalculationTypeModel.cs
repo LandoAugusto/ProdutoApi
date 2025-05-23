@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ProductApi.Core.Models
+﻿namespace ProductApi.Core.Models
 {
     public class CalculationTypeModel
     {
+        public int CalculationTypeId { get; set; }
+        public required string Name { get; set; }
     }
 }
