@@ -11,6 +11,8 @@ namespace ProductApi.Application.Interfaces
         Task<IEnumerable<AddressTypeModel>?> GetAddressTypeAsync(RecordStatusEnum recordStatusEnum);
         Task<IEnumerable<DocumentTypeModel>?> GetDocumentypeAsync(RecordStatusEnum recordStatusEnum);
         Task<IEnumerable<InsuredTypeModel>?> GetInsuredTypeAsync(RecordStatusEnum recordStatusEnum);
-        Task<IEnumerable<InsuranceTypeModel>?> GetinsuranceTypsAsync(RecordStatusEnum recordStatus);
+        Task<IEnumerable<InsuranceTypeModel>?> GetInsuranceTypeAsync(RecordStatusEnum recordStatus);
+        Task<IEnumerable<InsurerModel>?> GetInsurerAsync(RecordStatusEnum recordStatus);
+        Task<IEnumerable<ClaimsExperienceBonusModel>?> GetClaimsExperienceBonusModelAsync(RecordStatusEnum recordStatus);
     }
 }

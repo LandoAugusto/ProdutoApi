@@ -23,20 +23,17 @@ namespace ProductApi.Application.Extensions
             services.AddScoped<IProductVersionContractTypeAppService, ProductVersionContractTypeAppService>();
             services.AddScoped<IProductVersionContractTypeAppService, ProductVersionContractTypeAppService>();
             services.AddScoped<IProductVersionCalculationTypeAppService, ProductVersionCalculationTypeAppService>();
-            services.AddScoped<IProductVersionCalculationTypeAcceptanceAppService, ProductVersionCalculationTypeAcceptanceAppService>();
-
+            services.AddScoped<IProductVersionCalculationTypeAcceptanceAppService, ProductVersionCalculationTypeAcceptanceAppService>();            
             services.AddScoped<ICommonAppService, CommonAppService>();
             services.AddScoped<IBranchAppService, BranchAppService>();
             services.AddScoped<IProductComponentScreenAppService, ProductComponentScreenAppService>();
             services.AddScoped<ILaborCourtAppService, LaborCourtAppService>();
             services.AddScoped<ICivilCourtAppService, CivilCourtAppService>();
             services.AddScoped<ILegalRecourseTypeAppService, LegalRecourseTypeAppService>();
-
             services.AddScoped<IRegisterVehicleBrandAppService, RegisterVehicleBrandAppService>();
             services.AddScoped<IRegisterVehicleModelAppService, RegisterVehicleModelAppService>();
             services.AddScoped<IRegisterVehicleVersionAppService, RegisterVehicleVersionAppService>();
             services.AddScoped<IRegisterVehicleYearAppService, RegisterVehicleYearAppService>();
-
         }
     }
 }

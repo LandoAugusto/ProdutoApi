@@ -128,9 +128,43 @@ namespace Product.Api.Controllers.V1
         [Route("get-insurance-type")]
         [ProducesResponseType(typeof(BaseDataResponseModel<TermTypeModel>), StatusCodes.Status200OK)]        
         [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status404NotFound)]
-        public async Task<IActionResult> GetinsuranceTypsAsync()
+        public async Task<IActionResult> GetInsuranceTypeAsync()
         {
-            var response = await _commonService.GetinsuranceTypsAsync(RecordStatusEnum.Active);
+            var response = await _commonService.GetInsuranceTypeAsync(RecordStatusEnum.Active);
+            if (response == null)
+                return ReturnNotFound();
+
+            return base.ReturnSuccess(response);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("get-insurer")]
+        [ProducesResponseType(typeof(BaseDataResponseModel<InsurerModel>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> GetInsurerAsync()
+        {
+            var response = await _commonService.GetInsurerAsync(RecordStatusEnum.Active);
+            if (response == null)
+                return ReturnNotFound();
+
+            return base.ReturnSuccess(response);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("get-claims-experience-bonus")]
+        [ProducesResponseType(typeof(BaseDataResponseModel<InsurerModel>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> GetClaimsExperienceBonusModelAsync()
+        {
+            var response = await _commonService.GetClaimsExperienceBonusModelAsync(RecordStatusEnum.Active);
             if (response == null)
                 return ReturnNotFound();
 

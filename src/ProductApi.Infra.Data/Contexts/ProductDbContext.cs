@@ -61,6 +61,8 @@ namespace ProductApi.Infra.Data.Contexts
         public virtual DbSet<LaborCourt> LaborCourt { get; set; }
         public virtual DbSet<ContractType> ContractType { get; set; }
         public virtual DbSet<InsuranceType> InsuranceType { get; set; }
-        
+        public virtual DbSet<Insurer> Insurer { get; set; }
+        public virtual DbSet<ClaimsExperienceBonus> ClaimsExperienceBonus { get; set; }
+
     }
 }

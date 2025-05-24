@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using ProductApi.Core.Models;
 using ProductApi.Infra.Data.Contexts;
 using ProductApi.Infra.Data.Interfaces;
 using ProductApi.Infra.Data.Repositories;
@@ -56,6 +57,9 @@ namespace ProductApi.Infra.Data.Extensions
             services.AddScoped<IRegisterVehicleModelRepository, RegisterVehicleModelRepository>();            
             services.AddScoped<IRegisterVehicleVersionRepository, RegisterVehicleVersionRepository>();
             services.AddScoped<IRegisterVehicleYearRepository, RegisterVehicleYearRepository>();
+            services.AddScoped<IInsurerRepository, InsurerRepository>();
+            services.AddScoped<IClaimsExperienceBonusRepository, ClaimsExperienceBonusRepository>();
+            
             return services;
         }
     }

@@ -17,7 +17,8 @@ namespace ProductApi.Core.Infrastructure.Mapper
             CreateMap<ProductVersionModel, ProductVersion>().ReverseMap();
             CreateMap<ProductVersionAcceptanceModel, ProductVersionAcceptance>().ReverseMap();            
             CreateMap<ProductVersionClauseModel, ProductVersionClause>().ReverseMap();
-            CreateMap<ProductVersionLawsuitTypeModel, ProductVersionLawsuitType>().ReverseMap();                              
+            CreateMap<ProductVersionLawsuitTypeModel, ProductVersionLawsuitType>().ReverseMap();
+            CreateMap<CalculationTypeAcceptanceModel, ProductVersionCalculationTypeAcceptance>().ReverseMap();
             CreateMap<PaymentFrequencyModel, PaymentFrequency>().ReverseMap();
             CreateMap<PaymentInstallmentModel, PaymentInstallment>().ReverseMap();
             CreateMap<InsuredObjectModel, InsuredObject>().ReverseMap();
@@ -46,7 +47,10 @@ namespace ProductApi.Core.Infrastructure.Mapper
             CreateMap<InsuranceTypeModel, InsuranceType>().ReverseMap();
             CreateMap<ConstructionTypeModel, ConstructionType>().ReverseMap();
             CreateMap<CalculationTypeModel, CalculationType>().ReverseMap();
-            CreateMap<CalculationTypeAcceptanceModel, ProductVersionCalculationTypeAcceptance>().ReverseMap();
+            CreateMap<InsurerModel, Insurer>().ReverseMap();
+            CreateMap<ClaimsExperienceBonusModel, ClaimsExperienceBonus>().ReverseMap();
+
+            
         }
     }
 }

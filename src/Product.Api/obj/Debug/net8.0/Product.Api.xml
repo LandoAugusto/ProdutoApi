@@ -139,7 +139,19 @@
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Product.Api.Controllers.V1.CommonController.GetinsuranceTypsAsync">
+        <member name="M:Product.Api.Controllers.V1.CommonController.GetInsuranceTypeAsync">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Product.Api.Controllers.V1.CommonController.GetInsurerAsync">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Product.Api.Controllers.V1.CommonController.GetClaimsExperienceBonusModelAsync">
             <summary>
             
             </summary>
