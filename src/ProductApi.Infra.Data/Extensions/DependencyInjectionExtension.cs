@@ -59,7 +59,9 @@ namespace ProductApi.Infra.Data.Extensions
             services.AddScoped<IRegisterVehicleYearRepository, RegisterVehicleYearRepository>();
             services.AddScoped<IInsurerRepository, InsurerRepository>();
             services.AddScoped<IClaimsExperienceBonusRepository, ClaimsExperienceBonusRepository>();
-            
+            services.AddScoped<IPropertyStructureRepository, PropertyStructureRepository>();
+            services.AddScoped<IBuildingsContentsRepository, BuildingsContentsRepository>();
+
             return services;
         }
     }

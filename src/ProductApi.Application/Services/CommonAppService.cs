@@ -11,7 +11,9 @@ namespace ProductApi.Application.Services
     internal class CommonAppService(IMapper mapper, IInsuredTypeRepository insuredTypeRepository, IDocumentTypeRepository documentTypeRepository,
        IAddressTypeRepository addressTypeRepository, IStateRepository stateRepository, IRecordStatusRepository recordStatusRepository,
        ITermTypeRepository termTypeRepository, IInsuranceTypeRepository insuranceTypeRepository, IInsurerRepository insurerRepository,
-       IClaimsExperienceBonusRepository claimsExperienceBonusRepository) : ICommonAppService
+       IClaimsExperienceBonusRepository claimsExperienceBonusRepository, IPropertyStructureRepository propertyStructureRepository,
+       IBuildingsContentsRepository buildingsContentsRepository) 
+     : ICommonAppService
     {
 
         private readonly IMapper _mapper = mapper;
@@ -24,6 +26,8 @@ namespace ProductApi.Application.Services
         private readonly IInsuranceTypeRepository _insuranceTypeRepository = insuranceTypeRepository;
         private readonly IInsurerRepository _insurerRepository = insurerRepository;
         private readonly IClaimsExperienceBonusRepository _claimsExperienceBonusRepository = claimsExperienceBonusRepository;
+        private readonly IPropertyStructureRepository _propertyStructureRepository = propertyStructureRepository;
+        private readonly IBuildingsContentsRepository _buildingsContentsRepository = buildingsContentsRepository;
         public async Task<IEnumerable<AddressTypeModel>?> GetAddressTypeAsync(RecordStatusEnum recordStatusEnum)
         {
             var entity = await _addressTypeRepository.ListAsync(recordStatusEnum);
@@ -86,12 +90,29 @@ namespace ProductApi.Application.Services
             return _mapper.Map<IEnumerable<InsurerModel>>(entidade);
         }
 
-        public async Task<IEnumerable<ClaimsExperienceBonusModel>?> GetClaimsExperienceBonusModelAsync(RecordStatusEnum recordStatus)
+        public async Task<IEnumerable<ClaimsExperienceBonusModel>?> GetClaimsExperienceBonusAsync(RecordStatusEnum recordStatus)
         {
             var entidade = await _claimsExperienceBonusRepository.GetAllAsync(recordStatus);
             if (!entidade.IsAny<ClaimsExperienceBonus>()) return null;
 
             return _mapper.Map<IEnumerable<ClaimsExperienceBonusModel>>(entidade);
         }
+
+        public async Task<IEnumerable<PropertyStructureModel>?> GetPropertyStructureAsync(RecordStatusEnum recordStatus)
+        {
+            var entidade = await _propertyStructureRepository.GetAllAsync(recordStatus);
+            if (!entidade.IsAny<PropertyStructure>()) return null;
+
+            return _mapper.Map<IEnumerable<PropertyStructureModel>>(entidade);
+        }
+        public async Task<IEnumerable<BuildingsContentsModel>?> GetBuildingsContentsAsync(RecordStatusEnum recordStatus)
+        {
+            var entidade = await _buildingsContentsRepository.GetAllAsync(recordStatus);
+            if (!entidade.IsAny<BuildingsContents>()) return null;
+
+            return _mapper.Map<IEnumerable<BuildingsContentsModel>>(entidade);
+        }
+
+        
     }
 }

@@ -164,7 +164,40 @@ namespace Product.Api.Controllers.V1
         [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status404NotFound)]
         public async Task<IActionResult> GetClaimsExperienceBonusModelAsync()
         {
-            var response = await _commonService.GetClaimsExperienceBonusModelAsync(RecordStatusEnum.Active);
+            var response = await _commonService.GetClaimsExperienceBonusAsync(RecordStatusEnum.Active);
+            if (response == null)
+                return ReturnNotFound();
+
+            return base.ReturnSuccess(response);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("get-property-structure")]
+        [ProducesResponseType(typeof(BaseDataResponseModel<InsurerModel>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> GetPropertyStructureAsync()
+        {
+            var response = await _commonService.GetPropertyStructureAsync(RecordStatusEnum.Active);
+            if (response == null)
+                return ReturnNotFound();
+
+            return base.ReturnSuccess(response);
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("get-buildings-contents")]
+        [ProducesResponseType(typeof(BaseDataResponseModel<InsurerModel>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> GetBuildingsContentsAsync()
+        {
+            var response = await _commonService.GetBuildingsContentsAsync(RecordStatusEnum.Active);
             if (response == null)
                 return ReturnNotFound();
 

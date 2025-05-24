@@ -63,6 +63,8 @@ namespace ProductApi.Infra.Data.Contexts
         public virtual DbSet<InsuranceType> InsuranceType { get; set; }
         public virtual DbSet<Insurer> Insurer { get; set; }
         public virtual DbSet<ClaimsExperienceBonus> ClaimsExperienceBonus { get; set; }
-
+        public virtual DbSet<PropertyStructure> PropertyStructure { get; set; }
+        public virtual DbSet<BuildingsContents> BuildingsContents { get; set; }
+        
     }
 }

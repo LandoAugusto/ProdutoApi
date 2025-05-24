@@ -15,7 +15,7 @@ namespace ProductApi.Core.Infrastructure.Mapper
             CreateMap<CoverageModel, Coverage>().ReverseMap();
             CreateMap<TermTypeModel, TermType>().ReverseMap();
             CreateMap<ProductVersionModel, ProductVersion>().ReverseMap();
-            CreateMap<ProductVersionAcceptanceModel, ProductVersionAcceptance>().ReverseMap();            
+            CreateMap<ProductVersionAcceptanceModel, ProductVersionAcceptance>().ReverseMap();
             CreateMap<ProductVersionClauseModel, ProductVersionClause>().ReverseMap();
             CreateMap<ProductVersionLawsuitTypeModel, ProductVersionLawsuitType>().ReverseMap();
             CreateMap<CalculationTypeAcceptanceModel, ProductVersionCalculationTypeAcceptance>().ReverseMap();
@@ -42,15 +42,15 @@ namespace ProductApi.Core.Infrastructure.Mapper
             CreateMap<RegisterVehicleBrandModel, RegisterVehicleBrand>().ReverseMap();
             CreateMap<RegisterVehicleModelModel, RegisterVehicleModel>().ReverseMap();
             CreateMap<RegisterVehicleVersionModel, RegisterVehicleVersion>().ReverseMap();
-            CreateMap<RegisterVehicleYearModel, RegisterVehicleYear>().ReverseMap();            
+            CreateMap<RegisterVehicleYearModel, RegisterVehicleYear>().ReverseMap();
             CreateMap<ContractTypeModel, ContractType>().ReverseMap();
             CreateMap<InsuranceTypeModel, InsuranceType>().ReverseMap();
             CreateMap<ConstructionTypeModel, ConstructionType>().ReverseMap();
             CreateMap<CalculationTypeModel, CalculationType>().ReverseMap();
             CreateMap<InsurerModel, Insurer>().ReverseMap();
             CreateMap<ClaimsExperienceBonusModel, ClaimsExperienceBonus>().ReverseMap();
-
-            
+            CreateMap<PropertyStructureModel, PropertyStructure>().ReverseMap();
+            CreateMap<BuildingsContentsModel, BuildingsContents>().ReverseMap();
         }
     }
 }

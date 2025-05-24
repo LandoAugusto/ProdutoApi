@@ -13,6 +13,8 @@ namespace ProductApi.Application.Interfaces
         Task<IEnumerable<InsuredTypeModel>?> GetInsuredTypeAsync(RecordStatusEnum recordStatusEnum);
         Task<IEnumerable<InsuranceTypeModel>?> GetInsuranceTypeAsync(RecordStatusEnum recordStatus);
         Task<IEnumerable<InsurerModel>?> GetInsurerAsync(RecordStatusEnum recordStatus);
-        Task<IEnumerable<ClaimsExperienceBonusModel>?> GetClaimsExperienceBonusModelAsync(RecordStatusEnum recordStatus);
+        Task<IEnumerable<ClaimsExperienceBonusModel>?> GetClaimsExperienceBonusAsync(RecordStatusEnum recordStatus);
+        Task<IEnumerable<PropertyStructureModel>?> GetPropertyStructureAsync(RecordStatusEnum recordStatus);
+        Task<IEnumerable<BuildingsContentsModel>?> GetBuildingsContentsAsync(RecordStatusEnum recordStatus);
     }
 }
