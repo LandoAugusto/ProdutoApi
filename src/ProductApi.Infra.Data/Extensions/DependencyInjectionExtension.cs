@@ -43,6 +43,7 @@ namespace ProductApi.Infra.Data.Extensions
             services.AddScoped<IProductVersionContractTypeRepository, ProductVersionContractTypeRepository>();
             services.AddScoped<IProductVersionCalculationTypeRepository, ProductVersionCalculationTypeRepository>();
             services.AddScoped<IProductVersionCalculationTypeAcceptanceRepository, ProductVersionCalculationTypeAcceptanceRepository>();
+            services.AddScoped<IProductVersionConstructionTypeRepository, ProductVersionConstructionTypeRepository>();
             services.AddScoped<ITermTypeRepository, TermTypeRepository>();
             services.AddScoped<IProductComponentRepository, ProductComponentRepository>();
             services.AddScoped<IFlexRateRepository, FlexRateRepository>();
@@ -61,7 +62,9 @@ namespace ProductApi.Infra.Data.Extensions
             services.AddScoped<IClaimsExperienceBonusRepository, ClaimsExperienceBonusRepository>();
             services.AddScoped<IPropertyStructureRepository, PropertyStructureRepository>();
             services.AddScoped<IBuildingsContentsRepository, BuildingsContentsRepository>();
-
+            services.AddScoped<IUseTypePropertyStructureRepository, UseTypePropertyStructureRepository>();
+            services.AddScoped<IUseTypePropertyStructureRepository, UseTypePropertyStructureRepository>();
+            services.AddScoped<IConstructionTypeUseTypeRepository, ConstructionTypeUseTypeRepository>();    
             return services;
         }
     }

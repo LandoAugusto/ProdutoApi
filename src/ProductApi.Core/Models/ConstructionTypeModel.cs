@@ -1,6 +1,8 @@
 ﻿namespace ProductApi.Core.Models
 {
-    internal class ConstructionTypeModel
+    public class ConstructionTypeModel
     {
+        public int ConstructionTypeId { get; set; }
+        public required string Name { get; set; }
     }
 }

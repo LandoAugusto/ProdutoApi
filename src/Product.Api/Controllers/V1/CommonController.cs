@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Product.Api.Controllers.V1.Base;
 using ProductApi.Application.Interfaces;
+using ProductApi.Core.Entities;
 using ProductApi.Core.Entities.Enumerators;
 using ProductApi.Core.Models;
 
@@ -91,7 +92,7 @@ namespace Product.Api.Controllers.V1
         /// <returns></returns>
         [HttpGet]
         [Route("get-record-status")]
-        [ProducesResponseType(typeof(BaseDataResponseModel<RecordStatusModel>), StatusCodes.Status200OK)]        
+        [ProducesResponseType(typeof(BaseDataResponseModel<RecordStatusModel>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status404NotFound)]
         public async Task<IActionResult> GetRecordStatusAsync()
         {
@@ -109,7 +110,7 @@ namespace Product.Api.Controllers.V1
         /// <returns></returns>
         [HttpGet]
         [Route("get-term-type")]
-        [ProducesResponseType(typeof(BaseDataResponseModel<TermTypeModel>), StatusCodes.Status200OK)]        
+        [ProducesResponseType(typeof(BaseDataResponseModel<TermTypeModel>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status404NotFound)]
         public async Task<IActionResult> GetTermTypeAllAsync()
         {
@@ -126,7 +127,7 @@ namespace Product.Api.Controllers.V1
         /// <returns></returns>
         [HttpGet]
         [Route("get-insurance-type")]
-        [ProducesResponseType(typeof(BaseDataResponseModel<TermTypeModel>), StatusCodes.Status200OK)]        
+        [ProducesResponseType(typeof(BaseDataResponseModel<TermTypeModel>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status404NotFound)]
         public async Task<IActionResult> GetInsuranceTypeAsync()
         {
@@ -176,28 +177,42 @@ namespace Product.Api.Controllers.V1
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-        [Route("get-property-structure")]
-        [ProducesResponseType(typeof(BaseDataResponseModel<InsurerModel>), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status404NotFound)]
-        public async Task<IActionResult> GetPropertyStructureAsync()
-        {
-            var response = await _commonService.GetPropertyStructureAsync(RecordStatusEnum.Active);
-            if (response == null)
-                return ReturnNotFound();
-
-            return base.ReturnSuccess(response);
-        }
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns></returns>
-        [HttpGet]
         [Route("get-buildings-contents")]
         [ProducesResponseType(typeof(BaseDataResponseModel<InsurerModel>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status404NotFound)]
         public async Task<IActionResult> GetBuildingsContentsAsync()
         {
             var response = await _commonService.GetBuildingsContentsAsync(RecordStatusEnum.Active);
+            if (response == null)
+                return ReturnNotFound();
+
+            return base.ReturnSuccess(response);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("get-property-structure/{useTypeId}")]
+        [ProducesResponseType(typeof(BaseDataResponseModel<PropertyStructureModel>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> GetPropertyStructureAsync(int useTypeId)
+        {
+            var response = await _commonService.GetPropertyStructureAsync(useTypeId, RecordStatusEnum.Active);
+            if (response == null)
+                return ReturnNotFound();
+
+            return base.ReturnSuccess(response);
+        }
+
+        [HttpGet]
+        [Route("get-use-type/{constructionTypeId}/{profileId}")]
+        [ProducesResponseType(typeof(BaseDataResponseModel<PropertyStructureModel>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> GetUseTypeAsync(int constructionTypeId, int profileId)
+        {
+            var response = await _commonService.GetUseTypeAsync(constructionTypeId, profileId, RecordStatusEnum.Active);
             if (response == null)
                 return ReturnNotFound();
 

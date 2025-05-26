@@ -25,7 +25,7 @@ namespace ProductApi.Infra.Data.Contexts
         public virtual DbSet<ProductVersionPaymentFrequency> ProductVersionPaymentFrequency { get; set; }
         public virtual DbSet<ProductVersionCoverage> ProductVersionCoverage { get; set; }
         public virtual DbSet<ProductVersionContractType> ProductVersionContractType { get; set; }
-        public virtual DbSet<ProductVersionCalculationTypeAcceptance> ProductVersionCalculationTypeAcceptance { get; set; }        
+        public virtual DbSet<ProductVersionCalculationTypeAcceptance> ProductVersionCalculationTypeAcceptance { get; set; }
         public virtual DbSet<PaymentFrequency> PaymentFrequency { get; set; }
         public virtual DbSet<PaymentInstallment> PaymentInstallment { get; set; }
         public virtual DbSet<PaymentMethod> PaymentMethod { get; set; }
@@ -65,6 +65,7 @@ namespace ProductApi.Infra.Data.Contexts
         public virtual DbSet<ClaimsExperienceBonus> ClaimsExperienceBonus { get; set; }
         public virtual DbSet<PropertyStructure> PropertyStructure { get; set; }
         public virtual DbSet<BuildingsContents> BuildingsContents { get; set; }
-        
+        public virtual DbSet<UseTypePropertyStructure> UseTypePropertyStructure { get; set; }
+        public virtual DbSet<ConstructionTypeUseType> ConstructionTypeUseType { get; set; }
     }
 }

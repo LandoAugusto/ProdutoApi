@@ -5,6 +5,6 @@ namespace ProductApi.Application.Interfaces
 {
     public interface IProductVersionCalculationTypeAppService
     {
-        Task<IEnumerable<CalculationTypeModel>?> GetProductVersionCalculationTypeAsync(int productVersionId, int profileId, RecordStatusEnum recordStatus);
+        Task<IEnumerable<CalculationTypeModel>?> GeAsync(int productVersionId, int profileId, RecordStatusEnum recordStatus);
     }
 }

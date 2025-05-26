@@ -14,7 +14,7 @@ namespace ProductApi.Application.Services
         private readonly IMapper _mapper = mapper;
         private readonly IProductVersionContractTypeRepository _productVersionContractTypeRepository = productVersionContractTypeRepository;
 
-        public async Task<IEnumerable<ContractTypeModel>?> GetProductVersionContractTypeAsync(int productVersionId, RecordStatusEnum recordStatus)
+        public async Task<IEnumerable<ContractTypeModel>?> GetAsync(int productVersionId, RecordStatusEnum recordStatus)
         {
             var entity = await _productVersionContractTypeRepository.GetProductVersionContractTypeAsync(productVersionId, recordStatus);
             if (!entity.IsAny<ProductVersionContractType>()) return null;

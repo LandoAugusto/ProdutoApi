@@ -157,13 +157,13 @@
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Product.Api.Controllers.V1.CommonController.GetPropertyStructureAsync">
+        <member name="M:Product.Api.Controllers.V1.CommonController.GetBuildingsContentsAsync">
             <summary>
             
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Product.Api.Controllers.V1.CommonController.GetBuildingsContentsAsync">
+        <member name="M:Product.Api.Controllers.V1.CommonController.GetPropertyStructureAsync(System.Int32)">
             <summary>
             
             </summary>
@@ -261,7 +261,7 @@
             <param name="productVersionCalculationTypeAppService"></param>
             <param name="productVersionCalculationTypeAcceptanceAppService"></param>
         </member>
-        <member name="M:Product.Api.Controllers.V1.ProductVersionController.#ctor(ProductApi.Application.Interfaces.IProductVersionAcceptanceAppService,ProductApi.Application.Interfaces.IProductVersionInsuredObjectAppService,ProductApi.Application.Interfaces.IProductVersionClauseAppService,ProductApi.Application.Interfaces.IProductVersionLawsuitTypeAppService,ProductApi.Application.Interfaces.IProductVersionTermTypeAppService,ProductApi.Application.Interfaces.IProductVersionPaymentMethodAppService,ProductApi.Application.Interfaces.IProductVersionPaymentInstallmentAppService,ProductApi.Application.Interfaces.IProductVersionPaymentFrequencyAppService,ProductApi.Application.Interfaces.IProductVersionCoverageAppService,ProductApi.Application.Interfaces.IProductVersionContractTypeAppService,ProductApi.Application.Interfaces.IProductVersionCalculationTypeAppService,ProductApi.Application.Interfaces.IProductVersionCalculationTypeAcceptanceAppService)">
+        <member name="M:Product.Api.Controllers.V1.ProductVersionController.#ctor(ProductApi.Application.Interfaces.IProductVersionAcceptanceAppService,ProductApi.Application.Interfaces.IProductVersionInsuredObjectAppService,ProductApi.Application.Interfaces.IProductVersionClauseAppService,ProductApi.Application.Interfaces.IProductVersionLawsuitTypeAppService,ProductApi.Application.Interfaces.IProductVersionTermTypeAppService,ProductApi.Application.Interfaces.IProductVersionPaymentMethodAppService,ProductApi.Application.Interfaces.IProductVersionPaymentInstallmentAppService,ProductApi.Application.Interfaces.IProductVersionPaymentFrequencyAppService,ProductApi.Application.Interfaces.IProductVersionCoverageAppService,ProductApi.Application.Interfaces.IProductVersionContractTypeAppService,ProductApi.Application.Interfaces.IProductVersionCalculationTypeAppService,ProductApi.Application.Interfaces.IProductVersionCalculationTypeAcceptanceAppService,ProductApi.Application.Interfaces.IProductVersionConstructionTypeAppService)">
             <summary>
             
             </summary>
@@ -374,6 +374,13 @@
             <param name="productVersionId"></param>
             <param name="profileId"></param>
             <param name="calculationTypeId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Product.Api.Controllers.V1.ProductVersionController.GetProductVersionConstructionTypeAsync(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="productVersionId"></param>        
             <returns></returns>
         </member>
         <member name="T:Product.Api.Controllers.V1.VehicleController">

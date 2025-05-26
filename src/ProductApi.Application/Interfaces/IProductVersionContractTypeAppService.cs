@@ -5,6 +5,6 @@ namespace ProductApi.Application.Interfaces
 {
     public interface IProductVersionContractTypeAppService
     {
-        Task<IEnumerable<ContractTypeModel>?> GetProductVersionContractTypeAsync(int productVersionId, RecordStatusEnum recordStatus);
+        Task<IEnumerable<ContractTypeModel>?> GetAsync(int productVersionId, RecordStatusEnum recordStatus);
     }
 }

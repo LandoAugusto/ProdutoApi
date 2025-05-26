@@ -13,7 +13,7 @@ namespace ProductApi.Application.Services
         private readonly IMapper _mapper = mapper;
         private readonly IProductVersionCalculationTypeRepository _productVersionCalculationTypeRepository = productVersionCalculationTypeRepository;
 
-        public async Task<IEnumerable<CalculationTypeModel>?> GetProductVersionCalculationTypeAsync(int productVersionId, int profileId, RecordStatusEnum recordStatus)
+        public async Task<IEnumerable<CalculationTypeModel>?> GeAsync(int productVersionId, int profileId, RecordStatusEnum recordStatus)
         {
             var entity = await _productVersionCalculationTypeRepository.ListAsync(productVersionId, profileId, recordStatus);
             if (!entity.IsAny<ProductVersionCalculationType>()) return null;

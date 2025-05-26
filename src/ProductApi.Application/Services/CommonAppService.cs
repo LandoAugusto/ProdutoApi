@@ -12,7 +12,8 @@ namespace ProductApi.Application.Services
        IAddressTypeRepository addressTypeRepository, IStateRepository stateRepository, IRecordStatusRepository recordStatusRepository,
        ITermTypeRepository termTypeRepository, IInsuranceTypeRepository insuranceTypeRepository, IInsurerRepository insurerRepository,
        IClaimsExperienceBonusRepository claimsExperienceBonusRepository, IPropertyStructureRepository propertyStructureRepository,
-       IBuildingsContentsRepository buildingsContentsRepository) 
+       IBuildingsContentsRepository buildingsContentsRepository, IUseTypePropertyStructureRepository useTypePropertyStructureRepository,
+       IConstructionTypeUseTypeRepository constructionTypeUseTypeRepository)
      : ICommonAppService
     {
 
@@ -28,6 +29,8 @@ namespace ProductApi.Application.Services
         private readonly IClaimsExperienceBonusRepository _claimsExperienceBonusRepository = claimsExperienceBonusRepository;
         private readonly IPropertyStructureRepository _propertyStructureRepository = propertyStructureRepository;
         private readonly IBuildingsContentsRepository _buildingsContentsRepository = buildingsContentsRepository;
+        private readonly IUseTypePropertyStructureRepository _useTypePropertyStructureRepository = useTypePropertyStructureRepository;
+        private readonly IConstructionTypeUseTypeRepository _constructionTypeUseTypeRepository = constructionTypeUseTypeRepository;
         public async Task<IEnumerable<AddressTypeModel>?> GetAddressTypeAsync(RecordStatusEnum recordStatusEnum)
         {
             var entity = await _addressTypeRepository.ListAsync(recordStatusEnum);
@@ -66,7 +69,7 @@ namespace ProductApi.Application.Services
             if (!entity.IsAny<RecordStatus>()) return null;
 
             return _mapper.Map<IEnumerable<RecordStatusModel>>(entity);
-        }       
+        }
 
         public async Task<IEnumerable<TermTypeModel>?> GetTermTypeAsync(RecordStatusEnum recordStatus)
         {
@@ -97,14 +100,7 @@ namespace ProductApi.Application.Services
 
             return _mapper.Map<IEnumerable<ClaimsExperienceBonusModel>>(entidade);
         }
-
-        public async Task<IEnumerable<PropertyStructureModel>?> GetPropertyStructureAsync(RecordStatusEnum recordStatus)
-        {
-            var entidade = await _propertyStructureRepository.GetAllAsync(recordStatus);
-            if (!entidade.IsAny<PropertyStructure>()) return null;
-
-            return _mapper.Map<IEnumerable<PropertyStructureModel>>(entidade);
-        }
+       
         public async Task<IEnumerable<BuildingsContentsModel>?> GetBuildingsContentsAsync(RecordStatusEnum recordStatus)
         {
             var entidade = await _buildingsContentsRepository.GetAllAsync(recordStatus);
@@ -113,6 +109,25 @@ namespace ProductApi.Application.Services
             return _mapper.Map<IEnumerable<BuildingsContentsModel>>(entidade);
         }
 
-        
+        public async Task<IEnumerable<PropertyStructureModel>?> GetPropertyStructureAsync(int useTypeId, RecordStatusEnum recordStatus)
+        {
+            var entidade = await _useTypePropertyStructureRepository.GetAsync(useTypeId, recordStatus);
+            if (!entidade.IsAny<UseTypePropertyStructure>()) return null;
+
+            return [.. entidade.ToList().Select(item =>
+            {
+                return _mapper.Map<PropertyStructureModel>(item.PropertyStructure);
+            })];
+        }
+        public async Task<IEnumerable<UseTypeModel>?> GetUseTypeAsync(int constructionTypeId, int profileId, RecordStatusEnum recordStatus)
+        {
+            var entidade = await _constructionTypeUseTypeRepository.GetAsync(constructionTypeId, profileId, recordStatus);
+            if (!entidade.IsAny<ConstructionTypeUseType>()) return null;
+
+            return [.. entidade.ToList().Select(item =>
+            {
+                return _mapper.Map<UseTypeModel>(item.UseType);
+            })];
+        }
     }
 }

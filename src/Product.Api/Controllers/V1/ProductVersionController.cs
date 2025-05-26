@@ -27,7 +27,7 @@ namespace Product.Api.Controllers.V1
         IProductVersionPaymentMethodAppService productVersionPaymentMethodService, IProductVersionPaymentInstallmentAppService productVersionPaymentInstallmentService,
         IProductVersionPaymentFrequencyAppService productVersionPaymentFrequencyService, IProductVersionCoverageAppService productVersionCoverageAppService,
         IProductVersionContractTypeAppService productVersionContractTypeAppService, IProductVersionCalculationTypeAppService productVersionCalculationTypeAppService,
-        IProductVersionCalculationTypeAcceptanceAppService productVersionCalculationTypeAcceptanceAppService) : BaseController
+        IProductVersionCalculationTypeAcceptanceAppService productVersionCalculationTypeAcceptanceAppService, IProductVersionConstructionTypeAppService productVersionConstructionTypeAppService) : BaseController
     {
         private readonly IProductVersionAcceptanceAppService _productVersionService = productVersionService;
         private readonly IProductVersionInsuredObjectAppService _productVersionInsuredObjectService = productVersionInsuredObjectService;
@@ -41,6 +41,7 @@ namespace Product.Api.Controllers.V1
         private readonly IProductVersionContractTypeAppService _productVersionContractTypeAppService = productVersionContractTypeAppService;
         private readonly IProductVersionCalculationTypeAppService _productVersionCalculationTypeAppService = productVersionCalculationTypeAppService;
         private readonly IProductVersionCalculationTypeAcceptanceAppService _productVersionCalculationTypeAcceptanceAppService = productVersionCalculationTypeAcceptanceAppService;
+        private readonly IProductVersionConstructionTypeAppService _productVersionConstructionTypeAppService = productVersionConstructionTypeAppService;
 
 
         /// <summary>
@@ -250,7 +251,7 @@ namespace Product.Api.Controllers.V1
         [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status404NotFound)]
         public async Task<IActionResult> GetProductVersionContractTypeAsync(int productVersionId)
         {
-            var response = await _productVersionContractTypeAppService.GetProductVersionContractTypeAsync(productVersionId, RecordStatusEnum.Active);
+            var response = await _productVersionContractTypeAppService.GetAsync(productVersionId, RecordStatusEnum.Active);
             if (response == null)
                 return ReturnNotFound();
 
@@ -270,7 +271,7 @@ namespace Product.Api.Controllers.V1
         [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status404NotFound)]
         public async Task<IActionResult> GetProductVersionContractTypeAsync(int productVersionId, int profileId)
         {
-            var response = await _productVersionCalculationTypeAppService.GetProductVersionCalculationTypeAsync(productVersionId, profileId, RecordStatusEnum.Active);
+            var response = await _productVersionCalculationTypeAppService.GeAsync(productVersionId, profileId, RecordStatusEnum.Active);
             if (response == null)
                 return ReturnNotFound();
 
@@ -292,6 +293,25 @@ namespace Product.Api.Controllers.V1
         public async Task<IActionResult> GetProductVersionContractTypeAcceptanceAsync(int productVersionId, int profileId, int calculationTypeId)
         {
             var response = await _productVersionCalculationTypeAcceptanceAppService.GetAsync(productVersionId, profileId, calculationTypeId, RecordStatusEnum.Active);
+            if (response == null)
+                return ReturnNotFound();
+
+            return base.ReturnSuccess(response);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="productVersionId"></param>        
+        /// <returns></returns>
+        [HttpGet]
+        [Route("get-product-version-construction-type/{productVersionId}")]
+        [ProducesResponseType(typeof(BaseDataResponseModel<IEnumerable<ConstructionTypeModel>>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> GetProductVersionConstructionTypeAsync(int productVersionId)
+        {
+            var response = await _productVersionConstructionTypeAppService.GetAsync(productVersionId, RecordStatusEnum.Active);
             if (response == null)
                 return ReturnNotFound();
 
