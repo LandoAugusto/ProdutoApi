@@ -21,6 +21,7 @@ namespace ProductApi.Core.Entities
         public virtual ICollection<ProductVersionCoverage> ProductVersionCoverage { get; set; } = new HashSet<ProductVersionCoverage>();
         public virtual ICollection<ProductVersionCalculationType> ProductVersionCalculationType { get; set; } = new HashSet<ProductVersionCalculationType>();
         public virtual ICollection<ProductVersionConstructionType> ProductVersionConstructionType { get; set; } = new HashSet<ProductVersionConstructionType>();
+        public virtual ICollection<ProductVersionActivity> ProductVersionActivity { get; set; } = new HashSet<ProductVersionActivity>();
 
     }
 }

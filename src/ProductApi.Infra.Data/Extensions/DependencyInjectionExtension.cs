@@ -44,6 +44,7 @@ namespace ProductApi.Infra.Data.Extensions
             services.AddScoped<IProductVersionCalculationTypeRepository, ProductVersionCalculationTypeRepository>();
             services.AddScoped<IProductVersionCalculationTypeAcceptanceRepository, ProductVersionCalculationTypeAcceptanceRepository>();
             services.AddScoped<IProductVersionConstructionTypeRepository, ProductVersionConstructionTypeRepository>();
+            services.AddScoped<IProductVersionActivityRepository, ProductVersionActivityRepository>();
             services.AddScoped<ITermTypeRepository, TermTypeRepository>();
             services.AddScoped<IProductComponentRepository, ProductComponentRepository>();
             services.AddScoped<IFlexRateRepository, FlexRateRepository>();

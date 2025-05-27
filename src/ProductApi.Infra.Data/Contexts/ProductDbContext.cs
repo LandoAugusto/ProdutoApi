@@ -67,5 +67,10 @@ namespace ProductApi.Infra.Data.Contexts
         public virtual DbSet<BuildingsContents> BuildingsContents { get; set; }
         public virtual DbSet<UseTypePropertyStructure> UseTypePropertyStructure { get; set; }
         public virtual DbSet<ConstructionTypeUseType> ConstructionTypeUseType { get; set; }
+        public virtual DbSet<ProductVersionActivity> ProductVersionActivity { get; set; }
+        public virtual DbSet<Activity> Activity { get; set; }
+        public virtual DbSet<HazardGroup> HazardGroup { get; set; }
+        public virtual DbSet<RiskType> RiskType { get; set; }
+
     }
 }

@@ -22,12 +22,15 @@ namespace Product.Api.Controllers.V1
     /// <param name="productVersionContractTypeAppService"></param>
     /// <param name="productVersionCalculationTypeAppService"></param>
     /// <param name="productVersionCalculationTypeAcceptanceAppService"></param>
+    /// <param name="productVersionConstructionTypeAppService"></param>
+    /// <param name="productVersionActivityAppService"></param>
     public class ProductVersionController(IProductVersionAcceptanceAppService productVersionService, IProductVersionInsuredObjectAppService productVersionInsuredObjectService,
         IProductVersionClauseAppService productVersionClauseService, IProductVersionLawsuitTypeAppService productVersionLawsuitTypeService, IProductVersionTermTypeAppService productVersionTermTypeService,
         IProductVersionPaymentMethodAppService productVersionPaymentMethodService, IProductVersionPaymentInstallmentAppService productVersionPaymentInstallmentService,
         IProductVersionPaymentFrequencyAppService productVersionPaymentFrequencyService, IProductVersionCoverageAppService productVersionCoverageAppService,
         IProductVersionContractTypeAppService productVersionContractTypeAppService, IProductVersionCalculationTypeAppService productVersionCalculationTypeAppService,
-        IProductVersionCalculationTypeAcceptanceAppService productVersionCalculationTypeAcceptanceAppService, IProductVersionConstructionTypeAppService productVersionConstructionTypeAppService) : BaseController
+        IProductVersionCalculationTypeAcceptanceAppService productVersionCalculationTypeAcceptanceAppService, IProductVersionConstructionTypeAppService productVersionConstructionTypeAppService,
+        IProductVersionActivityAppService productVersionActivityAppService) : BaseController
     {
         private readonly IProductVersionAcceptanceAppService _productVersionService = productVersionService;
         private readonly IProductVersionInsuredObjectAppService _productVersionInsuredObjectService = productVersionInsuredObjectService;
@@ -42,6 +45,7 @@ namespace Product.Api.Controllers.V1
         private readonly IProductVersionCalculationTypeAppService _productVersionCalculationTypeAppService = productVersionCalculationTypeAppService;
         private readonly IProductVersionCalculationTypeAcceptanceAppService _productVersionCalculationTypeAcceptanceAppService = productVersionCalculationTypeAcceptanceAppService;
         private readonly IProductVersionConstructionTypeAppService _productVersionConstructionTypeAppService = productVersionConstructionTypeAppService;
+        private readonly IProductVersionActivityAppService _productVersionActivityAppService = productVersionActivityAppService;
 
 
         /// <summary>
@@ -312,6 +316,27 @@ namespace Product.Api.Controllers.V1
         public async Task<IActionResult> GetProductVersionConstructionTypeAsync(int productVersionId)
         {
             var response = await _productVersionConstructionTypeAppService.GetAsync(productVersionId, RecordStatusEnum.Active);
+            if (response == null)
+                return ReturnNotFound();
+
+            return base.ReturnSuccess(response);
+        }
+
+      /// <summary>
+      /// 
+      /// </summary>
+      /// <param name="productVersionId"></param>
+      /// <param name="profileid"></param>
+      /// <param name="name"></param>
+      /// <returns></returns>
+        [HttpGet]
+        [Route("get-product-version-activity/{productVersionId}/{profileid}")]
+        [ProducesResponseType(typeof(BaseDataResponseModel<IEnumerable<ActivityModel>>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> GetProductVersionActivityAsync(int productVersionId, int profileid, string? name )
+        {
+            var response = await _productVersionActivityAppService.ListAsync(productVersionId, profileid, name, RecordStatusEnum.Active);
             if (response == null)
                 return ReturnNotFound();
 

@@ -52,6 +52,7 @@ namespace ProductApi.Core.Infrastructure.Mapper
             CreateMap<PropertyStructureModel, PropertyStructure>().ReverseMap();
             CreateMap<BuildingsContentsModel, BuildingsContents>().ReverseMap();
             CreateMap<UseTypeModel, UseType>().ReverseMap();
+            CreateMap<ActivityModel, Activity>().ReverseMap();
         }
     }
 }
