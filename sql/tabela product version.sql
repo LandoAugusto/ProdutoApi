@@ -57,6 +57,83 @@ CREATE TABLE [dbo].[ContractType](
 ) ON [PRIMARY]
 GO
 
+
+
+IF OBJECT_ID('dbo.HazardGroup', 'U') IS NOT NULL 
+  DROP TABLE dbo.HazardGroup; 
+GO
+CREATE TABLE [dbo].[HazardGroup](
+	[HazardGroupId] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [varchar](30) NOT NULL,
+	[Status] [int] NOT NULL,
+	[InclusionUserId] [int] NOT NULL,
+	[InclusionDate] [datetime] NOT NULL,
+	[LastChangeUserId]				INT NULL,
+	[LastChangeDate]				DATETIME NULL
+ CONSTRAINT [PK_HazardGroup_HazardGroupId] PRIMARY KEY CLUSTERED 
+(
+	[HazardGroupId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+
+IF OBJECT_ID('dbo.RiskType', 'U') IS NOT NULL 
+  DROP TABLE dbo.RiskType; 
+GO
+CREATE TABLE [dbo].RiskType(
+	[RiskTypeId] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [varchar](30) NOT NULL,
+	[Status] [int] NOT NULL,
+	[InclusionUserId] [int] NOT NULL,
+	[InclusionDate] [datetime] NOT NULL,
+	[LastChangeUserId]				INT NULL,
+	[LastChangeDate]				DATETIME NULL
+ CONSTRAINT [PK_RiskType_RiskTypeId] PRIMARY KEY CLUSTERED 
+(
+	[RiskTypeId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+IF OBJECT_ID('dbo.Activity', 'U') IS NOT NULL 
+  DROP TABLE dbo.Activity; 
+GO
+CREATE TABLE [dbo].Activity(
+	[ActivityId] [int] IDENTITY(1,1) NOT NULL,
+	[ActivityNatureId] [int],
+	[Name] [varchar](30) NOT NULL,
+	[Status] [int] NOT NULL,
+	[InclusionUserId] [int] NOT NULL,
+	[InclusionDate] [datetime] NOT NULL,
+	[LastChangeUserId]				INT NULL,
+	[LastChangeDate]				DATETIME NULL
+ CONSTRAINT [PK_Activity_ActivityId] PRIMARY KEY CLUSTERED 
+(
+	[ActivityId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+IF OBJECT_ID('dbo.ActivityNature', 'U') IS NOT NULL 
+  DROP TABLE dbo.ActivityNature; 
+GO
+CREATE TABLE [dbo].ActivityNature(
+	[ActivityNatureId] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [varchar](30) NOT NULL,
+	[Status] [int] NOT NULL,
+	[InclusionUserId] [int] NOT NULL,
+	[InclusionDate] [datetime] NOT NULL,
+	[LastChangeUserId]				INT NULL,
+	[LastChangeDate]				DATETIME NULL
+ CONSTRAINT [PK_ActivityNature_ActivityNatureId] PRIMARY KEY CLUSTERED 
+(
+	[ActivityNatureId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+
 IF OBJECT_ID('dbo.ProductVersionPlan', 'U') IS NOT NULL 
   DROP TABLE dbo.ProductVersionPlan; 
 GO
@@ -404,16 +481,14 @@ IF OBJECT_ID('dbo.ProductVersionCoverage', 'U') IS NOT NULL
 GO
 
 CREATE TABLE [dbo].[ProductVersionCoverage](
-	[ProductVersionCoverageId] [int] IDENTITY(1,1) NOT NULL,
-	[ProductVersionId] [int] NOT NULL,
-	[CoverageId] [int] NOT NULL,
-	[CoverageBasic] [bit] NOT NULL,
-	[LegacyCode] [varchar](10) NULL,
-	[Status] [int] NOT NULL,
-	[InclusionUserId] [int] NOT NULL,
-	[InclusionDate] [datetime] NOT NULL,
-	[LastChangeUserId] [int] NULL,
-	[LastChangeDate] [datetime] NULL,
+	[ProductVersionCoverageId]		INT IDENTITY(1,1) NOT NULL,
+	[ProductVersionId]				INT NOT NULL,
+	[CoverageId]					INT NOT NULL,
+	[Status]						INT NOT NULL,
+	[InclusionUserId]				INT NOT NULL,
+	[InclusionDate]					DATETIME NOT NULL,
+	[LastChangeUserId]				INT NULL,
+	[LastChangeDate]				datetime NULL,
  CONSTRAINT [PK_ProductVersionCoverageId] PRIMARY KEY CLUSTERED 
 (
 	[ProductVersionCoverageId] ASC
@@ -421,7 +496,27 @@ CREATE TABLE [dbo].[ProductVersionCoverage](
 ) ON [PRIMARY]
 GO
 
+IF OBJECT_ID('dbo.ProductVersionCoverageAcceptance', 'U') IS NOT NULL 
+  DROP TABLE dbo.ProductVersionCoverage; 
+GO
 
+--CREATE TABLE [dbo].[ProductVersionCoverageAcceptance](
+--	[ProductVersionCoverageId]		INT IDENTITY(1,1) NOT NULL,
+--	[ProductVersionId]				INT NOT NULL,
+--	[CoverageId]					INT NOT NULL,
+--	[ProfileId]						INT NOT NULL,
+--	[InsuredAmountDefault]			DECIMAL(18,6) NOT NULL,
+--	[Status]						INT NOT NULL,
+--	[InclusionUserId]				INT NOT NULL,
+--	[InclusionDate]					DATETIME NOT NULL,
+--	[LastChangeUserId]				INT NULL,
+--	[LastChangeDate]				datetime NULL,
+-- CONSTRAINT [PK_ProductVersionCoverageId] PRIMARY KEY CLUSTERED 
+--(
+--	[ProductVersionCoverageId] ASC
+--)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+--) ON [PRIMARY]
+--GO
 
 IF OBJECT_ID('dbo.ProductVersionAcceptance', 'U') IS NOT NULL 
   DROP TABLE dbo.ProductVersionAcceptance; 
@@ -690,12 +785,13 @@ IF OBJECT_ID('dbo.[Coverage]', 'U') IS NOT NULL
 GO
 CREATE TABLE [dbo].[Coverage](
 	[CoverageId] [int] IDENTITY(1,1) NOT NULL,	
-	[Name] [varchar](100) NOT NULL,
-	[Description] [varchar](255) NOT NULL,
+	[Name] [varchar](300) NOT NULL,
+	[Description] [varchar](500) NOT NULL,
 	[BranchId] [int] NOT NULL,
 	[CoverageGroupId] [int] NOT NULL,
+	[CoverageBasic] [bit] NOT NULL,		
 	[IsGoodsRelationship ] BIT NOT NULL,
-	[ExternalCode] [varchar](50) NOT NULL,
+	[LegacyCode] [varchar](10) NULL,
 	[Status] [int] NOT NULL,
 	[InclusionUserId] [int] NOT NULL,
 	[InclusionDate] [datetime] NOT NULL,
@@ -1009,6 +1105,7 @@ GO
 
 INSERT INTO CoverageGroup VALUES ('Básica', 76,1, 14, Getdate(),null,null)
 INSERT INTO CoverageGroup VALUES ('Coberturas Adicionais', 76,1, 14, Getdate(),null,null)
+INSERT INTO CoverageGroup VALUES ('Responsabilidade Civil', 76,1, 14, Getdate(),null,null)
 INSERT INTO CoverageGroup VALUES ('Acidentes Pessoais Passageiros', 76,1, 14, Getdate(),null,null)
 INSERT INTO CoverageGroup VALUES ('Acidentes Pessoais de Tripulantes', 76,1, 14, Getdate(),null,null)
 INSERT INTO CoverageGroup VALUES ('Serviços', 76,1, 14, Getdate(),null,null)
@@ -1041,29 +1138,66 @@ INSERT INTO CoverageGroup VALUES ('FIANÇA LOCATÍCIA', 76,1, 14, Getdate(),null,n
 INSERT INTO CoverageGroup VALUES ('EMPRESARIAL', 76,1, 14, Getdate(),null,null)
 
 
+INSERT INTO [dbo].[Coverage] VALUES ( N'Incêndio, Queda de Raio, Explosão, Implosão e Queda de Aeronaves',N'Danos materiais decorrentes de incêndio de qualquer natureza, onde quer que tenham se originado,   incluindo queimadas em zonas rurais;',3,1,1,0, N'10353', 1, 6,GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Coverage] VALUES ( N'Compreensiva para Veículos em Exposição E Venda',N'Exclusivamente para empresas cuja atividade/ocupação seja Concessionárias Autorizadas de Veículos/Máquinas e Implementos Agrícolas garante Perda e danos exclusivamente materiais e diretamente causados aos veículos de propriedade do Segurado, desde que tais danos materiais sejam resultantes de:  a) Incêndio, raio ou explosão.   b) Roubo.  c) Furto Qualificado, total ou parcial.   do Código Penal.  d) Colisão, abalroamento ou capotagem acidental.;',3,2,0,0, N'10353', 1, 6,GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Coverage] VALUES ( N'Despesas de Recomposição de Registros de Documentos',N'Garante o reembolso das despesas necessárias à recomposição de seus registros e documentos que forem destruídos total ou parcialmente por eventos de causa externa. Estarão amparados também os registros e documentos de terceiros quando inerentes ao ramo de atividade do Segurado.',3,2,0,0, N'10353', 1, 6,GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Coverage] VALUES ( N'Impacto de Veículos Terrestres',N'A seguradora indenizará por esta cobertura os danos materiais diretamente causados aos bens segurados em consequência do impacto de veículos terrestres. Entende-se por “veículo terrestre” aquele que possa ou não dispor de tração própria.',3,2,0,0, N'10353', 1, 6,GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Coverage] VALUES ( N'Tumultos, Greves e Lock-Out',N'Cobertura que ampara as perdas e danos causados aos bens cobertos por atos predatórios, ocorridos durante tumulto, greve ou lockout.',3,2,0,0, N'10353', 1, 6,GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Coverage] VALUES ( N'Ruptura de Tanques e Tubulações',N'Garante as perdas e/ou danos materiais de origem súbita e imprevista causados ao estabelecimento segurado em consequência de derrame ou vazamento de água, ocasionado pelo rompimento das  tubulações e/ou encanamentos das instalações fixas da rede interna de água e esgoto, do sistema de tratamento e reutilização de água, assim como os reservatórios existentes no imóvel segurado.',3,2,0,0, N'10353', 1, 6,GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Coverage] VALUES ( N'Derrame ou Vazamento de Material em Estado de Fusão',N'Garante as perdas ou pelos danos materiais de origem súbita e imprevista, sofridos por tanques fixos de depósitos ou por seus respectivos conteúdos, ou tubulações existentes no local segurado, diretamente causados por acidentes de causa externa, exceto por impacto de veículos.',3,2,0,0, N'10353', 1, 6,GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Coverage] VALUES ( N'Derrame de Sprinklers',N'Garante as perdas ou danos materiais causados, direta e exclusivamente, aos bens segurados, decorrentes de infiltração, derrame de água ou outra substância líquida contida em instalações de chuveiros automáticos (sprinklers) em consequência de acidente de causa externa.',3,2,0,0, N'10353', 1, 6,GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Coverage] VALUES ( N'Perda e/ou Pagamento de Aluguel',N'Esta cobertura garante o pagamento, por período indenizatório especificado na apólice de seguros (normalmente 6 ou 12 meses), de despesas de aluguel e demais despesas contratuais, caso o imóvel não possa ser  ocupado, em decorrência dos eventos de danos materiais cobertos e contratados na apólice de seguros.',3,2,0,0, N'10353', 1, 6,GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Coverage] VALUES ( N'Alagamento',N'Garante as perdas ou os danos materiais causados aos bens descritos na apólice por entrada de água no local segurado proveniente de aguaceiro, tromba-d’água ou chuva, seja ou não consequente da obstrução ou insuficiência de esgotos, galerias pluviais, desaguadouros e similares',3,2,0,0, N'10353', 1, 6,GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Coverage] VALUES ( N'Avarias de Máquinas e Equipamentos',N'Garante os prejuízos por perda e danos materiais, de origem súbita e imprevista (causa externa), causados:  Aos equipamentos eletrônicos, arrendados ou cedidos a terceiros, em exposição, móveis ou estacionários, portáteis de propriedade do Segurado ou de terceiros utilizados em função da atividade empresarial.  Por impacto externo, queda, balanço, colisão, virada ou fatos equivalentes, durante a movimentação interna ou operações de carga e descarga.',3,2,0,0, N'10353', 1, 6,GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Coverage] VALUES ( N'Equipamentos Eletrônicos',N'Garante, a indenização por perdas e danos materiais, de origem súbita e imprevista (causa externa),   causados aos Equipamentos Eletrônicos de propriedade do segurado, ou por ele utilizados em   função de sua atividade e que estejam nas dependências do local de risco, em consequência de:  a) Danos mecânicos;  b) Transporte interno;  c) Queda, quebra, amassamento em consequência de eventos cobertos.',3,2,0,0, N'10353', 1, 6,GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Coverage] VALUES ( N'Equipamentos Arrendados ou Cedidos a Terceiros',N'Garante, danos materiais causados aos bens segurados por qualquer acidente de causa externa.Esta garantia abrange os equipamentos segurados nos locais de operação ou de guarda, assim como a sua trasladação fora de tais locais, por autopropulsão ou por qualquer meio de transporte adequado.',3,2,0,0, N'10353', 1, 6,GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Coverage] VALUES ( N'Equipamentos em Exposição',N'Equipamentos em Exposição',3,2,0,0, N'10353', 1, 6,GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Coverage] VALUES ( N'Equipamentos Estacionários e Móveis',N'Garante as perdas ou os danos materiais causados aos equipamentos estacionários descritos na apólice, por acidentes decorrentes de causa externa. E aos danos materiais causados aos equipamentos móveis, por acidentes decorrentes de causa externa, enquanto estiverem nos canteiros de obras ou locais de trabalho, considerando-se, também, como tais, locais de guarda, assim como sua transladação fora desses lugares, por autopropulsão ou qualquer meio de transporte adequado.',3,2,0,0, N'10353', 1, 6,GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Coverage] VALUES ( N'Deterioração de Mercadorias em Ambientes Frigorificados',N'Garante, as perdas e danos materiais causados à mercadorias existentes no estabelecimento segurado, em ambientes frigorificados em consequência de:  a) Ruptura, quebra ou desarranjo acidental de qualquer parte do sistema de refrigeração;  b) Vazamento, descarga ou evaporação da substância refrigerante contida no sistema de refrigeração;  c) Falha no fornecimento de energia elétrica  d) Desentulho do local.',3,2,0,0, N'10353', 1, 6,GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Coverage] VALUES ( N'Movimentação Interna',N'Garante a indenização por perdas e danos materiais causados por impacto externo, queda, balanço, colisão, virada ou fatos equivalentes, durante a movimentação interna ou operações de carga e  descarga.',3,2,0,0, N'10353', 1, 6,GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Coverage] VALUES ( N'Danos Elétricos',N'Garante as perdas ou danos físicos diretamente causados a quaisquer máquinas, equipamentos ou instalações eletrônicas ou elétricas devido a variações anormais de tensão, curto-circuito, arco voltaico, calor gerado acidentalmente por eletricidade, descargas elétricas, eletricidade estática ou qualquer efeito ou fenômeno de natureza elétrica, inclusive a queda de raio.',3,2,0,0, N'10353', 1, 6,GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Coverage] VALUES ( N'Quebra de Vidros e Anúncios Luminosos e Mármores',N'Garante as perdas ou pelos danos materiais sofridos por vidros, regularmente existentes e instalados no(s) local(is) segurado(s) descrito(s) na apólice, bem como perdas ou danos materiais causados aos letreiros, anúncios luminosos e painéis, inclusive às respectivas estruturas e bases, decorrentes de quaisquer acidentes de causa externa, salvo os expressamente excluídos.',3,2,0,0, N'10353', 1, 6,GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Coverage] VALUES ( N'Roubo de Bens',N'Garante as perdas e/ou danos materiais causados aos bens de propriedade do segurado por:  a) roubo ou furto qualificado, caracterizado com destruição ou rompimento e obstáculo;  b) extorsão, de acordo com a definição do artigo 158 do Código Penal;  c) danos causados a portas e janelas, bem como danos às fechaduras e outras partes do imóvel, onde os bens cobertos encontram-se localizados, quer o furto qualificado tenha se consumado ou não, ou tenha se caracterizado como simples tentativa.',3,2,0,1, N'10353', 1, 6,GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Coverage] VALUES ( N'Roubo de Bens de Hóspedes',N'Exclusivamente para empresas cuja atividade/ocupação seja hotéis/resorts/pousadas, garante a indenização por perdas e danos causados aos bens pertencentes aos hóspedes, guardados   no cofre do hotel, não se considerando como tal os cofres localizados dentro dos quartos, enquanto  os mesmos estiverem hospedados no local segurado.',3,2,0,0, N'10353', 1, 6,GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Coverage] VALUES ( N'Roubo de Valores no Interior do Estabelecimento',N'Cobertura voltada para contratações de seguros compreensivos empresariais e que ampara os prejuízos decorrentes de:  a) roubo ou furto qualificado caracterizado, com destruição ou rompimento de obstáculo, de valores de propriedade do segurado, quando ocorridos no interior do estabelecimento segurado;  b) destruição ou perecimento dos valores em consequência ou decorrente da simples tentativa de roubo ou furto qualificado;  c) extorsão de acordo com a definição do artigo 158 do Código Penal.',3,2,0,0, N'10353', 1, 6,GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Coverage] VALUES ( N'Roubo de Valores em Trânsito em Mãos de Portadores',N'Cobertura também voltada para contratações de seguros compreensivos empresariais e que ampara os prejuízos decorrentes de roubo ou furto de valores ocorridos em trânsito em mãos de portadores (pessoas às quais são confiados os valores para missões externas)',3,2,0,0, N'10353', 1, 6,GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Coverage] VALUES ( N'Vendaval, Furacão, Ciclone, Granizo e Tornado',N'Visa garantir as perdas e os danos causados aos bens segurados diretamente por vendaval, furacão, ciclone, tornado e granizo.',3,2,0,0, N'10353', 1, 6,GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Coverage] VALUES ( N'Perda de Lucro Bruto',N'Esta cobertura garante o pagamento, por período indenizatório especificado na apólice de seguros, referente às perdas de Lucro Bruto (constituído pela soma do Lucro Líquido e Despesas Fixas) do estabelecimento segurado resultante da interrupção ou queda no movimento de negócios da empresa segurada em decorrência de sinistro de danos materiais coberto pelas coberturas contratadas no seguro.',3,2,0,0, N'10353', 1, 6,GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Coverage] VALUES ( N'Despesas Fixas',N'Esta cobertura garante o pagamento, por período indenizatório especificado na apólice de seguros, de despesas fixas se o estabelecimento segurado ficar total ou parcialmente paralisado em consequência de sinistro de danos materiais garantido por cobertura contratada no seguro, geralmente pela cobertura incêndio, queda de raio e explosão (Cobertura Básica).',3,2,0,0, N'10353', 1, 6,GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Coverage] VALUES ( N'Responsabilidade Civil Operações',N'Estabelece, normalmente, que a seguradora responderá pelo reembolso ao segurado das quantias pelas quais vier a ser responsável civilmente, em sentença judicial transitada em julgado ou em acordo autorizado de modo expresso pela seguradora, pelos danos materiais e corporais causados involuntariamente a terceiros durante a vigência deste contrato e que decorram dos  riscos estabelecidos nas condições gerais',3,3,0,0, N'10353', 1, 6,GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Coverage] VALUES ( N'Responsabilidade Civil Contingente de Veículos',N'Garante o reembolso ao segurado das quantias pelas quais vier a ser responsável civilmente, relativas a reparações por danos materiais causados exclusivamente a veículos de terceiros sob a guarda ou custódia do segurado, decorrentes de:  -incêndio ou explosão;  -roubo ou furto qualificado total;  -colisão de veículos contra obstáculos;  -colisão entre veículos;  -acidentes relacionados à existência, conservação e ao uso do local do risco indicado na apólice.',3,3,0,0, N'10353', 1, 6,GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Coverage] VALUES ( N'Responsabilidade Civil Empregador',N'Cobre acidentes súbitos e inesperados que resultem morte ou invalidez permanente de empregados quando a serviço do segurado.',3,3,0,0, N'10353', 1, 6,GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Coverage] VALUES ( N'Responsabilidade Civil Estabelecimentos de Ensino',N'Ampara os danos causados a terceiros que sejam decorrentes de acidentes relacionados com a existência, uso e conservação do local de risco, bem como à realização das atividades desenvolvidas pelo segurado no referido imóvel.',3,3,0,0, N'10353', 1, 6,GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Coverage] VALUES ( N'Responsabilidade Civil Estabelecimentos de Hospedagem',N'Garante a indenização a terceiros por danos corporais e materiais causados em hóspedes ou pessoas que estão utilizando as dependências do hotel para alimentação, reunião ou eventos.',3,3,0,0, N'10353', 1, 6,GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Coverage] VALUES ( N'Responsabilidade Civil Guarda de Veículos de Terceiros',N'Garante o reembolso ao segurado das quantias pelas quais vier a ser responsável civilmente, relativas a reparações por danos materiais causados exclusivamente a veículos de terceiros sob a guarda ou custódia do segurado, decorrentes de:  -incêndio ou explosão;  -roubo ou furto qualificado total;  -colisão de veículos contra obstáculos;  -colisão entre veículos;  -acidentes relacionados à existência, conservação e ao uso do local do risco indicado na apólice.',3,3,0,0, N'10353', 1, 6,GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Coverage] VALUES ( N'Responsabilidade Civil Guarda de Veículos para Concessionárias Autorizadas',N'Garante indenização por avarias, perdas e danos materiais de origem súbita, imprevista e acidental, diretamente ocasionadas por colisão, incêndio e roubo, causadas aos veículos e/ou pelos veículos de clientes, quando conduzidos por manobrista, devidamente autorizados, durante o percurso entre o estabelecimento segurado e os locais de estacionamento indicados na apólice, durante a vigência da apólice.',3,3,0,0, N'10353', 1, 6,GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Coverage] VALUES ( N'Danos Morais',N'Garante o reembolso das quantias mensuráveis pelas quais o Segurado vier a ser civilmente responsável a pagar, em sentença judicial transitada em julgado ou em acordo expressamente autorizado pela Seguradora, em virtude de Danos Morais diretamente decorrentes de Danos Materiais e/ou de Danos Corporais causados a terceiros, durante a vigência deste contrato e efetivamente indenizados nos termos previstos na especificação da apólice.',3,3,0,0, N'10353', 1, 6,GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Coverage] VALUES ( N'Incêndio, Queda de Raio, Explosão, Fumaça e Queda de Aeronaves ',N'Ampara sua residência se ela for atingida por fogo ou fumaça ou até se acontecer uma explosão. Além disso, essa cobertura ampara seu imóvel em caso de queda de aeronaves.  ',4,1,1,0, N'10353', 1, 6,GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Coverage] VALUES ( N'Danos Elétricos',N'Ampara os danos em seus eletrodomésticos, eletroeletrônicos e instalações elétricas causados por curto-circuito, variações anormais de tensão e queda de raio. Essa cobertura ampara o valor para conserto ou compra de novos equipamentos.',4,2,0,0, N'10353', 1, 6,GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Coverage] VALUES ( N'Responsabilidade Civil Familiar (danos a terceiros) ',N'Essa cobertura ampara os danos causados a terceiros, se você for responsabilizado civilmente. Ex: seu pet mordeu alguém na rua ou seu filho quebrou o vidro da janela do vizinho.',4,2,0,0, N'10353', 1, 6,GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Coverage] VALUES ( N'Vendaval, Furacão, Ciclone, Tornado e Granizo',N'Garante os danos a sua residência causados diretamente por vendaval, ciclone, tornado, furacão e granizo. ',4,2,0,0, N'10353', 1, 6,GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Coverage] VALUES ( N'Quebra de Vidros, Mármores e Granitos',N'Cobre  danos  causados,  por  quaisquer  acidentes  de  causa  externa,  aos  vidros,  espelhos, mármores e granitos (exceto pisos) instalados de forma fixa no imóvel, bem como, tampos de vidro de mesa ou instalados em balcões de uso doméstico, cooktop e louças sanitárias.',4,2,0,0, N'10353', 1, 6,GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Coverage] VALUES ( N'Impacto de Veículos',N'Ampara sua casa se algum veículo de terceiro atingir involuntariamente sua casa e danificá-la. ',4,2,0,0, N'10353', 1, 6,GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Coverage] VALUES ( N'Despesas com Aluguel',N'Em  caso  de  sinistro  de  incêndio,  queda  de  raio,  explosão,  vendaval,  furacão,  ciclone, tornado,  granizo  e  impacto  de  veículos  terrestres  e  aéreos  (desde  que contratada  a cobertura  adicional),  que  impeça  o  imóvel  de  permanecer  ocupado,  garante  ao segurado as despesas de aluguel caso ele seja proprietário ou locatário do imóvel.',4,2,0,0, N'10353', 1, 6,GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Coverage] VALUES ( N'Roubo e Subtração de Bens com Arrombamento',N'Ampara o roubo ou furto qualificado de bens de sua casa. Para recebimento da indenização respeitando o valor contratado é necessário comprovar a pré-existência dos bens (para alguns itens é necessária apresentação da nota fiscal).',4,2,0,0, N'10353', 1, 6,GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Coverage] VALUES ( N'Ruptura de Tubulações',N'Ampara os danos decorrentes de rupturas de tanques e tubulações da rede de água e esgoto da residência segurada. Lembrando que a ruptura tem que ser acidental e súbita. ',4,2,0,0, N'10353', 1, 6,GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Coverage] VALUES ( N'Tumultos, Greves e Lock-outs',N'Ampra os danos materiais causados por tumultos, greves e lock-outs.',4,2,0,0, N'10353', 1, 6,GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Coverage] VALUES ( N'Equipamentos Eletrônicos',N'Ampara os danos causados aos equipamentos do segurado como laptops (notebook, netbook, ultrabook) e desktops, inclusive seus acessórios decorrentes de acidentes de origem súbita.',4,2,0,0, N'10353', 1, 6,GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Coverage] VALUES ( N'Danos ao Jardim',N'Em caso de incêndio, vendaval, queda de granizo ou até um assalto, essa cobertura ampara os danos ao jardim da sua casa, inclusive a iluminação, sistemas de irrigação, chafariz e mobiliário existentes nesse espaço. ',4,2,0,0, N'10353', 1, 6,GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Coverage] VALUES ( N'Obras de Arte e Bens Culturais',N'Obras de Arte e Bens Culturais - Garante os danos decorrentes de Incêndio, Vendaval, Roubo com Arrombamento e Impacto de Veículos às obras de arte (desenhos, pinturas, quadros, esculturas, vasos e objetos decorativos) e bens culturais (obras de artistas, arquitetos, músicos, escritores ligados a cultura de alguma nacionalidade e/ou grupo específico',4,2,0,0, N'10353', 1, 6,GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Coverage] VALUES ( N'Desmoronamento',N'Esta cobertura ampara danos diretamente causados por desmoronamento total ou parcial do imóvel segurado, respeitando o limite máximo indenizável ',4,2,0,0, N'10353', 1, 6,GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Coverage] VALUES ( N'Joias e Relogios',N'Essa cobertura garante a indenização dos danos causados às jóias, obras e objetos de arte de propriedade do segurado que estiverem em sua casa decorrente de eventos como roubo ou furto qualificado, alagamento, vendaval, queda de aeronaves, impacto de veículos, desmoronamento, tumultos, incêndio, raio e explosão.',4,2,0,0, N'10353', 1, 6,GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Coverage] VALUES ( N'Roubo de Bens Fora do Local de Risco',N'Essa cobertura garante o roubo  ou  furto  qualificado  de  bicicletas,  celulares,  filmadoras  e  máquinas fotográficas, notebook, laptop, tablet, netbook, jóias e relógios de pulso, fora do local de  risco de acordo com os limites estabelecidos nas condições gerais do produto. É necessária a comprovação dos bens através de notas fiscais.  ',4,2,0,0, N'10353', 1, 6,GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Coverage] VALUES ( N'Alagamento e inundação',N'Garante os danos causados a sua residência em caso de alagamento, inundação e enchente, que tenham acontecido por fortes chuvas. ',4,2,0,0, N'10353', 1, 6,GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Coverage] VALUES ( N'Roubo de Bens',N'Garante as perdas e/ou danos materiais causados aos bens de propriedade do segurado por:  a) roubo ou furto qualificado, caracterizado com destruição ou rompimento e obstáculo;  b) extorsão, de acordo com a definição do artigo 158 do Código Penal;  c) danos causados a portas e janelas, bem como danos às fechaduras e outras partes do imóvel, onde os bens cobertos encontram-se localizados, quer o furto qualificado tenha se consumado ou não, ou tenha se caracterizado como simples tentativa.',4,2,0,1, N'10353', 1, 6,GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Coverage] VALUES ( N'Anfitrião',N'Ampara os danos materiais causados pelo hóspede aos bens da residência anfitriã durante sua permanência no imóvel. ',4,2,0,0, N'10353', 1, 6,GETDATE(), NULL, NULL)
 
-INSERT INTO [dbo].[Coverage] VALUES ('EXECUTANTE CONSTRUTOR - TÉRMINO DE OBRA - INFRAESTRUTURA', N'',1,1, 0, N'10353', 1, 6,GETDATE(), NULL, NULL)
-INSERT INTO [dbo].[Coverage] VALUES ( N'RETENÇÃO DE PAGAMENTO', N'',1,1,0, N'10353', 1, 6,GETDATE(), NULL, NULL)
-INSERT INTO [dbo].[Coverage] VALUES ( N'ADIANTAMENTO DE PAGAMENTO', N'',1,1,0, N'10353', 1, 6,GETDATE(), NULL, NULL)
-INSERT INTO [dbo].[Coverage] VALUES ( N'MANUTENÇÃO CORRETIVA', N'',1,1,0, N'10353', 1, 6,GETDATE(), NULL, NULL)
-INSERT INTO [dbo].[Coverage] VALUES ( N'ADUANEIRO', N'', 1,1,0, N'10353', 1, 6,GETDATE(), NULL, NULL)
-INSERT INTO [dbo].[Coverage] VALUES ( N'AGÊNCIA NACIONAL DO PETRÓLEO, GÁS NATURAL E BIOCOMBUSTÍVEIS - ANP', N'', 1,1,0, N'10353', 1, 6,GETDATE(), NULL, NULL)
-INSERT INTO [dbo].[Coverage] VALUES ( N'TÉRMINO DE OBRA - MANUTENÇÃO CORRETIVA', N'CORRETIVA', 1,1,0, N'10353', 1, 6,GETDATE(), NULL, NULL)
-INSERT INTO [dbo].[Coverage] VALUES ( N'PARCELAMENTO ADMINISTRATIVO FISCAL', N'',1,1,0, N'10353', 1, 6,GETDATE(), NULL, NULL)
-INSERT INTO [dbo].[Coverage] VALUES ( N'ADMINISTRATIVO DE CRÉDITOS TRIBUTÁRIOS', N'',1,1,0, N'10353', 1, 6,GETDATE(), NULL, NULL)
-INSERT INTO [dbo].[Coverage] VALUES ( N'AÇÕES TRABALHISTAS E PREVIDENCIÁRIAS', N'',1,1,0, N'10353', 1, 6,GETDATE(), NULL, NULL)
-INSERT INTO [dbo].[Coverage] VALUES ( N'JUDICIAL PARA EXECUÇÃO FISCAL', N'', 1,1,0, N'10353', 1, 6,GETDATE(), NULL, NULL)
-INSERT INTO [dbo].[Coverage] VALUES ( N'JUDICIAL', N'', 1,1,0, N'10353', 1, 6,GETDATE(), NULL, NULL)
-INSERT INTO [dbo].[Coverage] VALUES ( N'EXECUTANTE CONSTRUTOR - TÉRMINO DE OBRA - CEF', N'',1,1,0, N'10353', 1, 6,GETDATE(), NULL, NULL)
-INSERT INTO [dbo].[Coverage] VALUES ( N'EXECUTANTE CONSTRUTOR - TÉRMINO DE OBRA - BB', N'',1,1, 0,N'10353', 1, 6,GETDATE(), NULL, NULL)
-INSERT INTO [dbo].[Coverage] VALUES ( N'AGENTE FINANCIADOR (COMPLETION)', N'',1,1, 0,N'10353', 1, 6,GETDATE(), NULL, NULL)
-INSERT INTO [dbo].[Coverage] VALUES ( N'LICITANTE', N'',1,1, 0,N'10353', 1, 6,GETDATE(), NULL, NULL)
-INSERT INTO [dbo].[Coverage] VALUES ( N'GARANTIA FINANCEIRA', N'', 1,1,0, N'10353', 1, 6,GETDATE(), NULL, NULL)
-INSERT INTO [dbo].[Coverage] VALUES ( N'GARANTIA DO LICITANTE ANEEL', N'',1,1,0, N'10353', 1, 6,GETDATE(), NULL, NULL)
-INSERT INTO [dbo].[Coverage] VALUES ( N'PAGAMENTOS', N'',1,1, 0,N'10353', 1, 6,GETDATE(), NULL, NULL)
-INSERT INTO [dbo].[Coverage] VALUES ( N'GARANTIA RECURSAL', N'',1,1,0, N'10353', 1, 6,GETDATE(), NULL, NULL)
-INSERT INTO [dbo].[Coverage] VALUES ( N'JUDICIAL PARA EXECUÇÃO TRABALHISTA', N'', 1,1,0, N'10353', 1, 6,GETDATE(), NULL, NULL)
-INSERT INTO [dbo].[Coverage] VALUES ( N'GARANTIA RECURSAL SME', N'',1,1,0, N'10353', 1, 6,GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Coverage] VALUES ( N'Licitante',															N'',1,1,1,0, N'10353', 1, 6,GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Coverage] VALUES ( N'Contrato',															N'',1,1,1,0, N'10353', 1, 6,GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Coverage] VALUES ( N'Pagamentos',														N'',1,1,1,0, N'10353', 1, 6,GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Coverage] VALUES ( N'Garantia Recursal',													N'',1,1,1,0, N'10353', 1, 6,GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Coverage] VALUES ( N'Judicial para execução trabalhista',								N'',1,1,1,0, N'10353', 1, 6,GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Coverage] VALUES ( N'Garantia Recursal SME',												N'',1,1,1,0, N'10353', 1, 6,GETDATE(), NULL, NULL)
 
 INSERT INTO [dbo].[Profile]  VALUES ( N'Administrador', 1,  14, GETDATE(),null,null)
 INSERT INTO [dbo].[Profile]  VALUES ( N'Corretor', 1,  14, GETDATE(),null,null)
@@ -1076,21 +1210,12 @@ INSERT INTO [ProductVersion] VALUES(5,1,1,GETDATE(),null,null)
 INSERT INTO [ProductVersion] VALUES(6,1,1,GETDATE(),null,null)
 INSERT INTO [ProductVersion] VALUES(7,1,1,GETDATE(),null,null)
 
-INSERT INTO [dbo].[ProductVersionCoverage] VALUES ( 1, 1, 1, NULL, 1, 99, GETDATE(), NULL, NULL)
-INSERT INTO [dbo].[ProductVersionCoverage] VALUES ( 1, 2, 1, NULL, 1, 99, GETDATE(), NULL, NULL)
-INSERT INTO [dbo].[ProductVersionCoverage] VALUES ( 2, 1, 1, NULL, 1, 99, GETDATE(), NULL, NULL)
-INSERT INTO [dbo].[ProductVersionCoverage] VALUES ( 2, 2, 1, NULL, 1, 99, GETDATE(), NULL, NULL)
-INSERT INTO [dbo].[ProductVersionCoverage] VALUES ( 2, 6, 1, NULL, 1, 99, GETDATE(), NULL, NULL)
-INSERT INTO [dbo].[ProductVersionCoverage] VALUES ( 2, 7, 1, NULL, 1, 99, GETDATE(), NULL, NULL)
-INSERT INTO [dbo].[ProductVersionCoverage] VALUES ( 2, 8, 1, NULL, 1, 99, GETDATE(), NULL, NULL)
-INSERT INTO [dbo].[ProductVersionCoverage] VALUES ( 3, 9, 1, NULL, 1, 99, GETDATE(), NULL, NULL)
-INSERT INTO [dbo].[ProductVersionCoverage] VALUES ( 3, 10, 1, NULL, 1, 99,GETDATE(), NULL, NULL)
-INSERT INTO [dbo].[ProductVersionCoverage] VALUES ( 3, 11, 1, NULL, 1, 99,GETDATE(), NULL, NULL)
-INSERT INTO [dbo].[ProductVersionCoverage] VALUES ( 3, 12, 1, NULL, 1, 99,GETDATE(), NULL, NULL)
-INSERT INTO [dbo].[ProductVersionCoverage] VALUES ( 3, 13, 1, NULL, 1, 99,GETDATE(), NULL, NULL)
-INSERT INTO [dbo].[ProductVersionCoverage] VALUES ( 4, 3, 1, NULL, 1, 99, GETDATE(), NULL, NULL)
-INSERT INTO [dbo].[ProductVersionCoverage] VALUES ( 4, 4, 1, NULL, 1, 99, GETDATE(), NULL, NULL)
-INSERT INTO [dbo].[ProductVersionCoverage] VALUES ( 4, 5, 1, NULL, 1, 99, GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[ProductVersionCoverage] VALUES ( 1, 54, 1, 99, GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[ProductVersionCoverage] VALUES ( 2, 55, 1, 99, GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[ProductVersionCoverage] VALUES ( 3, 57,1, 99, GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[ProductVersionCoverage] VALUES ( 3, 58,1, 99, GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[ProductVersionCoverage] VALUES ( 3, 59,1, 99, GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[ProductVersionCoverage] VALUES ( 4, 56, 1, 99, GETDATE(), NULL, NULL)
 
 INSERT INTO [ProductVersionAcceptance] VALUES (1,1,20.00,0.01,	30.00,150.00,10000.00,1000.01,10000.00,10,10,7.38,2,30.000000,	30.000000,	100.000000,0,5.000000,15.000000,1,1,1,GETDATE(), nULL, NULL)
 INSERT INTO [ProductVersionAcceptance] VALUES (2,1,20.00,0.01,	30.00,150.00,10000.00,1000.01,10000.00,10,10,7.38,2,30.000000,	30.000000,	100.000000,0,5.000000,15.000000,1,1,1,GETDATE(), nULL, NULL)
@@ -1427,6 +1552,8 @@ INSERT INTO  ClaimsExperienceBonus VALUES ('4 anos com sinistro',10,1,1, GETDATE
 INSERT INTO  ClaimsExperienceBonus VALUES ('5 anos com sinistro',11,1,1, GETDATE(), null,null)
 
 
+
+
 INSERT INTO  PropertyStructure VALUES ('Casa',1,1, GETDATE(), null,null)
 INSERT INTO  PropertyStructure VALUES ('Apartamento',1,1, GETDATE(), null,null)
 INSERT INTO  PropertyStructure VALUES ('Casa em condomínio',1,1, GETDATE(), null,null)
@@ -1492,3 +1619,22 @@ Insert into dbo.ProductVersionConstructionType values (5,3, 1,1, GETDATE(), null
 Insert into dbo.ProductVersionConstructionType values (5,4, 1,1, GETDATE(), null,null)
 Insert into dbo.ProductVersionConstructionType values (6,5, 1,1, GETDATE(), null,null)
 Insert into dbo.ProductVersionConstructionType values (6,6, 1,1, GETDATE(), null,null)
+
+
+INSERT INTO  HazardGroup VALUES ('Grupo de Risco 1',1,1, GETDATE(), null,null)
+INSERT INTO  HazardGroup VALUES ('Grupo de Risco 2',1,1, GETDATE(), null,null)
+INSERT INTO  HazardGroup VALUES ('Grupo de Risco 3',1,1, GETDATE(), null,null)
+INSERT INTO  HazardGroup VALUES ('Grupo de Risco 4',1,1, GETDATE(), null,null)
+INSERT INTO  HazardGroup VALUES ('Grupo de Risco 5',1,1, GETDATE(), null,null)
+INSERT INTO  HazardGroup VALUES ('Grupo de Risco 6',1,1, GETDATE(), null,null)
+INSERT INTO  HazardGroup VALUES ('Grupo de Risco 7',1,1, GETDATE(), null,null)
+INSERT INTO  HazardGroup VALUES ('Grupo de Risco 8',1,1, GETDATE(), null,null)
+INSERT INTO  HazardGroup VALUES ('Grupo de Risco 9',1,1, GETDATE(), null,null)
+
+INSERT INTO  ActivityNature VALUES ('Comércio',1,1, GETDATE(), null,null)
+INSERT INTO  ActivityNature VALUES ('Indústria',1,1, GETDATE(), null,null)
+INSERT INTO  ActivityNature VALUES ('Serviços',1,1, GETDATE(), null,null)
+
+INSERT INTO  RiskType VALUES ('Aceito',1,1, GETDATE(), null,null)
+INSERT INTO  RiskType VALUES ('Restrito',1,1, GETDATE(), null,null)
+INSERT INTO  RiskType VALUES ('Sob Consulta',1,1, GETDATE(), null,null)
