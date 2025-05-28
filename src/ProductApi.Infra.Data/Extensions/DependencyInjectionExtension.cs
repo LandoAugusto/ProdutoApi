@@ -1,7 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using ProductApi.Core.Models;
 using ProductApi.Infra.Data.Contexts;
 using ProductApi.Infra.Data.Interfaces;
 using ProductApi.Infra.Data.Repositories;
@@ -67,7 +66,7 @@ namespace ProductApi.Infra.Data.Extensions
             services.AddScoped<IUseTypePropertyStructureRepository, UseTypePropertyStructureRepository>();
             services.AddScoped<IConstructionTypeUseTypeRepository, ConstructionTypeUseTypeRepository>();
             services.AddScoped<IPersonTypeRepository, PersonTypeRepository>();
-            
+            services.AddScoped<IQuotationStatusRepository, QuotationStatusRepository>();
             return services;
         }
     }

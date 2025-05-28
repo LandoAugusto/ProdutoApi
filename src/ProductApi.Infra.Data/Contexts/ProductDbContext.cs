@@ -72,6 +72,7 @@ namespace ProductApi.Infra.Data.Contexts
         public virtual DbSet<HazardGroup> HazardGroup { get; set; }
         public virtual DbSet<RiskType> RiskType { get; set; }
         public virtual DbSet<PersonType> PersonType { get; set; }
+        public virtual DbSet<QuotationStatus> QuotationStatus { get; set; }
 
     }
 }

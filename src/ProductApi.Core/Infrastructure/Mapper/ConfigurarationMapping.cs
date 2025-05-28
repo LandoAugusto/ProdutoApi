@@ -54,6 +54,7 @@ namespace ProductApi.Core.Infrastructure.Mapper
             CreateMap<UseTypeModel, UseType>().ReverseMap();
             CreateMap<ActivityModel, Activity>().ReverseMap();
             CreateMap<PersonTypeModel, PersonType>().ReverseMap();
+            CreateMap<QuotationStatusModel, QuotationStatus>().ReverseMap();
         }
     }
 }

@@ -307,6 +307,22 @@ CREATE TABLE [dbo].[ProductVersionCalculationType](
 GO
 
 
+IF OBJECT_ID('dbo.QuotationStatus', 'U') IS NOT NULL 
+  DROP TABLE dbo.QuotationStatus; 
+GO
+CREATE TABLE [dbo].[QuotationStatus](
+	[QuotationStatusId] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [varchar](30) NOT NULL,
+	[Status] [int] NOT NULL,
+	[InclusionUserId] [int] NOT NULL,
+	[InclusionDate] [datetime] NOT NULL,
+ CONSTRAINT [PK_QuotationStatus_QuotationStatusId] PRIMARY KEY CLUSTERED 
+(
+	[QuotationStatusId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
 IF OBJECT_ID('dbo.PersonType', 'U') IS NOT NULL 
   DROP TABLE dbo.PersonType; 
 GO
@@ -1311,6 +1327,18 @@ INSERT INTO  [dbo].[CalculationType]  VALUES ( N'18 meses', 1, 1, GETDATE())
 INSERT INTO  [dbo].[CalculationType]  VALUES ( N'Prazo Curto', 1, 1, GETDATE())
 INSERT INTO  [dbo].[CalculationType]  VALUES ( N'Prazo Longo', 1, 1, GETDATE())
 INSERT INTO  [dbo].[CalculationType]  VALUES ( N'Plurianual', 1, 1, GETDATE())
+
+INSERT INTO  [dbo].[QuotationStatus]  VALUES ( N'Cotação Em Andamento', 1, 1,GETDATE())
+INSERT INTO  [dbo].[QuotationStatus]  VALUES ( N'Proposta Em Andamento', 1, 1,GETDATE())
+INSERT INTO  [dbo].[QuotationStatus]  VALUES ( N'Proposta Em Análise', 1, 1, GETDATE())
+INSERT INTO  [dbo].[QuotationStatus]  VALUES ( N'Proposta Aprovada', 1, 1,GETDATE())
+INSERT INTO  [dbo].[QuotationStatus]  VALUES ( N'Proposta Recusada', 1, 1,GETDATE())
+INSERT INTO  [dbo].[QuotationStatus]  VALUES ( N'Proposta Cancelada', 1, 1, GETDATE())
+INSERT INTO  [dbo].[QuotationStatus]  VALUES ( N'Cotação Vencida', 1, 1, GETDATE())
+INSERT INTO  [dbo].[QuotationStatus]  VALUES ( N'Cotação Vencida', 1, 1, GETDATE())
+INSERT INTO  [dbo].[QuotationStatus]  VALUES ( N'Aguardando Dados Cartão de Crédito', 1, 1, GETDATE())
+INSERT INTO  [dbo].[QuotationStatus]  VALUES ( N'Aguardando Pagamento', 1, 1, GETDATE())
+
 
 INSERT INTO  [dbo].[PersonType]  VALUES ( N'Física', 1, 1,GETDATE())
 INSERT INTO  [dbo].[PersonType]  VALUES ( N'Jurídica', 1, 1, GETDATE())

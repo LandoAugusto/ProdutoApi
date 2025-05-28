@@ -13,7 +13,8 @@ namespace ProductApi.Application.Services
        ITermTypeRepository termTypeRepository, IInsuranceTypeRepository insuranceTypeRepository, IInsurerRepository insurerRepository,
        IClaimsExperienceBonusRepository claimsExperienceBonusRepository, IPropertyStructureRepository propertyStructureRepository,
        IBuildingsContentsRepository buildingsContentsRepository, IUseTypePropertyStructureRepository useTypePropertyStructureRepository,
-       IConstructionTypeUseTypeRepository constructionTypeUseTypeRepository, IPersonTypeRepository personTypeRepository)
+       IConstructionTypeUseTypeRepository constructionTypeUseTypeRepository, IPersonTypeRepository personTypeRepository,
+       IQuotationStatusRepository quotationStatusRepository)
      : ICommonAppService
     {
 
@@ -32,6 +33,7 @@ namespace ProductApi.Application.Services
         private readonly IUseTypePropertyStructureRepository _useTypePropertyStructureRepository = useTypePropertyStructureRepository;
         private readonly IConstructionTypeUseTypeRepository _constructionTypeUseTypeRepository = constructionTypeUseTypeRepository;
         private readonly IPersonTypeRepository _personTypeRepository = personTypeRepository;
+        private readonly IQuotationStatusRepository _quotationStatusRepository = quotationStatusRepository; 
 
         public async Task<IEnumerable<AddressTypeModel>?> GetAddressTypeAsync(RecordStatusEnum recordStatusEnum)
         {
@@ -138,6 +140,13 @@ namespace ProductApi.Application.Services
             if (!entidade.IsAny<PersonType>()) return null;
 
             return _mapper.Map<IEnumerable<PersonTypeModel>>(entidade);
+        }
+        public async Task<IEnumerable<QuotationStatusModel>?> GetQuotationStatusAsync(RecordStatusEnum recordStatus)
+        {
+            var entidade = await _quotationStatusRepository.GetAllAsync(recordStatus);
+            if (!entidade.IsAny<QuotationStatus>()) return null;
+
+            return _mapper.Map<IEnumerable<QuotationStatusModel>>(entidade);
         }
     }
 }
