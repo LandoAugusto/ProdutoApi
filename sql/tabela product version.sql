@@ -57,6 +57,43 @@ CREATE TABLE [dbo].[ContractType](
 ) ON [PRIMARY]
 GO
 
+IF OBJECT_ID('dbo.[ClaimsExperienceBonus]', 'U') IS NOT NULL 
+  DROP TABLE dbo.ClaimsExperienceBonus; 
+GO
+CREATE TABLE [dbo].ClaimsExperienceBonus(
+	[ClaimsExperienceBonusId] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [varchar](30) NOT NULL,
+	[BonusId] [int] NOT NULL,
+	[Status] [int] NOT NULL,
+	[InclusionUserId] [int] NOT NULL,
+	[InclusionDate] [datetime] NOT NULL,
+	[LastChangeUserId]				INT NULL,
+	[LastChangeDate]				DATETIME NULL
+ CONSTRAINT [PK_ClaimsExperienceBonus_ClaimsExperienceBonusId] PRIMARY KEY CLUSTERED 
+(
+	[ClaimsExperienceBonusId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+IF OBJECT_ID('dbo.[BuildingsContents]', 'U') IS NOT NULL 
+  DROP TABLE dbo.BuildingsContents; 
+GO
+CREATE TABLE [dbo].BuildingsContents(
+	[BuildingsContentsId] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [varchar](30) NOT NULL,
+	[Status] [int] NOT NULL,
+	[InclusionUserId] [int] NOT NULL,
+	[InclusionDate] [datetime] NOT NULL,
+	[LastChangeUserId]				INT NULL,
+	[LastChangeDate]				DATETIME NULL
+ CONSTRAINT [PK_BuildingsContents_BuildingsContentsId] PRIMARY KEY CLUSTERED 
+(
+	[BuildingsContentsId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
 IF OBJECT_ID('dbo.ProductVersionActivity', 'U') IS NOT NULL 
   DROP TABLE dbo.ProductVersionActivity; 
 GO
