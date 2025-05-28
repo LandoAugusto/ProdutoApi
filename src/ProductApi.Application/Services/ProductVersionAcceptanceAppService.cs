@@ -18,7 +18,11 @@ namespace ProductApi.Application.Services
             var entidade = await _productVersionRepository.GetAsync(productId, profileId, recordStatus);
             if (entidade == null) return null;
 
-            return _mapper.Map<ProductVersionAcceptanceModel>(await _productVersionAcceptanceRepository.GetAsync(entidade.ProductVersionId, profileId, recordStatus));
+            var response = _mapper.Map<ProductVersionAcceptanceModel>(await _productVersionAcceptanceRepository.GetAsync(entidade.ProductVersionId, profileId, recordStatus));
+            response.Name = entidade.Product?.Name ?? string.Empty;
+            response.InsuranceBranch = entidade.Product?.InsuranceBranch.Name ?? string.Empty;           
+
+            return response;
         }
     }
 }

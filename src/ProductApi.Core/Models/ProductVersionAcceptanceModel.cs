@@ -1,8 +1,12 @@
-﻿namespace ProductApi.Core.Models
+﻿using System.Configuration;
+
+namespace ProductApi.Core.Models
 {
     public class ProductVersionAcceptanceModel
     {
-        public int ProductVersionId { get; set; }       
+        public int ProductVersionId { get; set; }
+        public required string Name { get; set; }
+        public required string InsuranceBranch { get; set; }
         public decimal CommissionDefaultValue { get; set; }
         public decimal CommissionMinValue { get; set; }
         public decimal CommissionMaxValue { get; set; }
@@ -13,7 +17,7 @@
         public int RetroactiveEffectiveDateStartDays { get; set; }
         public int LaterEffectiveDateStartDays { get; set; }
         public int GrievanceType { get; set; }
-        public decimal PercentIofValue { get; set; }        
+        public decimal PercentIofValue { get; set; }
         public decimal GrievanceDefaultValue { get; set; }
         public decimal GrievanceMinValue { get; set; }
         public decimal GrievanceMaxValue { get; set; }
@@ -21,5 +25,7 @@
         public decimal DiscountMinValue { get; set; }
         public decimal DiscountMaxValue { get; set; }
         public bool RequiresRecalculationIfExpired { get; set; }
+
+        public required ProductModel Product { get; set; }
     }
 }

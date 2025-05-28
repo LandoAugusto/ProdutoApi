@@ -1167,17 +1167,6 @@ GO
 INSERT INTO [dbo].[Product]  VALUES ( N'VIDA', N'', 7, 1, 521, GETDATE(), NULL, NULL)
 GO
 
-INSERT INTO [dbo].[CalculationType]  VALUES ( N'Anual', 1, 1, GETDATE())
-GO
-INSERT INTO  [dbo].[CalculationType] VALUES ( N'18 meses', 1, 1,GETDATE())
-GO
-INSERT INTO [dbo].[CalculationType]  VALUES ( N'Prazo Curto', 1, 1, GETDATE())
-GO
-INSERT  INTO [dbo].[CalculationType] VALUES ( N'Prazo Longo', 1, 1, GETDATE())
-GO
-INSERT  INTO [dbo].[CalculationType] VALUES ( N'Plurianual', 1, 1, GETDATE())
-GO
-
 INSERT INTO CoverageGroup VALUES ('Básica', 76,1, 14, Getdate(),null,null)
 INSERT INTO CoverageGroup VALUES ('Coberturas Adicionais', 76,1, 14, Getdate(),null,null)
 INSERT INTO CoverageGroup VALUES ('Responsabilidade Civil', 76,1, 14, Getdate(),null,null)
@@ -1296,6 +1285,9 @@ INSERT INTO [ProductVersionAcceptance] VALUES (1,1,20.00,0.01,	30.00,150.00,1000
 INSERT INTO [ProductVersionAcceptance] VALUES (2,1,20.00,0.01,	30.00,150.00,10000.00,1000.01,10000.00,10,10,7.38,2,30.000000,	30.000000,	100.000000,0,5.000000,15.000000,1,1,1,GETDATE(), nULL, NULL)
 INSERT INTO [ProductVersionAcceptance] VALUES (3,1,20.00,0.01,	30.00,150.00,10000.00,1000.01,10000.00,10,10,7.38,2,30.000000,	30.000000,	100.000000,0,5.000000,15.000000,1,1,1,GETDATE(), nULL, NULL)
 INSERT INTO [ProductVersionAcceptance] VALUES (4,1,20.00,0.01,	30.00,150.00,10000.00,1000.01,10000.00,10,10,7.38,2,30.000000,	30.000000,	100.000000,0,5.000000,15.000000,1,1,1,GETDATE(), nULL, NULL)
+INSERT INTO [ProductVersionAcceptance] VALUES (5,1,20.00,0.01,	30.00,150.00,10000.00,1000.01,10000.00,10,10,7.38,2,30.000000,	30.000000,	100.000000,0,5.000000,15.000000,1,1,1,GETDATE(), nULL, NULL)
+INSERT INTO [ProductVersionAcceptance] VALUES (6,1,20.00,0.01,	30.00,150.00,10000.00,1000.01,10000.00,10,10,7.38,2,30.000000,	30.000000,	100.000000,0,5.000000,15.000000,1,1,1,GETDATE(), nULL, NULL)
+INSERT INTO [ProductVersionAcceptance] VALUES (7,1,20.00,0.01,	30.00,150.00,10000.00,1000.01,10000.00,10,10,7.38,2,30.000000,	30.000000,	100.000000,0,5.000000,15.000000,1,1,1,GETDATE(), nULL, NULL)
 
 INSERT INTO  [dbo].[CalculationType]  VALUES ( N'Anual', 1, 1,GETDATE())
 INSERT INTO  [dbo].[CalculationType]  VALUES ( N'18 meses', 1, 1, GETDATE())
@@ -1709,6 +1701,9 @@ INSERT INTO  HazardGroup VALUES ('Grupo de Risco 8',1,1, GETDATE(), null,null)
 INSERT INTO  ActivityNature VALUES ('Comércio',1,1, GETDATE(), null,null)
 INSERT INTO  ActivityNature VALUES ('Indústria',1,1, GETDATE(), null,null)
 INSERT INTO  ActivityNature VALUES ('Serviços',1,1, GETDATE(), null,null)
+INSERT INTO  ActivityNature VALUES ('Deposito',1,1, GETDATE(), null,null)
+INSERT INTO  ActivityNature VALUES ('Armazenamento/Distribuição',1,1, GETDATE(), null,null)
+INSERT INTO  ActivityNature VALUES ('Outros',1,1, GETDATE(), null,null)
 
 INSERT INTO  RiskType VALUES ('Aceito',1,1, GETDATE(), null,null)
 INSERT INTO  RiskType VALUES ('Restrito',1,1, GETDATE(), null,null)

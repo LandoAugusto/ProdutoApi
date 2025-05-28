@@ -363,7 +363,7 @@
             <param name="productVersionId"></param>        
             <returns></returns>
         </member>
-        <member name="M:Product.Api.Controllers.V1.ProductVersionController.GetProductVersionContractTypeAsync(System.Int32,System.Int32)">
+        <member name="M:Product.Api.Controllers.V1.ProductVersionController.GetProductVersionCalculationTypeAsync(System.Int32,System.Int32)">
             <summary>
             
             </summary>

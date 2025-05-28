@@ -1,4 +1,5 @@
-﻿using ProductApi.Core.Entities;
+﻿using Microsoft.EntityFrameworkCore;
+using ProductApi.Core.Entities;
 using ProductApi.Core.Entities.Enumerators;
 using ProductApi.Infra.Data.Contexts;
 using ProductApi.Infra.Data.Interfaces;
@@ -13,7 +14,11 @@ namespace ProductApi.Infra.Data.Repositories
             var query =
                     await Task.FromResult(
                         GenerateQuery(
-                            filter: (filtr => filtr.ProductId.Equals(productId)  && filtr.Status.Equals((int)recordStatus)),                             
+                            filter: (filtr => filtr.ProductId.Equals(productId)  && filtr.Status.Equals((int)recordStatus)),
+                            includeProperties: source =>
+                                    source
+                                    .Include(item => item.Product)
+                                    .ThenInclude(item => item.InsuranceBranch),
                             orderBy: item => item.OrderBy(y => y.ProductVersionId)));
 
             return query.FirstOrDefault();
