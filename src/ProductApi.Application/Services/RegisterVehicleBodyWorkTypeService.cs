@@ -1,5 +1,5 @@
 using AutoMapper;
-using Product.Application.Interfaces;
+using ProductApi.Application.Interfaces;
 using  ProductApi.Core.Entities.Enumerators;
 using  ProductApi.Core.Models;
 using  ProductApi.Infra.Data.Interfaces;

@@ -391,8 +391,9 @@
             <summary>
             
             </summary>
-            <param name="productVersionId"></param>   
-            <param name="profileid"></param> 
+            <param name="productVersionId"></param>
+            <param name="profileid"></param>
+            <param name="name"></param>
             <returns></returns>
         </member>
         <member name="T:Product.Api.Controllers.V1.VehicleController">

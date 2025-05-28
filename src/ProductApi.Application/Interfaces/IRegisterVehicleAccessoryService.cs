@@ -1,8 +1,7 @@
-﻿using  ProductApi.Core.Entities;
-using  ProductApi.Core.Entities.Enumerators;
-using  ProductApi.Core.Models;
+﻿using ProductApi.Core.Entities.Enumerators;
+using ProductApi.Core.Models;
 
-namespace Product.Application.Interfaces
+namespace ProductApi.Application.Interfaces
 {
     public interface IRegisterVehicleAccessoryService
     {

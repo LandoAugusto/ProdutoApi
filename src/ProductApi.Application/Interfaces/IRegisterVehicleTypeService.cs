@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Product.Application.Interfaces
+namespace ProductApi.Application.Interfaces
 {
     public interface IRegisterVehicleTypeService
     {

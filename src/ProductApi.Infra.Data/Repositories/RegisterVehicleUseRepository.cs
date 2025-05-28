@@ -1,12 +1,7 @@
-﻿using  ProductApi.Core.Entities.Enumerators;
-using  ProductApi.Infra.Data.Contexts;
-using  ProductApi.Infra.Data.Interfaces;
-using  ProductApi.Infra.Data.Repositories.Standard;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ProductApi.Core.Entities.Enumerators;
+using ProductApi.Infra.Data.Contexts;
+using ProductApi.Infra.Data.Interfaces;
+using ProductApi.Infra.Data.Repositories.Standard;
 
 namespace  ProductApi.Infra.Data.Repositories
 {

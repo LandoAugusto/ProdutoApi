@@ -2,7 +2,7 @@
 using  ProductApi.Core.Entities;
 using  ProductApi.Core.Models;
 
-namespace Product.Application.Interfaces
+namespace ProductApi.Application.Interfaces
 {
     public interface IRegisterVehicleBodyWorkTypeService
     {

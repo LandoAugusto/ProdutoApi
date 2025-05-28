@@ -1,8 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using Product.Application.Interfaces;
 using ProductApi.Application.Interfaces;
 using ProductApi.Application.Services;
-using ProductApi.Infra.Data.Interfaces;
 
 namespace ProductApi.Application.Extensions
 {
