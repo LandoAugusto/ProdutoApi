@@ -246,7 +246,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "ProductApi.Core.Models.BaseDataResponseModel\u00601[[ProductApi.Core.Models.InsurerModel, ProductApi.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "ProductApi.Core.Models.BaseDataResponseModel\u00601[[ProductApi.Core.Models.BuildingsContentsModel, ProductApi.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain; x-api-version=1.0",
           "application/json; x-api-version=1.0",
@@ -275,7 +275,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "ProductApi.Core.Models.BaseDataResponseModel\u00601[[ProductApi.Core.Models.InsurerModel, ProductApi.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "ProductApi.Core.Models.BaseDataResponseModel\u00601[[ProductApi.Core.Models.ClaimsExperienceBonusModel, ProductApi.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain; x-api-version=1.0",
           "application/json; x-api-version=1.0",
@@ -333,7 +333,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "ProductApi.Core.Models.BaseDataResponseModel\u00601[[ProductApi.Core.Models.TermTypeModel, ProductApi.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "ProductApi.Core.Models.BaseDataResponseModel\u00601[[ProductApi.Core.Models.InsuranceTypeModel, ProductApi.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain; x-api-version=1.0",
           "application/json; x-api-version=1.0",
@@ -392,6 +392,35 @@
     "ReturnTypes": [
       {
         "Type": "ProductApi.Core.Models.BaseDataResponseModel\u00601[[ProductApi.Core.Models.InsurerModel, ProductApi.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "ProductApi.Core.Models.BaseDataResponseModel\u00601",
+        "MediaTypes": [
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0"
+        ],
+        "StatusCode": 404
+      }
+    ]
+  },
+  {
+    "ContainingType": "Product.Api.Controllers.V1.CommonController",
+    "Method": "GetPersonTypeAsync",
+    "RelativePath": "api/v1/common/get-person-type",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "ProductApi.Core.Models.BaseDataResponseModel\u00601[[System.Collections.Generic.IEnumerable\u00601[[ProductApi.Core.Models.PersonTypeModel, ProductApi.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "text/plain; x-api-version=1.0",
           "application/json; x-api-version=1.0",
@@ -553,7 +582,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "ProductApi.Core.Models.BaseDataResponseModel\u00601[[ProductApi.Core.Models.PropertyStructureModel, ProductApi.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "ProductApi.Core.Models.BaseDataResponseModel\u00601[[System.Collections.Generic.IEnumerable\u00601[[ProductApi.Core.Models.UseTypeModel, ProductApi.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "text/plain; x-api-version=1.0",
           "application/json; x-api-version=1.0",

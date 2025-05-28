@@ -306,6 +306,23 @@ CREATE TABLE [dbo].[ProductVersionCalculationType](
 ) ON [PRIMARY]
 GO
 
+
+IF OBJECT_ID('dbo.PersonType', 'U') IS NOT NULL 
+  DROP TABLE dbo.PersonType; 
+GO
+CREATE TABLE [dbo].[PersonType](
+	[PersonTypeId] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [varchar](30) NOT NULL,
+	[Status] [int] NOT NULL,
+	[InclusionUserId] [int] NOT NULL,
+	[InclusionDate] [datetime] NOT NULL,
+ CONSTRAINT [PK_PersonType_PersonTypeId] PRIMARY KEY CLUSTERED 
+(
+	[PersonTypeId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
 IF OBJECT_ID('dbo.CalculationType', 'U') IS NOT NULL 
   DROP TABLE dbo.CalculationType; 
 GO
@@ -1294,6 +1311,26 @@ INSERT INTO  [dbo].[CalculationType]  VALUES ( N'18 meses', 1, 1, GETDATE())
 INSERT INTO  [dbo].[CalculationType]  VALUES ( N'Prazo Curto', 1, 1, GETDATE())
 INSERT INTO  [dbo].[CalculationType]  VALUES ( N'Prazo Longo', 1, 1, GETDATE())
 INSERT INTO  [dbo].[CalculationType]  VALUES ( N'Plurianual', 1, 1, GETDATE())
+
+INSERT INTO  [dbo].[PersonType]  VALUES ( N'Física', 1, 1,GETDATE())
+INSERT INTO  [dbo].[PersonType]  VALUES ( N'Jurídica', 1, 1, GETDATE())
+
+
+INSERT INTO ProductVersionCalculationType VALUES (5,1,1,1,1, Getdate(),null,null)
+INSERT INTO ProductVersionCalculationType VALUES (5,1,2,1,1, Getdate(),null,null)
+INSERT INTO ProductVersionCalculationType VALUES (5,1,3,1,1, Getdate(),null,null)
+INSERT INTO ProductVersionCalculationType VALUES (5,1,4,1,1, Getdate(),null,null)
+
+INSERT INTO ProductVersionCalculationType VALUES (5,2,1,1,1, Getdate(),null,null)
+INSERT INTO ProductVersionCalculationType VALUES (5,2,2,1,1, Getdate(),null,null)
+INSERT INTO ProductVersionCalculationType VALUES (5,2,3,1,1, Getdate(),null,null)
+INSERT INTO ProductVersionCalculationType VALUES (5,2,4,1,1, Getdate(),null,null)
+
+INSERT INTO ProductVersionCalculationType VALUES (6,1,1,1,1, Getdate(),null,null)
+INSERT INTO ProductVersionCalculationType VALUES (6,2,1,1,1, Getdate(),null,null)
+
+INSERT INTO ProductVersionCalculationType VALUES (7,1,5,1,1, Getdate(),null,null)
+INSERT INTO ProductVersionCalculationType VALUES (7,2,5,1,1, Getdate(),null,null)
 
 INSERT INTO [dbo].[ContractType]  VALUES ( N'Local a local', 1, 1, GETDATE())
 INSERT INTO [dbo].[ContractType]  VALUES ( N'LMI único', 1, 1, GETDATE())

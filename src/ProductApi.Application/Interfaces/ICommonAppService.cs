@@ -17,5 +17,6 @@ namespace ProductApi.Application.Interfaces
         Task<IEnumerable<BuildingsContentsModel>?> GetBuildingsContentsAsync(RecordStatusEnum recordStatus);
         Task<IEnumerable<PropertyStructureModel>?> GetPropertyStructureAsync(int useTypeId, RecordStatusEnum recordStatus);
         Task<IEnumerable<UseTypeModel>?> GetUseTypeAsync(int constructionTypeId, int profileId, RecordStatusEnum recordStatus);
+        Task<IEnumerable<PersonTypeModel>?> GetPersonTypeAsync(RecordStatusEnum recordStatus);
     }
 }

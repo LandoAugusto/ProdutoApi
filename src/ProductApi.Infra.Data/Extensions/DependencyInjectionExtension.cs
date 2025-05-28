@@ -65,7 +65,9 @@ namespace ProductApi.Infra.Data.Extensions
             services.AddScoped<IBuildingsContentsRepository, BuildingsContentsRepository>();
             services.AddScoped<IUseTypePropertyStructureRepository, UseTypePropertyStructureRepository>();
             services.AddScoped<IUseTypePropertyStructureRepository, UseTypePropertyStructureRepository>();
-            services.AddScoped<IConstructionTypeUseTypeRepository, ConstructionTypeUseTypeRepository>();    
+            services.AddScoped<IConstructionTypeUseTypeRepository, ConstructionTypeUseTypeRepository>();
+            services.AddScoped<IPersonTypeRepository, PersonTypeRepository>();
+            
             return services;
         }
     }

@@ -706,17 +706,17 @@
             "content": {
               "text/plain; x-api-version=1.0": {
                 "schema": {
-                  "$ref": "#/components/schemas/TermTypeModelBaseDataResponseModel"
+                  "$ref": "#/components/schemas/InsuranceTypeModelBaseDataResponseModel"
                 }
               },
               "application/json; x-api-version=1.0": {
                 "schema": {
-                  "$ref": "#/components/schemas/TermTypeModelBaseDataResponseModel"
+                  "$ref": "#/components/schemas/InsuranceTypeModelBaseDataResponseModel"
                 }
               },
               "text/json; x-api-version=1.0": {
                 "schema": {
-                  "$ref": "#/components/schemas/TermTypeModelBaseDataResponseModel"
+                  "$ref": "#/components/schemas/InsuranceTypeModelBaseDataResponseModel"
                 }
               }
             }
@@ -806,17 +806,17 @@
             "content": {
               "text/plain; x-api-version=1.0": {
                 "schema": {
-                  "$ref": "#/components/schemas/InsurerModelBaseDataResponseModel"
+                  "$ref": "#/components/schemas/ClaimsExperienceBonusModelBaseDataResponseModel"
                 }
               },
               "application/json; x-api-version=1.0": {
                 "schema": {
-                  "$ref": "#/components/schemas/InsurerModelBaseDataResponseModel"
+                  "$ref": "#/components/schemas/ClaimsExperienceBonusModelBaseDataResponseModel"
                 }
               },
               "text/json; x-api-version=1.0": {
                 "schema": {
-                  "$ref": "#/components/schemas/InsurerModelBaseDataResponseModel"
+                  "$ref": "#/components/schemas/ClaimsExperienceBonusModelBaseDataResponseModel"
                 }
               }
             }
@@ -856,17 +856,17 @@
             "content": {
               "text/plain; x-api-version=1.0": {
                 "schema": {
-                  "$ref": "#/components/schemas/InsurerModelBaseDataResponseModel"
+                  "$ref": "#/components/schemas/BuildingsContentsModelBaseDataResponseModel"
                 }
               },
               "application/json; x-api-version=1.0": {
                 "schema": {
-                  "$ref": "#/components/schemas/InsurerModelBaseDataResponseModel"
+                  "$ref": "#/components/schemas/BuildingsContentsModelBaseDataResponseModel"
                 }
               },
               "text/json; x-api-version=1.0": {
                 "schema": {
-                  "$ref": "#/components/schemas/InsurerModelBaseDataResponseModel"
+                  "$ref": "#/components/schemas/BuildingsContentsModelBaseDataResponseModel"
                 }
               }
             }
@@ -960,10 +960,12 @@
         "tags": [
           "Common"
         ],
+        "summary": "",
         "parameters": [
           {
             "name": "constructionTypeId",
             "in": "path",
+            "description": "",
             "required": true,
             "schema": {
               "type": "integer",
@@ -973,6 +975,7 @@
           {
             "name": "profileId",
             "in": "path",
+            "description": "",
             "required": true,
             "schema": {
               "type": "integer",
@@ -986,17 +989,67 @@
             "content": {
               "text/plain; x-api-version=1.0": {
                 "schema": {
-                  "$ref": "#/components/schemas/PropertyStructureModelBaseDataResponseModel"
+                  "$ref": "#/components/schemas/UseTypeModelIEnumerableBaseDataResponseModel"
                 }
               },
               "application/json; x-api-version=1.0": {
                 "schema": {
-                  "$ref": "#/components/schemas/PropertyStructureModelBaseDataResponseModel"
+                  "$ref": "#/components/schemas/UseTypeModelIEnumerableBaseDataResponseModel"
                 }
               },
               "text/json; x-api-version=1.0": {
                 "schema": {
-                  "$ref": "#/components/schemas/PropertyStructureModelBaseDataResponseModel"
+                  "$ref": "#/components/schemas/UseTypeModelIEnumerableBaseDataResponseModel"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseDataResponseModel`1"
+                }
+              },
+              "application/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseDataResponseModel`1"
+                }
+              },
+              "text/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseDataResponseModel`1"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/common/get-person-type": {
+      "get": {
+        "tags": [
+          "Common"
+        ],
+        "summary": "",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/PersonTypeModelIEnumerableBaseDataResponseModel"
+                }
+              },
+              "application/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/PersonTypeModelIEnumerableBaseDataResponseModel"
+                }
+              },
+              "text/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/PersonTypeModelIEnumerableBaseDataResponseModel"
                 }
               }
             }
@@ -3091,6 +3144,35 @@
         },
         "additionalProperties": false
       },
+      "BuildingsContentsModel": {
+        "required": [
+          "name"
+        ],
+        "type": "object",
+        "properties": {
+          "buildingsContentsId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "BuildingsContentsModelBaseDataResponseModel": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/BuildingsContentsModel"
+          },
+          "transactionStatus": {
+            "$ref": "#/components/schemas/StatusResponseModel"
+          }
+        },
+        "additionalProperties": false
+      },
       "CalculationTypeAcceptanceModel": {
         "type": "object",
         "properties": {
@@ -3261,6 +3343,40 @@
         "properties": {
           "data": {
             "$ref": "#/components/schemas/CivilCourtModel"
+          },
+          "transactionStatus": {
+            "$ref": "#/components/schemas/StatusResponseModel"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ClaimsExperienceBonusModel": {
+        "required": [
+          "bonusId",
+          "name"
+        ],
+        "type": "object",
+        "properties": {
+          "claimsExperienceBonusId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "bonusId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ClaimsExperienceBonusModelBaseDataResponseModel": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/ClaimsExperienceBonusModel"
           },
           "transactionStatus": {
             "$ref": "#/components/schemas/StatusResponseModel"
@@ -3488,6 +3604,35 @@
         "properties": {
           "data": {
             "$ref": "#/components/schemas/InsuranceBranchModel"
+          },
+          "transactionStatus": {
+            "$ref": "#/components/schemas/StatusResponseModel"
+          }
+        },
+        "additionalProperties": false
+      },
+      "InsuranceTypeModel": {
+        "required": [
+          "name"
+        ],
+        "type": "object",
+        "properties": {
+          "insuranceTypeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "InsuranceTypeModelBaseDataResponseModel": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/InsuranceTypeModel"
           },
           "transactionStatus": {
             "$ref": "#/components/schemas/StatusResponseModel"
@@ -3882,6 +4027,39 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/PaymentMethodModel"
+            },
+            "nullable": true
+          },
+          "transactionStatus": {
+            "$ref": "#/components/schemas/StatusResponseModel"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PersonTypeModel": {
+        "required": [
+          "name"
+        ],
+        "type": "object",
+        "properties": {
+          "personTypeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PersonTypeModelIEnumerableBaseDataResponseModel": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PersonTypeModel"
             },
             "nullable": true
           },
@@ -4472,6 +4650,39 @@
         ],
         "type": "integer",
         "format": "int32"
+      },
+      "UseTypeModel": {
+        "required": [
+          "name"
+        ],
+        "type": "object",
+        "properties": {
+          "useTypeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UseTypeModelIEnumerableBaseDataResponseModel": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UseTypeModel"
+            },
+            "nullable": true
+          },
+          "transactionStatus": {
+            "$ref": "#/components/schemas/StatusResponseModel"
+          }
+        },
+        "additionalProperties": false
       }
     },
     "securitySchemes": {

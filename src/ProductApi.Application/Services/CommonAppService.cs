@@ -13,7 +13,7 @@ namespace ProductApi.Application.Services
        ITermTypeRepository termTypeRepository, IInsuranceTypeRepository insuranceTypeRepository, IInsurerRepository insurerRepository,
        IClaimsExperienceBonusRepository claimsExperienceBonusRepository, IPropertyStructureRepository propertyStructureRepository,
        IBuildingsContentsRepository buildingsContentsRepository, IUseTypePropertyStructureRepository useTypePropertyStructureRepository,
-       IConstructionTypeUseTypeRepository constructionTypeUseTypeRepository)
+       IConstructionTypeUseTypeRepository constructionTypeUseTypeRepository, IPersonTypeRepository personTypeRepository)
      : ICommonAppService
     {
 
@@ -31,6 +31,8 @@ namespace ProductApi.Application.Services
         private readonly IBuildingsContentsRepository _buildingsContentsRepository = buildingsContentsRepository;
         private readonly IUseTypePropertyStructureRepository _useTypePropertyStructureRepository = useTypePropertyStructureRepository;
         private readonly IConstructionTypeUseTypeRepository _constructionTypeUseTypeRepository = constructionTypeUseTypeRepository;
+        private readonly IPersonTypeRepository _personTypeRepository = personTypeRepository;
+
         public async Task<IEnumerable<AddressTypeModel>?> GetAddressTypeAsync(RecordStatusEnum recordStatusEnum)
         {
             var entity = await _addressTypeRepository.ListAsync(recordStatusEnum);
@@ -128,6 +130,14 @@ namespace ProductApi.Application.Services
             {
                 return _mapper.Map<UseTypeModel>(item.UseType);
             })];
+        }
+
+        public async Task<IEnumerable<PersonTypeModel>?> GetPersonTypeAsync(RecordStatusEnum recordStatus)
+        {
+            var entidade = await _personTypeRepository.GetAllAsync(recordStatus);
+            if (!entidade.IsAny<PersonType>()) return null;
+
+            return _mapper.Map<IEnumerable<PersonTypeModel>>(entidade);
         }
     }
 }

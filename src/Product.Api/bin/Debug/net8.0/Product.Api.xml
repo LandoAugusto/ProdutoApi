@@ -169,6 +169,20 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:Product.Api.Controllers.V1.CommonController.GetUseTypeAsync(System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="constructionTypeId"></param>
+            <param name="profileId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Product.Api.Controllers.V1.CommonController.GetPersonTypeAsync">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
         <member name="T:Product.Api.Controllers.V1.LaborCourtController">
             <summary>
             
