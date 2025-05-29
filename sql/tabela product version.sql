@@ -312,7 +312,7 @@ IF OBJECT_ID('dbo.QuotationStatus', 'U') IS NOT NULL
 GO
 CREATE TABLE [dbo].[QuotationStatus](
 	[QuotationStatusId] [int] IDENTITY(1,1) NOT NULL,
-	[Name] [varchar](30) NOT NULL,
+	[Name] [varchar](60) NOT NULL,
 	[Status] [int] NOT NULL,
 	[InclusionUserId] [int] NOT NULL,
 	[InclusionDate] [datetime] NOT NULL,
@@ -911,7 +911,7 @@ GO
 CREATE TABLE [dbo].[CoverageGroup](
 	[CoverageGroupId] [int] IDENTITY(1,1) NOT NULL,	
 	[Name] [varchar](100) NOT NULL,	
-	[ExternalCode] [varchar](50) NOT NULL,
+	[LegacyCode] [varchar](50) NOT NULL,
 	[Status] [int] NOT NULL,
 	[InclusionUserId] [int] NOT NULL,
 	[InclusionDate] [datetime] NOT NULL,
@@ -1369,17 +1369,6 @@ INSERT INTO [dbo].[ProductVersionContractType]  VALUES ( 5, 2, 1, 1,  GETDATE(),
 INSERT INTO [dbo].[ProductVersionContractType]  VALUES ( 6, 1, 1, 1,  GETDATE(), NULL, NULL)
 INSERT INTO [dbo].[ProductVersionContractType]  VALUES ( 7, 3, 1, 1, GETDATE(), NULL, NULL)
 
---INSERT INTO [dbo].[ProductVersionInsuredObject]  VALUES (2, 1, 1, 521, GETDATE(), null,null)
---GO
---INSERT INTO [dbo].[ProductVersionInsuredObject]  VALUES (2, 1, 1, 521, GETDATE(), null,null)
---GO
---INSERT INTO [dbo].[ProductVersionInsuredObject]  VALUES (3, 1, 1, 521, GETDATE(), null,null)
---GO
---INSERT INTO [dbo].[ProductVersionInsuredObject]  VALUES (3, 1, 1, 521, GETDATE(), null,null)
---GO
---INSERT INTO  [dbo].[ProductVersionInsuredObject]  VALUES (5, 1, 1, 6, GETDATE(), null,null)
---GO
---INSERT INTO [dbo].[ProductVersionInsuredObject]  VALUES (5, 1, 1, 6, GETDATE(), null,null)
 
 
 
@@ -1484,8 +1473,19 @@ CLÁUSULAS PARTICULARES:
 - Esta apólice é emitida de acordo com as condições da Circular da SUSEP nº 477/13 e fica expressamente estabelecido que para todos os fins e efeitos de direito, a regulação do sinistro observará o disposto nas Condições Gerais da presente Apólice.    
 - ESTA APÓLICE NÃO PODERÁ SER UTILIZADA COMO COMPLEMENTO OU ENDOSSO DE APÓLICE ANTERIORMENTE FORNECIDA POR ESTA SEGURADORA REFERENTE AO MESMO EDITAL E/OU CONTRATO OBJETO DESTE SEGURO', 1, 1, 1, 521, GETDATE(), NULL, NULL)
 GO
-INSERT INTO [dbo].[ProductVersionInsuredObject]  VALUES (1, 1, 1, 521, GETDATE(), null,null)
+
+
+INSERT INTO [dbo].[ProductVersionInsuredObject]  VALUES (2, 1, 1, 521, GETDATE(), null,null)
+--GO
+--INSERT INTO [dbo].[ProductVersionInsuredObject]  VALUES (2, 1, 1, 521, GETDATE(), null,null)
 GO
+INSERT INTO [dbo].[ProductVersionInsuredObject]  VALUES (3, 1, 1, 521, GETDATE(), null,null)
+--GO
+--INSERT INTO [dbo].[ProductVersionInsuredObject]  VALUES (3, 1, 1, 521, GETDATE(), null,null)
+--GO
+--INSERT INTO  [dbo].[ProductVersionInsuredObject]  VALUES (5, 1, 1, 6, GETDATE(), null,null)
+--GO
+--INSERT INTO [dbo].[ProductVersionInsuredObject]  VALUES (5, 1, 1, 6, GETDATE(), null,null)
 
 INSERT INTO [dbo].[ProductVersionCalculationTypeAcceptance]  VALUES ( 1, 0, 365, 365, 1, 1, GETDATE(), NULL, NULL)
 INSERT INTO [dbo].[ProductVersionCalculationTypeAcceptance]  VALUES ( 2, 0, 365, 547, 1, 1, GETDATE(), NULL, NULL)
@@ -1527,7 +1527,9 @@ INSERT INTO [dbo].[ProductVersionCalculationTypeAcceptance]  VALUES ( 9, 0, 365,
 INSERT INTO PaymentMethod VALUES ('Ficha de compensação', 1, 1,1,GETDATE(), null, null)
 INSERT INTO PaymentMethod VALUES ('Boleto', 2, 1,1,GETDATE(), null, null)
 INSERT INTO PaymentMethod VALUES ('Fatura unificada',3, 1,1,GETDATE(), null, null)
+
 INSERT INTO ProductVersionPaymentMethod VALUES(1,3,1,1,1,GETDATE(), null, null)
+INSERT INTO ProductVersionPaymentMethod VALUES(2,3,1,1,1,GETDATE(), null, null)
 
 INSERT INTO PaymentInstallment Values('A vista',		1 ,0,0,0,99,1,1,getdate(), null,null)
 INSERT INTO PaymentInstallment Values('1 + 1 sem juros',2 ,0,0,0,99,1,1,getdate(), null,null)
@@ -1560,6 +1562,16 @@ INSERT INTO ProductVersionPaymentInstallment VALUES (1,6, 99,1,GETDATE() , null,
 INSERT INTO ProductVersionPaymentInstallment VALUES (1,7, 99,1,GETDATE() , null, null)
 INSERT INTO ProductVersionPaymentInstallment VALUES (1,8, 99,1,GETDATE() , null, null)
 INSERT INTO ProductVersionPaymentInstallment VALUES (1,9, 99,1,GETDATE() , null, null)
+
+INSERT INTO ProductVersionPaymentInstallment VALUES (2,1, 99,1,GETDATE() , null, null)
+INSERT INTO ProductVersionPaymentInstallment VALUES (2,2, 99,1,GETDATE() , null, null)
+INSERT INTO ProductVersionPaymentInstallment VALUES (2,3, 99,1,GETDATE() , null, null)
+INSERT INTO ProductVersionPaymentInstallment VALUES (2,4, 99,1,GETDATE() , null, null)
+INSERT INTO ProductVersionPaymentInstallment VALUES (2,5, 99,1,GETDATE() , null, null)
+INSERT INTO ProductVersionPaymentInstallment VALUES (2,6, 99,1,GETDATE() , null, null)
+INSERT INTO ProductVersionPaymentInstallment VALUES (2,7, 99,1,GETDATE() , null, null)
+INSERT INTO ProductVersionPaymentInstallment VALUES (2,8, 99,1,GETDATE() , null, null)
+INSERT INTO ProductVersionPaymentInstallment VALUES (2,9, 99,1,GETDATE() , null, null)
 
 
 

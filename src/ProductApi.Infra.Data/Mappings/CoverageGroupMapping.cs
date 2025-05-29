@@ -17,9 +17,6 @@ namespace ProductApi.Infra.Data.Mappings
               .IsUnicode(false);
 
             builder
-            .Property(x => x.Description);
-
-            builder
          .Property(x => x.LastChangeDate);
 
             builder
