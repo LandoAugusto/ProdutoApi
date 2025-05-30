@@ -14,5 +14,7 @@ namespace ProductApi.Core.Entities
         public DateTime? LastChangeDate { get; set; }
         public virtual ActivityNature ActivityNature { get; set; } = null!;
         public virtual ICollection<ProductVersionActivity> ProductVersionActivity { get; set; } = new HashSet<ProductVersionActivity>();
+        public virtual ICollection<ProductVersionPlanActivity> ProductVersionPlanActivity { get; set; } = new HashSet<ProductVersionPlanActivity>();
+        public virtual ICollection<ProductVersionCoverageActivityLimit> ProductVersionCoverageActivityLimit { get; set; } = new HashSet<ProductVersionCoverageActivityLimit>();
     }
 }

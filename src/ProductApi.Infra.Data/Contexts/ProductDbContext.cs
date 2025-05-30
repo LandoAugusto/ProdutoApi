@@ -73,6 +73,14 @@ namespace ProductApi.Infra.Data.Contexts
         public virtual DbSet<RiskType> RiskType { get; set; }
         public virtual DbSet<PersonType> PersonType { get; set; }
         public virtual DbSet<QuotationStatus> QuotationStatus { get; set; }
-
+        public virtual DbSet<ProductVersionPlan> ProductVersionPlan { get; set; }
+        public virtual DbSet<Plan> Plan { get; set; }
+        public virtual DbSet<ProductVersionPlanActivity> ProductVersionPlanActivity { get; set; }
+        public virtual DbSet<ProductVersionCoverageActivityLimit> ProductVersionCoverageActivityLimit { get; set; }
+        public virtual DbSet<ProductVersionPlanCoverage> ProductVersionPlanCoverage { get; set; }
+        public virtual DbSet<ProtectiveDevicesType> ProtectiveDevicesType { get; set; }
+        public virtual DbSet<ProtectiveDevices> ProtectiveDevices { get; set; }
+        public virtual DbSet<ProductVersionLocalization> ProductVersionLocalization { get; set; }
+        public virtual DbSet<Localization> Localization { get; set; }
     }
 }

@@ -283,7 +283,7 @@
             <param name="productVersionConstructionTypeAppService"></param>
             <param name="productVersionActivityAppService"></param>
         </member>
-        <member name="M:Product.Api.Controllers.V1.ProductVersionController.#ctor(ProductApi.Application.Interfaces.IProductVersionAcceptanceAppService,ProductApi.Application.Interfaces.IProductVersionInsuredObjectAppService,ProductApi.Application.Interfaces.IProductVersionClauseAppService,ProductApi.Application.Interfaces.IProductVersionLawsuitTypeAppService,ProductApi.Application.Interfaces.IProductVersionTermTypeAppService,ProductApi.Application.Interfaces.IProductVersionPaymentMethodAppService,ProductApi.Application.Interfaces.IProductVersionPaymentInstallmentAppService,ProductApi.Application.Interfaces.IProductVersionPaymentFrequencyAppService,ProductApi.Application.Interfaces.IProductVersionCoverageAppService,ProductApi.Application.Interfaces.IProductVersionContractTypeAppService,ProductApi.Application.Interfaces.IProductVersionCalculationTypeAppService,ProductApi.Application.Interfaces.IProductVersionCalculationTypeAcceptanceAppService,ProductApi.Application.Interfaces.IProductVersionConstructionTypeAppService,ProductApi.Application.Interfaces.IProductVersionActivityAppService)">
+        <member name="M:Product.Api.Controllers.V1.ProductVersionController.#ctor(ProductApi.Application.Interfaces.IProductVersionAcceptanceAppService,ProductApi.Application.Interfaces.IProductVersionInsuredObjectAppService,ProductApi.Application.Interfaces.IProductVersionClauseAppService,ProductApi.Application.Interfaces.IProductVersionLawsuitTypeAppService,ProductApi.Application.Interfaces.IProductVersionTermTypeAppService,ProductApi.Application.Interfaces.IProductVersionPaymentMethodAppService,ProductApi.Application.Interfaces.IProductVersionPaymentInstallmentAppService,ProductApi.Application.Interfaces.IProductVersionPaymentFrequencyAppService,ProductApi.Application.Interfaces.IProductVersionCoverageAppService,ProductApi.Application.Interfaces.IProductVersionContractTypeAppService,ProductApi.Application.Interfaces.IProductVersionCalculationTypeAppService,ProductApi.Application.Interfaces.IProductVersionCalculationTypeAcceptanceAppService,ProductApi.Application.Interfaces.IProductVersionConstructionTypeAppService,ProductApi.Application.Interfaces.IProductVersionActivityAppService,ProductApi.Application.Interfaces.IProductVersionPlanActivityAppService)">
             <summary>
             
             </summary>
@@ -414,6 +414,14 @@
             <param name="productVersionId"></param>
             <param name="profileid"></param>
             <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Product.Api.Controllers.V1.ProductVersionController.GetProductVersionActivityAsync(System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="productVersionId"></param>
+            <param name="activityId"></param>        
             <returns></returns>
         </member>
         <member name="T:Product.Api.Controllers.V1.VehicleController">

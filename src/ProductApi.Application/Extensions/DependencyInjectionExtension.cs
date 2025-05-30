@@ -24,6 +24,7 @@ namespace ProductApi.Application.Extensions
             services.AddScoped<IProductVersionConstructionTypeAppService, ProductVersionConstructionTypeAppService>();
             services.AddScoped<IProductVersionCalculationTypeAcceptanceAppService, ProductVersionCalculationTypeAcceptanceAppService>();
             services.AddScoped<IProductVersionActivityAppService, ProductVersionActivityAppService>();
+            services.AddScoped<IProductVersionPlanActivityAppService, ProductVersionPlanActivityAppService>();
             services.AddScoped<ICommonAppService, CommonAppService>();
             services.AddScoped<IBranchAppService, BranchAppService>();
             services.AddScoped<IProductComponentScreenAppService, ProductComponentScreenAppService>();

@@ -9,7 +9,8 @@ using ProductApi.Core.Models;
 
 namespace ProductApi.Application.Services
 {
-    internal class ProductVersionTermTypeAppService(IMapper mapper, IProductVersionTermTypeRepository productVersionTermTypeRepository) : IProductVersionTermTypeAppService
+    internal class ProductVersionTermTypeAppService(IMapper mapper, IProductVersionTermTypeRepository productVersionTermTypeRepository)
+        : IProductVersionTermTypeAppService
     {
         private readonly IMapper _mapper = mapper;
         private readonly IProductVersionTermTypeRepository _productVersionTermTypeRepository = productVersionTermTypeRepository;
