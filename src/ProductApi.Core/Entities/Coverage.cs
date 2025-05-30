@@ -5,13 +5,13 @@ namespace ProductApi.Core.Entities
     public class Coverage : IIdentityEntity
     {
         public int CoverageId { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
+        public required string Name { get; set; }
+        public required string Description { get; set; }
         public int BranchId { get; set; }
         public int CoverageGroupId { get; set; }
         public bool CoverageBasic { get; set; }
         public bool IsGoodsRelationship { get; set; }
-        public bool LegacyCode { get; set; }
+        public string? LegacyCode { get; set; }
         public int Status { get; set; }
         public int InclusionUserId { get; set; }
         public DateTime InclusionDate { get; set; }

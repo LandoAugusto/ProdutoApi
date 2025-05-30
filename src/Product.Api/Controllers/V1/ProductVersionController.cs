@@ -30,7 +30,8 @@ namespace Product.Api.Controllers.V1
         IProductVersionPaymentFrequencyAppService productVersionPaymentFrequencyService, IProductVersionCoverageAppService productVersionCoverageAppService,
         IProductVersionContractTypeAppService productVersionContractTypeAppService, IProductVersionCalculationTypeAppService productVersionCalculationTypeAppService,
         IProductVersionCalculationTypeAcceptanceAppService productVersionCalculationTypeAcceptanceAppService, IProductVersionConstructionTypeAppService productVersionConstructionTypeAppService,
-        IProductVersionActivityAppService productVersionActivityAppService, IProductVersionPlanActivityAppService productVersionPlanActivityAppService) : BaseController
+        IProductVersionActivityAppService productVersionActivityAppService, IProductVersionPlanActivityAppService productVersionPlanActivityAppService,
+        IProductVersionPlanCoverageAppService productVersionPlanCoverageAppService) : BaseController
     {
         private readonly IProductVersionAcceptanceAppService _productVersionService = productVersionService;
         private readonly IProductVersionInsuredObjectAppService _productVersionInsuredObjectService = productVersionInsuredObjectService;
@@ -47,6 +48,7 @@ namespace Product.Api.Controllers.V1
         private readonly IProductVersionConstructionTypeAppService _productVersionConstructionTypeAppService = productVersionConstructionTypeAppService;
         private readonly IProductVersionActivityAppService _productVersionActivityAppService = productVersionActivityAppService;
         private readonly IProductVersionPlanActivityAppService _productVersionPlanActivityAppService = productVersionPlanActivityAppService;
+        private readonly IProductVersionPlanCoverageAppService _productVersionPlanCoverageAppService = productVersionPlanCoverageAppService;
 
         /// <summary>
         /// 
@@ -322,19 +324,19 @@ namespace Product.Api.Controllers.V1
             return base.ReturnSuccess(response);
         }
 
-      /// <summary>
-      /// 
-      /// </summary>
-      /// <param name="productVersionId"></param>
-      /// <param name="profileid"></param>
-      /// <param name="name"></param>
-      /// <returns></returns>
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="productVersionId"></param>
+        /// <param name="profileid"></param>
+        /// <param name="name"></param>
+        /// <returns></returns>
         [HttpGet]
         [Route("get-product-version-activity/{productVersionId}/{profileid}")]
         [ProducesResponseType(typeof(BaseDataResponseModel<IEnumerable<ActivityModel>>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status500InternalServerError)]
         [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status404NotFound)]
-        public async Task<IActionResult> GetProductVersionActivityAsync(int productVersionId, int profileid, string? name )
+        public async Task<IActionResult> GetProductVersionActivityAsync(int productVersionId, int profileid, string? name)
         {
             var response = await _productVersionActivityAppService.ListAsync(productVersionId, profileid, name, RecordStatusEnum.Active);
             if (response == null)
@@ -353,13 +355,32 @@ namespace Product.Api.Controllers.V1
         [ProducesResponseType(typeof(BaseDataResponseModel<IEnumerable<ActivityModel>>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status500InternalServerError)]
         [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status404NotFound)]
-        public async Task<IActionResult> GetProductVersionActivityAsync(int productVersionId, int activityId )
+        public async Task<IActionResult> GetProductVersionPlanActivityAsync(int productVersionId, int activityId)
         {
-            var response = await _productVersionPlanActivityAppService.ListAsync(productVersionId, activityId,  RecordStatusEnum.Active);
+            var response = await _productVersionPlanActivityAppService.ListAsync(productVersionId, activityId, RecordStatusEnum.Active);
             if (response == null)
                 return ReturnNotFound();
 
             return base.ReturnSuccess(response);
-        }        
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="productVersionPlanId"></param>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("get-product-version-plan-coverage/{productVersionPlanId}")]
+        [ProducesResponseType(typeof(BaseDataResponseModel<IEnumerable<ActivityModel>>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> GetProductVersionPlanCoverageAsync(int productVersionPlanId)
+        {
+            var response = await productVersionPlanCoverageAppService.ListAsync(productVersionPlanId, RecordStatusEnum.Active);
+            if (response == null)
+                return ReturnNotFound();
+
+            return base.ReturnSuccess(response);
+        }
     }
 }

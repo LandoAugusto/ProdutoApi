@@ -16,10 +16,10 @@ namespace ProductApi.Application.Services
 
         public async Task<IEnumerable<PlanModel>?> ListAsync(int productVersionId, int activityId, RecordStatusEnum recordStatus)
         {
-            var entidade = await _productVersionPlanActivityRepository.ListAsync(productVersionId, activityId, recordStatus);
-            if (!entidade.IsAny<ProductVersionPlanActivity>()) return null;
+            var entity = await _productVersionPlanActivityRepository.ListAsync(productVersionId, activityId, recordStatus);
+            if (!entity.IsAny<ProductVersionPlanActivity>()) return null;
 
-            return [.. entidade.ToList().Select(item =>
+            return [.. entity.ToList().Select(item =>
             {
                 return _mapper.Map<PlanModel>(item.ProductVersionPlan.Plan);
             })];

@@ -2899,6 +2899,88 @@
         }
       }
     },
+    "/api/v1/productversion/get-product-version-plan-coverage/{productVersionPlanId}": {
+      "get": {
+        "tags": [
+          "ProductVersion"
+        ],
+        "summary": "",
+        "parameters": [
+          {
+            "name": "productVersionPlanId",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActivityModelIEnumerableBaseDataResponseModel"
+                }
+              },
+              "application/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActivityModelIEnumerableBaseDataResponseModel"
+                }
+              },
+              "text/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActivityModelIEnumerableBaseDataResponseModel"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "text/plain; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseDataResponseModel`1"
+                }
+              },
+              "application/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseDataResponseModel`1"
+                }
+              },
+              "text/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseDataResponseModel`1"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseDataResponseModel`1"
+                }
+              },
+              "application/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseDataResponseModel`1"
+                }
+              },
+              "text/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseDataResponseModel`1"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/v1/vehicle/get-vehicle-brand/{name}": {
       "get": {
         "tags": [
@@ -3644,6 +3726,10 @@
         "additionalProperties": false
       },
       "CoverageModel": {
+        "required": [
+          "description",
+          "name"
+        ],
         "type": "object",
         "properties": {
           "coverageId": {
@@ -3658,7 +3744,26 @@
             "type": "string",
             "nullable": true
           },
-          "externalCode": {
+          "branchId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "coverageGroupId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "coverageBasic": {
+            "type": "boolean"
+          },
+          "coverageRestricted": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "isGoodsRelationship": {
+            "type": "boolean"
+          },
+          "legacyCode": {
             "type": "string",
             "nullable": true
           }

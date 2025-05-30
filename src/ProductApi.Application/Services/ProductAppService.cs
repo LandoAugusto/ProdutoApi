@@ -4,6 +4,7 @@ using ProductApi.Core.Entities.Enumerators;
 using ProductApi.Core.Extensions;
 using ProductApi.Core.Models;
 using ProductApi.Infra.Data.Interfaces;
+using SharpCompress.Common;
 
 namespace ProductApi.Application.Services
 {
@@ -14,18 +15,18 @@ namespace ProductApi.Application.Services
 
         public async Task<IEnumerable<ProductModel>?> ListAsync(RecordStatusEnum recordStatus)
         {
-            var entidade = await _productRepository.ListAsync(recordStatus);
-            if (!entidade.IsAny<Core.Entities.Product>()) return null;
+            var entity = await _productRepository.ListAsync(recordStatus);
+            if (!entity.IsAny<Core.Entities.Product>()) return null;
 
-            return _mapper.Map<IEnumerable<ProductModel>>(entidade);
+            return _mapper.Map<IEnumerable<ProductModel>>(entity);
         }
 
         public async Task<IEnumerable<ProductModel>?> ListBranchAsync(int insurancebranchId, RecordStatusEnum recordStatus)
         {
-            var entidade = await _productRepository.ListBranchAsync(insurancebranchId, recordStatus);
-            if (!entidade.IsAny<Core.Entities.Product>()) return null;
+            var entity = await _productRepository.ListBranchAsync(insurancebranchId, recordStatus);
+            if (!entity.IsAny<Core.Entities.Product>()) return null;
 
-            return _mapper.Map<IEnumerable<ProductModel>>(entidade);
+            return _mapper.Map<IEnumerable<ProductModel>>(entity);
         }
     }
 }
