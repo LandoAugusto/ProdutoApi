@@ -57,7 +57,8 @@ namespace ProductApi.Core.Infrastructure.Mapper
             CreateMap<QuotationStatusModel, QuotationStatus>().ReverseMap();
             CreateMap<PlanModel, Plan>().ReverseMap();
             CreateMap<ProductVersionCoverageActivityLimitModel, ProductVersionCoverageActivityLimit>().ReverseMap();
-            
+            CreateMap<LocalizationModel, Localization>().ReverseMap();
+
         }
     }
 }

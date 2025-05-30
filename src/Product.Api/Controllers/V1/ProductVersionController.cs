@@ -5,9 +5,11 @@ using ProductApi.Core.Entities;
 using ProductApi.Core.Entities.Enumerators;
 using ProductApi.Core.Models;
 using ProductApi.Core.Models.Product;
+using ProductApi.Infra.Data.Interfaces;
 
 namespace Product.Api.Controllers.V1
 {
+
     /// <summary>
     /// 
     /// </summary>
@@ -25,6 +27,10 @@ namespace Product.Api.Controllers.V1
     /// <param name="productVersionCalculationTypeAcceptanceAppService"></param>
     /// <param name="productVersionConstructionTypeAppService"></param>
     /// <param name="productVersionActivityAppService"></param>
+    /// <param name="productVersionPlanActivityAppService"></param>
+    /// <param name="productVersionPlanCoverageAppService"></param>
+    /// <param name="productVersionCoverageActivityLimitAppService"></param>
+    /// <param name="productVersionLocalizationRepository"></param>
     public class ProductVersionController(IProductVersionAcceptanceAppService productVersionService, IProductVersionInsuredObjectAppService productVersionInsuredObjectService,
         IProductVersionClauseAppService productVersionClauseService, IProductVersionLawsuitTypeAppService productVersionLawsuitTypeService, IProductVersionTermTypeAppService productVersionTermTypeService,
         IProductVersionPaymentMethodAppService productVersionPaymentMethodService, IProductVersionPaymentInstallmentAppService productVersionPaymentInstallmentService,
@@ -32,7 +38,8 @@ namespace Product.Api.Controllers.V1
         IProductVersionContractTypeAppService productVersionContractTypeAppService, IProductVersionCalculationTypeAppService productVersionCalculationTypeAppService,
         IProductVersionCalculationTypeAcceptanceAppService productVersionCalculationTypeAcceptanceAppService, IProductVersionConstructionTypeAppService productVersionConstructionTypeAppService,
         IProductVersionActivityAppService productVersionActivityAppService, IProductVersionPlanActivityAppService productVersionPlanActivityAppService,
-        IProductVersionPlanCoverageAppService productVersionPlanCoverageAppService, IProductVersionCoverageActivityLimitAppService productVersionCoverageActivityLimitAppService) : BaseController
+        IProductVersionPlanCoverageAppService productVersionPlanCoverageAppService, IProductVersionCoverageActivityLimitAppService productVersionCoverageActivityLimitAppService,
+        IProductVersionLocalizationAppService productVersionLocalizationAppService) : BaseController
     {
         private readonly IProductVersionAcceptanceAppService _productVersionService = productVersionService;
         private readonly IProductVersionInsuredObjectAppService _productVersionInsuredObjectService = productVersionInsuredObjectService;
@@ -51,6 +58,7 @@ namespace Product.Api.Controllers.V1
         private readonly IProductVersionPlanActivityAppService _productVersionPlanActivityAppService = productVersionPlanActivityAppService;
         private readonly IProductVersionPlanCoverageAppService _productVersionPlanCoverageAppService = productVersionPlanCoverageAppService;
         private readonly IProductVersionCoverageActivityLimitAppService _productVersionCoverageActivityLimitAppService = productVersionCoverageActivityLimitAppService;
+        private readonly IProductVersionLocalizationAppService _productVersionLocalizationAppService = productVersionLocalizationAppService;
 
         /// <summary>
         /// 
@@ -401,6 +409,24 @@ namespace Product.Api.Controllers.V1
         public async Task<IActionResult> GetProductVersionCoverageActivityLimitAsync(int productVersionId, int coverageId, int activityId, int profileId)
         {
             var response = await _productVersionCoverageActivityLimitAppService.GetAsync(productVersionId, coverageId, activityId, profileId, RecordStatusEnum.Active);
+            if (response == null)
+                return ReturnNotFound();
+
+            return base.ReturnSuccess(response);
+        }
+
+        /// <summary>        
+        /// </summary>
+        /// <param name="productVersionId"></param>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("get-product-version-localization/{productVersionId}")]
+        [ProducesResponseType(typeof(BaseDataResponseModel<IEnumerable<ActivityModel>>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> GetProductVersionCoverageActivityLimitAsync(int productVersionId)
+        {
+            var response = await _productVersionLocalizationAppService.ListAsync(productVersionId,  RecordStatusEnum.Active);
             if (response == null)
                 return ReturnNotFound();
 

@@ -46,7 +46,8 @@ namespace ProductApi.Infra.Data.Extensions
             services.AddScoped<IProductVersionActivityRepository, ProductVersionActivityRepository>();
             services.AddScoped<IProductVersionPlanActivityRepository, ProductVersionPlanActivityRepository>();
             services.AddScoped<IProductVersionPlanCoverageRepository, ProductVersionPlanCoverageRepository>();
-            services.AddScoped<IProductVersionCoverageActivityLimitRepository, ProductVersionCoverageActivityLimitRepository>();            
+            services.AddScoped<IProductVersionCoverageActivityLimitRepository, ProductVersionCoverageActivityLimitRepository>();
+            services.AddScoped<IProductVersionLocalizationRepository, ProductVersionLocalizationRepository>();
             services.AddScoped<ITermTypeRepository, TermTypeRepository>();
             services.AddScoped<IProductComponentRepository, ProductComponentRepository>();
             services.AddScoped<IFlexRateRepository, FlexRateRepository>();

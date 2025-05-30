@@ -6,8 +6,7 @@ namespace ProductApi.Core.Entities
     {
         public int ProductVersionLocalizationId { get; set; }
         public int LocalizationId { get; set; }
-        public int ProductVersionId { get; set; }
-        public required string Name { get; set; }
+        public int ProductVersionId { get; set; }        
         public int Status { get; set; }
         public int InclusionUserId { get; set; }
         public DateTime InclusionDate { get; set; }
