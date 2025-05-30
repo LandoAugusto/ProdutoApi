@@ -6,6 +6,6 @@ namespace ProductApi.Infra.Data.Interfaces
 {
     public interface IProductVersionPlanCoverageRepository : IDomainRepository<ProductVersionPlanCoverage>
     {
-        Task<IEnumerable<ProductVersionPlanCoverage>?> ListAsync(int productVersionPlanId, RecordStatusEnum recordStatus);
+        Task<IEnumerable<ProductVersionPlanCoverage>?> ListAsync(int productVersionPlanId, int planId, RecordStatusEnum recordStatus);
     }
 }

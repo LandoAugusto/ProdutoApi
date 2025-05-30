@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Product.Api.Controllers.V1.Base;
 using ProductApi.Application.Interfaces;
+using ProductApi.Core.Entities;
 using ProductApi.Core.Entities.Enumerators;
 using ProductApi.Core.Models;
 using ProductApi.Core.Models.Product;
@@ -31,7 +32,7 @@ namespace Product.Api.Controllers.V1
         IProductVersionContractTypeAppService productVersionContractTypeAppService, IProductVersionCalculationTypeAppService productVersionCalculationTypeAppService,
         IProductVersionCalculationTypeAcceptanceAppService productVersionCalculationTypeAcceptanceAppService, IProductVersionConstructionTypeAppService productVersionConstructionTypeAppService,
         IProductVersionActivityAppService productVersionActivityAppService, IProductVersionPlanActivityAppService productVersionPlanActivityAppService,
-        IProductVersionPlanCoverageAppService productVersionPlanCoverageAppService) : BaseController
+        IProductVersionPlanCoverageAppService productVersionPlanCoverageAppService, IProductVersionCoverageActivityLimitAppService productVersionCoverageActivityLimitAppService) : BaseController
     {
         private readonly IProductVersionAcceptanceAppService _productVersionService = productVersionService;
         private readonly IProductVersionInsuredObjectAppService _productVersionInsuredObjectService = productVersionInsuredObjectService;
@@ -49,11 +50,12 @@ namespace Product.Api.Controllers.V1
         private readonly IProductVersionActivityAppService _productVersionActivityAppService = productVersionActivityAppService;
         private readonly IProductVersionPlanActivityAppService _productVersionPlanActivityAppService = productVersionPlanActivityAppService;
         private readonly IProductVersionPlanCoverageAppService _productVersionPlanCoverageAppService = productVersionPlanCoverageAppService;
+        private readonly IProductVersionCoverageActivityLimitAppService _productVersionCoverageActivityLimitAppService = productVersionCoverageActivityLimitAppService;
 
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="productId"></param>        
+        /// <param name="productId"></param>                
         /// <param name="profileId"></param>
         /// <returns></returns>
         [HttpGet]
@@ -352,7 +354,7 @@ namespace Product.Api.Controllers.V1
         /// <returns></returns>
         [HttpGet]
         [Route("get-product-version-plan-activity/{productVersionId}/{activityId}")]
-        [ProducesResponseType(typeof(BaseDataResponseModel<IEnumerable<ActivityModel>>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<IEnumerable<PlanModel>>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status500InternalServerError)]
         [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status404NotFound)]
         public async Task<IActionResult> GetProductVersionPlanActivityAsync(int productVersionId, int activityId)
@@ -367,16 +369,38 @@ namespace Product.Api.Controllers.V1
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="productVersionPlanId"></param>
+        /// <param name="productVersionId,"></param>
+        /// <param name="planId"></param>
         /// <returns></returns>
         [HttpGet]
-        [Route("get-product-version-plan-coverage/{productVersionPlanId}")]
+        [Route("get-product-version-plan-coverage/{productVersionId}/{planId}")]
+        [ProducesResponseType(typeof(BaseDataResponseModel<IEnumerable<CoverageModel>>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> GetProductVersionPlanCoverageAsync(int productVersionId, int planId)
+        {
+            var response = await _productVersionPlanCoverageAppService.ListAsync(productVersionId, planId, RecordStatusEnum.Active);
+            if (response == null)
+                return ReturnNotFound();
+
+            return base.ReturnSuccess(response);
+        }
+        /// <summary>
+        /// s
+        /// </summary>
+        /// <param name="productVersionId"></param>
+        /// <param name="coverageId"></param>
+        /// <param name="activityId"></param>
+        /// <param name="profileId"></param>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("get-product-version-coverage-activity-limit/{productVersionId}/{coverageId}/{activityId}/{profileId}")]
         [ProducesResponseType(typeof(BaseDataResponseModel<IEnumerable<ActivityModel>>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status500InternalServerError)]
         [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status404NotFound)]
-        public async Task<IActionResult> GetProductVersionPlanCoverageAsync(int productVersionPlanId)
+        public async Task<IActionResult> GetProductVersionCoverageActivityLimitAsync(int productVersionId, int coverageId, int activityId, int profileId)
         {
-            var response = await productVersionPlanCoverageAppService.ListAsync(productVersionPlanId, RecordStatusEnum.Active);
+            var response = await _productVersionCoverageActivityLimitAppService.GetAsync(productVersionId, coverageId, activityId, profileId, RecordStatusEnum.Active);
             if (response == null)
                 return ReturnNotFound();
 

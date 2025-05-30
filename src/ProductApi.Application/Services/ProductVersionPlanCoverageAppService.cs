@@ -14,9 +14,9 @@ namespace ProductApi.Application.Services
         private readonly IMapper _mapper = mapper;
         private readonly IProductVersionPlanCoverageRepository _productVersionPlanCoverageRepository = productVersionPlanCoverageRepository;
 
-        public async Task<IEnumerable<CoverageModel>?> ListAsync(int productVersionPlanId, RecordStatusEnum recordStatus)
+        public async Task<IEnumerable<CoverageModel>?> ListAsync(int productVersionId, int planId,  RecordStatusEnum recordStatus)
         {
-            var entity  = await _productVersionPlanCoverageRepository.ListAsync(productVersionPlanId, recordStatus);
+            var entity  = await _productVersionPlanCoverageRepository.ListAsync(productVersionId, planId, recordStatus);
             if (!entity.IsAny<ProductVersionPlanCoverage>()) return null;
 
             return [.. entity.ToList().Select(item =>

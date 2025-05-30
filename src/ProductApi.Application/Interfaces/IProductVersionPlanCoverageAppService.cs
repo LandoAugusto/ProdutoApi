@@ -5,6 +5,6 @@ namespace ProductApi.Application.Interfaces
 {
     public interface IProductVersionPlanCoverageAppService
     {
-        Task<IEnumerable<CoverageModel>?> ListAsync(int productVersionPlanId, RecordStatusEnum recordStatus);
+        Task<IEnumerable<CoverageModel>?> ListAsync(int productVersionId, int planId, RecordStatusEnum recordStatus);
     }
 }

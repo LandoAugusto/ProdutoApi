@@ -22,6 +22,6 @@ namespace ProductApi.Core.Entities
         public DateTime? LastChangeDate { get; set; }     
         public virtual Profile Profile { get; set; } = null!;
         public virtual Activity Activity { get; set; } = null!;
-        public virtual ProductVersionCoverage ProductVersiProductVersionCoverageonPlan { get; set; } = null!;
+        public virtual ProductVersionCoverage ProductVersionCoverage { get; set; } = null!;
     }
 }

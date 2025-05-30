@@ -283,7 +283,7 @@
             <param name="productVersionConstructionTypeAppService"></param>
             <param name="productVersionActivityAppService"></param>
         </member>
-        <member name="M:Product.Api.Controllers.V1.ProductVersionController.#ctor(ProductApi.Application.Interfaces.IProductVersionAcceptanceAppService,ProductApi.Application.Interfaces.IProductVersionInsuredObjectAppService,ProductApi.Application.Interfaces.IProductVersionClauseAppService,ProductApi.Application.Interfaces.IProductVersionLawsuitTypeAppService,ProductApi.Application.Interfaces.IProductVersionTermTypeAppService,ProductApi.Application.Interfaces.IProductVersionPaymentMethodAppService,ProductApi.Application.Interfaces.IProductVersionPaymentInstallmentAppService,ProductApi.Application.Interfaces.IProductVersionPaymentFrequencyAppService,ProductApi.Application.Interfaces.IProductVersionCoverageAppService,ProductApi.Application.Interfaces.IProductVersionContractTypeAppService,ProductApi.Application.Interfaces.IProductVersionCalculationTypeAppService,ProductApi.Application.Interfaces.IProductVersionCalculationTypeAcceptanceAppService,ProductApi.Application.Interfaces.IProductVersionConstructionTypeAppService,ProductApi.Application.Interfaces.IProductVersionActivityAppService,ProductApi.Application.Interfaces.IProductVersionPlanActivityAppService,ProductApi.Application.Interfaces.IProductVersionPlanCoverageAppService)">
+        <member name="M:Product.Api.Controllers.V1.ProductVersionController.#ctor(ProductApi.Application.Interfaces.IProductVersionAcceptanceAppService,ProductApi.Application.Interfaces.IProductVersionInsuredObjectAppService,ProductApi.Application.Interfaces.IProductVersionClauseAppService,ProductApi.Application.Interfaces.IProductVersionLawsuitTypeAppService,ProductApi.Application.Interfaces.IProductVersionTermTypeAppService,ProductApi.Application.Interfaces.IProductVersionPaymentMethodAppService,ProductApi.Application.Interfaces.IProductVersionPaymentInstallmentAppService,ProductApi.Application.Interfaces.IProductVersionPaymentFrequencyAppService,ProductApi.Application.Interfaces.IProductVersionCoverageAppService,ProductApi.Application.Interfaces.IProductVersionContractTypeAppService,ProductApi.Application.Interfaces.IProductVersionCalculationTypeAppService,ProductApi.Application.Interfaces.IProductVersionCalculationTypeAcceptanceAppService,ProductApi.Application.Interfaces.IProductVersionConstructionTypeAppService,ProductApi.Application.Interfaces.IProductVersionActivityAppService,ProductApi.Application.Interfaces.IProductVersionPlanActivityAppService,ProductApi.Application.Interfaces.IProductVersionPlanCoverageAppService,ProductApi.Application.Interfaces.IProductVersionCoverageActivityLimitAppService)">
             <summary>
             
             </summary>
@@ -306,7 +306,7 @@
             <summary>
             
             </summary>
-            <param name="productId"></param>        
+            <param name="productId"></param>                
             <param name="profileId"></param>
             <returns></returns>
         </member>
@@ -424,11 +424,22 @@
             <param name="activityId"></param>        
             <returns></returns>
         </member>
-        <member name="M:Product.Api.Controllers.V1.ProductVersionController.GetProductVersionPlanCoverageAsync(System.Int32)">
+        <member name="M:Product.Api.Controllers.V1.ProductVersionController.GetProductVersionPlanCoverageAsync(System.Int32,System.Int32)">
             <summary>
             
             </summary>
-            <param name="productVersionPlanId"></param>
+            <param name="productVersionId,,"></param>
+            <param name="planId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Product.Api.Controllers.V1.ProductVersionController.GetProductVersionCoverageActivityLimitAsync(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            s
+            </summary>
+            <param name="productVersionId"></param>
+            <param name="coverageId"></param>
+            <param name="activityId"></param>
+            <param name="profileId"></param>
             <returns></returns>
         </member>
         <member name="T:Product.Api.Controllers.V1.VehicleController">
