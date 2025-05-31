@@ -1127,6 +1127,67 @@
         }
       }
     },
+    "/api/v1/common/get-protective-devices/{protectiveDevicesTypeId}": {
+      "get": {
+        "tags": [
+          "Common"
+        ],
+        "summary": "",
+        "parameters": [
+          {
+            "name": "protectiveDevicesTypeId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProtectiveDevicesModelIEnumerableBaseDataResponseModel"
+                }
+              },
+              "application/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProtectiveDevicesModelIEnumerableBaseDataResponseModel"
+                }
+              },
+              "text/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProtectiveDevicesModelIEnumerableBaseDataResponseModel"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseDataResponseModel`1"
+                }
+              },
+              "application/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseDataResponseModel`1"
+                }
+              },
+              "text/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseDataResponseModel`1"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/v1/laborcourt/get-all": {
       "get": {
         "tags": [
@@ -3107,7 +3168,7 @@
         "tags": [
           "ProductVersion"
         ],
-        "summary": "s",
+        "summary": "",
         "parameters": [
           {
             "name": "productVersionId",
@@ -4828,6 +4889,43 @@
         "properties": {
           "data": {
             "$ref": "#/components/schemas/PropertyStructureModel"
+          },
+          "transactionStatus": {
+            "$ref": "#/components/schemas/StatusResponseModel"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ProtectiveDevicesModel": {
+        "required": [
+          "name"
+        ],
+        "type": "object",
+        "properties": {
+          "protectiveDevicesId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "protectiveDevicesTypeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ProtectiveDevicesModelIEnumerableBaseDataResponseModel": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ProtectiveDevicesModel"
+            },
+            "nullable": true
           },
           "transactionStatus": {
             "$ref": "#/components/schemas/StatusResponseModel"

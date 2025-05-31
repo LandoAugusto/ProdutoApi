@@ -189,6 +189,12 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:Product.Api.Controllers.V1.CommonController.GetProtectiveDevicesAsync(System.Int32)">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
         <member name="T:Product.Api.Controllers.V1.LaborCourtController">
             <summary>
             
@@ -451,8 +457,7 @@
             <returns></returns>
         </member>
         <member name="M:Product.Api.Controllers.V1.ProductVersionController.GetProductVersionCoverageActivityLimitAsync(System.Int32)">
-            <summary>
-            s
+            <summary>        
             </summary>
             <param name="productVersionId"></param>
             <returns></returns>

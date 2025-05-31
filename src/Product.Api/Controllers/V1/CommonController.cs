@@ -259,5 +259,22 @@ namespace Product.Api.Controllers.V1
 
             return base.ReturnSuccess(response);
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("get-protective-devices/{protectiveDevicesTypeId}")]
+        [ProducesResponseType(typeof(BaseDataResponseModel<IEnumerable<ProtectiveDevicesModel>>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> GetProtectiveDevicesAsync(int protectiveDevicesTypeId)
+        {
+            var response = await _commonService.GetProtectiveDevicesAsync(protectiveDevicesTypeId, RecordStatusEnum.Active);
+            if (response == null)
+                return ReturnNotFound();
+
+            return base.ReturnSuccess(response);
+        }
     }
 }

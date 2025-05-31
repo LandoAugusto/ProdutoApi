@@ -58,6 +58,7 @@ namespace ProductApi.Core.Infrastructure.Mapper
             CreateMap<PlanModel, Plan>().ReverseMap();
             CreateMap<ProductVersionCoverageActivityLimitModel, ProductVersionCoverageActivityLimit>().ReverseMap();
             CreateMap<LocalizationModel, Localization>().ReverseMap();
+            CreateMap<ProtectiveDevicesModel, ProtectiveDevices>().ReverseMap();
 
         }
     }
