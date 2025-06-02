@@ -13,12 +13,12 @@ namespace ProductApi.Application.Services
         private readonly IProductVersionCoverageActivityLimitRepository _productVersionCoverageActivityLimitRepository = productVersionCoverageActivityLimitRepository;
 
 
-        public async  Task<ProductVersionCoverageActivityLimitModel?> GetAsync(int productVersionId, int coverageId, int activityId, int profileId, RecordStatusEnum recordStatus)
+        public async  Task<CoverageActivityLimitModel?> GetAsync(int productVersionId, int coverageId, int activityId, int profileId, RecordStatusEnum recordStatus)
         {
             var entity = await _productVersionCoverageActivityLimitRepository.GetAsync(productVersionId, coverageId, activityId, profileId, recordStatus);
             if (entity == null) return null;
 
-            return _mapper.Map<ProductVersionCoverageActivityLimitModel>(entity);
+            return _mapper.Map<CoverageActivityLimitModel>(entity);
         }
     }
 }

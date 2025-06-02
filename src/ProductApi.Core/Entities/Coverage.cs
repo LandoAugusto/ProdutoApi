@@ -10,6 +10,7 @@ namespace ProductApi.Core.Entities
         public int BranchId { get; set; }
         public int CoverageGroupId { get; set; }
         public bool CoverageBasic { get; set; }
+        public int? CoverageRestricted { get; set; }
         public bool IsGoodsRelationship { get; set; }
         public string? LegacyCode { get; set; }
         public int Status { get; set; }

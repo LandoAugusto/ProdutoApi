@@ -5,6 +5,6 @@ namespace ProductApi.Application.Interfaces
 {
     public interface IProductVersionCoverageActivityLimitAppService
     {
-        Task<ProductVersionCoverageActivityLimitModel?> GetAsync(int productVersionId, int coverageId, int activityId, int profileId, RecordStatusEnum recordStatus);
+        Task<CoverageActivityLimitModel?> GetAsync(int productVersionId, int coverageId, int activityId, int profileId, RecordStatusEnum recordStatus);
     }
 }

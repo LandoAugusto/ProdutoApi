@@ -82,5 +82,8 @@ namespace ProductApi.Infra.Data.Contexts
         public virtual DbSet<ProtectiveDevices> ProtectiveDevices { get; set; }
         public virtual DbSet<ProductVersionLocalization> ProductVersionLocalization { get; set; }
         public virtual DbSet<Localization> Localization { get; set; }
+        public virtual DbSet<FranchiseType> FranchiseType { get; set; }
+        public virtual DbSet<Franchise> Franchise { get; set; }
+        public virtual DbSet<ProductVersionCoverageFranchise> ProductVersionCoverageFranchise { get; set; }
     }
 }

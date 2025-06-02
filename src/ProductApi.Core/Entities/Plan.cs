@@ -6,7 +6,8 @@ namespace ProductApi.Core.Entities
     {
         public int PlanId { get; set; }
         public required string Name { get; set; }
-        public required string Description { get; set; }
+        public required string Description { get; set; }        
+        public string? Image { get; set; }
         public bool IsPersonalized { get; set; }
         public int Status { get; set; }
         public int InclusionUserId { get; set; }

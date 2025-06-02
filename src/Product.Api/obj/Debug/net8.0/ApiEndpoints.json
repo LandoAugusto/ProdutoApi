@@ -1240,7 +1240,56 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "ProductApi.Core.Models.BaseDataResponseModel\u00601[[System.Collections.Generic.IEnumerable\u00601[[ProductApi.Core.Models.ActivityModel, ProductApi.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Type": "ProductApi.Core.Models.BaseDataResponseModel\u00601[[System.Collections.Generic.IEnumerable\u00601[[ProductApi.Core.Models.CoverageActivityLimitModel, ProductApi.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "ProductApi.Core.Models.BaseDataResponseModel\u00601",
+        "MediaTypes": [
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0"
+        ],
+        "StatusCode": 500
+      },
+      {
+        "Type": "ProductApi.Core.Models.BaseDataResponseModel\u00601",
+        "MediaTypes": [
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0"
+        ],
+        "StatusCode": 404
+      }
+    ]
+  },
+  {
+    "ContainingType": "Product.Api.Controllers.V1.ProductVersionController",
+    "Method": "GetProductVersionLocalizationAsync",
+    "RelativePath": "api/v1/productversion/get-product-version-coverage-franchise/{productVersionId}/{coverageId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "productVersionId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "coverageId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ProductApi.Core.Models.BaseDataResponseModel\u00601[[System.Collections.Generic.IEnumerable\u00601[[ProductApi.Core.Models.LocalizationModel, ProductApi.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "text/plain; x-api-version=1.0",
           "application/json; x-api-version=1.0",
@@ -1407,7 +1456,7 @@
   },
   {
     "ContainingType": "Product.Api.Controllers.V1.ProductVersionController",
-    "Method": "GetProductVersionCoverageActivityLimitAsync",
+    "Method": "GetProductVersionLocalizationAsync",
     "RelativePath": "api/v1/productversion/get-product-version-localization/{productVersionId}",
     "HttpMethod": "GET",
     "IsController": true,
@@ -1421,7 +1470,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "ProductApi.Core.Models.BaseDataResponseModel\u00601[[System.Collections.Generic.IEnumerable\u00601[[ProductApi.Core.Models.ActivityModel, ProductApi.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Type": "ProductApi.Core.Models.BaseDataResponseModel\u00601[[System.Collections.Generic.IEnumerable\u00601[[ProductApi.Core.Models.LocalizationModel, ProductApi.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "text/plain; x-api-version=1.0",
           "application/json; x-api-version=1.0",

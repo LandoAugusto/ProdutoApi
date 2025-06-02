@@ -17,10 +17,10 @@ namespace ProductApi.Application.Services
 
         public async Task<IEnumerable<TermTypeModel>?> ListAsync(int productVersionId, RecordStatusEnum recordStatus)
         {
-            var entidade = await _productVersionTermTypeRepository.ListAsync(productVersionId, recordStatus);
-            if (!entidade.IsAny<ProductVersionTermType>()) return null;
+            var entity = await _productVersionTermTypeRepository.ListAsync(productVersionId, recordStatus);
+            if (!entity.IsAny<ProductVersionTermType>()) return null;
 
-            return [.. entidade.ToList().Select(item =>
+            return [.. entity.ToList().Select(item =>
             {
                 return _mapper.Map<TermTypeModel>(item.TermType);
             })];
