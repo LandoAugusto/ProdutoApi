@@ -3279,17 +3279,17 @@
             "content": {
               "text/plain; x-api-version=1.0": {
                 "schema": {
-                  "$ref": "#/components/schemas/LocalizationModelIEnumerableBaseDataResponseModel"
+                  "$ref": "#/components/schemas/FranchiseModelIEnumerableBaseDataResponseModel"
                 }
               },
               "application/json; x-api-version=1.0": {
                 "schema": {
-                  "$ref": "#/components/schemas/LocalizationModelIEnumerableBaseDataResponseModel"
+                  "$ref": "#/components/schemas/FranchiseModelIEnumerableBaseDataResponseModel"
                 }
               },
               "text/json; x-api-version=1.0": {
                 "schema": {
-                  "$ref": "#/components/schemas/LocalizationModelIEnumerableBaseDataResponseModel"
+                  "$ref": "#/components/schemas/FranchiseModelIEnumerableBaseDataResponseModel"
                 }
               }
             }
@@ -4225,6 +4225,68 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/DocumentTypeModel"
+            },
+            "nullable": true
+          },
+          "transactionStatus": {
+            "$ref": "#/components/schemas/StatusResponseModel"
+          }
+        },
+        "additionalProperties": false
+      },
+      "FranchiseModel": {
+        "required": [
+          "description",
+          "text"
+        ],
+        "type": "object",
+        "properties": {
+          "franchiseId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "text": {
+            "type": "string",
+            "nullable": true
+          },
+          "franchiseTypeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "percentangeLmi": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "percentange": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "value": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "countDays": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FranchiseModelIEnumerableBaseDataResponseModel": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FranchiseModel"
             },
             "nullable": true
           },

@@ -444,7 +444,7 @@ namespace Product.Api.Controllers.V1
         /// <returns></returns>
         [HttpGet]
         [Route("get-product-version-coverage-franchise/{productVersionId}/{coverageId}")]
-        [ProducesResponseType(typeof(BaseDataResponseModel<IEnumerable<LocalizationModel>>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<IEnumerable<FranchiseModel>>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status500InternalServerError)]
         [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status404NotFound)]
         public async Task<IActionResult> GetProductVersionLocalizationAsync(int productVersionId,int coverageId)
