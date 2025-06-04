@@ -192,14 +192,17 @@ namespace Product.Api.Controllers.V1
         /// <summary>
         /// 
         /// </summary>
+        /// <param name="constructionTypeId"></param>
+        /// <param name="useTypeId"></param>
+        /// <param name="profileId"></param>
         /// <returns></returns>
         [HttpGet]
-        [Route("get-property-structure/{useTypeId}")]
+        [Route("get-property-structure/{constructionTypeId}/{useTypeId}/{profileId}")]
         [ProducesResponseType(typeof(BaseDataResponseModel<PropertyStructureModel>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status404NotFound)]
-        public async Task<IActionResult> GetPropertyStructureAsync(int useTypeId)
+        public async Task<IActionResult> GetPropertyStructureAsync(int constructionTypeId, int useTypeId, int profileId)
         {
-            var response = await _commonService.GetPropertyStructureAsync(useTypeId, RecordStatusEnum.Active);
+            var response = await _commonService.GetPropertyStructureAsync(constructionTypeId, useTypeId, profileId, RecordStatusEnum.Active);
             if (response == null)
                 return ReturnNotFound();
 
@@ -236,7 +239,7 @@ namespace Product.Api.Controllers.V1
         [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status404NotFound)]
         public async Task<IActionResult> GetPersonTypeAsync()
         {
-            var response = await _commonService.GetPersonTypeAsync( RecordStatusEnum.Active);
+            var response = await _commonService.GetPersonTypeAsync(RecordStatusEnum.Active);
             if (response == null)
                 return ReturnNotFound();
 

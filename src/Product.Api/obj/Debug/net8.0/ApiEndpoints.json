@@ -442,13 +442,23 @@
   {
     "ContainingType": "Product.Api.Controllers.V1.CommonController",
     "Method": "GetPropertyStructureAsync",
-    "RelativePath": "api/v1/common/get-property-structure/{useTypeId}",
+    "RelativePath": "api/v1/common/get-property-structure/{constructionTypeId}/{useTypeId}/{profileId}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
+        "Name": "constructionTypeId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
         "Name": "useTypeId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "profileId",
         "Type": "System.Int32",
         "IsRequired": true
       }

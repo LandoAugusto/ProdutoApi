@@ -16,5 +16,6 @@ namespace ProductApi.Core.Entities
         public virtual UseType UseType { get; set; } = null!;
         public virtual Profile Profile { get; set; } = null!;
         public virtual ConstructionType ConstructionType { get; set; } = null!;
+        public virtual ICollection<ConstructionTypeUseTypeStructure> ConstructionTypeUseTypeStructure { get; set; } = new HashSet<ConstructionTypeUseTypeStructure>();
     }
 }

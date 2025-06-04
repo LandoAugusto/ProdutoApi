@@ -65,7 +65,7 @@ namespace ProductApi.Infra.Data.Contexts
         public virtual DbSet<ClaimsExperienceBonus> ClaimsExperienceBonus { get; set; }
         public virtual DbSet<PropertyStructure> PropertyStructure { get; set; }
         public virtual DbSet<BuildingsContents> BuildingsContents { get; set; }
-        public virtual DbSet<UseTypePropertyStructure> UseTypePropertyStructure { get; set; }
+        public virtual DbSet<ConstructionTypeUseTypeStructure> ConstructionTypeUseTypeStructure { get; set; }
         public virtual DbSet<ConstructionTypeUseType> ConstructionTypeUseType { get; set; }
         public virtual DbSet<ProductVersionActivity> ProductVersionActivity { get; set; }
         public virtual DbSet<Activity> Activity { get; set; }

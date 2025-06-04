@@ -163,10 +163,13 @@
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Product.Api.Controllers.V1.CommonController.GetPropertyStructureAsync(System.Int32)">
+        <member name="M:Product.Api.Controllers.V1.CommonController.GetPropertyStructureAsync(System.Int32,System.Int32,System.Int32)">
             <summary>
             
             </summary>
+            <param name="constructionTypeId"></param>
+            <param name="useTypeId"></param>
+            <param name="profileId"></param>
             <returns></returns>
         </member>
         <member name="M:Product.Api.Controllers.V1.CommonController.GetUseTypeAsync(System.Int32,System.Int32)">

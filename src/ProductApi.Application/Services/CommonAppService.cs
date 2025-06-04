@@ -12,7 +12,7 @@ namespace ProductApi.Application.Services
        IAddressTypeRepository addressTypeRepository, IStateRepository stateRepository, IRecordStatusRepository recordStatusRepository,
        ITermTypeRepository termTypeRepository, IInsuranceTypeRepository insuranceTypeRepository, IInsurerRepository insurerRepository,
        IClaimsExperienceBonusRepository claimsExperienceBonusRepository, IBuildingsContentsRepository buildingsContentsRepository,
-       IUseTypePropertyStructureRepository useTypePropertyStructureRepository, IConstructionTypeUseTypeRepository constructionTypeUseTypeRepository,
+       IConstructionTypeUseTypeStructureRepository useTypePropertyStructureRepository, IConstructionTypeUseTypeRepository constructionTypeUseTypeRepository,
        IPersonTypeRepository personTypeRepository, IQuotationStatusRepository quotationStatusRepository, IProtectiveDevicesRepository protectiveDevicesRepository)
      : ICommonAppService
     {
@@ -28,7 +28,7 @@ namespace ProductApi.Application.Services
         private readonly IInsurerRepository _insurerRepository = insurerRepository;
         private readonly IClaimsExperienceBonusRepository _claimsExperienceBonusRepository = claimsExperienceBonusRepository;
         private readonly IBuildingsContentsRepository _buildingsContentsRepository = buildingsContentsRepository;
-        private readonly IUseTypePropertyStructureRepository _useTypePropertyStructureRepository = useTypePropertyStructureRepository;
+        private readonly IConstructionTypeUseTypeStructureRepository _useTypePropertyStructureRepository = useTypePropertyStructureRepository;
         private readonly IConstructionTypeUseTypeRepository _constructionTypeUseTypeRepository = constructionTypeUseTypeRepository;
         private readonly IPersonTypeRepository _personTypeRepository = personTypeRepository;
         private readonly IQuotationStatusRepository _quotationStatusRepository = quotationStatusRepository;
@@ -112,10 +112,10 @@ namespace ProductApi.Application.Services
             return _mapper.Map<IEnumerable<BuildingsContentsModel>>(entity);
         }
 
-        public async Task<IEnumerable<PropertyStructureModel>?> GetPropertyStructureAsync(int useTypeId, RecordStatusEnum recordStatus)
+        public async Task<IEnumerable<PropertyStructureModel>?> GetPropertyStructureAsync(int constructionTypeId, int useTypeId, int profileId, RecordStatusEnum recordStatus)
         {
-            var entity = await _useTypePropertyStructureRepository.GetAsync(useTypeId, recordStatus);
-            if (!entity.IsAny<UseTypePropertyStructure>()) return null;
+            var entity = await _useTypePropertyStructureRepository.GetAsync(constructionTypeId, useTypeId, profileId, recordStatus);
+            if (!entity.IsAny<ConstructionTypeUseTypeStructure>()) return null;
 
             return [.. entity.ToList().Select(item =>
             {
