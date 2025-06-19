@@ -630,7 +630,6 @@ C:\Work\APIS\ProductApi\src\Product.Api\obj\Debug\net8.0\staticwebassets.build.j
 C:\Work\APIS\ProductApi\src\Product.Api\obj\Debug\net8.0\staticwebassets.build.json.cache
 C:\Work\APIS\ProductApi\src\Product.Api\obj\Debug\net8.0\staticwebassets.development.json
 C:\Work\APIS\ProductApi\src\Product.Api\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-C:\Work\APIS\ProductApi\src\Product.Api\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Work\APIS\ProductApi\src\Product.Api\obj\Debug\net8.0\Product..6D500C4C.Up2Date
 C:\Work\APIS\ProductApi\src\Product.Api\obj\Debug\net8.0\Product.Api.dll
 C:\Work\APIS\ProductApi\src\Product.Api\obj\Debug\net8.0\refint\Product.Api.dll
@@ -638,3 +637,4 @@ C:\Work\APIS\ProductApi\src\Product.Api\obj\Debug\net8.0\Product.Api.xml
 C:\Work\APIS\ProductApi\src\Product.Api\obj\Debug\net8.0\Product.Api.pdb
 C:\Work\APIS\ProductApi\src\Product.Api\obj\Debug\net8.0\Product.Api.genruntimeconfig.cache
 C:\Work\APIS\ProductApi\src\Product.Api\obj\Debug\net8.0\ref\Product.Api.dll
+C:\Work\APIS\ProductApi\src\Product.Api\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
