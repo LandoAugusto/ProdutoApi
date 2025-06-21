@@ -6,21 +6,21 @@ using ProductApi.Infra.Data.Interfaces;
 
 namespace ProductApi.Application.Services
 {
-    internal class ProductVersionAcceptanceAppService(IMapper mapper, IProductVersionRepository productVersionRepository, IProductVersionAcceptanceRepository productVersionAcceptanceRepository)
+    internal class ProductVersionAcceptanceAppService(IMapper mapper, IProductVersionAcceptanceRepository productVersionAcceptanceRepository)
         : IProductVersionAcceptanceAppService
     {
         private readonly IMapper _mapper = mapper;
-        private readonly IProductVersionRepository _productVersionRepository = productVersionRepository;
         private readonly IProductVersionAcceptanceRepository _productVersionAcceptanceRepository = productVersionAcceptanceRepository;
 
-        public async Task<ProductVersionAcceptanceModel?> GetAsync(int productId, int profileId, RecordStatusEnum recordStatus)
+        public async Task<ProductVersionAcceptanceModel?> GetAsync(int productVersionId, int profileId, RecordStatusEnum recordStatus)
         {
-            var entidade = await _productVersionRepository.GetAsync(productId, profileId, recordStatus);
-            if (entidade == null) return null;
+            var productVersionAcceptance = await _productVersionAcceptanceRepository.GetAsync(productVersionId, profileId, recordStatus);
+            if (productVersionAcceptance == null) return null;
 
-            var response = _mapper.Map<ProductVersionAcceptanceModel>(await _productVersionAcceptanceRepository.GetAsync(entidade.ProductVersionId, profileId, recordStatus));
-            response.Name = entidade.Product?.Name ?? string.Empty;
-            response.InsuranceBranch = entidade.Product?.InsuranceBranch.Name ?? string.Empty;           
+            var response = _mapper.Map<ProductVersionAcceptanceModel>(productVersionAcceptance);
+
+            response.Name = productVersionAcceptance.ProductVersion.Product?.Name ?? string.Empty;
+             response.InsuranceBranch = productVersionAcceptance.ProductVersion.Product?.InsuranceBranch.Name ?? string.Empty;
 
             return response;
         }

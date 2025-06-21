@@ -19,7 +19,7 @@ namespace Product.Api.Extensions
         const string SwaggerRoutePrefix = "api/swagger";
         public static void UseApi(this IApplicationBuilder application, IConfiguration configuration)
         {
-            
+            application.UseDeveloperExceptionPage();
             ApiConfig apiConfig = configuration.GetSection("ApiConfig").Get<ApiConfig>();
             application.UseCors("AllowSpecificOrigins");
             application.UseSwagger(apiConfig);

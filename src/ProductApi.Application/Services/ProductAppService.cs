@@ -4,7 +4,6 @@ using ProductApi.Core.Entities.Enumerators;
 using ProductApi.Core.Extensions;
 using ProductApi.Core.Models;
 using ProductApi.Infra.Data.Interfaces;
-using SharpCompress.Common;
 
 namespace ProductApi.Application.Services
 {

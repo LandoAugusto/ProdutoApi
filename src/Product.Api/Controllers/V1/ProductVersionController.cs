@@ -8,29 +8,29 @@ using ProductApi.Core.Models.Product;
 namespace Product.Api.Controllers.V1
 {
 
-   /// <summary>
-   /// 
-   /// </summary>
-   /// <param name="productVersionService"></param>
-   /// <param name="productVersionInsuredObjectService"></param>
-   /// <param name="productVersionClauseService"></param>
-   /// <param name="productVersionLawsuitTypeService"></param>
-   /// <param name="productVersionTermTypeService"></param>
-   /// <param name="productVersionPaymentMethodService"></param>
-   /// <param name="productVersionPaymentInstallmentService"></param>
-   /// <param name="productVersionPaymentFrequencyService"></param>
-   /// <param name="productVersionCoverageAppService"></param>
-   /// <param name="productVersionContractTypeAppService"></param>
-   /// <param name="productVersionCalculationTypeAppService"></param>
-   /// <param name="productVersionCalculationTypeAcceptanceAppService"></param>
-   /// <param name="productVersionConstructionTypeAppService"></param>
-   /// <param name="productVersionActivityAppService"></param>
-   /// <param name="productVersionPlanActivityAppService"></param>
-   /// <param name="productVersionPlanCoverageAppService"></param>
-   /// <param name="productVersionCoverageActivityLimitAppService"></param>
-   /// <param name="productVersionLocalizationAppService"></param>
-   /// <param name="productVersionCoverageFranchiseAppService"></param>
-    public class ProductVersionController(IProductVersionAcceptanceAppService productVersionService, IProductVersionInsuredObjectAppService productVersionInsuredObjectService,
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="productVersionAcceptanceAppService"></param>
+    /// <param name="productVersionInsuredObjectService"></param>
+    /// <param name="productVersionClauseService"></param>
+    /// <param name="productVersionLawsuitTypeService"></param>
+    /// <param name="productVersionTermTypeService"></param>
+    /// <param name="productVersionPaymentMethodService"></param>
+    /// <param name="productVersionPaymentInstallmentService"></param>
+    /// <param name="productVersionPaymentFrequencyService"></param>
+    /// <param name="productVersionCoverageAppService"></param>
+    /// <param name="productVersionContractTypeAppService"></param>
+    /// <param name="productVersionCalculationTypeAppService"></param>
+    /// <param name="productVersionCalculationTypeAcceptanceAppService"></param>
+    /// <param name="productVersionConstructionTypeAppService"></param>
+    /// <param name="productVersionActivityAppService"></param>
+    /// <param name="productVersionPlanActivityAppService"></param>
+    /// <param name="productVersionPlanCoverageAppService"></param>
+    /// <param name="productVersionCoverageActivityLimitAppService"></param>
+    /// <param name="productVersionLocalizationAppService"></param>
+    /// <param name="productVersionCoverageFranchiseAppService"></param>
+    public class ProductVersionController(IProductVersionAppService productVersionAppService,IProductVersionAcceptanceAppService productVersionAcceptanceAppService, IProductVersionInsuredObjectAppService productVersionInsuredObjectService,
         IProductVersionClauseAppService productVersionClauseService, IProductVersionLawsuitTypeAppService productVersionLawsuitTypeService, IProductVersionTermTypeAppService productVersionTermTypeService,
         IProductVersionPaymentMethodAppService productVersionPaymentMethodService, IProductVersionPaymentInstallmentAppService productVersionPaymentInstallmentService,
         IProductVersionPaymentFrequencyAppService productVersionPaymentFrequencyService, IProductVersionCoverageAppService productVersionCoverageAppService,
@@ -41,7 +41,8 @@ namespace Product.Api.Controllers.V1
         IProductVersionLocalizationAppService productVersionLocalizationAppService, IProductVersionCoverageFranchiseAppService productVersionCoverageFranchiseAppService)
         : BaseController
     {
-        private readonly IProductVersionAcceptanceAppService _productVersionService = productVersionService;
+        private readonly IProductVersionAppService _productVersionAppService = productVersionAppService;    
+        private readonly IProductVersionAcceptanceAppService _productVersionAcceptanceAppService = productVersionAcceptanceAppService;
         private readonly IProductVersionInsuredObjectAppService _productVersionInsuredObjectService = productVersionInsuredObjectService;
         private readonly IProductVersionClauseAppService _productVersionClauseService = productVersionClauseService;
         private readonly IProductVersionLawsuitTypeAppService _productVersionLawsuitTypeService = productVersionLawsuitTypeService;
@@ -62,21 +63,40 @@ namespace Product.Api.Controllers.V1
         private readonly IProductVersionCoverageFranchiseAppService _productVersionCoverageFranchiseAppService = productVersionCoverageFranchiseAppService;
 
 
-        
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="productId"></param>                
-        /// <param name="profileId"></param>
+        /// <param name="productId"></param>                        
         /// <returns></returns>
         [HttpGet]
-        [Route("get-product-version-acceptance/{productId}/{profileId}")]
+        [Route("get-product-version/{productId}")]
         [ProducesResponseType(typeof(BaseDataResponseModel<ProductVersionAcceptanceModel>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status500InternalServerError)]
         [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status404NotFound)]
-        public async Task<IActionResult> GetProductVersionAcceptancesAsync(int productId, int profileId)
+        public async Task<IActionResult> GetProductVersionAcceptancesAsync(int productId)
         {
-            var response = await _productVersionService.GetAsync(productId, profileId, RecordStatusEnum.Active);
+            var response = await _productVersionAppService.GetAsync(productId, RecordStatusEnum.Active);
+            if (response == null)
+                return ReturnNotFound();
+
+            return base.ReturnSuccess(response);
+        }
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="productVersionId"></param>                
+        /// <param name="profileId"></param>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("get-product-version-acceptance/{productVersionId}/{profileId}")]
+        [ProducesResponseType(typeof(BaseDataResponseModel<ProductVersionAcceptanceModel>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> GetProductVersionAcceptancesAsync(int productVersionId, int profileId)
+        {
+            var response = await _productVersionAcceptanceAppService.GetAsync(productVersionId, profileId, RecordStatusEnum.Active);
             if (response == null)
                 return ReturnNotFound();
 

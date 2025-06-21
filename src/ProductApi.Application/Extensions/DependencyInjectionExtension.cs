@@ -8,7 +8,8 @@ namespace ProductApi.Application.Extensions
     {
         public static void AddAppServices(this IServiceCollection services)
         {
-            services.AddScoped<IProductAppService, ProductAppService>();                        
+            services.AddScoped<IProductAppService, ProductAppService>();
+            services.AddScoped<IProductVersionAppService, ProductVersionAppService>();
             services.AddScoped<IProductVersionAcceptanceAppService, ProductVersionAcceptanceAppService>();
             services.AddScoped<IProductVersionInsuredObjectAppService, ProductVersionInsuredObjectAppService>();
             services.AddScoped<IProductVersionClauseAppService, ProductVersionClauseAppService>();
