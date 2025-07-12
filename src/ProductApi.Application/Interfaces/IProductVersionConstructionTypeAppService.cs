@@ -5,6 +5,6 @@ namespace ProductApi.Application.Interfaces
 {
     public interface IProductVersionConstructionTypeAppService
     {
-        Task<IEnumerable<ConstructionTypeModel>?> GetAsync(int productVersionId, RecordStatusEnum recordStatus);
+        Task<IEnumerable<ConstructionTypeModel>?> GetAsync(int productVersionId, int profileId, RecordStatusEnum recordStatus);
     }
 }

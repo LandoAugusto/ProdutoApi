@@ -66,6 +66,9 @@ namespace ProductApi.Infra.Data.Mappings
             .Property(x => x.DiscountMaxValue);
 
             builder
+           .Property(x => x.CalculationNumberDays);
+
+            builder
             .Property(x => x.RequiresRecalculationIfExpired);
 
             builder

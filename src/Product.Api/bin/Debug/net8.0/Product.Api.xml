@@ -426,11 +426,12 @@
             <param name="calculationTypeId"></param>
             <returns></returns>
         </member>
-        <member name="M:Product.Api.Controllers.V1.ProductVersionController.GetProductVersionConstructionTypeAsync(System.Int32)">
+        <member name="M:Product.Api.Controllers.V1.ProductVersionController.GetProductVersionConstructionTypeAsync(System.Int32,System.Int32)">
             <summary>
             
             </summary>
             <param name="productVersionId"></param>        
+            <param name="profileId"></param>        
             <returns></returns>
         </member>
         <member name="M:Product.Api.Controllers.V1.ProductVersionController.GetProductVersionActivityAsync(System.Int32,System.Int32,System.String)">

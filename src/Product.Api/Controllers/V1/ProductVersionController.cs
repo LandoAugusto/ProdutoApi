@@ -30,7 +30,7 @@ namespace Product.Api.Controllers.V1
     /// <param name="productVersionCoverageActivityLimitAppService"></param>
     /// <param name="productVersionLocalizationAppService"></param>
     /// <param name="productVersionCoverageFranchiseAppService"></param>
-    public class ProductVersionController(IProductVersionAppService productVersionAppService,IProductVersionAcceptanceAppService productVersionAcceptanceAppService, IProductVersionInsuredObjectAppService productVersionInsuredObjectService,
+    public class ProductVersionController(IProductVersionAppService productVersionAppService, IProductVersionAcceptanceAppService productVersionAcceptanceAppService, IProductVersionInsuredObjectAppService productVersionInsuredObjectService,
         IProductVersionClauseAppService productVersionClauseService, IProductVersionLawsuitTypeAppService productVersionLawsuitTypeService, IProductVersionTermTypeAppService productVersionTermTypeService,
         IProductVersionPaymentMethodAppService productVersionPaymentMethodService, IProductVersionPaymentInstallmentAppService productVersionPaymentInstallmentService,
         IProductVersionPaymentFrequencyAppService productVersionPaymentFrequencyService, IProductVersionCoverageAppService productVersionCoverageAppService,
@@ -41,7 +41,7 @@ namespace Product.Api.Controllers.V1
         IProductVersionLocalizationAppService productVersionLocalizationAppService, IProductVersionCoverageFranchiseAppService productVersionCoverageFranchiseAppService)
         : BaseController
     {
-        private readonly IProductVersionAppService _productVersionAppService = productVersionAppService;    
+        private readonly IProductVersionAppService _productVersionAppService = productVersionAppService;
         private readonly IProductVersionAcceptanceAppService _productVersionAcceptanceAppService = productVersionAcceptanceAppService;
         private readonly IProductVersionInsuredObjectAppService _productVersionInsuredObjectService = productVersionInsuredObjectService;
         private readonly IProductVersionClauseAppService _productVersionClauseService = productVersionClauseService;
@@ -342,15 +342,16 @@ namespace Product.Api.Controllers.V1
         /// 
         /// </summary>
         /// <param name="productVersionId"></param>        
+        /// <param name="profileId"></param>        
         /// <returns></returns>
         [HttpGet]
-        [Route("get-product-version-construction-type/{productVersionId}")]
+        [Route("get-product-version-construction-type/{productVersionId}/{profileId}")]
         [ProducesResponseType(typeof(BaseDataResponseModel<IEnumerable<ConstructionTypeModel>>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status500InternalServerError)]
         [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status404NotFound)]
-        public async Task<IActionResult> GetProductVersionConstructionTypeAsync(int productVersionId)
+        public async Task<IActionResult> GetProductVersionConstructionTypeAsync(int productVersionId, int profileId)
         {
-            var response = await _productVersionConstructionTypeAppService.GetAsync(productVersionId, RecordStatusEnum.Active);
+            var response = await _productVersionConstructionTypeAppService.GetAsync(productVersionId, profileId, RecordStatusEnum.Active);
             if (response == null)
                 return ReturnNotFound();
 
@@ -449,13 +450,13 @@ namespace Product.Api.Controllers.V1
         [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status404NotFound)]
         public async Task<IActionResult> GetProductVersionLocalizationAsync(int productVersionId)
         {
-            var response = await _productVersionLocalizationAppService.ListAsync(productVersionId,  RecordStatusEnum.Active);
+            var response = await _productVersionLocalizationAppService.ListAsync(productVersionId, RecordStatusEnum.Active);
             if (response == null)
                 return ReturnNotFound();
 
             return base.ReturnSuccess(response);
         }
-    
+
         /// <summary>
         /// 
         /// </summary>
@@ -467,13 +468,13 @@ namespace Product.Api.Controllers.V1
         [ProducesResponseType(typeof(BaseDataResponseModel<IEnumerable<FranchiseModel>>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status500InternalServerError)]
         [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status404NotFound)]
-        public async Task<IActionResult> GetProductVersionLocalizationAsync(int productVersionId,int coverageId)
+        public async Task<IActionResult> GetProductVersionLocalizationAsync(int productVersionId, int coverageId)
         {
             var response = await _productVersionCoverageFranchiseAppService.GetAsync(productVersionId, coverageId, RecordStatusEnum.Active);
             if (response == null)
                 return ReturnNotFound();
 
             return base.ReturnSuccess(response);
-        }        
+        }
     }
 }

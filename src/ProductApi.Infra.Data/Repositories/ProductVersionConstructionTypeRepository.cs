@@ -7,16 +7,18 @@ using ProductApi.Infra.Data.Repositories.Standard;
 
 namespace ProductApi.Infra.Data.Repositories
 {
-    internal class ProductVersionConstructionTypeRepository(ProductDbContext context) : DomainRepository<ProductVersionConstructionType>(context), 
+    internal class ProductVersionConstructionTypeRepository(ProductDbContext context) : DomainRepository<ProductVersionConstructionType>(context),
         IProductVersionConstructionTypeRepository
     {
 
-        public async Task<IEnumerable<ProductVersionConstructionType>?> GetAsync(int productVersionId, RecordStatusEnum recordStatus)
+        public async Task<IEnumerable<ProductVersionConstructionType>?> GetAsync(int productVersionId, int profileId, RecordStatusEnum recordStatus)
         {
             var query =
                     await Task.FromResult(
                         GenerateQuery(
-                            filter: (filtr => filtr.ProductVersionId.Equals(productVersionId) && filtr.Status.Equals((int)recordStatus)),
+                            filter: (filtr => filtr.ProductVersionId.Equals(productVersionId)
+                            && filtr.ProfileId.Equals(profileId)
+                            && filtr.Status.Equals((int)recordStatus)),
                             includeProperties: source =>
                                     source
                                     .Include(item => item.ConstructionType),

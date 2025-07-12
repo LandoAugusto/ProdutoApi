@@ -13,9 +13,9 @@ namespace ProductApi.Application.Services
     {
         private readonly IMapper _mapper = mapper;
         private readonly IProductVersionConstructionTypeRepository _productVersionConstructionTypeRepository = productVersionConstructionTypeRepository;    
-        public async Task<IEnumerable<ConstructionTypeModel>?> GetAsync(int productVersionId, RecordStatusEnum recordStatus)
+        public async Task<IEnumerable<ConstructionTypeModel>?> GetAsync(int productVersionId, int profileId, RecordStatusEnum recordStatus)
         {
-            var entidade = await _productVersionConstructionTypeRepository.GetAsync(productVersionId, recordStatus);
+            var entidade = await _productVersionConstructionTypeRepository.GetAsync(productVersionId, profileId, recordStatus);
             if (!entidade.IsAny<ProductVersionConstructionType>()) return null;
 
             return [.. entidade.ToList().Select(item =>

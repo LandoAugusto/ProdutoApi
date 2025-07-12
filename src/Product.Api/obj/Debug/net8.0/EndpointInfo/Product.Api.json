@@ -2789,7 +2789,7 @@
         }
       }
     },
-    "/api/v1/productversion/get-product-version-construction-type/{productVersionId}": {
+    "/api/v1/productversion/get-product-version-construction-type/{productVersionId}/{profileId}": {
       "get": {
         "tags": [
           "ProductVersion"
@@ -2798,6 +2798,16 @@
         "parameters": [
           {
             "name": "productVersionId",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "profileId",
             "in": "path",
             "description": "",
             "required": true,
@@ -5086,6 +5096,10 @@
           "discountMaxValue": {
             "type": "number",
             "format": "double"
+          },
+          "calculationNumberDays": {
+            "type": "integer",
+            "format": "int32"
           },
           "requiresRecalculationIfExpired": {
             "type": "boolean"

@@ -1134,13 +1134,18 @@
   {
     "ContainingType": "Product.Api.Controllers.V1.ProductVersionController",
     "Method": "GetProductVersionConstructionTypeAsync",
-    "RelativePath": "api/v1/productversion/get-product-version-construction-type/{productVersionId}",
+    "RelativePath": "api/v1/productversion/get-product-version-construction-type/{productVersionId}/{profileId}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "productVersionId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "profileId",
         "Type": "System.Int32",
         "IsRequired": true
       }

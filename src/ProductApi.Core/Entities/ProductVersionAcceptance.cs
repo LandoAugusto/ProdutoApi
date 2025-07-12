@@ -23,7 +23,8 @@ namespace ProductApi.Core.Entities
         public decimal DiscountDefaultValue { get; set; }
         public decimal DiscountMinValue { get; set; }
         public decimal DiscountMaxValue { get; set; }
-        public decimal PercentIofValue { get; set; }        
+        public decimal PercentIofValue { get; set; }
+        public int CalculationNumberDays { get; set; }
         public bool RequiresRecalculationIfExpired { get; set; }
         public int Status { get; set; }
         public int InclusionUserId { get; set; }
