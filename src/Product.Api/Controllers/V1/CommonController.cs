@@ -25,9 +25,9 @@ namespace Product.Api.Controllers.V1
         [Route("get-state")]
         [ProducesResponseType(typeof(BaseDataResponseModel<StateModel>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status404NotFound)]
-        public async Task<IActionResult> GetStateAllAsync()
+        public async Task<IActionResult> GetStateAllAsync(string? stateId = null)
         {
-            var response = await _commonService.GetStateAsync(RecordStatusEnum.Active);
+            var response = await _commonService.GetStateAsync(RecordStatusEnum.Active, stateId);
             if (response == null)
                 return ReturnNotFound();
 

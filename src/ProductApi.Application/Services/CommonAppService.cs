@@ -58,9 +58,9 @@ namespace ProductApi.Application.Services
             return _mapper.Map<IEnumerable<InsuredTypeModel>>(entity);
         }
 
-        public async Task<IEnumerable<StateModel>?> GetStateAsync(RecordStatusEnum recordStatusEnum)
+        public async Task<IEnumerable<StateModel>?> GetStateAsync(RecordStatusEnum recordStatusEnum, string? stateId = null)
         {
-            var entity = await _stateRepository.ListAsync(recordStatusEnum);
+            var entity = await _stateRepository.ListAsync(recordStatusEnum, stateId);
             if (entity == null) return null;
 
             return _mapper.Map<IEnumerable<StateModel>>(entity);

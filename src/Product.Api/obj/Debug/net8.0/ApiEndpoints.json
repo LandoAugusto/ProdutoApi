@@ -584,7 +584,13 @@
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "stateId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": [
       {
         "Type": "ProductApi.Core.Models.BaseDataResponseModel\u00601[[ProductApi.Core.Models.StateModel, ProductApi.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",

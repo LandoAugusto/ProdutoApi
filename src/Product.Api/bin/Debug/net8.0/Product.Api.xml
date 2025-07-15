@@ -103,7 +103,7 @@
             </summary>
             <param name="commonService"></param>
         </member>
-        <member name="M:Product.Api.Controllers.V1.CommonController.GetStateAllAsync">
+        <member name="M:Product.Api.Controllers.V1.CommonController.GetStateAllAsync(System.String)">
             <summary>
             
             </summary>
