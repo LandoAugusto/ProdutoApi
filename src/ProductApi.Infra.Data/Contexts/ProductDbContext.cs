@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using ProductApi.Core.Entities;
+using ProductApi.Core.Models;
 
 namespace ProductApi.Infra.Data.Contexts
 {
@@ -74,6 +75,8 @@ namespace ProductApi.Infra.Data.Contexts
         public virtual DbSet<PersonType> PersonType { get; set; }
         public virtual DbSet<QuotationStatus> QuotationStatus { get; set; }
         public virtual DbSet<ProductVersionPlan> ProductVersionPlan { get; set; }
+        public virtual DbSet<ProductVersionPlanAssistance> ProductVersionPlanAssistance { get; set; }
+        public virtual DbSet<Assistance> Assistance { get; set; }
         public virtual DbSet<Plan> Plan { get; set; }
         public virtual DbSet<ProductVersionPlanActivity> ProductVersionPlanActivity { get; set; }
         public virtual DbSet<ProductVersionCoverageActivityLimit> ProductVersionCoverageActivityLimit { get; set; }

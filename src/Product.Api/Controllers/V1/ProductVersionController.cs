@@ -38,7 +38,8 @@ namespace Product.Api.Controllers.V1
         IProductVersionCalculationTypeAcceptanceAppService productVersionCalculationTypeAcceptanceAppService, IProductVersionConstructionTypeAppService productVersionConstructionTypeAppService,
         IProductVersionActivityAppService productVersionActivityAppService, IProductVersionPlanActivityAppService productVersionPlanActivityAppService,
         IProductVersionPlanCoverageAppService productVersionPlanCoverageAppService, IProductVersionCoverageActivityLimitAppService productVersionCoverageActivityLimitAppService,
-        IProductVersionLocalizationAppService productVersionLocalizationAppService, IProductVersionCoverageFranchiseAppService productVersionCoverageFranchiseAppService)
+        IProductVersionLocalizationAppService productVersionLocalizationAppService, IProductVersionCoverageFranchiseAppService productVersionCoverageFranchiseAppService,
+        IProductVersionPlanAssistanceAppService productVersionPlanAssistanceAppService)
         : BaseController
     {
         private readonly IProductVersionAppService _productVersionAppService = productVersionAppService;
@@ -61,6 +62,7 @@ namespace Product.Api.Controllers.V1
         private readonly IProductVersionCoverageActivityLimitAppService _productVersionCoverageActivityLimitAppService = productVersionCoverageActivityLimitAppService;
         private readonly IProductVersionLocalizationAppService _productVersionLocalizationAppService = productVersionLocalizationAppService;
         private readonly IProductVersionCoverageFranchiseAppService _productVersionCoverageFranchiseAppService = productVersionCoverageFranchiseAppService;
+        private readonly IProductVersionPlanAssistanceAppService _productVersionPlanAssistanceAppService = productVersionPlanAssistanceAppService;   
 
 
         /// <summary>
@@ -412,6 +414,26 @@ namespace Product.Api.Controllers.V1
         public async Task<IActionResult> GetProductVersionPlanCoverageAsync(int productVersionId, int planId)
         {
             var response = await _productVersionPlanCoverageAppService.ListAsync(productVersionId, planId, RecordStatusEnum.Active);
+            if (response == null)
+                return ReturnNotFound();
+
+            return base.ReturnSuccess(response);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="productVersionId"></param>
+        /// <param name="planId"></param>        
+        /// <returns></returns>
+        [HttpGet]
+        [Route("get-product-version-plan-assistance/{productVersionId}/{planId}")]
+        [ProducesResponseType(typeof(BaseDataResponseModel<IEnumerable<AssistanceModel>>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> GetProductVersionPlanAssistanceAsync(int productVersionId, int planId)
+        {
+            var response = await _productVersionPlanAssistanceAppService.GetAsync(productVersionId, planId, RecordStatusEnum.Active);
             if (response == null)
                 return ReturnNotFound();
 

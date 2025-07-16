@@ -60,6 +60,7 @@ namespace ProductApi.Core.Infrastructure.Mapper
             CreateMap<LocalizationModel, Localization>().ReverseMap();
             CreateMap<ProtectiveDevicesModel, ProtectiveDevices>().ReverseMap();
             CreateMap<FranchiseModel, Franchise>().ReverseMap();
+            CreateMap<AssistanceModel, Assistance>().ReverseMap();
 
         }
     }
