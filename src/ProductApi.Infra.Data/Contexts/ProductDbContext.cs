@@ -87,6 +87,11 @@ namespace ProductApi.Infra.Data.Contexts
         public virtual DbSet<Localization> Localization { get; set; }
         public virtual DbSet<FranchiseType> FranchiseType { get; set; }
         public virtual DbSet<Franchise> Franchise { get; set; }
-        public virtual DbSet<ProductVersionCoverageFranchise> ProductVersionCoverageFranchise { get; set; }
+        public virtual DbSet<ComponentType> ComponentType { get; set; }
+        public virtual DbSet<Question> Question { get; set; }
+        public virtual DbSet<Response> Response { get; set; }
+        public virtual DbSet<QuestionResponse> QuestionResponse { get; set; }
+        public virtual DbSet<ProductVersionQuestionnaire> ProductVersionQuestionnaire { get; set; }
+
     }
 }

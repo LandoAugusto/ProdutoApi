@@ -61,6 +61,8 @@ namespace ProductApi.Core.Infrastructure.Mapper
             CreateMap<ProtectiveDevicesModel, ProtectiveDevices>().ReverseMap();
             CreateMap<FranchiseModel, Franchise>().ReverseMap();
             CreateMap<AssistanceModel, Assistance>().ReverseMap();
+            CreateMap<QuestionnaireModel, Question>().ReverseMap();
+            CreateMap<ResponseModel, Response>().ReverseMap();
 
         }
     }

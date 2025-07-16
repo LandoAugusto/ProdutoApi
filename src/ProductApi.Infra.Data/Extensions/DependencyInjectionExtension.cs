@@ -71,6 +71,8 @@ namespace ProductApi.Infra.Data.Extensions
             services.AddScoped<IConstructionTypeUseTypeRepository, ConstructionTypeUseTypeRepository>();
             services.AddScoped<IPersonTypeRepository, PersonTypeRepository>();
             services.AddScoped<IQuotationStatusRepository, QuotationStatusRepository>();
+            services.AddScoped<IProductVersionQuestionnaireRepository, ProductVersionQuestionnaireRepository>();
+            services.AddScoped<IQuestionResponseRepository, QuestionResponseRepository>();
             return services;
         }
     }

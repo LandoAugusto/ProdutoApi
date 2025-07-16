@@ -39,7 +39,7 @@ namespace Product.Api.Controllers.V1
         IProductVersionActivityAppService productVersionActivityAppService, IProductVersionPlanActivityAppService productVersionPlanActivityAppService,
         IProductVersionPlanCoverageAppService productVersionPlanCoverageAppService, IProductVersionCoverageActivityLimitAppService productVersionCoverageActivityLimitAppService,
         IProductVersionLocalizationAppService productVersionLocalizationAppService, IProductVersionCoverageFranchiseAppService productVersionCoverageFranchiseAppService,
-        IProductVersionPlanAssistanceAppService productVersionPlanAssistanceAppService)
+        IProductVersionPlanAssistanceAppService productVersionPlanAssistanceAppService, IProductVersionQuestionnaireAppService productVersionQuestionnaireAppService)
         : BaseController
     {
         private readonly IProductVersionAppService _productVersionAppService = productVersionAppService;
@@ -62,15 +62,16 @@ namespace Product.Api.Controllers.V1
         private readonly IProductVersionCoverageActivityLimitAppService _productVersionCoverageActivityLimitAppService = productVersionCoverageActivityLimitAppService;
         private readonly IProductVersionLocalizationAppService _productVersionLocalizationAppService = productVersionLocalizationAppService;
         private readonly IProductVersionCoverageFranchiseAppService _productVersionCoverageFranchiseAppService = productVersionCoverageFranchiseAppService;
-        private readonly IProductVersionPlanAssistanceAppService _productVersionPlanAssistanceAppService = productVersionPlanAssistanceAppService;   
+        private readonly IProductVersionPlanAssistanceAppService _productVersionPlanAssistanceAppService = productVersionPlanAssistanceAppService;
+        private readonly IProductVersionQuestionnaireAppService _productVersionQuestionnaireAppService = productVersionQuestionnaireAppService;
 
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="productId"></param>                        
-        /// <returns></returns>
-        [HttpGet]
+       /// <summary>
+       /// 
+       /// </summary>
+       /// <param name="productId"></param>                        
+       /// <returns></returns>
+       [HttpGet]
         [Route("get-product-version/{productId}")]
         [ProducesResponseType(typeof(BaseDataResponseModel<ProductVersionAcceptanceModel>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status500InternalServerError)]
@@ -493,6 +494,24 @@ namespace Product.Api.Controllers.V1
         public async Task<IActionResult> GetProductVersionLocalizationAsync(int productVersionId, int coverageId)
         {
             var response = await _productVersionCoverageFranchiseAppService.GetAsync(productVersionId, coverageId, RecordStatusEnum.Active);
+            if (response == null)
+                return ReturnNotFound();
+
+            return base.ReturnSuccess(response);
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="productVersionId"></param>        
+        /// <returns></returns>
+        [HttpGet]
+        [Route("get-product-version-questionnaire/{productVersionId}")]
+        [ProducesResponseType(typeof(BaseDataResponseModel<IEnumerable<FranchiseModel>>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> GetProductVersionQuestionnaireAsync(int productVersionId)
+        {
+            var response = await _productVersionQuestionnaireAppService.GetAsync(productVersionId, RecordStatusEnum.Active);
             if (response == null)
                 return ReturnNotFound();
 
