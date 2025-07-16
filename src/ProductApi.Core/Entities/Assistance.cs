@@ -5,6 +5,7 @@ namespace ProductApi.Core.Entities
     public class Assistance : IIdentityEntity
     {
         public int AssistanceId { get; set; }
+        public required string Name { get; set; }
         public int Status { get; set; }
         public int InclusionUserId { get; set; }
         public DateTime InclusionDate { get; set; }

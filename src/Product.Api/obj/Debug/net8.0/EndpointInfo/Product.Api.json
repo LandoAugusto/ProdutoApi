@@ -3173,6 +3173,98 @@
         }
       }
     },
+    "/api/v1/productversion/get-product-version-plan-assistance/{productVersionId}/{planId}": {
+      "get": {
+        "tags": [
+          "ProductVersion"
+        ],
+        "summary": "",
+        "parameters": [
+          {
+            "name": "productVersionId",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "planId",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssistanceModelIEnumerableBaseDataResponseModel"
+                }
+              },
+              "application/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssistanceModelIEnumerableBaseDataResponseModel"
+                }
+              },
+              "text/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssistanceModelIEnumerableBaseDataResponseModel"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "text/plain; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseDataResponseModel`1"
+                }
+              },
+              "application/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseDataResponseModel`1"
+                }
+              },
+              "text/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseDataResponseModel`1"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseDataResponseModel`1"
+                }
+              },
+              "application/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseDataResponseModel`1"
+                }
+              },
+              "text/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseDataResponseModel`1"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/v1/productversion/get-product-version-coverage-activity-limit/{productVersionId}/{coverageId}/{activityId}/{profileId}": {
       "get": {
         "tags": [
@@ -3765,6 +3857,39 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/AddressTypeModel"
+            },
+            "nullable": true
+          },
+          "transactionStatus": {
+            "$ref": "#/components/schemas/StatusResponseModel"
+          }
+        },
+        "additionalProperties": false
+      },
+      "AssistanceModel": {
+        "required": [
+          "name"
+        ],
+        "type": "object",
+        "properties": {
+          "assistanceId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "AssistanceModelIEnumerableBaseDataResponseModel": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AssistanceModel"
             },
             "nullable": true
           },

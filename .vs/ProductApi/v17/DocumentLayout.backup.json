@@ -3,7 +3,24 @@
   "WorkspaceRootPath": "C:\\Work\\APIS\\ProductApi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{9E735982-15C2-4A44-8C50-450518BDD0B0}|src\\ProductApi.Core\\ProductApi.Core.csproj|c:\\work\\apis\\productapi\\src\\productapi.core\\entities\\assistance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E735982-15C2-4A44-8C50-450518BDD0B0}|src\\ProductApi.Core\\ProductApi.Core.csproj|solutionrelative:src\\productapi.core\\entities\\assistance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69EDEDAB-4A20-4441-B979-F66AC5305D8A}|src\\ProductApi.Application\\ProductApi.Application.csproj|c:\\work\\apis\\productapi\\src\\productapi.application\\services\\productversionplanassistanceappservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69EDEDAB-4A20-4441-B979-F66AC5305D8A}|src\\ProductApi.Application\\ProductApi.Application.csproj|solutionrelative:src\\productapi.application\\services\\productversionplanassistanceappservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{43668110-B5EE-4FD3-A7F7-006DF586C52A}|src\\Product.Api\\Product.Api.csproj|c:\\work\\apis\\productapi\\src\\product.api\\controllers\\v1\\productversioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{43668110-B5EE-4FD3-A7F7-006DF586C52A}|src\\Product.Api\\Product.Api.csproj|solutionrelative:src\\product.api\\controllers\\v1\\productversioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{43668110-B5EE-4FD3-A7F7-006DF586C52A}|src\\Product.Api\\Product.Api.csproj|c:\\work\\apis\\productapi\\src\\product.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{43668110-B5EE-4FD3-A7F7-006DF586C52A}|src\\Product.Api\\Product.Api.csproj|solutionrelative:src\\product.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{43668110-B5EE-4FD3-A7F7-006DF586C52A}|src\\Product.Api\\Product.Api.csproj|c:\\work\\apis\\productapi\\src\\product.api\\controllers\\v1\\base\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{43668110-B5EE-4FD3-A7F7-006DF586C52A}|src\\Product.Api\\Product.Api.csproj|solutionrelative:src\\product.api\\controllers\\v1\\base\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,14 +43,66 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Microsoft.Common.CurrentVersion.targets",
-              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
-              "RelativeDocumentMoniker": "..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
-              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
-              "RelativeToolTip": "..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
-              "ViewState": "AgIAAAAVAAAAAAAAAAAawBIVAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
-              "WhenOpened": "2025-07-16T13:32:34.062Z",
+              "Title": "Assistance.cs",
+              "DocumentMoniker": "C:\\Work\\APIS\\ProductApi\\src\\ProductApi.Core\\Entities\\Assistance.cs",
+              "RelativeDocumentMoniker": "src\\ProductApi.Core\\Entities\\Assistance.cs",
+              "ToolTip": "C:\\Work\\APIS\\ProductApi\\src\\ProductApi.Core\\Entities\\Assistance.cs",
+              "RelativeToolTip": "src\\ProductApi.Core\\Entities\\Assistance.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-16T13:41:20.313Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProductVersionPlanAssistanceAppService.cs",
+              "DocumentMoniker": "C:\\Work\\APIS\\ProductApi\\src\\ProductApi.Application\\Services\\ProductVersionPlanAssistanceAppService.cs",
+              "RelativeDocumentMoniker": "src\\ProductApi.Application\\Services\\ProductVersionPlanAssistanceAppService.cs",
+              "ToolTip": "C:\\Work\\APIS\\ProductApi\\src\\ProductApi.Application\\Services\\ProductVersionPlanAssistanceAppService.cs",
+              "RelativeToolTip": "src\\ProductApi.Application\\Services\\ProductVersionPlanAssistanceAppService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-16T13:41:09.592Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProductVersionController.cs",
+              "DocumentMoniker": "C:\\Work\\APIS\\ProductApi\\src\\Product.Api\\Controllers\\V1\\ProductVersionController.cs",
+              "RelativeDocumentMoniker": "src\\Product.Api\\Controllers\\V1\\ProductVersionController.cs",
+              "ToolTip": "C:\\Work\\APIS\\ProductApi\\src\\Product.Api\\Controllers\\V1\\ProductVersionController.cs",
+              "RelativeToolTip": "src\\Product.Api\\Controllers\\V1\\ProductVersionController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-16T13:40:59.345Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BaseController.cs",
+              "DocumentMoniker": "C:\\Work\\APIS\\ProductApi\\src\\Product.Api\\Controllers\\V1\\Base\\BaseController.cs",
+              "RelativeDocumentMoniker": "src\\Product.Api\\Controllers\\V1\\Base\\BaseController.cs",
+              "ToolTip": "C:\\Work\\APIS\\ProductApi\\src\\Product.Api\\Controllers\\V1\\Base\\BaseController.cs",
+              "RelativeToolTip": "src\\Product.Api\\Controllers\\V1\\Base\\BaseController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-16T13:40:05.181Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Work\\APIS\\ProductApi\\src\\Product.Api\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "src\\Product.Api\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Work\\APIS\\ProductApi\\src\\Product.Api\\Properties\\launchSettings.json",
+              "RelativeToolTip": "src\\Product.Api\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-07-16T13:39:57.821Z",
               "EditorCaption": ""
             }
           ]
