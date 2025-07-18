@@ -20,7 +20,8 @@ namespace ProductApi.Infra.Data.Repositories
                     includeProperties: source =>
                                     source
                                     .Include(item => item.ProductVersionPlan)
-                                        .ThenInclude(item => item.Plan),
+                                        .ThenInclude(item => item.Plan)
+                                        .ThenInclude(item => item.PlanType),
                     orderBy: item => item.OrderBy(y => y.ProductVersionPlanId)));
 
             return query.AsEnumerable();
