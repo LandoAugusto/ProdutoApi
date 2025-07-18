@@ -19,5 +19,7 @@ namespace ProductApi.Core.Entities
         public virtual ICollection<ProductVersionPlanActivity> ProductVersionPlanActivity { get; set; } = new HashSet<ProductVersionPlanActivity>();
         public virtual ICollection<ProductVersionPlanCoverage> ProductVersionPlanCoverage { get; set; } = new HashSet<ProductVersionPlanCoverage>();
         public virtual ICollection<ProductVersionPlanAssistance> ProductVersionPlanAssistance { get; set; } = new HashSet<ProductVersionPlanAssistance>();
+        public virtual ICollection<ProductVersionPlanUseProperty> ProductVersionPlanUseProperty { get; set; } = new HashSet<ProductVersionPlanUseProperty>();
+        
     }
 }

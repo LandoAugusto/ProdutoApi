@@ -903,160 +903,6 @@
         }
       }
     },
-    "/api/v1/common/get-property-structure/{constructionTypeId}/{useTypeId}/{profileId}": {
-      "get": {
-        "tags": [
-          "Common"
-        ],
-        "summary": "",
-        "parameters": [
-          {
-            "name": "constructionTypeId",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "useTypeId",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "profileId",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain; x-api-version=1.0": {
-                "schema": {
-                  "$ref": "#/components/schemas/PropertyStructureModelBaseDataResponseModel"
-                }
-              },
-              "application/json; x-api-version=1.0": {
-                "schema": {
-                  "$ref": "#/components/schemas/PropertyStructureModelBaseDataResponseModel"
-                }
-              },
-              "text/json; x-api-version=1.0": {
-                "schema": {
-                  "$ref": "#/components/schemas/PropertyStructureModelBaseDataResponseModel"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "text/plain; x-api-version=1.0": {
-                "schema": {
-                  "$ref": "#/components/schemas/BaseDataResponseModel`1"
-                }
-              },
-              "application/json; x-api-version=1.0": {
-                "schema": {
-                  "$ref": "#/components/schemas/BaseDataResponseModel`1"
-                }
-              },
-              "text/json; x-api-version=1.0": {
-                "schema": {
-                  "$ref": "#/components/schemas/BaseDataResponseModel`1"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/v1/common/get-use-type/{constructionTypeId}/{profileId}": {
-      "get": {
-        "tags": [
-          "Common"
-        ],
-        "summary": "",
-        "parameters": [
-          {
-            "name": "constructionTypeId",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "profileId",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain; x-api-version=1.0": {
-                "schema": {
-                  "$ref": "#/components/schemas/UseTypeModelIEnumerableBaseDataResponseModel"
-                }
-              },
-              "application/json; x-api-version=1.0": {
-                "schema": {
-                  "$ref": "#/components/schemas/UseTypeModelIEnumerableBaseDataResponseModel"
-                }
-              },
-              "text/json; x-api-version=1.0": {
-                "schema": {
-                  "$ref": "#/components/schemas/UseTypeModelIEnumerableBaseDataResponseModel"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "text/plain; x-api-version=1.0": {
-                "schema": {
-                  "$ref": "#/components/schemas/BaseDataResponseModel`1"
-                }
-              },
-              "application/json; x-api-version=1.0": {
-                "schema": {
-                  "$ref": "#/components/schemas/BaseDataResponseModel`1"
-                }
-              },
-              "text/json; x-api-version=1.0": {
-                "schema": {
-                  "$ref": "#/components/schemas/BaseDataResponseModel`1"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/api/v1/common/get-person-type": {
       "get": {
         "tags": [
@@ -2890,6 +2736,180 @@
         }
       }
     },
+    "/api/v1/productversion/get-use-type/{productVersionId}/{constructionTypeId}/{profileId}": {
+      "get": {
+        "tags": [
+          "ProductVersion"
+        ],
+        "summary": "",
+        "parameters": [
+          {
+            "name": "productVersionId",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "constructionTypeId",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "profileId",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/UseTypeModelIEnumerableBaseDataResponseModel"
+                }
+              },
+              "application/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/UseTypeModelIEnumerableBaseDataResponseModel"
+                }
+              },
+              "text/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/UseTypeModelIEnumerableBaseDataResponseModel"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseDataResponseModel`1"
+                }
+              },
+              "application/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseDataResponseModel`1"
+                }
+              },
+              "text/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseDataResponseModel`1"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/productversion/get-property-structure/{productVersionId}/{constructionTypeId}/{useTypeId}/{profileId}": {
+      "get": {
+        "tags": [
+          "ProductVersion"
+        ],
+        "summary": "",
+        "parameters": [
+          {
+            "name": "productVersionId",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "constructionTypeId",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "useTypeId",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "profileId",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/PropertyStructureModelBaseDataResponseModel"
+                }
+              },
+              "application/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/PropertyStructureModelBaseDataResponseModel"
+                }
+              },
+              "text/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/PropertyStructureModelBaseDataResponseModel"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseDataResponseModel`1"
+                }
+              },
+              "application/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseDataResponseModel`1"
+                }
+              },
+              "text/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseDataResponseModel`1"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/v1/productversion/get-product-version-activity/{productVersionId}/{profileid}": {
       "get": {
         "tags": [
@@ -3082,6 +3102,108 @@
         }
       }
     },
+    "/api/v1/productversion/get-product-version-plan-usetype-propertystructure/{productVersionId}/{useTypeId}/{propertyStructureId}": {
+      "get": {
+        "tags": [
+          "ProductVersion"
+        ],
+        "summary": "",
+        "parameters": [
+          {
+            "name": "productVersionId",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "useTypeId",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "propertyStructureId",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/PlanModelIEnumerableBaseDataResponseModel"
+                }
+              },
+              "application/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/PlanModelIEnumerableBaseDataResponseModel"
+                }
+              },
+              "text/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/PlanModelIEnumerableBaseDataResponseModel"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "text/plain; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseDataResponseModel`1"
+                }
+              },
+              "application/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseDataResponseModel`1"
+                }
+              },
+              "text/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseDataResponseModel`1"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseDataResponseModel`1"
+                }
+              },
+              "application/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseDataResponseModel`1"
+                }
+              },
+              "text/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseDataResponseModel`1"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/v1/productversion/get-product-version-plan-coverage/{productVersionId}/{planId}": {
       "get": {
         "tags": [
@@ -3092,6 +3214,7 @@
           {
             "name": "productVersionId",
             "in": "path",
+            "description": "",
             "required": true,
             "schema": {
               "type": "integer",

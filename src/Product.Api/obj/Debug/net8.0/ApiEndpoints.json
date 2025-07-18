@@ -441,51 +441,6 @@
   },
   {
     "ContainingType": "Product.Api.Controllers.V1.CommonController",
-    "Method": "GetPropertyStructureAsync",
-    "RelativePath": "api/v1/common/get-property-structure/{constructionTypeId}/{useTypeId}/{profileId}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "constructionTypeId",
-        "Type": "System.Int32",
-        "IsRequired": true
-      },
-      {
-        "Name": "useTypeId",
-        "Type": "System.Int32",
-        "IsRequired": true
-      },
-      {
-        "Name": "profileId",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "ProductApi.Core.Models.BaseDataResponseModel\u00601[[ProductApi.Core.Models.PropertyStructureModel, ProductApi.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain; x-api-version=1.0",
-          "application/json; x-api-version=1.0",
-          "text/json; x-api-version=1.0"
-        ],
-        "StatusCode": 200
-      },
-      {
-        "Type": "ProductApi.Core.Models.BaseDataResponseModel\u00601",
-        "MediaTypes": [
-          "text/plain; x-api-version=1.0",
-          "application/json; x-api-version=1.0",
-          "text/json; x-api-version=1.0"
-        ],
-        "StatusCode": 404
-      }
-    ]
-  },
-  {
-    "ContainingType": "Product.Api.Controllers.V1.CommonController",
     "Method": "GetProtectiveDevicesAsync",
     "RelativePath": "api/v1/common/get-protective-devices/{protectiveDevicesTypeId}",
     "HttpMethod": "GET",
@@ -623,46 +578,6 @@
     "ReturnTypes": [
       {
         "Type": "ProductApi.Core.Models.BaseDataResponseModel\u00601[[ProductApi.Core.Models.TermTypeModel, ProductApi.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain; x-api-version=1.0",
-          "application/json; x-api-version=1.0",
-          "text/json; x-api-version=1.0"
-        ],
-        "StatusCode": 200
-      },
-      {
-        "Type": "ProductApi.Core.Models.BaseDataResponseModel\u00601",
-        "MediaTypes": [
-          "text/plain; x-api-version=1.0",
-          "application/json; x-api-version=1.0",
-          "text/json; x-api-version=1.0"
-        ],
-        "StatusCode": 404
-      }
-    ]
-  },
-  {
-    "ContainingType": "Product.Api.Controllers.V1.CommonController",
-    "Method": "GetUseTypeAsync",
-    "RelativePath": "api/v1/common/get-use-type/{constructionTypeId}/{profileId}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "constructionTypeId",
-        "Type": "System.Int32",
-        "IsRequired": true
-      },
-      {
-        "Name": "profileId",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "ProductApi.Core.Models.BaseDataResponseModel\u00601[[System.Collections.Generic.IEnumerable\u00601[[ProductApi.Core.Models.UseTypeModel, ProductApi.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "text/plain; x-api-version=1.0",
           "application/json; x-api-version=1.0",
@@ -1805,6 +1720,60 @@
   },
   {
     "ContainingType": "Product.Api.Controllers.V1.ProductVersionController",
+    "Method": "GetProductVersionPlanUsepropertyStructureAsync",
+    "RelativePath": "api/v1/productversion/get-product-version-plan-usetype-propertystructure/{productVersionId}/{useTypeId}/{propertyStructureId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "productVersionId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "useTypeId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "propertyStructureId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ProductApi.Core.Models.BaseDataResponseModel\u00601[[System.Collections.Generic.IEnumerable\u00601[[ProductApi.Core.Models.PlanModel, ProductApi.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "ProductApi.Core.Models.BaseDataResponseModel\u00601",
+        "MediaTypes": [
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0"
+        ],
+        "StatusCode": 500
+      },
+      {
+        "Type": "ProductApi.Core.Models.BaseDataResponseModel\u00601",
+        "MediaTypes": [
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0"
+        ],
+        "StatusCode": 404
+      }
+    ]
+  },
+  {
+    "ContainingType": "Product.Api.Controllers.V1.ProductVersionController",
     "Method": "GetProductVersionQuestionnaireAsync",
     "RelativePath": "api/v1/productversion/get-product-version-questionnaire/{productVersionId}",
     "HttpMethod": "GET",
@@ -1923,6 +1892,101 @@
           "text/json; x-api-version=1.0"
         ],
         "StatusCode": 500
+      },
+      {
+        "Type": "ProductApi.Core.Models.BaseDataResponseModel\u00601",
+        "MediaTypes": [
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0"
+        ],
+        "StatusCode": 404
+      }
+    ]
+  },
+  {
+    "ContainingType": "Product.Api.Controllers.V1.ProductVersionController",
+    "Method": "GetPropertyStructureAsync",
+    "RelativePath": "api/v1/productversion/get-property-structure/{productVersionId}/{constructionTypeId}/{useTypeId}/{profileId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "productVersionId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "constructionTypeId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "useTypeId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "profileId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ProductApi.Core.Models.BaseDataResponseModel\u00601[[ProductApi.Core.Models.PropertyStructureModel, ProductApi.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "ProductApi.Core.Models.BaseDataResponseModel\u00601",
+        "MediaTypes": [
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0"
+        ],
+        "StatusCode": 404
+      }
+    ]
+  },
+  {
+    "ContainingType": "Product.Api.Controllers.V1.ProductVersionController",
+    "Method": "GetUseTypeAsync",
+    "RelativePath": "api/v1/productversion/get-use-type/{productVersionId}/{constructionTypeId}/{profileId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "productVersionId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "constructionTypeId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "profileId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ProductApi.Core.Models.BaseDataResponseModel\u00601[[System.Collections.Generic.IEnumerable\u00601[[ProductApi.Core.Models.UseTypeModel, ProductApi.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0"
+        ],
+        "StatusCode": 200
       },
       {
         "Type": "ProductApi.Core.Models.BaseDataResponseModel\u00601",

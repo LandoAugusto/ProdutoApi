@@ -28,6 +28,8 @@ namespace ProductApi.Application.Extensions
             services.AddScoped<IProductVersionPlanActivityAppService, ProductVersionPlanActivityAppService>();
             services.AddScoped<IProductVersionPlanCoverageAppService, ProductVersionPlanCoverageAppService>();
             services.AddScoped<IProductVersionCoverageActivityLimitAppService, ProductVersionCoverageActivityLimitAppService>();
+            services.AddScoped<IProductVersionConstructionUseTypeAppService, ProductVersionConstructionUseTypeAppService>();
+            services.AddScoped<IProductVersionConstructionUseStructureAppService, ProductVersionConstructionUseStructureAppService>();
             services.AddScoped<IProductVersionLocalizationAppService, ProductVersionLocalizationAppService>();
             services.AddScoped<ICommonAppService, CommonAppService>();
             services.AddScoped<IBranchAppService, BranchAppService>();
@@ -42,7 +44,7 @@ namespace ProductApi.Application.Extensions
             services.AddScoped<IProductVersionCoverageFranchiseAppService, ProductVersionCoverageFranchiseAppService>();
             services.AddScoped<IProductVersionPlanAssistanceAppService, ProductVersionPlanAssistanceAppService>();
             services.AddScoped<IProductVersionQuestionnaireAppService, ProductVersionQuestionnaireAppService>();
-            
+            services.AddScoped<IProductVersionPlanUsePropertyAppService, ProductVersionPlanUsePropertyAppService>();
         }
     }
 }

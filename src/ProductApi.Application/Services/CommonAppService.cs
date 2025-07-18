@@ -12,7 +12,7 @@ namespace ProductApi.Application.Services
        IAddressTypeRepository addressTypeRepository, IStateRepository stateRepository, IRecordStatusRepository recordStatusRepository,
        ITermTypeRepository termTypeRepository, IInsuranceTypeRepository insuranceTypeRepository, IInsurerRepository insurerRepository,
        IClaimsExperienceBonusRepository claimsExperienceBonusRepository, IBuildingsContentsRepository buildingsContentsRepository,
-       IConstructionTypeUseTypeStructureRepository useTypePropertyStructureRepository, IConstructionTypeUseTypeRepository constructionTypeUseTypeRepository,
+       IProductVersionConstructionUseStructureRepository useTypePropertyStructureRepository, IProductVersionConstructionUseTypeRepository constructionTypeUseTypeRepository,
        IPersonTypeRepository personTypeRepository, IQuotationStatusRepository quotationStatusRepository, IProtectiveDevicesRepository protectiveDevicesRepository)
      : ICommonAppService
     {
@@ -28,8 +28,7 @@ namespace ProductApi.Application.Services
         private readonly IInsurerRepository _insurerRepository = insurerRepository;
         private readonly IClaimsExperienceBonusRepository _claimsExperienceBonusRepository = claimsExperienceBonusRepository;
         private readonly IBuildingsContentsRepository _buildingsContentsRepository = buildingsContentsRepository;
-        private readonly IConstructionTypeUseTypeStructureRepository _useTypePropertyStructureRepository = useTypePropertyStructureRepository;
-        private readonly IConstructionTypeUseTypeRepository _constructionTypeUseTypeRepository = constructionTypeUseTypeRepository;
+        private readonly IProductVersionConstructionUseStructureRepository _useTypePropertyStructureRepository = useTypePropertyStructureRepository;
         private readonly IPersonTypeRepository _personTypeRepository = personTypeRepository;
         private readonly IQuotationStatusRepository _quotationStatusRepository = quotationStatusRepository;
         private readonly IProtectiveDevicesRepository _protectiveDevicesRepository = protectiveDevicesRepository;
@@ -110,28 +109,7 @@ namespace ProductApi.Application.Services
             if (!entity.IsAny<BuildingsContents>()) return null;
 
             return _mapper.Map<IEnumerable<BuildingsContentsModel>>(entity);
-        }
-
-        public async Task<IEnumerable<PropertyStructureModel>?> GetPropertyStructureAsync(int constructionTypeId, int useTypeId, int profileId, RecordStatusEnum recordStatus)
-        {
-            var entity = await _useTypePropertyStructureRepository.GetAsync(constructionTypeId, useTypeId, profileId, recordStatus);
-            if (!entity.IsAny<ConstructionTypeUseTypeStructure>()) return null;
-
-            return [.. entity.ToList().Select(item =>
-            {
-                return _mapper.Map<PropertyStructureModel>(item.PropertyStructure);
-            })];
-        }
-        public async Task<IEnumerable<UseTypeModel>?> GetUseTypeAsync(int constructionTypeId, int profileId, RecordStatusEnum recordStatus)
-        {
-            var entity = await _constructionTypeUseTypeRepository.GetAsync(constructionTypeId, profileId, recordStatus);
-            if (!entity.IsAny<ConstructionTypeUseType>()) return null;
-
-            return [.. entity.ToList().Select(item =>
-            {
-                return _mapper.Map<UseTypeModel>(item.UseType);
-            })];
-        }
+        }    
 
         public async Task<IEnumerable<PersonTypeModel>?> GetPersonTypeAsync(RecordStatusEnum recordStatus)
         {

@@ -10,8 +10,7 @@ namespace ProductApi.Core.Entities
         public int InclusionUserId { get; set; }
         public DateTime InclusionDate { get; set; }
         public int? LastChangeUserId { get; set; }
-        public DateTime? LastChangeDate { get; set; }
-        public virtual ICollection<ConstructionTypeUseType> ConstructionTypeUseType { get; set; } = new HashSet<ConstructionTypeUseType>();
+        public DateTime? LastChangeDate { get; set; }        
         public virtual ICollection<ProductVersionConstructionType> ProductVersionConstructionType { get; set; } = new HashSet<ProductVersionConstructionType>();
     }
 }

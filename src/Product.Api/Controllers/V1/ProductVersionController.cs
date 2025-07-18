@@ -11,6 +11,7 @@ namespace Product.Api.Controllers.V1
     /// <summary>
     /// 
     /// </summary>
+    /// <param name="productVersionAppService"></param>
     /// <param name="productVersionAcceptanceAppService"></param>
     /// <param name="productVersionInsuredObjectService"></param>
     /// <param name="productVersionClauseService"></param>
@@ -30,6 +31,10 @@ namespace Product.Api.Controllers.V1
     /// <param name="productVersionCoverageActivityLimitAppService"></param>
     /// <param name="productVersionLocalizationAppService"></param>
     /// <param name="productVersionCoverageFranchiseAppService"></param>
+    /// <param name="productVersionPlanAssistanceAppService"></param>
+    /// <param name="productVersionQuestionnaireAppService"></param>
+    /// <param name="productVersionConstructionUseTypeAppService"></param>
+    /// <param name="productVersionConstructionUseStructureAppService"></param>
     public class ProductVersionController(IProductVersionAppService productVersionAppService, IProductVersionAcceptanceAppService productVersionAcceptanceAppService, IProductVersionInsuredObjectAppService productVersionInsuredObjectService,
         IProductVersionClauseAppService productVersionClauseService, IProductVersionLawsuitTypeAppService productVersionLawsuitTypeService, IProductVersionTermTypeAppService productVersionTermTypeService,
         IProductVersionPaymentMethodAppService productVersionPaymentMethodService, IProductVersionPaymentInstallmentAppService productVersionPaymentInstallmentService,
@@ -39,7 +44,9 @@ namespace Product.Api.Controllers.V1
         IProductVersionActivityAppService productVersionActivityAppService, IProductVersionPlanActivityAppService productVersionPlanActivityAppService,
         IProductVersionPlanCoverageAppService productVersionPlanCoverageAppService, IProductVersionCoverageActivityLimitAppService productVersionCoverageActivityLimitAppService,
         IProductVersionLocalizationAppService productVersionLocalizationAppService, IProductVersionCoverageFranchiseAppService productVersionCoverageFranchiseAppService,
-        IProductVersionPlanAssistanceAppService productVersionPlanAssistanceAppService, IProductVersionQuestionnaireAppService productVersionQuestionnaireAppService)
+        IProductVersionPlanAssistanceAppService productVersionPlanAssistanceAppService, IProductVersionQuestionnaireAppService productVersionQuestionnaireAppService,
+        IProductVersionConstructionUseTypeAppService productVersionConstructionUseTypeAppService, IProductVersionConstructionUseStructureAppService productVersionConstructionUseStructureAppService,
+        IProductVersionPlanUsePropertyAppService productVersionPlanUsePropertyAppService)
         : BaseController
     {
         private readonly IProductVersionAppService _productVersionAppService = productVersionAppService;
@@ -64,14 +71,16 @@ namespace Product.Api.Controllers.V1
         private readonly IProductVersionCoverageFranchiseAppService _productVersionCoverageFranchiseAppService = productVersionCoverageFranchiseAppService;
         private readonly IProductVersionPlanAssistanceAppService _productVersionPlanAssistanceAppService = productVersionPlanAssistanceAppService;
         private readonly IProductVersionQuestionnaireAppService _productVersionQuestionnaireAppService = productVersionQuestionnaireAppService;
+        private readonly IProductVersionConstructionUseTypeAppService _productVersionConstructionUseTypeAppService = productVersionConstructionUseTypeAppService;
+        private readonly IProductVersionConstructionUseStructureAppService _productVersionConstructionUseStructureAppService = productVersionConstructionUseStructureAppService;
+        private readonly IProductVersionPlanUsePropertyAppService _productVersionPlanUsePropertyAppService = productVersionPlanUsePropertyAppService;
 
-
-       /// <summary>
-       /// 
-       /// </summary>
-       /// <param name="productId"></param>                        
-       /// <returns></returns>
-       [HttpGet]
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="productId"></param>                        
+        /// <returns></returns>
+        [HttpGet]
         [Route("get-product-version/{productId}")]
         [ProducesResponseType(typeof(BaseDataResponseModel<ProductVersionAcceptanceModel>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status500InternalServerError)]
@@ -365,6 +374,47 @@ namespace Product.Api.Controllers.V1
         /// 
         /// </summary>
         /// <param name="productVersionId"></param>
+        /// <param name="constructionTypeId"></param>
+        /// <param name="profileId"></param>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("get-use-type/{productVersionId}/{constructionTypeId}/{profileId}")]
+        [ProducesResponseType(typeof(BaseDataResponseModel<IEnumerable<UseTypeModel>>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> GetUseTypeAsync(int productVersionId, int constructionTypeId, int profileId)
+        {
+            var response = await _productVersionConstructionUseTypeAppService.GetAsync(productVersionId, constructionTypeId, profileId, RecordStatusEnum.Active);
+            if (response == null)
+                return ReturnNotFound();
+
+            return base.ReturnSuccess(response);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="productVersionId"></param>
+        /// <param name="constructionTypeId"></param>
+        /// <param name="useTypeId"></param>
+        /// <param name="profileId"></param>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("get-property-structure/{productVersionId}/{constructionTypeId}/{useTypeId}/{profileId}")]
+        [ProducesResponseType(typeof(BaseDataResponseModel<PropertyStructureModel>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> GetPropertyStructureAsync(int productVersionId, int constructionTypeId, int useTypeId, int profileId)
+        {
+            var response = await _productVersionConstructionUseStructureAppService.GetAsync(productVersionId, constructionTypeId, useTypeId, profileId, RecordStatusEnum.Active);
+            if (response == null)
+                return ReturnNotFound();
+
+            return base.ReturnSuccess(response);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="productVersionId"></param>
         /// <param name="profileid"></param>
         /// <param name="name"></param>
         /// <returns></returns>
@@ -404,7 +454,28 @@ namespace Product.Api.Controllers.V1
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="productVersionId,"></param>
+        /// <param name="productVersionId"></param>
+        /// <param name="useTypeId"></param>        
+        /// <param name="propertyStructureId"></param>        
+        /// <returns></returns>
+        [HttpGet]
+        [Route("get-product-version-plan-useType-propertyStructure/{productVersionId}/{useTypeId}/{propertyStructureId}")]
+        [ProducesResponseType(typeof(BaseDataResponseModel<IEnumerable<PlanModel>>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> GetProductVersionPlanUsepropertyStructureAsync(int productVersionId, int useTypeId, int propertyStructureId)
+        {
+            var response = await _productVersionPlanUsePropertyAppService.GetAsync(productVersionId, useTypeId, propertyStructureId, RecordStatusEnum.Active);
+            if (response == null)
+                return ReturnNotFound();
+
+            return base.ReturnSuccess(response);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="productVersionId"></param>
         /// <param name="planId"></param>
         /// <returns></returns>
         [HttpGet]

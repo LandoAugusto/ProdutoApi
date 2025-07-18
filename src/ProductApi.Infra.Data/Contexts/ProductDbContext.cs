@@ -66,8 +66,8 @@ namespace ProductApi.Infra.Data.Contexts
         public virtual DbSet<ClaimsExperienceBonus> ClaimsExperienceBonus { get; set; }
         public virtual DbSet<PropertyStructure> PropertyStructure { get; set; }
         public virtual DbSet<BuildingsContents> BuildingsContents { get; set; }
-        public virtual DbSet<ConstructionTypeUseTypeStructure> ConstructionTypeUseTypeStructure { get; set; }
-        public virtual DbSet<ConstructionTypeUseType> ConstructionTypeUseType { get; set; }
+        public virtual DbSet<ProductVersionConstructionUseStructure> ProductVersionConstructionUseStructure { get; set; }
+        public virtual DbSet<ProductVersionConstructionUseType> ProductVersionConstructionUseType { get; set; }
         public virtual DbSet<ProductVersionActivity> ProductVersionActivity { get; set; }
         public virtual DbSet<Activity> Activity { get; set; }
         public virtual DbSet<HazardGroup> HazardGroup { get; set; }
@@ -93,6 +93,6 @@ namespace ProductApi.Infra.Data.Contexts
         public virtual DbSet<QuestionResponse> QuestionResponse { get; set; }
         public virtual DbSet<ProductVersionQuestionnaire> ProductVersionQuestionnaire { get; set; }
         public virtual DbSet<PlanType> PlanType { get; set; }
-
+        public virtual DbSet<ProductVersionPlanUseProperty> ProductVersionPlanUseProperty { get; set; }
     }
 }

@@ -15,19 +15,19 @@ namespace ProductApi.Application.Services
 
         public async Task<IEnumerable<CivilCourtModel>?> GetAllAsync(RecordStatusEnum recordStatus)
         {
-            var entidade = await _civilCourtRepository.GetAllAsync(recordStatus);
-            if (!entidade.IsAny<CivilCourt>()) return null;
+            var entities = await _civilCourtRepository.GetAllAsync(recordStatus);
+            if (!entities.IsAny<CivilCourt>()) return null;
 
-            return _mapper.Map<IEnumerable<CivilCourtModel>>(entidade);
+            return _mapper.Map<IEnumerable<CivilCourtModel>>(entities);
         }
         public async Task<IEnumerable<CivilCourtModel?>> ListAsync(CivilCourtFilterModel filter)
         {
             var recordStatus = (filter.StatusId == null || filter.StatusId == 2) ? RecordStatusEnum.Active : RecordStatusEnum.Inativo;
 
-            var entidade = await _civilCourtRepository.ListAsync(filter.Name, filter.LaborCourtId, filter.StateId, recordStatus);
-            if (!entidade.IsAny<CivilCourt>()) return null;
+            var entities = await _civilCourtRepository.ListAsync(filter.Name, filter.LaborCourtId, filter.StateId, recordStatus);
+            if (!entities.IsAny<CivilCourt>()) return null;
 
-            return _mapper.Map<IEnumerable<CivilCourtModel>>(entidade);
+            return _mapper.Map<IEnumerable<CivilCourtModel>>(entities);
         }
     }
 }
