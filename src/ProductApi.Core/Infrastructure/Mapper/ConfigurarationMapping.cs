@@ -65,6 +65,8 @@ namespace ProductApi.Core.Infrastructure.Mapper
             CreateMap<AssistanceModel, Assistance>().ReverseMap();
             CreateMap<QuestionnaireModel, Question>().ReverseMap();
             CreateMap<ResponseModel, Response>().ReverseMap();
+            CreateMap<GenderModel, Gender>().ReverseMap();
+            CreateMap<ProfessionModel, Profession>().ReverseMap();
 
         }
     }

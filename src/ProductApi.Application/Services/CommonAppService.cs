@@ -13,11 +13,13 @@ namespace ProductApi.Application.Services
        ITermTypeRepository termTypeRepository, IInsuranceTypeRepository insuranceTypeRepository, IInsurerRepository insurerRepository,
        IClaimsExperienceBonusRepository claimsExperienceBonusRepository, IBuildingsContentsRepository buildingsContentsRepository,
        IProductVersionConstructionUseStructureRepository useTypePropertyStructureRepository, IProductVersionConstructionUseTypeRepository constructionTypeUseTypeRepository,
-       IPersonTypeRepository personTypeRepository, IQuotationStatusRepository quotationStatusRepository, IProtectiveDevicesRepository protectiveDevicesRepository)
+       IPersonTypeRepository personTypeRepository, IQuotationStatusRepository quotationStatusRepository, IProtectiveDevicesRepository protectiveDevicesRepository,
+       IGenderRepository genderRepository, IProfessionRepository professionRepository)
      : ICommonAppService
     {
 
         private readonly IMapper _mapper = mapper;
+        private readonly IGenderRepository _genderRepository = genderRepository;
         private readonly IStateRepository _stateRepository = stateRepository;
         private readonly IAddressTypeRepository _addressTypeRepository = addressTypeRepository;
         private readonly IDocumentTypeRepository _documentTypeRepository = documentTypeRepository;
@@ -32,6 +34,7 @@ namespace ProductApi.Application.Services
         private readonly IPersonTypeRepository _personTypeRepository = personTypeRepository;
         private readonly IQuotationStatusRepository _quotationStatusRepository = quotationStatusRepository;
         private readonly IProtectiveDevicesRepository _protectiveDevicesRepository = protectiveDevicesRepository;
+        private readonly IProfessionRepository _professionRepository = professionRepository;    
 
         public async Task<IEnumerable<AddressTypeModel>?> GetAddressTypeAsync(RecordStatusEnum recordStatusEnum)
         {
@@ -131,6 +134,20 @@ namespace ProductApi.Application.Services
             if (!entity.IsAny<ProtectiveDevices>()) return null;
 
             return _mapper.Map<IEnumerable<ProtectiveDevicesModel>>(entity);
+        }
+        public async Task<IEnumerable<GenderModel>?> GetGenderAsync( RecordStatusEnum recordStatus)
+        {
+            var entity = await _genderRepository.ListAsync(recordStatus);
+            if (!entity.IsAny<Gender>()) return null;
+
+            return _mapper.Map<IEnumerable<GenderModel>>(entity);
+        }
+        public async Task<IEnumerable<ProfessionModel>?> GetProfessionAsync(string? name,RecordStatusEnum recordStatus)
+        {
+            var entity = await _professionRepository.ListAsync(name,recordStatus);
+            if (!entity.IsAny<Profession>()) return null;
+
+            return _mapper.Map<IEnumerable<ProfessionModel>>(entity);
         }
     }
 }

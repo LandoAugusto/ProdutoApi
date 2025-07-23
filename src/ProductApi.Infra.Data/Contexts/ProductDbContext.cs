@@ -93,6 +93,8 @@ namespace ProductApi.Infra.Data.Contexts
         public virtual DbSet<QuestionResponse> QuestionResponse { get; set; }
         public virtual DbSet<ProductVersionQuestionnaire> ProductVersionQuestionnaire { get; set; }
         public virtual DbSet<PlanType> PlanType { get; set; }
+        public virtual DbSet<Gender> Gender { get; set; }
+        public virtual DbSet<Profession> Profession { get; set; }
         public virtual DbSet<ProductVersionPlanUseProperty> ProductVersionPlanUseProperty { get; set; }
     }
 }

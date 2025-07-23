@@ -18,5 +18,7 @@ namespace ProductApi.Application.Interfaces
         Task<IEnumerable<PersonTypeModel>?> GetPersonTypeAsync(RecordStatusEnum recordStatus);
         Task<IEnumerable<QuotationStatusModel>?> GetQuotationStatusAsync(RecordStatusEnum recordStatus);
         Task<IEnumerable<ProtectiveDevicesModel>?> GetProtectiveDevicesAsync(int protectiveDevicesTypeId,RecordStatusEnum recordStatus);
+        Task<IEnumerable<GenderModel>?> GetGenderAsync(RecordStatusEnum recordStatus);
+        Task<IEnumerable<ProfessionModel>?> GetProfessionAsync(string? name, RecordStatusEnum recordStatus);
     }
 }

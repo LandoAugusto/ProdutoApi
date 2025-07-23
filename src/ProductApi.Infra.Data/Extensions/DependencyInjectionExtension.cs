@@ -74,6 +74,10 @@ namespace ProductApi.Infra.Data.Extensions
             services.AddScoped<IProductVersionQuestionnaireRepository, ProductVersionQuestionnaireRepository>();
             services.AddScoped<IQuestionResponseRepository, QuestionResponseRepository>();
             services.AddScoped<IProductVersionPlanUsePropertyRepository, ProductVersionPlanUsePropertyRepository>();
+            services.AddScoped<IProductVersionPlanUsePropertyRepository, ProductVersionPlanUsePropertyRepository>();
+            services.AddScoped<IProductVersionPlanUsePropertyRepository, ProductVersionPlanUsePropertyRepository>();
+            services.AddScoped<IProfessionRepository, ProfessionRepository>();
+            services.AddScoped<IGenderRepository, GenderRepository>();
 
             return services;
         }

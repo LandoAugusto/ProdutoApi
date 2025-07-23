@@ -181,6 +181,19 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:Product.Api.Controllers.V1.CommonController.GetGenderAsync">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Product.Api.Controllers.V1.CommonController.GetProfessionAsync(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
         <member name="T:Product.Api.Controllers.V1.LaborCourtController">
             <summary>
             
