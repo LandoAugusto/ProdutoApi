@@ -1,6 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using ProductApi.Core.Entities;
-using ProductApi.Core.Models;
 
 namespace ProductApi.Infra.Data.Contexts
 {
@@ -96,5 +95,10 @@ namespace ProductApi.Infra.Data.Contexts
         public virtual DbSet<Gender> Gender { get; set; }
         public virtual DbSet<Profession> Profession { get; set; }
         public virtual DbSet<ProductVersionPlanUseProperty> ProductVersionPlanUseProperty { get; set; }
+        public virtual DbSet<InspectionReason> InspectionReason { get; set; }
+        public virtual DbSet<InspectionRuleCoverage> InspectionRuleCoverage { get; set; }        
+        public virtual DbSet<InspectionRuleActivity> InspectionRuleActivity { get; set; }
+        public virtual DbSet<InspectionRuleHazardGroup> InspectionRuleHazardGroup { get; set; }
+        public virtual DbSet<InspectionRuleHazardGroupLimit> InspectionRuleHazardGroupLimit { get; set; }
     }
 }

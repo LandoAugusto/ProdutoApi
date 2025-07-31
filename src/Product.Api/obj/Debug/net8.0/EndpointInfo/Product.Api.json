@@ -1174,6 +1174,158 @@
         }
       }
     },
+    "/api/v1/inspection/get-inspection-reason": {
+      "get": {
+        "tags": [
+          "Inspection"
+        ],
+        "summary": "",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/InspectionReasonModelBaseDataResponseModel"
+                }
+              },
+              "application/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/InspectionReasonModelBaseDataResponseModel"
+                }
+              },
+              "text/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/InspectionReasonModelBaseDataResponseModel"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseDataResponseModel`1"
+                }
+              },
+              "application/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseDataResponseModel`1"
+                }
+              },
+              "text/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseDataResponseModel`1"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/inspection/get-inspection-rule-coverage/{productVersionId}/{contractTypeId}/{profileId}/{activityId}/{coverageId}": {
+      "get": {
+        "tags": [
+          "Inspection"
+        ],
+        "summary": "",
+        "parameters": [
+          {
+            "name": "productVersionId",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "contractTypeId",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "profileId",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "activityId",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "coverageId",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/InspectionRuleCoverageModelBaseDataResponseModel"
+                }
+              },
+              "application/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/InspectionRuleCoverageModelBaseDataResponseModel"
+                }
+              },
+              "text/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/InspectionRuleCoverageModelBaseDataResponseModel"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseDataResponseModel`1"
+                }
+              },
+              "application/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseDataResponseModel`1"
+                }
+              },
+              "text/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseDataResponseModel`1"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/v1/laborcourt/get-all": {
       "get": {
         "tags": [
@@ -4884,6 +5036,69 @@
               "$ref": "#/components/schemas/GenderModel"
             },
             "nullable": true
+          },
+          "transactionStatus": {
+            "$ref": "#/components/schemas/StatusResponseModel"
+          }
+        },
+        "additionalProperties": false
+      },
+      "InspectionReasonModel": {
+        "required": [
+          "description"
+        ],
+        "type": "object",
+        "properties": {
+          "inspectionReasonId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "InspectionReasonModelBaseDataResponseModel": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/InspectionReasonModel"
+          },
+          "transactionStatus": {
+            "$ref": "#/components/schemas/StatusResponseModel"
+          }
+        },
+        "additionalProperties": false
+      },
+      "InspectionRuleCoverageModel": {
+        "type": "object",
+        "properties": {
+          "inspectionRuleCoverageId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "inspectionReasonId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "valueMin": {
+            "type": "number",
+            "format": "double"
+          },
+          "valueMax": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "InspectionRuleCoverageModelBaseDataResponseModel": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/InspectionRuleCoverageModel"
           },
           "transactionStatus": {
             "$ref": "#/components/schemas/StatusResponseModel"

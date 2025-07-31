@@ -25,6 +25,9 @@ namespace ProductApi.Core.Entities
         public virtual ICollection<ProductVersionPlan> ProductVersionPlan { get; set; } = new HashSet<ProductVersionPlan>();
         public virtual ICollection<ProductVersionLocalization> ProductVersionLocalization { get; set; } = new HashSet<ProductVersionLocalization>();
         public virtual ICollection<ProductVersionQuestionnaire> ProductVersionQuestion { get; set; } = new HashSet<ProductVersionQuestionnaire>();
+        public virtual ICollection<InspectionRuleActivity> InspectionRuleActivity { get; set; } = new HashSet<InspectionRuleActivity>();
+        public virtual ICollection<InspectionRuleHazardGroup> InspectionRuleHazardGroup { get; set; } = new HashSet<InspectionRuleHazardGroup>();
+        public virtual ICollection<InspectionRuleCoverage> InspectionRuleCoverage { get; set; } = new HashSet<InspectionRuleCoverage>();
 
     }
 }

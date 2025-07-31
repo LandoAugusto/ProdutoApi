@@ -12,5 +12,6 @@ namespace ProductApi.Core.Entities
         public int? LastChangeUserId { get; set; }
         public DateTime? LastChangeDate { get; set; }
         public virtual ICollection<ProductVersionActivity> ProductVersionActivity { get; set; } = new HashSet<ProductVersionActivity>();
+        public virtual ICollection<InspectionRuleHazardGroup> InspectionRuleHazardGroup { get; set; } = new HashSet<InspectionRuleHazardGroup>();
     }
 }

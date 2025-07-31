@@ -95,13 +95,13 @@
             <summary>
             
             </summary>
-            <param name="commonService"></param>
+            <param name="commonAppService"></param>
         </member>
         <member name="M:Product.Api.Controllers.V1.CommonController.#ctor(ProductApi.Application.Interfaces.ICommonAppService)">
             <summary>
             
             </summary>
-            <param name="commonService"></param>
+            <param name="commonAppService"></param>
         </member>
         <member name="M:Product.Api.Controllers.V1.CommonController.GetStateAllAsync(System.String)">
             <summary>
@@ -192,6 +192,37 @@
             
             </summary>
             <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Product.Api.Controllers.V1.InspectionController">
+            <summary>
+            
+            </summary>
+            <param name="inspectionRuleCoverageAppService"></param>
+            <param name="inspectionAppService"></param>
+        </member>
+        <member name="M:Product.Api.Controllers.V1.InspectionController.#ctor(ProductApi.Application.Interfaces.IInspectionRuleCoverageAppService,ProductApi.Application.Interfaces.IInspectionAppService)">
+            <summary>
+            
+            </summary>
+            <param name="inspectionRuleCoverageAppService"></param>
+            <param name="inspectionAppService"></param>
+        </member>
+        <member name="M:Product.Api.Controllers.V1.InspectionController.GetReasoAsync">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Product.Api.Controllers.V1.InspectionController.GetRuleCoverageAsync(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="productVersionId"></param>
+            <param name="contractTypeId"></param>
+            <param name="profileId"></param>
+            <param name="activityId"></param>
+            <param name="coverageId"></param>
             <returns></returns>
         </member>
         <member name="T:Product.Api.Controllers.V1.LaborCourtController">

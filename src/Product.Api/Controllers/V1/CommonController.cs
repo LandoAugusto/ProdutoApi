@@ -11,11 +11,11 @@ namespace Product.Api.Controllers.V1
     /// <summary>
     /// 
     /// </summary>
-    /// <param name="commonService"></param>
-    public class CommonController(ICommonAppService commonService) : BaseController
+    /// <param name="commonAppService"></param>
+    public class CommonController(ICommonAppService commonAppService) : BaseController
     {
 
-        private readonly ICommonAppService _commonService = commonService;
+        private readonly ICommonAppService _commonAppService = commonAppService;
 
         /// <summary>
         /// 
@@ -27,7 +27,7 @@ namespace Product.Api.Controllers.V1
         [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status404NotFound)]
         public async Task<IActionResult> GetStateAllAsync(string? stateId = null)
         {
-            var response = await _commonService.GetStateAsync(RecordStatusEnum.Active, stateId);
+            var response = await _commonAppService.GetStateAsync(RecordStatusEnum.Active, stateId);
             if (response == null)
                 return ReturnNotFound();
 
@@ -44,7 +44,7 @@ namespace Product.Api.Controllers.V1
         [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status404NotFound)]
         public async Task<IActionResult> GetAddressTypeAsync()
         {
-            var response = await _commonService.GetAddressTypeAsync(RecordStatusEnum.Active);
+            var response = await _commonAppService.GetAddressTypeAsync(RecordStatusEnum.Active);
             if (response == null)
                 return ReturnNotFound();
 
@@ -61,7 +61,7 @@ namespace Product.Api.Controllers.V1
         [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status404NotFound)]
         public async Task<IActionResult> GetDocumentypeAsync()
         {
-            var response = await _commonService.GetDocumentypeAsync(RecordStatusEnum.Active);
+            var response = await _commonAppService.GetDocumentypeAsync(RecordStatusEnum.Active);
             if (response == null)
                 return ReturnNotFound();
 
@@ -79,7 +79,7 @@ namespace Product.Api.Controllers.V1
         [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status404NotFound)]
         public async Task<IActionResult> GetInsuredTypeModelAsync()
         {
-            var response = await _commonService.GetInsuredTypeAsync(RecordStatusEnum.Active);
+            var response = await _commonAppService.GetInsuredTypeAsync(RecordStatusEnum.Active);
             if (response == null)
                 return ReturnNotFound();
 
@@ -96,7 +96,7 @@ namespace Product.Api.Controllers.V1
         [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status404NotFound)]
         public async Task<IActionResult> GetRecordStatusAsync()
         {
-            var response = await _commonService.GetRecordStatusAsync();
+            var response = await _commonAppService.GetRecordStatusAsync();
             if (response == null)
                 return ReturnNotFound();
 
@@ -114,7 +114,7 @@ namespace Product.Api.Controllers.V1
         [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status404NotFound)]
         public async Task<IActionResult> GetTermTypeAllAsync()
         {
-            var response = await _commonService.GetTermTypeAsync(RecordStatusEnum.Active);
+            var response = await _commonAppService.GetTermTypeAsync(RecordStatusEnum.Active);
             if (response == null)
                 return ReturnNotFound();
 
@@ -131,7 +131,7 @@ namespace Product.Api.Controllers.V1
         [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status404NotFound)]
         public async Task<IActionResult> GetInsuranceTypeAsync()
         {
-            var response = await _commonService.GetInsuranceTypeAsync(RecordStatusEnum.Active);
+            var response = await _commonAppService.GetInsuranceTypeAsync(RecordStatusEnum.Active);
             if (response == null)
                 return ReturnNotFound();
 
@@ -148,7 +148,7 @@ namespace Product.Api.Controllers.V1
         [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status404NotFound)]
         public async Task<IActionResult> GetInsurerAsync()
         {
-            var response = await _commonService.GetInsurerAsync(RecordStatusEnum.Active);
+            var response = await _commonAppService.GetInsurerAsync(RecordStatusEnum.Active);
             if (response == null)
                 return ReturnNotFound();
 
@@ -165,7 +165,7 @@ namespace Product.Api.Controllers.V1
         [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status404NotFound)]
         public async Task<IActionResult> GetClaimsExperienceBonusModelAsync()
         {
-            var response = await _commonService.GetClaimsExperienceBonusAsync(RecordStatusEnum.Active);
+            var response = await _commonAppService.GetClaimsExperienceBonusAsync(RecordStatusEnum.Active);
             if (response == null)
                 return ReturnNotFound();
 
@@ -182,7 +182,7 @@ namespace Product.Api.Controllers.V1
         [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status404NotFound)]
         public async Task<IActionResult> GetBuildingsContentsAsync()
         {
-            var response = await _commonService.GetBuildingsContentsAsync(RecordStatusEnum.Active);
+            var response = await _commonAppService.GetBuildingsContentsAsync(RecordStatusEnum.Active);
             if (response == null)
                 return ReturnNotFound();
 
@@ -201,7 +201,7 @@ namespace Product.Api.Controllers.V1
         [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status404NotFound)]
         public async Task<IActionResult> GetPersonTypeAsync()
         {
-            var response = await _commonService.GetPersonTypeAsync(RecordStatusEnum.Active);
+            var response = await _commonAppService.GetPersonTypeAsync(RecordStatusEnum.Active);
             if (response == null)
                 return ReturnNotFound();
 
@@ -218,7 +218,7 @@ namespace Product.Api.Controllers.V1
         [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status404NotFound)]
         public async Task<IActionResult> GetQuotationStatusAsync()
         {
-            var response = await _commonService.GetQuotationStatusAsync(RecordStatusEnum.Active);
+            var response = await _commonAppService.GetQuotationStatusAsync(RecordStatusEnum.Active);
             if (response == null)
                 return ReturnNotFound();
 
@@ -235,7 +235,7 @@ namespace Product.Api.Controllers.V1
         [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status404NotFound)]
         public async Task<IActionResult> GetProtectiveDevicesAsync(int protectiveDevicesTypeId)
         {
-            var response = await _commonService.GetProtectiveDevicesAsync(protectiveDevicesTypeId, RecordStatusEnum.Active);
+            var response = await _commonAppService.GetProtectiveDevicesAsync(protectiveDevicesTypeId, RecordStatusEnum.Active);
             if (response == null)
                 return ReturnNotFound();
 
@@ -251,7 +251,7 @@ namespace Product.Api.Controllers.V1
         [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status404NotFound)]
         public async Task<IActionResult> GetGenderAsync()
         {
-            var response = await _commonService.GetGenderAsync(RecordStatusEnum.Active);
+            var response = await _commonAppService.GetGenderAsync(RecordStatusEnum.Active);
             if (response == null)
                 return ReturnNotFound();
 
@@ -269,7 +269,7 @@ namespace Product.Api.Controllers.V1
         [ProducesResponseType(typeof(BaseDataResponseModel<>), StatusCodes.Status404NotFound)]
         public async Task<IActionResult> GetProfessionAsync(string? name)
         {
-            var response = await _commonService.GetProfessionAsync(name, RecordStatusEnum.Active);
+            var response = await _commonAppService.GetProfessionAsync(name, RecordStatusEnum.Active);
             if (response == null)
                 return ReturnNotFound();
 

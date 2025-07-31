@@ -45,6 +45,8 @@ namespace ProductApi.Application.Extensions
             services.AddScoped<IProductVersionPlanAssistanceAppService, ProductVersionPlanAssistanceAppService>();
             services.AddScoped<IProductVersionQuestionnaireAppService, ProductVersionQuestionnaireAppService>();
             services.AddScoped<IProductVersionPlanUsePropertyAppService, ProductVersionPlanUsePropertyAppService>();
+            services.AddScoped<IInspectionAppService, InspectionAppService>();
+            services.AddScoped<IInspectionRuleCoverageAppService, InspectionRuleCoverageAppService>();
         }
     }
 }

@@ -21,5 +21,6 @@ namespace ProductApi.Core.Entities
         public virtual Branch Branch { get; set; } = null!;
         public virtual CoverageGroup CoverageGroup { get; set; } = null!;
         public virtual ICollection<ProductVersionCoverage> ProductVersionCoverage { get; set; } = new HashSet<ProductVersionCoverage>();
+        public virtual ICollection<InspectionRuleCoverage> InspectionRuleCoverage { get; set; } = new HashSet<InspectionRuleCoverage>();
     }
 }

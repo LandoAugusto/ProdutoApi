@@ -1,8 +1,11 @@
 ﻿using AutoMapper;
 using ProductApi.Application.Interfaces;
+using ProductApi.Core.Entities;
 using ProductApi.Core.Entities.Enumerators;
+using ProductApi.Core.Extensions;
 using ProductApi.Core.Models;
 using ProductApi.Infra.Data.Interfaces;
+using SharpCompress.Common;
 
 namespace ProductApi.Application.Services
 {
@@ -16,25 +19,25 @@ namespace ProductApi.Application.Services
 
         public async Task<IEnumerable<BranchTypeModel>?> ListBranchTypeAsync(RecordStatusEnum recordStatusEnum)
         {
-            var response = await _branchTypeRepository.ListAsync(recordStatusEnum);
-            if (response == null) return null;
+            var entity = await _branchTypeRepository.ListAsync(recordStatusEnum);
+            if (!entity.IsAny<BranchType>()) return null;
 
-            return _mapper.Map<IEnumerable<BranchTypeModel>>(response);
+            return _mapper.Map<IEnumerable<BranchTypeModel>>(entity);
         }
 
         public async Task<IEnumerable<BranchModel>?> ListBranchAsync(int? brachTypeId, RecordStatusEnum recordStatusEnum)
         {
-            var response = await _branchRepository.ListAsync(brachTypeId, recordStatusEnum);
-            if (response == null) return null;
+            var entity = await _branchRepository.ListAsync(brachTypeId, recordStatusEnum);            
+            if (!entity.IsAny<Branch>()) return null;            
 
-            return _mapper.Map<IEnumerable<BranchModel>>(response);
+            return _mapper.Map<IEnumerable<BranchModel>>(entity);
         }
         public async Task<IEnumerable<InsuranceBranchModel>?> ListInsuranceBranchAsync(int? brachId, RecordStatusEnum recordStatusEnum)
         {
-            var response = await _insuranceBranchRepository.ListAsync(brachId, recordStatusEnum);
-            if (response == null) return null;
+            var entity = await _insuranceBranchRepository.ListAsync(brachId, recordStatusEnum);
+            if (!entity.IsAny<InsuranceBranch>()) return null;
 
-            return _mapper.Map<IEnumerable<InsuranceBranchModel>>(response);
+            return _mapper.Map<IEnumerable<InsuranceBranchModel>>(entity);
         }
     }
 }
